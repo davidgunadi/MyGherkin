@@ -1,38 +1,38 @@
-# Select a dropdown value - This uses the value attribute in an option
+// Select a dropdown value - This uses the value attribute in an option
 And I set "en_CA" to "the 'User Locale' sub-section dropdown list" value
 
-#Type into textbox
+//Type into textbox
 And I set "<selector>" value to "XXX"
 
-#Click
+//Click
 And I click on "Login Button"
 
-#isDisplayed
+//isDisplayed
 Then "Username Avatar" should be displayed
 
-#Page is Displayed
+//Page is Displayed
 Then "Username Avatar" page should be displayed
 
-#multiple iFrames
+//multiple iFrames
 "Any row item": ["//iframe[@id='fr1']", "//iframe[@id='fr2']", "//iframe[@id='fr3']", "//tr[contains(@class, 'GridRow_Aptean')]"],
 
-#set Date Time to variable
+//set Date Time to variable
 Given "currentTime" value is the current datetime "+0 milliseconds"
 
-#CRM MainFrame
+//CRM MainFrame
 ["//iframe[@id='mainFrame']", ""]
 
-#CRM Work 1
+//CRM Work 1
 ["//iframe[@id='mainFrame']", "//iframe[@id='work1']", ".u8-queryeditor-infoarea-header"]
 
-#DNN PersonaBar Frame
+//DNN PersonaBar Frame
 ["//iframe[@id='personaBar-iframe']", ""]
 
 
-#ECN
-#https://confluence.devfactory.com/display/KM/KMECN+E2E+Environment+Data+Structure
+//ECN
+//https://confluence.devfactory.com/display/KM/KMECN+E2E+Environment+Data+Structure
 
-#Boint
+//Boint
 Link Icon (in Header): //div[@class='header-links-container']
 Link Dropdown Menu (in Header): //nav[@class='header-links']
 Marketplace (in Link Dropdown Menu): //nav[@class='header-links']//a[text()='Marketplace']
@@ -55,16 +55,15 @@ Wanted (Category Dropdown Option - in Marketplace): //div[@class='flex-1'][.//sp
 Services (Category Dropdown Option - in Marketplace): //div[@class='flex-1'][.//span[text()='Category']]//select/option[text()='Services']
 All (Category Dropdown Option - in Marketplace): //div[@class='flex-1'][.//span[text()='Category']]//select/option[text()='All']
 Category Value (in MarketPlace Card Text - First): //div[@class='bz-item-container'][1]//div[contains(@class,'bz-category')]/span
-
 Sort By Dropdown (in MarketPlace): //div[@class='flex-1'][.//span[text()='Sort By']]//select
 Expiring Soon (Sort By Dropdown Option - in Marketplace): //div[@class='flex-1'][.//span[text()='Sort By']]//select/option[text()='Expiring Soon']
 Price Low to High (Sort By Dropdown Option - in Marketplace): //div[@class='flex-1'][.//span[text()='Sort By']]//select/option[text()='Price - Low to High']
 Price High to Low (Sort By Dropdown Option - in Marketplace): //div[@class='flex-1'][.//span[text()='Sort By']]//select/option[text()='Price - High to Low']
 
-#Boint
-#BOINT Env
-#https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
-#http://spadmin:Password%231@automation1
+//Boint
+//BOINT Env
+//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
+//http://spadmin:Password%231@automation1
 See All (for MarketPlace): //a[contains(@href,'marketplace')][text()='See All']
 Current Node - MarketPlace: //span[@class='bz-current-node'][text()='MarketPlace']
 Site Contents (Header): //span[@id='DeltaPlaceHolderPageTitleInTitleArea'][normalize-space(text())='Site Contents']
@@ -88,7 +87,7 @@ Location Dropdown Item (Last Item) (In MarketPlace): //div[@class='flex-1'][.//s
 
 
 
-#temp Locator SCLOOP
+//temp Locator SCLOOP
 Teacher Usage Stats Districts (Header): //div[@id='logo'][text()='Teacher Usage Stats: Districts']
 District Name (First Item): //tr[1]/td[@class='districtname']
 Report Date: //div[@class='report_date']
@@ -106,7 +105,7 @@ Post 30 Day Totals (Report Dropdown Item): //li[@class='css_arrow']//a[contains(
 Question Mark Icon (for FREQUENT PUBLISHERS): //th[text()='FREQUENT PUBLISHERS']/img[@class='tip']
 Question Mark Icon Help Text (for FREQUENT PUBLISHERS): //div[@class='qtip-content'][text()='Publishers with 10 or more posts in the last 30 days. Success is 80% or better.']
 
-#temp Locator DNN-24982
+//temp Locator DNN-24982
 ["//iframe[@id='personaBar-iframe']", ""]
 Connectors menu item: ["//iframe[@id='personaBar-iframe']", "//li[@id='Dnn.Connectors']"]
 Connectors (Header): ["//iframe[@id='personaBar-iframe']", "//h3[text()='Connectors']"]
@@ -130,7 +129,7 @@ Save Button (in Advanced Settings Dialog): ["//iframe[@id='personaBar-iframe']",
 Cancel Button (in Advanced Settings Dialog): ["//iframe[@id='personaBar-iframe']", "//div[contains(@class,'personaBarDialog')]//span[@class='btn btn-cancel']"]
 
 
-#temp Locator DNN-31021
+//temp Locator DNN-31021
 S.E.O. Tab: ["//iframe[@id='personaBar-iframe']", "//li[text()='S.E.O.']"]
 Add URL (in Advanced SEO Page): ["//iframe[@id='personaBar-iframe']", "//div[@class='AddItemBox']"]
 URL Path Textbox: ["//iframe[@id='personaBar-iframe']", "//div[contains(@class,'dnn-single-line-input-with-error')][contains(.,'URL Path')]//input"]
@@ -139,7 +138,7 @@ Invalid URL Error Dialog: ["//iframe[@id='personaBar-iframe']", "//p[@id='notifi
 Test Record (in URL Table): ["//iframe[@id='personaBar-iframe']", "//div[@class='url-table']//div[text()='/-test']"]
 Delete Icon (for Test Record in URL Table): ["//iframe[@id='personaBar-iframe']", "//div[@class='url-table']/div[contains(.,'/-test')]//div[@class='extension-action'][1]"]
 
-#temp Locator Bec
+//temp Locator Bec
 Turner Standard User Record: //td/span[contains(text(),'Turner Standard Users')]
 Turner Standard User 3 Record: //td/span[normalize-space(text())='Turner Standard Users 3']
 Group Name Title: //span[@class='punchTarget mainTitle']
@@ -159,7 +158,7 @@ Delete Icon (for Eva): //tr[contains(.,'Eva')]//i[contains(@class,'beckon-icon-t
 User Deleted Message: //span[contains(text(),'was deleted from the user group')]
 46 users (in Group Management): //span[text()='46 users']
 
-#temp Locator DNN
+//temp Locator DNN
 Administrator User Name (in Add New Site Form): ["//iframe[@id='personaBar-iframe']", "//input[@id='admin-user-name']"]
 First Name (in Add New Site Form): ["//iframe[@id='personaBar-iframe']", "//input[@id='admin-first-name']"]
 Last Name (in Add New Site Form): ["//iframe[@id='personaBar-iframe']", "//input[@id='admin-last-name']"]
@@ -178,7 +177,7 @@ Directory (Radio Button): ["//iframe[@id='personaBar-iframe']", "//input[@id='ra
 Assign Current User as Administrator toggle: ["//iframe[@id='personaBar-iframe']", "//div[@class='dnn-grid-cell user-as-admin']//span[contains(@class, 'dnn-switch')]"]
 
 
-#temp Locator CRM
+//temp Locator CRM
 Log in to Aurea CRM web: ["//iframe[@id='mainFrame']", "//h1[text()='Log in to Aurea CRM web']"]
 User Name: ["//iframe[@id='mainFrame']", "//input[@id='txtUserName_input']"]
 Password: ["//iframe[@id='mainFrame']", "//input[@id='txtPassword_input']"]

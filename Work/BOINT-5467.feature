@@ -75,11 +75,16 @@ Scenario: Select "Expiring Soon" Dropdown
 When I click on "Sort By Dropdown (in MarketPlace)"
 And I click on "Expiring Soon (Sort By Dropdown Option - in Marketplace)"
 Then I should see "Expiring Soon" in "Sort By Dropdown (in MarketPlace)"
+And "Location Value (in MarketPlace Card Text - First)" should be displayed
 
 Scenario: Sort by "Price - Low to High"
-Select Price - Low to High on the Sort By dropdown
-The results are ordered according to ascending price
+When I click on "Sort By Dropdown (in MarketPlace)"
+And I click on "Price Low to High (Sort By Dropdown Option - in Marketplace)"
+Then I should see "Price - Low to High" in "Sort By Dropdown (in MarketPlace)"
+And "Location Value (in MarketPlace Card Text - First)" should be displayed
 
 Scenario: Sort by "Price - High to Low"
-Select Price - High to Low on the Sort By dropdown
-The results are ordered according to descending price
+When I click on "Sort By Dropdown (in MarketPlace)"
+And I click on "Price High to Low (Sort By Dropdown Option - in Marketplace)"
+Then I should see "Price - High to Low" in "Sort By Dropdown (in MarketPlace)"
+And "Location Value (in MarketPlace Card Text - First)" should be displayed
