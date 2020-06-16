@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Gherkin Spec{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<nav>
+    <ul>
+        {% for driver, steps in data %}
+        <li><a href="#{{ driver }}">{{ driver }}</a></li>
+            <ul>
+            {% for step, sentences in steps.items() %}
+                <li>{{ step }}</li>
+                <ul>
+                     {% for sentence in sentences %}
+                         <li><a href="#{{ driver }}/{{ sentence.sentence_id }}">{{ sentence.gherkin }}</a></li>
+                     {% endfor %}
+                </ul>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+</nav>
+
+{% for driver, steps in data %}
+<h2 id="{{ driver }}">{{ driver }}</h2>
+    {% for step, sentences in steps.items() %}
+    <h3>{{ step }}</h3>
+        {% for sentence in sentences %}
+        <h4 id="{{ driver }}/{{ sentence.sentence_id }}"><code>{{ step }} {{ sentence.gherkin }}</code></h4>
+        <div><small>RegExp: <code>{{ sentence.pattern }}</code></small></div>
+        <p>{{ sentence.description | replace(" ", "&nbsp;" | safe) | replace("\n", "<br/>" | safe)}}</p>
+            {% if sentence.manual_execution %}
+                <p>Manual execution only</p>
+            {% endif %}
+            <p>
+                Implementation status: {{ sentence.implementation_status }}
+                {% if sentence.implementation_todos %}
+                    , <span>TBD: {{ sentence.implementation_todos }}</span>
+                {% endif %}
+                {% if sentence.implementation_jira %}
+                    , <span>see: <a href="https://jira.devfactory.com/browse/{{ sentence.implementation_jira }}" target="_blank">{{ sentence.implementation_jira }}</a> </span>
+                {% endif %}
+            </p>
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
+{% endblock %}

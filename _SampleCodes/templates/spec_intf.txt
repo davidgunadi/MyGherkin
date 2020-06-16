@@ -1,0 +1,22 @@
+from abc import abstractmethod
+from runtime.E2EContext import E2EContext
+from runtime.E2EContextAware import E2EContextAware
+{{ spec.imports }}
+
+
+class I{{ spec.spec_id }}(E2EContextAware):
+
+    def __init__(self, e2e: E2EContext):
+        super().__init__(e2e)
+{% for sentence in spec.sentences  if not sentence.manual_execution %}
+
+    @abstractmethod
+    def {{ sentence.sentence_id }}(
+        self,
+    {% for arg in sentence.args.values() %}
+        {{ arg.name }}: {{ arg.python_type }},
+    {% endfor %}
+    ):
+        """{{ sentence.doc.replace('"""', '\\"""') }}"""
+        pass
+{% endfor %}

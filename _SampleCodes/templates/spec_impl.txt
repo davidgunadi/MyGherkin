@@ -1,0 +1,15 @@
+{{ spec.imports }}
+
+
+class {{ spec.spec_id }}Impl(I{{ spec.spec_id }}):
+{% for sentence in spec.sentences %}
+
+    @spec_impl
+    def {{ sentence.sentence_id }}(
+        self,
+    {% for arg in sentence.args.values() %}
+        {{ arg.name }}: {{ arg.python_type }},
+    {% endfor %}
+    ):
+        raise NotImplementedError()
+{% endfor %}

@@ -1,0 +1,24 @@
+from behave import when, then, given
+from behave.runner import Context
+
+from {{ spec_module_name }} import spec
+from runtime import invoke_step
+from util.spec import ManualExecutionError
+{% for sentence in spec.sentences %}
+
+
+@{{ sentence.sentence_type }}(r'{{ sentence.pattern() }}')
+@spec.behave_step
+def {{ sentence.sentence_id }}(context: Context, *args, **kwargs):
+    """{{ sentence.doc.replace('"""', '\\"""') }}"""
+    {% if sentence.manual_execution %}
+    raise ManualExecutionError()
+    {% else %}
+        {% for arg in sentence.args.values() %}
+            {% if arg.is_multiline_text %}
+    kwargs['{{ arg.name }}'] = context.text
+            {% endif %}
+        {% endfor %}
+    invoke_step(context.e2e, context.e2e.spec['{{ spec.spec_id }}'].{{ sentence.sentence_id }}, **kwargs)
+    {% endif %}
+{% endfor %}
