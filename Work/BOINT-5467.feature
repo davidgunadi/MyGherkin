@@ -1,4 +1,4 @@
-Feature: BOINT-7730
+Feature: BOINT-5647
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
