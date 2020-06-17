@@ -18,21 +18,27 @@ Scenario: Go to Reports
 When I click on "Reports Top Navigation Tab"
 Then "Results of Favorite Report Search" should be displayed
 
-Click on the "SQL/OQL Reporting" sub tab on the left.
-The "SQL/OQL Reporting" page is opened.
+Scenario: Go to "SQL/OQL Reporting"
+When I click on "SQL/OQL Reporting Left Menu Link"
+Then "SQL/OQL Reporting page title" should be displayed
 
-Click on the "Query Details" tab on the top.
-The "Query Details" tab with the "Query" textarea field is opened in the page.
+Scenario: Open "Query Details" Tab
+When I click on "Query Details tab"
+Then "Query text area" should be displayed
 
-Check the "OQL" raido button in the "Query Type" field, write "select p.name from SCCMProduct p" in the "Query" text area and click on the "Verify & Execute Query" button.
-It validates the query and executes it, then retrieves all product records in the database including the products created in the precondition steps. The records are shown in the "Execution Results" on the bottom of the page.
+Scenario: Write OQL Type Query and Verify & Execute
+When I click on "OQL Radio Button (in Query Details Form)"
+And I click on "Query text area"
+And I type "select p.name from SCCMProduct p where p.name = 'product1'"
+And I click on "Verify & Execute Query button"
+Then "product1 (in Execution Results Table)" should be displayed
 
-Click on the "Save Query" button.
-A popup is opened and asked you the name of the query which you save.
-
-Enter a query name(e.g."products1") in the popup and click on the "OK" button.
-The popup window is closed and the query is saved and shown with the name that you enter in the "Query Name" column, "OQL" in the "Type" column in the "Queries" list in the "Query List" tab.
-Scenario: Preconditions
-Given environment "Login into the "Develop Branch Enterprise ( Next Release Version )" environment." from "https://confluence.devfactory.com/display/ADCM/DCM+QA+Environments"
-Given credentials "Check the credentials of the "Develop Branch Enterprise ( Next Release Version )" environment."
-
+Scenario: Save Query and Verify
+When I click on "Save Query button"
+And I type "{RandomValue}" into the alert box
+And I accept the alert box
+And I click on "Query Name input field"
+And I type "{RandomValue}"
+And I click on "Search button (in Query List)"
+Then I should see "{RandomValue}" in "Query Name (in Search Result, Row 1)"
+And I should see "OQL" in "Query Type (in Search Result, Row 1)"

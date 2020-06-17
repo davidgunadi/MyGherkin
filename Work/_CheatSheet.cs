@@ -42,14 +42,25 @@ Then I should see "{text}" in "selector"
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure
-ADCM Frame Container - Cacheframe0 - Subpage
-["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", ""]
+ADCM Frame Container - CacheframeX - Subpage
+["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", ""]
 ADCM NoCacheFrame
 ["//iframe[@id='nocacheframe']", ""]
 ADCM Left Menu Link
 ["//frame[@name='sidebar']", ""]
 
 Results of Favorite Report Search: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Favorite Report Search')]"]
+OQL Radio Button (in Query Details Form): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//input[@id='queryDetailsOqlQuery']"]
+product1 (in Execution Results Table): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//td[@class='TD_Normal'][contains(text(),'product1')]"]
+Query Name input field: //input[@id="SearchQueryName"]
+
+
+
+
+
+
+
+
 
 
 
