@@ -43,11 +43,23 @@ Then I should see "{text}" in "selector"
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure
 ADCM Frame Container - CacheframeX - Subpage
-["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", ""]
+["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", ""]
+ADCM Frame Container - CacheframeX - Subpage
+["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='proppage']", ""]
 ADCM NoCacheFrame
 ["//iframe[@id='nocacheframe']", ""]
 ADCM Left Menu Link
 ["//frame[@name='sidebar']", ""]
+
+Hierarchy Search Label: ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//div[contains(text(),'of Hierarchy Search')]"]
+Product Search (in Sidebar): ["//frame[@name='sidebar']", "//a[@id='ProductHierarchySearch_sub']"]
+Product Hierarchy Search Label: ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//div[contains(text(),'of Product Hierarchy Search')]"]
+Search Dropdown (in Product Search): ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//button[contains(@class,'dropdown')][.//span[text()='Search Prod Hierarchy']]"]
+Search Product (Dropdown Option): ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//span[@class='text'][text()='Search Product']"]
+New Product Button: ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//a[@id='Button_SCCMProductSearch_SCCMProduct_NewSCCMProduct']"]
+Create New (Header): ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='proppage']", "//h3/span[text()='Create New']"]
+
+
 
 Results of Favorite Report Search: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Favorite Report Search')]"]
 OQL Radio Button (in Query Details Form): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//input[@id='queryDetailsOqlQuery']"]
@@ -55,6 +67,8 @@ product1 (in Execution Results Table): ["//frame[@name='container']", "//iframe[
 Search button (in Query List): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//[@id="SearchImg"]"]
 Query Name (in Search Result, Row 1): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//tr[@class='TD_Highlight']/td[1]"]
 Query Type (in Search Result, Row 1): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//tr[@class='TD_Highlight']/td[2]"]
+
+
 
 
 
