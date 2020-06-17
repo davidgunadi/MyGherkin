@@ -52,7 +52,9 @@ ADCM Left Menu Link
 Results of Favorite Report Search: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Favorite Report Search')]"]
 OQL Radio Button (in Query Details Form): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//input[@id='queryDetailsOqlQuery']"]
 product1 (in Execution Results Table): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//td[@class='TD_Normal'][contains(text(),'product1')]"]
-Query Name input field: //input[@id="SearchQueryName"]
+Search button (in Query List): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//[@id="SearchImg"]"]
+Query Name (in Search Result, Row 1): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//tr[@class='TD_Highlight']/td[1]"]
+Query Type (in Search Result, Row 1): ["//frame[@name='container']", "//iframe[@id='cacheframe1']", "//frame[@name='subpage']", "//tr[@class='TD_Highlight']/td[2]"]
 
 
 

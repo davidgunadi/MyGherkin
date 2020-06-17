@@ -4,7 +4,9 @@ Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "Develop Branch Enterprise ( Next Release Version )" from "https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure"
 Given credentials "DCM system admin default credentials"
-Given "RandomValue" value is the current datetime "+0 milliseconds"
+Given "RandomValue" value is the current datetime "+0 milliseconds" #need to change this to random string only
+
+#NEED TO ADD PRECONDITION
 
 Scenario: Log in as DCM System Admin Default Credentials
 Given browser "Chrome"
@@ -35,7 +37,7 @@ Then "product1 (in Execution Results Table)" should be displayed
 
 Scenario: Save Query and Verify
 When I click on "Save Query button"
-And I type "{RandomValue}" into the alert box
+And I type "{RandomValue}" in the alert box
 And I accept the alert box
 And I click on "Query Name input field"
 And I type "{RandomValue}"
