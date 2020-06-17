@@ -33,6 +33,14 @@ Given "currentTime" value is the current datetime "+0 milliseconds"
 //https://confluence.devfactory.com/display/KM/KMECN+E2E+Environment+Data+Structure
 
 //Boint
+Intranet Automation 1 Record (in Brick): //table[@class='standard']//tr[.//div[text()='Intranet Automation 1']]
+Cog Icon (for Intranet Automation 1 Record, in Brick)://table[@class='standard']//tr[.//div[text()='Intranet Automation 1']]//span[@class='fal fa-cog']
+Edit Bonzai Configuration Header: //h1[contains(text(),'Edit Bonzai Configuration')]
+TermStore Group Guid Textbox: //input[@name='_owlTermStoreGroupGuid']
+Footer Term Set Guid Textbox: //input[@name='_owlFooterTermSetGuid']
+
+
+
 Link Icon (in Header): //div[@class='header-links-container']
 Link Dropdown Menu (in Header): //nav[@class='header-links']
 Marketplace (in Link Dropdown Menu): //nav[@class='header-links']//a[text()='Marketplace']
