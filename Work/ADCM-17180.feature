@@ -2,22 +2,21 @@ Feature: ADCM-17180
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
-Given environment "Automation Staging" from "https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure"
-Given credentials "sc_admin"
+Given environment "Develop Branch Enterprise ( Next Release Version )" from "https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure"
+Given credentials "DCM system admin default credentials"
 Given "RandomValue" value is the current datetime "+0 milliseconds"
 
 Scenario: Log in as DCM System Admin Default Credentials
 Given browser "Chrome"
-When I open "{environment.brick_home.URL}"
-And I set "{credentials.brick_superadmin.username}" to "Brick Username" value
-And I set "{credentials.brick_superadmin.password}" to "Brick Password" value
-And I click on "Log me in button"
+When I open "{environment.DCM UI.URL}"
+And I set "{credentials.DCM system admin default credentials.username}" to "User Name field" value
+And I set "{credentials.DCM system admin default credentials.password}" to "Password field" value
+And I click on "Login button"
+Then "Welcome" should be displayed
 
-Login into the DCM UI.
-The DCM Welcome page is opened.
-
-Go to the "Reports" tab.
-The favorite reports page with the "RESULTS OF FAVORITE REPORT SEARCH" table is opened.
+Scenario: Go to Reports
+When I click on "Reports Top Navigation Tab"
+Then "Results of Favorite Report Search" should be displayed
 
 Click on the "SQL/OQL Reporting" sub tab on the left.
 The "SQL/OQL Reporting" page is opened.

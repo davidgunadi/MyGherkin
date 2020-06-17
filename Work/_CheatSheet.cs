@@ -19,6 +19,13 @@ Then "Username Avatar" page should be displayed
 //set Date Time to variable
 Given "currentTime" value is the current datetime "+0 milliseconds"
 
+//save a value to variable
+And I remember a value from ["title" atribute of] "selector" as "variableName"
+
+//verify a selector contains a text
+Then I should see "{text}" in "selector"
+
+
 //CRM MainFrame
 ["//iframe[@id='mainFrame']", ""]
 
@@ -29,17 +36,72 @@ Given "currentTime" value is the current datetime "+0 milliseconds"
 ["//iframe[@id='personaBar-iframe']", ""]
 
 
-//ECN
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                             ADCM                                   //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure
+ADCM Frame Container - Cacheframe0 - Subpage
+["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", ""]
+ADCM NoCacheFrame
+["//iframe[@id='nocacheframe']", ""]
+ADCM Left Menu Link
+["//frame[@name='sidebar']", ""]
+
+Results of Favorite Report Search: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Favorite Report Search')]"]
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                             ECN                                   //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/KM/KMECN+E2E+Environment+Data+Structure
 
-//Boint
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                             BOINT                                  //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
+//http://spadmin:Password%231@automation1
+Expand Node Icon (for Intranet Navigation-FR): //div[@class='treenodediv'][.//span[contains(@title,'Intranet Navigation-FR')]//img[@class='ti']
+Home (Tree Node): //div[@class='treenodediv']//span[@title='Home']
+Copy Term (Popup Menu Item)://span[@class='ms-core-menu-title'][text()='Copy Term']
+Delete Term (Popup Menu Item)://span[@class='ms-core-menu-title'][text()='Delete Term']
+Copy of Home (Tree Node): //div[@class='treenodediv']//span[@title='Copy of Home']
+
+Copy of Intranet Navigation (Tree Node): //div[@class='treenodediv']//span[@title='Copy of Intranet Navigation']
+General Tab (in Site Settings): //span[@id='PropertyTab']
+Term Set Name Textbox (in Site Settings): //input[@name='ctl00$PlaceHolderMain$termsetName']
+Save Button (in Site Settings): //input[contains(@id,'submit')][@value='Save']
+
+
+Intranet Navigation (Tree Node): //div[@class='treenodediv']//span[@title='Intranet Navigation']
+Copy Term Set (Popup Menu Item): //span[@class='ms-core-menu-title'][text()='Copy Term Set']
+
+Site Settings (Header): //span[@id='DeltaPlaceHolderPageTitleInTitleArea']//span[text()='Site Settings']
+Term store management link (in Site Settings): //a[contains(@id,'SiteAdministration_RptControls_TermStoreManagement')]
+Term Store Management Tool (Header): //span[@id='DeltaPlaceHolderPageTitleInTitleArea'][contains(.,'Term Store Management Tool')]
+Bonzai Automation Environment Terms (Tree Node): //div[@class='treenodediv']//span[@title='Bonzai Automation Environment Terms']
+Expand Node Icon (for Bonzai Automation Environment Terms): //div[@class='treenodediv'][.//span[@title='Bonzai Automation Environment Terms']]//img[@class='ti']
+Footer Navigation (Tree Node): //div[@class='treenodediv']//span[@title='Footer Navigation']
+Expand Node Icon (for Footer Navigation): //div[@class='treenodediv'][.//span[@title='Footer Navigation']]//img[@class='ti']
+First Tree Node Under Footer Navigation: //div[@class='treenodediv'][.//span[@title='Footer Navigation']]/following-sibling::ul[1]/li[1]/div//span[@class='ms-pagetitle']
+Unique Identifier Value: //div[@id='ItemId']
+Logo (located on the left of Site Settings - Term Store Management Tool): //img[@class='ms-siteicon-img']
+First Header in the Footer Section in Main Page: //div[contains(@class,'bz-footer-container')]//div[@class='bz-footer-top-nav'][1]/h3/a
+
+
 Intranet Automation 1 Record (in Brick): //table[@class='standard']//tr[.//div[text()='Intranet Automation 1']]
 Cog Icon (for Intranet Automation 1 Record, in Brick)://table[@class='standard']//tr[.//div[text()='Intranet Automation 1']]//span[@class='fal fa-cog']
 Edit Bonzai Configuration Header: //h1[contains(text(),'Edit Bonzai Configuration')]
 TermStore Group Guid Textbox: //input[@name='_owlTermStoreGroupGuid']
 Footer Term Set Guid Textbox: //input[@name='_owlFooterTermSetGuid']
-
-
 
 Link Icon (in Header): //div[@class='header-links-container']
 Link Dropdown Menu (in Header): //nav[@class='header-links']
@@ -68,10 +130,6 @@ Expiring Soon (Sort By Dropdown Option - in Marketplace): //div[@class='flex-1']
 Price Low to High (Sort By Dropdown Option - in Marketplace): //div[@class='flex-1'][.//span[text()='Sort By']]//select/option[text()='Price - Low to High']
 Price High to Low (Sort By Dropdown Option - in Marketplace): //div[@class='flex-1'][.//span[text()='Sort By']]//select/option[text()='Price - High to Low']
 
-//Boint
-//BOINT Env
-//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
-//http://spadmin:Password%231@automation1
 See All (for MarketPlace): //a[contains(@href,'marketplace')][text()='See All']
 Current Node - MarketPlace: //span[@class='bz-current-node'][text()='MarketPlace']
 Site Contents (Header): //span[@id='DeltaPlaceHolderPageTitleInTitleArea'][normalize-space(text())='Site Contents']
