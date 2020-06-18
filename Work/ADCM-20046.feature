@@ -5,6 +5,7 @@ Given quality bar version "20200115.1"
 Given environment "Develop Branch Enterprise ( Next Release Version )" from "https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure"
 Given credentials "DCM system admin default credentials"
 Given "currentDateInMMDDYYYY" default value is "{date('MMDDYYYY')}"
+Given "TaxID" default value is "{date('MMDDhhmmss')}"
 
 Scenario: Log in as DCM System Admin Default Credentials
 Given browser "Chrome"
@@ -32,12 +33,11 @@ When I set "TestOrganization1" to "Name (in Create New Organization Form)" value
 And I click on "Appointing Company Checkbox (in Create New Organization Form)"
 And I click on "Contract Kit Provider Checkbox (in Create New Organization Form)"
 And I click on "Distributor Checkbox (in Create New Organization Form)"
-And I set "123212" to "Tax ID/SSN (in Create New Organization Form)" value
+And I set "{TaxID}" to "Tax ID/SSN (in Create New Organization Form)" value
 And I click on "Synchronize with PDB (in Create New Organization Form)"
 And I click on "No (Dropdown Option)"
 And I click on "Agency Formation Date (in Create New Organization Form)"
 And I type "{currentDateInMMDDYYYY}"
-And I type "TAB"
 And I set "1234" to "DTCC ID (in Create New Organization Form)" value
 And I set "123456" to "National Producer Number (in Create New Organization Form)" value
 And I set "Entrepreneur" to "Doing Business As (in Create New Organization Form)" value
@@ -58,4 +58,4 @@ Then "Validating Successful Message" should be displayed
 
 Scenario: Click Save and Validate
 When I click on "Save Button"
-Then I should see "TestOrganization1" in "First Row in Result of Party Search"
+Then "TestOrganization1 in First Row in Result of Party Search" should be displayed
