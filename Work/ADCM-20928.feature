@@ -34,7 +34,7 @@ And I click on "Automobile (Dropdown Option)"
 And I click on "Description Textarea (in Mass Renewal)"
 And I type "test description"
 And I click on "Termination Reason Dropdown (in Mass Renewal)"
-And I click on "N/A (Dropdown Option)"
+And I click on "Voluntary Termination (Dropdown Option)"
 And I click on "Validate Button"
 Then "Validating Successful Message" should be displayed
 
