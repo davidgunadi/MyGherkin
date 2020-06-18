@@ -13,3 +13,11 @@ And I set "{credentials.DCM system admin default credentials.username}" to "User
 And I set "{credentials.DCM system admin default credentials.password}" to "Password field" value
 And I click on "Login button"
 Then "Welcome" should be displayed
+
+Scenario: Go to Party
+
+Scenario: Select Search Organization
+
+Scenario: Click Create Organization and Validate
+
+Scenario: Save and Confirm Organization is Created
