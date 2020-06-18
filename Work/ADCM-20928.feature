@@ -5,8 +5,6 @@ Given quality bar version "20200115.1"
 Given environment "Develop Branch Enterprise ( Next Release Version )" from "https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure"
 Given credentials "DCM system admin default credentials"
 
-
-
 Scenario: Log in as DCM System Admin Default Credentials
 Given browser "Chrome"
 When I open "{environment.DCM UI.URL}"
@@ -15,22 +13,31 @@ And I set "{credentials.DCM system admin default credentials.password}" to "Pass
 And I click on "Login button"
 Then "Welcome" should be displayed
 
-Go to the "Party" main tab in the page.
-The person party searching page with the "RESULTS OF PARTY SEARCH" table is opened.
+Scenario: Navigate to Party Tab
+When I click on "Party Top Navigation Tab"
+Then "Party Search Label" should be displayed
 
-Click on the "Mass Renewals" link on the left.
-The appointment mass renewals searching page with the "SELECT MASS RENEWAL" table is opened.
+Scenario: Navigate to Mass Renewals
+When I click on "Mass Renewals (in Sidebar)"
+And I refresh the page
+Then "Search Mass Renewals Label" should be displayed
 
-Click on the "New" button under the "SELECT MASS RENEWAL" table.
-The "Create New Appointment Mass Renewal" page is opened.
+Scenario: Click New
+When I click on "New Button (in Mass Renewal)"
+Then "Create New (Header)" should be displayed
 
-Select a jurisdiction in the "Jurisdiction" field, select an option in the "Appointment Line" field, select a future date in the "End Date" field, enter a value in the "Description" field, select a reason in the "Termination Reason" field, then click on the "Validate" button.
-It validates the field values, and the "VALIDATING...SUCCESSFUL" message is shown near the "Validate" button.
+Scenario: Enter Form Details and Validate
+When I click on "Jurisdiction Dropdown (in Mass Renewal)"
+And I click on "Alabama (Dropdown Option)"
+And I click on "Appointment Line Dropdown (in Mass Renewal)"
+And I click on "Automobile (Dropdown Option)"
+And I click on "Description Textarea (in Mass Renewal)"
+And I type "test description"
+And I click on "Termination Reason Dropdown (in Mass Renewal)"
+And I click on "N/A (Dropdown Option)"
+And I click on "Validate Button"
+Then "Validating Successful Message" should be displayed
 
-Click on the "Cancel" button.
-The "Create New Appointment Mass Renewal" page is closed and no new appointment mass renewal is created and shown in the "SELECT MASS RENEWAL" table.
-Scenario: Preconditions
-Given quality bar version "20200115.1"
-Given environment "Login into the "Develop Branch Enterprise ( Next Release Version )" environment." from "https://confluence.devfactory.com/display/ADCM/DCM+QA+Environments"
-Given credentials "Check the credentials of the "Develop Branch Enterprise ( Next Release Version )" environment."
-
+Scenario: Click Cancel Button and Verify No Record is Created
+When I click on "Cancel Button"
+Then "No Results Label" should be displayed

@@ -66,7 +66,7 @@ Given environment "Develop Branch Enterprise ( Next Release Version )" from "htt
 Given credentials "DCM system admin default credentials"
 Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 
-Scenario: Precondition - ADCM-111414 - Create Product1
+Scenario: ADCM-11414 - Create Product1
 Given browser "Chrome"
 When I execute scenario "https://jira.devfactory.com/browse/ADCM-11414"
 Then "Product1 in First Row in Result of Product Search Grid" should be displayed

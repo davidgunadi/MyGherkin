@@ -52,6 +52,20 @@ ADCM Left Menu Link
 ["//frame[@name='sidebar']", ""]
 
 
+Party Search Label: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Party Search')]"]
+Mass Renewals (in Sidebar): ["//frame[@name='sidebar']", "//a[@id='MassRenewal_sub']"]
+Search Mass Renewals Label: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'Mass Renewal')]"]
+New Button (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//a[@id='Button_Grid_MassRenewal_Appointment_New']"]
+
+
+Jurisdiction Dropdown (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//button[@data-id='PPField.MassRenewal.Appointment.Jurisdiction']"]
+Appointment Line Dropdown (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//button[@data-id='PPField.MassRenewal.Appointment.LicenseLine']"]
+Description Textarea (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//textarea[@id='PPField.MassRenewal.Appointment.Description']"]
+Termination Reason Dropdown (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//button[@data-id='TerminationReason]"]
+
+
+
+
 Name Textbox (in Create New Product Form): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//input[@id='Name']"]
 Description Textbox (in Create New Product Form): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//input[@id='Description']"]
 CUSIP Textbox (in Create New Product Form): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//input[@id='CUSIP']"]
@@ -60,7 +74,8 @@ Jurisdiction(s) Dropdown (in Create New Product Form): ["//frame[@name='containe
 DIS - Disability (Dropdown Option): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//span[@class='text'][text()='DIS - Disability']"]
 Alabama (Dropdown Option): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//span[@class='text'][text()='Alabama']"]
 Validating Successful Message: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//p[@id='ppMessage'][text()='Validating...successful']"]
-
+Product1 in First Row in Result of Product Search Grid: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//td[@id='Field_SCCMProductSearch_Main_Name_Grid_0'][text()='product1']"]
+First Row in Result of Product Search Grid: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//td[@id='Field_SCCMProductSearch_Main_Name_Grid_0']"]
 
 Hierarchy Search Label: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Hierarchy Search')]"]
 Product Search (in Sidebar): ["//frame[@name='sidebar']", "//a[@id='ProductHierarchySearch_sub']"]
