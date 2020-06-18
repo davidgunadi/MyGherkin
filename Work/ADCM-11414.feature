@@ -45,4 +45,4 @@ Then "Validating Successful Message" should be displayed
 
 Scenario: Click Save and Validate
 When I click on "Save Button"
-Then I should see "product1" in "First Row in Result of Product Search Grid"
+Then "Product1 in First Row in Result of Product Search Grid" should be displayed
