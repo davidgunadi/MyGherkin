@@ -43,22 +43,32 @@ Then I should see "{text}" in "selector"
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure
 ADCM Frame Container - CacheframeX - Subpage
-["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", ""]
-ADCM Frame Container - CacheframeX - Subpage
-["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='proppage']", ""]
+["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", ""]
+ADCM Frame Container - CacheframeX - Proppage
+["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", ""]
 ADCM NoCacheFrame
 ["//iframe[@id='nocacheframe']", ""]
 ADCM Left Menu Link
 ["//frame[@name='sidebar']", ""]
 
-Hierarchy Search Label: ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//div[contains(text(),'of Hierarchy Search')]"]
-Product Search (in Sidebar): ["//frame[@name='sidebar']", "//a[@id='ProductHierarchySearch_sub']"]
-Product Hierarchy Search Label: ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//div[contains(text(),'of Product Hierarchy Search')]"]
-Search Dropdown (in Product Search): ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//button[contains(@class,'dropdown')][.//span[text()='Search Prod Hierarchy']]"]
-Search Product (Dropdown Option): ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//span[@class='text'][text()='Search Product']"]
-New Product Button: ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='subpage']", "//a[@id='Button_SCCMProductSearch_SCCMProduct_NewSCCMProduct']"]
-Create New (Header): ["//frame[@name='container']", "//iframe[contains(@id,'cacheframe')]", "//frame[@name='proppage']", "//h3/span[text()='Create New']"]
 
+Name Textbox (in Create New Product Form): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//input[@id='Name']"]
+Description Textbox (in Create New Product Form): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//input[@id='Description']"]
+CUSIP Textbox (in Create New Product Form): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//input[@id='CUSIP']"]
+Product Type Dropdown (in Create New Product Form): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//button[@data-id='ProductType']"]
+Jurisdiction(s) Dropdown (in Create New Product Form): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//button[@data-id='Jurisdictions']"]
+DIS - Disability (Dropdown Option): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//span[@class='text'][text()='DIS - Disability']"]
+Alabama (Dropdown Option): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//span[@class='text'][text()='Alabama']"]
+Validating Successful Message: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//p[@id='ppMessage'][text()='Validating...successful']"]
+
+
+Hierarchy Search Label: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Hierarchy Search')]"]
+Product Search (in Sidebar): ["//frame[@name='sidebar']", "//a[@id='ProductHierarchySearch_sub']"]
+Product Hierarchy Search Label: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Product Hierarchy Search')]"]
+Search Dropdown (in Product Search): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//button[contains(@class,'dropdown')][.//span[text()='Search Prod Hierarchy']]"]
+Search Product (Dropdown Option): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//span[@class='text'][text()='Search Product']"]
+New Product Button: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//a[@id='Button_SCCMProductSearch_SCCMProduct_NewSCCMProduct']"]
+Create New (Header): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//h3/span[text()='Create New']"]
 
 
 Results of Favorite Report Search: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Favorite Report Search')]"]

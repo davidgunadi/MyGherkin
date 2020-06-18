@@ -15,10 +15,12 @@ Then "Welcome" should be displayed
 
 Scenario: Navigate to Hierarchy
 When I click on "Hierarchy Top Navigation Tab"
+And I refresh the page
 Then "Hierarchy Search Label" should be displayed
 
 Scenario: Open "Product Search"
 When I click on "Product Search (in Sidebar)"
+And I refresh the page
 Then "Product Hierarchy Search Label" should be displayed
 
 Scenario: Select "Search Product" in the Search Dropdown
@@ -30,8 +32,20 @@ Scenario: Click on New Product
 When I click on "New Product Button"
 Then "Create New (Header)" should be displayed
 
-Scenario: 
-Enter a value(e.g. "product1") in the "Name" field, enter a value(e.g. "product desc") in the "Description" field, enter a value(e.g. "1542") in the "CUSIP" field, select a value(e.g. DIS-Disablity) in the "Product Type" drop-down field, select a value(e.g. Alabama) in the "Jurisdiction(s)" drop-down field. Then click on the "Validate" button in the page.	
+Scenario: Fill in New Product Form and Validate
+And I set "product1" to "Name Textbox (in Create New Product Form)" value
+And I set "product desc" to "Description Textbox (in Create New Product Form)" value
+And I set "1542" to "CUSIP Textbox (in Create New Product Form)" value
+And I click on "Product Type Dropdown (in Create New Product Form)"
+And I click on "DIS - Disability (Dropdown Option)"
+And I click on "Jurisdiction(s) Dropdown (in Create New Product Form)"
+And I click on "Alabama (Dropdown Option)"
+
+
+
+select a value(e.g. DIS-Disablity) in the "Product Type" drop-down field,
+select a value(e.g. Alabama) in the "Jurisdiction(s)" drop-down field.
+Then click on the "Validate" button in the page.	
 The "VALIDATING...SUCCESSFUL" message is shown in the page near the "Validate" button.
 
 Scenario: 
