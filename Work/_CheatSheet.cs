@@ -52,12 +52,16 @@ ADCM Left Menu Link
 ["//frame[@name='sidebar']", ""]
 
 
+Search Person Dropdown (in Party Page): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//button[@title='Search Person']"]
+Search Organization (Dropdown Item): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//span[@class='text'][text()='Search Organization']"]
+Create Organization Button: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//a[@id='Button_Org_Main_NewOrg']"]
+
+
 Party Search Label: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'of Party Search')]"]
 Mass Renewals (in Sidebar): ["//frame[@name='sidebar']", "//a[@id='MassRenewal_sub']"]
 Search Mass Renewals Label: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//div[contains(text(),'Mass Renewal')]"]
 New Button (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//a[@id='Button_Grid_MassRenewal_Appointment_New']"]
-
-
+No Results Label: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//span[text()='No Results']"]
 Jurisdiction Dropdown (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//button[@data-id='PPField.MassRenewal.Appointment.Jurisdiction']"]
 Appointment Line Dropdown (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//button[@data-id='PPField.MassRenewal.Appointment.LicenseLine']"]
 Description Textarea (in Mass Renewal): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", "//textarea[@id='PPField.MassRenewal.Appointment.Description']"]
