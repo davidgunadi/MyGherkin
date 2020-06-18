@@ -14,10 +14,19 @@ And I set "{credentials.DCM system admin default credentials.password}" to "Pass
 And I click on "Login button"
 Then "Welcome" should be displayed
 
-Scenario: Go to Party
+Scenario: Navigate to Party Tab
+When I click on "Party Top Navigation Tab"
+Then "Party Search Label" should be displayed
 
 Scenario: Select Search Organization
+When I click on "Search Person Dropdown (in Party Page)"
+And I click on "Search Organization (Dropdown Item)"
+Then "Create Organization Button" should be displayed
 
-Scenario: Click Create Organization and Validate
+Scenario: Click Create Organization
+When I click on "Create Organization Button"
+Then "Create New (Header)" should be displayed
+
+Scenario: Fill in the New Organization Form and Validate
 
 Scenario: Save and Confirm Organization is Created
