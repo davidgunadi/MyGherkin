@@ -66,7 +66,7 @@ Given environment "Develop Branch Enterprise ( Next Release Version )" from "htt
 Given credentials "DCM system admin default credentials"
 Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 
-Scenario: Create Product1
+Scenario: Precondition - ADCM-111414 - Create Product1
 Given browser "Chrome"
 When I execute scenario "https://jira.devfactory.com/browse/ADCM-11414"
 Then "Product1 in First Row in Result of Product Search Grid" should be displayed
@@ -100,4 +100,4 @@ And I click on "Query Name input field"
 And I type "Query{RandomValue}"
 And I click on "Search button (in Query List)"
 Then I should see "Query{RandomValue}" in "Query Name (in Search Result, Row 1)"
-And I should see "OQL" in "Query Type (in Search Result, Row 1)"a
+And I should see "OQL" in "Query Type (in Search Result, Row 1)"
