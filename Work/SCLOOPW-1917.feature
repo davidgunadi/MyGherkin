@@ -1,4 +1,4 @@
-Feature: BEC-63
+Feature: SCLOOPW-1917
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"

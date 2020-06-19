@@ -4,9 +4,9 @@ Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "Automation Staging" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
 Given credentials "sc_admin"
-Given "GeneratedRandom" value is the current datetime "+0 milliseconds"
 
 Scenario: Log in to Bonzai as a site collection administrator
+Given "GeneratedRandom" value is the current datetime "+0 milliseconds"
 Given browser "Chrome"
 When I open "{environment.bonzai_home.Login URL}"
 Then "Admin Menu Icon" should be displayed

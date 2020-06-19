@@ -4,10 +4,10 @@ Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "Beckon Web App QA" from "https://confluence.devfactory.com/display/BEC/Manual+Testing+Environments"
 Given credentials "beckonqa"
-Given "currentDateTime" value is the current datetime "+0 milliseconds"
 
 Scenario: Log in
 Given browser "Chrome"
+Given "currentDateTime" value is the current datetime "+0 milliseconds"
 When I open "{environment.Web Application.Login URL}"
 And I click on "Username Input"
 And I type "{credentials.beckonqa.username}"

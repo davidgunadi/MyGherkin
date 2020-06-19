@@ -4,10 +4,10 @@ Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "Develop Branch Enterprise ( Next Release Version )" from "https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure"
 Given credentials "DCM system admin default credentials"
-Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 
 Scenario: ADCM-11414 - Create Product1
 Given browser "Chrome"
+Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 When I execute scenario "https://jira.devfactory.com/browse/ADCM-11414"
 Then "Product1 in First Row in Result of Product Search Grid" should be displayed
 

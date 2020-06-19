@@ -42,14 +42,24 @@ Then I should see "{text}" in "selector"
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/ADCM/DCM+Environments+Data+Structure
+```
 ADCM Frame Container - CacheframeX - Subpage
 ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", ""]
+
 ADCM Frame Container - CacheframeX - Proppage
 ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='proppage']", ""]
-ADCM NoCacheFrame
-["//iframe[@id='nocacheframe']", ""]
+
 ADCM Left Menu Link
 ["//frame[@name='sidebar']", ""]
+```
+
+Create Person Button: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//a[@id='Button_Person_Main_NewPerson']"]
+
+
+
+
+TestOrganization1 in First Row in Result of Party Search: ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//td[@id='Field_Org_Main_Name_Grid_0'][text()='TestOrganization1']"]
+
 
 
 Search Person Dropdown (in Party Page): ["//frame[@name='container']", "//iframe[@id='cacheframe0']", "//frame[@name='subpage']", "//button[@title='Search Person']"]
