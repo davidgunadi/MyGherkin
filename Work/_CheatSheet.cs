@@ -135,6 +135,17 @@ Query Type (in Search Result, Row 1): ["//frame[@name='container']", "//iframe[@
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
 //http://spadmin:Password%231@automation1
+
+People Listing (in Site Contents): //a[contains(@id,'viewlist')][@title='People Listing']
+People Listing (Header in Site Contents): //span[@id='DeltaPlaceHolderPageTitleInTitleArea']//a[text()='People Listing']
+Title Textbox (in New People Form): //input[contains(@id,'Title')][@title='Title Required Field']
+Person to List Textbox (in New People Form): //input[contains(@id,'OwlPersonToList')][@title='Person to List']
+Save Button (in New People Form): //input[@value='Save'][contains(@id,'toolBarTbl_')]
+BONZAI\administrator (Dropdown Option): //div[@class='ms-core-menu-label'][text()='BONZAI\administrator']
+
+
+
+
 Expand Node Icon (for Intranet Navigation-FR): //div[@class='treenodediv'][.//span[contains(@title,'Intranet Navigation-FR')]//img[@class='ti']
 Home (Tree Node): //div[@class='treenodediv']//span[@title='Home']
 Copy Term (Popup Menu Item)://span[@class='ms-core-menu-title'][text()='Copy Term']
