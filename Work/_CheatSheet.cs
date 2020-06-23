@@ -110,11 +110,25 @@ Query Type (in Search Result, Row 1): ["//frame[@name='container']", "//iframe[@
 
 
 
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              SUPSOFT                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
+["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@title='Contains all the links to LiveAssist tools']"]
+mainAdmin
 
 
 
-
-
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                         GFI Archiver                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+https://confluence.devfactory.com/display/GFIA/Yaml+Environments
+User Icon on Top Right of Page (in NewUI): //div[@class='df-user-profile__img-container']
+Archive Page (in NewUI): //div[@class='section__header px-4 py-2'][text()='Archive']
 
 
 
@@ -250,6 +264,10 @@ Question Mark Icon Help Text (for FREQUENT PUBLISHERS): //div[@class='qtip-conte
 
 //temp Locator DNN-24982
 ["//iframe[@id='personaBar-iframe']", ""]
+
+My Website (the record in Sites Page): ["//iframe[@id='personaBar-iframe']", "//div[@class='portal-name'][text()='My Website']"]
+Site Settings icon (for My Website): ["//iframe[@id='personaBar-iframe']", "//div[@class='portal-card-container'][.//div/text()='My Website']//div[@title='Site Settings']"]
+
 Connectors menu item: ["//iframe[@id='personaBar-iframe']", "//li[@id='Dnn.Connectors']"]
 Connectors (Header): ["//iframe[@id='personaBar-iframe']", "//h3[text()='Connectors']"]
 ZENDESK Connector: ["//iframe[@id='personaBar-iframe']", "//span[@class='socialnetwork-name'][text()='Zendesk']"]
