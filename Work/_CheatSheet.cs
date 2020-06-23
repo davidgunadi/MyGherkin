@@ -116,9 +116,14 @@ Query Type (in Search Result, Row 1): ["//frame[@name='container']", "//iframe[@
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
+["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
 ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@title='Contains all the links to LiveAssist tools']"]
-mainAdmin
+Logout Button on Top Right: ["//frame[@name='topFrame']", "//a[@title='Logout']"]
 
+Analyst Monitor (Heading): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@class='pageheader'][text()='Analyst Monitor']"]
+Status Filter Listbox (in Analyst Monitor): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='statusSearch']"]
+Available Option (in Status Filter Listbox): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='statusSearch']/option[text()='Available']"]
+Unavailable Option (in Status Filter Listbox): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='statusSearch']/option[text()='Unavailable']"]
 
 
 ////////////////////////////////////////////////////////////////////////
