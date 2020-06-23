@@ -18,6 +18,8 @@ When I click on "Application Management in SA Menu"
 And I click on "RequestAssist in SA Menu"
 And I click on "Types in SA Menu"
 Then "Types (Header)" should be displayed
+And "Request Types Table in Types" should be displayed
+And "New Button in Types" should be displayed
 
 Scenario: Click on 'New' button
 When I click on "New Button in Types"
