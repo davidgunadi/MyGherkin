@@ -23,7 +23,7 @@ Then "CSR Chat Window" page should be displayed
 Scenario: Login as Admin
 When I switch to main window
 And I click on "LiveAssist Menu Item in SC Left Menu"
-And I double click on "Logout Button in Top Menu (for Support Center)"
+And I click on "Logout Button in Top Menu (for Support Center)"
 When I set "{credentials.Administrator.username}" to "Username Textbox in SC Login Page" value
 And I set "{credentials.Administrator.password}" to "Password Textbox in SC Login Page" value
 And I click on "Login Button in SC Login Page"
@@ -41,16 +41,18 @@ And "Login Name (Table Header, in Analyst Monitor)" should be displayed
 And "Chat Window (Table Header, in Analyst Monitor)" should be displayed
 And "Status (Table Header, in Analyst Monitor)" should be displayed
 And "Refresh Button (in Analyst Monitor)" should be displayed
-And "Analyst (Cell, in Agent Window Status Table)" should be displayed
+#And "Analyst (Cell, in Agent Window Status Table)" should be displayed
 
 Scenario: Select "Available" in "Status Filter" textbox and click on "Refresh" button
-When I click on "Available Option (in Status Filter Listbox)"
-And I type "available"
+<custom> select "Available" from the listbox "Status Filter Listbox (in Analyst Monitor)"
+#When I click on "Available Option (in Status Filter Listbox)"
+#And I type "available"
 And I click on "Refresh Button (in Analyst Monitor)"
 Then "Analyst (Cell, in Agent Window Status Table)" should not be displayed
 
 Scenario: Select "Unavailable" in "Status Filter" textbox and click on "Refresh" button
-When I click on "Status Filter Listbox (in Analyst Monitor)"
-And I type "unavailable"
+<custom> select "Unavailable" from the listbox "Status Filter Listbox (in Analyst Monitor)"
+#When I click on "Status Filter Listbox (in Analyst Monitor)"
+#And I type "unavailable"
 And I click on "Refresh Button (in Analyst Monitor)"
 Then "Analyst (Cell, in Agent Window Status Table)" should be displayed
