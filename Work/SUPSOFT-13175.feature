@@ -34,7 +34,7 @@ And "Cancel Button (in Edit Request Type Form)" should be displayed
 
 Scenario: Enter Type Name and Save
 Given "RequestTypeName" default value is "Test{date('MMDDhhmmss')}"
-And I set "Request Type (Textbox, in Edit Request Type Form)" to "{RequestTypeName}"
+When I set "Request Type (Textbox, in Edit Request Type Form)" value to "{RequestTypeName}"
 And I click on "Save Button (in Edit Request Type Form)"
 Then "Request type has been saved" should be displayed
 And "Set Permissions Button (in Edit Request Type Form)" should be displayed
