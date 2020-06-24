@@ -2,13 +2,13 @@ Feature: SCLOOPW-13037
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
-Given environment "QA" from "https://confluence.devfactory.com/display/SCHOOL/Environments"
+Given environment "Staging" from "https://confluence.devfactory.com/display/SCHOOL/Environments"
 Given credentials "staff"
 Given credentials "staff2"
 
 Scenario: Tasks: Login as Staff user
 Given browser "Chrome" as "Staff_Browser"
-When I open "{environment.Gradebook.Login URL}" in "Staff_Browser"
+When I open "{environment.Lisa School District.Login URL}" in "Staff_Browser"
 And I set "Username" value to "{credentials.staff.username}" in "Staff_Browser"
 And I set "Password" value to "{credentials.staff.password}" in "Staff_Browser"
 And I click on "Login" in "Staff_Browser"
@@ -35,8 +35,8 @@ Then "Staff2 record (in Current Editors and Contributors table)" should be displ
 
 Scenario: Tasks: Login as Staff 2 user
 Given browser "Chrome" as "Staff2_Browser"
-When I open "{environment.Gradebook.Login URL}" in "Staff2_Browser"
-And I set "Username" value to "{credentials.staff.username}" in "Staff2_Browser"
-And I set "Password" value to "{credentials.staff.password}" in "Staff2_Browser"
+When I open "{environment.Lisa School District.Login URL}" in "Staff2_Browser"
+And I set "Username" value to "{credentials.staff2.username}" in "Staff2_Browser"
+And I set "Password" value to "{credentials.staff2.password}" in "Staff2_Browser"
 And I click on "Login" in "Staff2_Browser"
 Then I should see "Staff User" in "My Sites" in "Staff2_Browser"
