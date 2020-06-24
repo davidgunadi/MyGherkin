@@ -30,6 +30,7 @@ Then "Assign Rights: Minisite" page should be displayed in "Staff_Browser"
 Scenario: Add user as editor
 When I click on "Add New Editor (Button, in Editors and Contributors)" in "Staff_Browser"
 And I click on "Checkbox for Staff2 record (in Add Editors)" in "Staff_Browser"
+And I wait for "1" seconds
 And I click on "Add Editor (Button, in Editors and Contributors)" in "Staff_Browser"
 Then "Staff2 record (in Current Editors and Contributors table)" should be displayed in "Staff_Browser"
 
@@ -43,6 +44,6 @@ Then "Staff User (under MY SITES section)" should be displayed in "Staff2_Browse
 
 Scenario: Cleanup Steps - Remove Staff2
 When I click on "Checkbox (for Staff2 record,in Current Editors and Contributors table)" in "Staff_Browser"
-And I click on "Remove Selected (Button, in Editors and Contributors)"
-And I wait until "Staff2 record (in Current Editors and Contributors table)" disappears
+And I click on "Remove Selected (Button, in Editors and Contributors)" in "Staff_Browser"
+And I wait until "Staff2 record (in Current Editors and Contributors table)" disappears in "Staff_Browser"
 Then "Staff2 record (in Current Editors and Contributors table)" should not be displayed in "Staff_Browser"
