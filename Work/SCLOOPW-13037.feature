@@ -12,11 +12,11 @@ When I open "{environment.Lisa School District.Login URL}" in "Staff_Browser"
 And I set "Username" value to "{credentials.staff.username}" in "Staff_Browser"
 And I set "Password" value to "{credentials.staff.password}" in "Staff_Browser"
 And I click on "Login" in "Staff_Browser"
-Then "Staff Staff's Portal" page should be displayed in "Staff_Browser"
+Then "Welcome Staff User!" page should be displayed in "Staff_Browser"
 
 Scenario: Open Staff User web site
 When I click on "My Website" in "Staff_Browser"
-Then "Staff Staff" page should be displayed in "Staff_Browser"
+Then "Staff User" page should be displayed in "Staff_Browser"
 
 Scenario: Open Manage Site
 When I click on "Manage Site" in "Staff_Browser"
