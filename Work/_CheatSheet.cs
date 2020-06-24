@@ -25,6 +25,9 @@ And I remember a value from ["title" atribute of] "selector" as "variableName"
 //verify a selector contains a text
 Then I should see "{text}" in "selector"
 
+//Create Random Text
+Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -99,21 +102,11 @@ Supsoft LeftFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
 Supsoft RightFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
-["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//img[contains(@src,'welcome_support_admin')]"]
-["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='New']"]
 
-["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//a[@class='clsTreeLeafSelected'][contains(@title,'Define custom Request Types')]"]
-
-Logout Button on Top Right: ["//frame[@name='topFrame']", "//a[@title='Logout']"]
-
-Analyst Monitor (Heading): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@class='pageheader'][text()='Analyst Monitor']"]
-Status Filter Listbox (in Analyst Monitor): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='statusSearch']"]
-Available Option (in Status Filter Listbox): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='statusSearch']/option[text()='Available']"]
-Unavailable Option (in Status Filter Listbox): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='statusSearch']/option[text()='Unavailable']"]
-
-Full Name (Table Header, in Analyst Monitor): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableSubHeader'][contains(.,'Full Name')]"]
-Login Name (Table Header, in Analyst Monitor): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableSubHeader'][contains(.,'Login Name')]"]
-Chat Window (Table Header, in Analyst Monitor): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableSubHeader'][contains(.,'Chat Window')]"]
-Status (Table Header, in Analyst Monitor): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableSubHeader'][contains(.,'Status')]"]
-Refresh Button (in Analyst Monitor): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='Refresh']"]
-Analyst (Cell, in Agent Window Status Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='divAgentWindowStatus']//td/a[text()='analyst']"]
+Build Packages (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Build Packages']"]
+MSI Package Name Textbox in Build Packages: //*input[@id="msiName"]
+Product Name Textbox in Build Packages: //*input[@id="productName"]
+Create as Client Package Checkbox in Build Packages: //*input[@type="checkbox"][@name="isAgentPackage"]
+Select All Checkbox for Admin Tools Under Select DNA for MSI Package in Build Packages: //*a[@class="clsImageAction1"][contains(@href, "unescape('Agent%20Binaries')")]/preceding-sibling::input[@type="checkbox][@name="catcheck"]
+Create MSI Package Button in Build Packages: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Create MSI Package']"]
+Build completed without critical errors Message in Build Packages: //*font[contains(text(), "Build completed without critical errors")]
