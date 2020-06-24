@@ -29,7 +29,7 @@ Then "Assign Rights: Minisite" page should be displayed in "Staff_Browser"
 
 Scenario: Add user as editor
 When I click on "Add New Editor (Button, in Editors and Contributors)" in "Staff_Browser"
-And I click on "Checkbox for Staff2 record" in "Staff_Browser"
+And I click on "Checkbox for Staff2 record (in Add Editors)" in "Staff_Browser"
 And I click on "Add Editor (Button, in Editors and Contributors)" in "Staff_Browser"
 Then "Staff2 record (in Current Editors and Contributors table)" should be displayed in "Staff_Browser"
 
@@ -39,4 +39,10 @@ When I open "{environment.Lisa School District.Login URL}" in "Staff2_Browser"
 And I set "Username" value to "{credentials.staff2.username}" in "Staff2_Browser"
 And I set "Password" value to "{credentials.staff2.password}" in "Staff2_Browser"
 And I click on "Login" in "Staff2_Browser"
-Then I should see "Staff User" in "My Sites" in "Staff2_Browser"
+Then "Staff User (under MY SITES section)" should be displayed in "Staff2_Browser"
+
+Scenario: Cleanup Steps - Remove Staff2
+When I click on "Checkbox (for Staff2 record,in Current Editors and Contributors table)" in "Staff_Browser"
+And I click on "Remove Selected (Button, in Editors and Contributors)"
+And I wait until "Staff2 record (in Current Editors and Contributors table)" disappears
+Then "Staff2 record (in Current Editors and Contributors table)" should not be displayed in "Staff_Browser"
