@@ -1,10 +1,9 @@
-Feature: SUPSOFT-13165
+Feature: SUPSOFT-4094
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
 Given credentials "Administrator"
-Given credentials "Analyst"
 
 Scenario: Browser: Login to Support Administrator
 Given browser "Chrome"
@@ -29,14 +28,14 @@ And I "uncheck" "Disable Spell Checkbox in Solr Server" checkbox
 And I click on "Save Button in Solr Server"
 Then I remember a value from "checked" attribute of "Perform Fuzzy Searches Checkbox in Solr Server" as "PerformFuzzyCheckboxStatus"
 And I remember a value from "checked" attribute of "Disable Spell Checkbox in Solr Server" as "DisableSpellCheckboxStatus"
-And the value of "PerformFuzzyCheckboxStatus" should be "false"
-And the value of "DisableSpellCheckboxStatus" should be "false"
+And the value of "PerformFuzzyCheckboxStatus" should be empty
+And the value of "DisableSpellCheckboxStatus" should be empty
 
 
 Scenario: Browser: Navigate to Solr Server Configuration Page
-When I click on "Platform Configuration In SA Menu"
+When I click on "Platform Configuration in SA Menu"
 And I click on "Solr Server in SA Menu"
 Then "Solr Server (Header)" should be displayed
-And the value of "PerformFuzzyCheckboxStatus" should be "false"
-And the value of "DisableSpellCheckboxStatus" should be "false"
+And the value of "PerformFuzzyCheckboxStatus" should be empty
+And the value of "DisableSpellCheckboxStatus" should be empty
 And "Save Button in Solr Server" should be displayed

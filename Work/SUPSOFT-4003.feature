@@ -26,8 +26,8 @@ Given "UniqueName" default value is "{date('YYYYMMDDmmss')}"
 Given a stopwatch "Load Timer"
 When I set "MSI Package Name Textbox in Build Packages" value to "MSIPackageName_{UniqueName}"
 And I set "Product Name Textbox in Build Packages" value to "ProdName_{UniqueName}"
-And I click on "Create as Client Package Checkbox in Build Packages"
-And I click on "Select All Checkbox for Admin Tools Under Select DNA for MSI Package in Build Packages"
+And I "check" "Create as Client Package Checkbox in Build Packages" checkbox
+And I "check" "Select All Checkbox for Admin Tools Under Select DNA for MSI Package in Build Packages" checkbox
 And I reset the stopwatch "Load Timer"
 And I start the stopwatch "Load Timer"
 And I click on "Create MSI Package Button in Build Packages"

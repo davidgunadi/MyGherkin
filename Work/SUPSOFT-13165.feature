@@ -45,10 +45,10 @@ And "Status (Table Header, in Analyst Monitor)" should be displayed
 And "Refresh Button (in Analyst Monitor)" should be displayed
 And "Analyst (Cell, in Agent Window Status Table)" should be displayed
 
-Scenario: Select "Available" in "Status Filter" textbox and click on "Refresh" button
-When I click on "Available Option (in Status Filter Listbox)"
-And I click on "Refresh Button (in Analyst Monitor)"
-Then "Analyst (Cell, in Agent Window Status Table)" should not be displayed
+# Scenario: Select "Available" in "Status Filter" textbox and click on "Refresh" button
+# When I click on "Available Option (in Status Filter Listbox)"
+# And I click on "Refresh Button (in Analyst Monitor)"
+# Then "Analyst (Cell, in Agent Window Status Table)" should not be displayed
 
 Scenario: Select "Unavailable" in "Status Filter" textbox and click on "Refresh" button
 When I click on "Unavailable Option (in Status Filter Listbox)"

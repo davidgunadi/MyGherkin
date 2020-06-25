@@ -28,6 +28,9 @@ Then I should see "{text}" in "selector"
 //Create Random Text
 Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 
+//Date
+Given "NextMonthDateInMMDDYYYY" default value is "{date('MM/DD/YYYY','30 days')}"
+
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -103,10 +106,17 @@ Supsoft LeftFrame
 Supsoft RightFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
 
-Build Packages (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Build Packages']"]
-MSI Package Name Textbox in Build Packages: //*input[@id="msiName"]
-Product Name Textbox in Build Packages: //*input[@id="productName"]
-Create as Client Package Checkbox in Build Packages: //*input[@type="checkbox"][@name="isAgentPackage"]
-Select All Checkbox for Admin Tools Under Select DNA for MSI Package in Build Packages: //*a[@class="clsImageAction1"][contains(@href, "unescape('Agent%20Binaries')")]/preceding-sibling::input[@type="checkbox][@name="catcheck"]
-Create MSI Package Button in Build Packages: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Create MSI Package']"]
-Build completed without critical errors Message in Build Packages: //*font[contains(text(), "Build completed without critical errors")]
+Solr Server (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Solr Server']"]
+Perform Fuzzy Searches Checkbox in Solr Server: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='prefFuzzySearchId']"]
+Disable Spell Checkbox in Solr Server: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='prefSpellCheckDisabled']"]
+Save Button in Solr Server: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='prefsubmit']"]
+Unchecked Perform Fuzzy Searches Checkbox in Solr Server:
+UnChecked Disable Spell Checkbox in Solr Server:
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              JVHOPST                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/EN/Jive+HOP+Standard+E2E+Environment+Data
