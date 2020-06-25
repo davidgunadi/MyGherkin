@@ -17,10 +17,10 @@ Then "Main" page should be displayed
 
 Scenario: Create a custom stream and add a group to the custom stream
 Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
-When I click on "News menu item"
+When I click on "News menu item (in Top Bar)"
 And I click on "Plus submenu icon"
 And I click on "OK Got It"
-And I set "Stream name textbox" value to "GroupStream_{RandomValue}"
+And I set "Stream name Textbox" value to "GroupStream_{RandomValue}"
 And I set "Search Textbox (in Stream Page)" value to "Community Group for storing ALL types of content"
 And I click on "Add Button (for Community Group for storing ALL types of content)"
 And I wait until "In Stream Button (for Community Group for storing ALL types of content)" appears
