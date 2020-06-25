@@ -120,3 +120,17 @@ UnChecked Disable Spell Checkbox in Solr Server:
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/EN/Jive+HOP+Standard+E2E+Environment+Data
+
+OK Got It: //button[text()='OK, Got It']
+Stream name Textbox: //input[@id='New Stream-label-id']
+Search Textbox (in Stream Page): //input[@id='j-stream-edit-search-textfield']
+Add Button (for Community Group for storing ALL types of content): //li[contains(.,'Community Group for storing ALL types of content')]//button[text()='Add']
+In Stream Button (for Community Group for storing ALL types of content)://li[contains(.,'Community Group for storing ALL types of content')]//button[text()='In Stream']
+Done Button (in New Stream Page): //button[contains(@class,'js-done-editing-stream')]
+Community Group for storing ALL types of content (in Search Result): //a[@class='j-visor-result-link']/span[text()='Community Group for storing ALL types of content']
+
+
+Name Textbox (in Create Project): //input[@id='jive-place-name-input']
+Description Textarea (in Create Project): //textare[@name='description']
+Tags Textbox (in Create Project): //div[@class='j-tags']
+Test Project in Community Group for storing ALL types of content (Header): //h1[@class='j-placeTitle'][.//a[contains(text(),'TestProject')]][.//a[contains(text(),'Community Group for storing ALL types of content')]]

@@ -2,72 +2,55 @@ Feature: JVHOPST-16424
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
-Given environment "* Environments: * Name:Default SE7 environment
-    * Type: QA
-   
-   
- * Credentials: * Username: username
-    * Password: password
-   
-   
- * Selectors * Email Address: //*[@id='username01']
-    * Password: //*[@id='password01']
-    * Sign in button: //*[@id='jive-login-button']
-    * Application landing: "application landing page for the user. it may be any page wrt user/server configuration, like News, Main, etc. that proves the user is logged in, i.e. avatar icon for the user is displayed on the top right"
-    * News tab and I click on + icon on the News page: //*[@id='jive-navbar-link-news']
-    * OK, Got it button from the New Stream page under Create custom streams for..heading: //*[@id='j-builder-help-splash']
-    * New stream field and enter the custom stream name in the field, eg: Group stream: //*[@id='New Stream-label-id']
-    * Search field and enter the group name in the Search field 
-      
-      eg: Community Group for storing All types of contents in the search field: //*[@id='j-stream-edit-search-textfield']
-    * Add button under the group name under the places: //*[@id='button-addstream-container-1019']
-    * Done button: //*[@id='stream-header']
-    * Search icon: //*[@id='j-nav-search']
-    * Community Group for storing All types of contents name from the search result: //*[@id='__generated_id_7']
-    * Actions dropdown and select Project menu item: //*[@id='jive-place-link-actions']
-    * Name (Required) field and enter the project name into the input field, eg: group project: //*[@id='jive-place-name-input']
-    * Description text area input field and enter a project description, eg: This is the project created in the group: //*[@name='description']
-    * Tags input field and enter a value in the field: //*[@id='input_tags']
-    * Preview button: //*[@id='js-about-apply']
-    * Create Project button from the bottom-left corner: //*[@id='save']
-    * News tab and click on the custom stream created in step 2: //*[@id='jive-navbar-link-news']" from "https://confluence.devfactory.com/display/EN/Jive+HOP+Standard+E2E+Environment+Data"
-Given credentials "Select the user account based on the instructions from the "Data prerequisites" row."
+Given environment "Default SE7 environment" from "https://confluence.devfactory.com/x/g1nsGg"
+Given credentials "regular_user1"
 
-Scenario: Login as an admin user
+Scenario: Login as Admin User
 Given browser "Chrome"
-When I open "Default SE7 environment"
-And I click on "Email Address"
-And I type "doll.tearsheet@aurea.com" 
-And I click on "Password"
-And I type "valid Password"
+When I open "{environment.Jive HOP web application.URL}"
+And I click on "Email Address input field"
+And I type "{credentials.regular_user1.username}"
+And I click on "Password input field"
+And I type "{credentials.regular_user1.password}"
 And I click on "Sign in button"
-Then "Application landing" page should be displayed
+Then "Main" page should be displayed
 
 Scenario: Create a custom stream and add a group to the custom stream
-When I click on "News tab and I click on + icon on the News page" 
-And I click on "OK, Got it button from the New Stream page under Create custom streams for..heading"
-And I click on "New stream field and enter the custom stream name in the field, eg: Group stream"
-And I click on "Search field and enter the group name in the Search field, eg: Community Group for storing All types of contents in the search field"
-And I click on "Add button under the group name under the places "
-And I click on "Done button"
-Then "newly created custom stream" page should be displayed
+Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+When I click on "News menu item"
+And I click on "Plus submenu icon"
+And I click on "OK Got It"
+And I set "Stream name textbox" value to "GroupStream_{RandomValue}"
+And I set "Search Textbox (in Stream Page)" value to "Community Group for storing ALL types of content"
+And I click on "Add Button (for Community Group for storing ALL types of content)"
+And I wait until "In Stream Button (for Community Group for storing ALL types of content)" appears
+And I click on "Done Button (in New Stream Page)"
+Then "GroupStream_{RandomValue}" page should be displayed
 
 Scenario: Open a group page add in the custom stream in step 2
-When I click on "Search icon" 
-And I type "'Community Group for storing All types of contents' in the search field"
-And I click on "Community Group for storing All types of contents name from the search result"
-Then "selected group" page should be displayed
+When I click on "Search icon"
+And I set "Search input" value to "Community Group for storing ALL types of content"
+And I click on "Community Group for storing ALL types of content (in Search Result)"
+Then "Community Group for storing ALL types of content group page" should be displayed
 
 Scenario: Create a project in the Group
-When I click on "Actions dropdown and select Project menu item"
-And I click on "Name (Required) field and enter the project name into the input field, eg: group project"
-And I click on "Description text area input field and enter a project description, eg: This is the project created in the group"
-And I click on "Tags input field and enter a value in the field"
-And I press "Enter" 
-And I click on "Preview button" 
-And I click on "Create Project button from the bottom-left corner"
-Then I should see "project is created inside the group and displayed" in "project activity page"
+When I click on "Actions dropdown"
+And I click on "Project link"
+And I set "Name Textbox (in Create Project)" value to "TestProject_{RandomValue}"
+And I set "Description Textarea (in Create Project)" value to "TestDesc_{RandomValue}"
+And I click on "Tags Textbox (in Create Project)"
+And I type "TestTag"
+And I type "ENTER"
+And I click on "Preview"
+And I click on "Create Project"
+Then "Test Project in Community Group for storing ALL types of content (Header)" should be displayed
 
 Scenario: Verify the project added in the group displayed in the custom stream created in step 2
-When I click on "News tab and click on the custom stream created in step 2"
-Then I should see "the notification about the created project on step 4 is displayed" in "Social News section of the custom stream created in step 2."
+When I click on "News menu item"
+And I click on "GroupStream XXX (in Stream Page)"
+Then "You created TestProject (Notification, in Stream Page)" should be displayed
+
+Scenario: Cleanup - Delete Created Stream
+When I click on "X Icon (in Stream Page)"
+And I click on "Delete Icon (in Delete This Stream confirmation popup)"
+Then "X Icon (in Stream Page)" should not be displayed
