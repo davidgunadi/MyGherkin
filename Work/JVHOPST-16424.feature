@@ -20,7 +20,8 @@ Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 When I click on "News menu item (in Top Bar)"
 And I click on "Plus submenu icon"
 And I click on "OK Got It"
-And I set "Stream name Textbox" value to "GroupStream_{RandomValue}"
+And I click on "Stream name Textbox"
+And I type "GroupStream_{RandomValue}"
 And I set "Search Textbox (in Stream Page)" value to "Community Group for storing ALL types of content"
 And I click on "Add Button (for Community Group for storing ALL types of content)"
 And I wait until "In Stream Button (for Community Group for storing ALL types of content)" appears
@@ -37,6 +38,7 @@ Scenario: Create a project in the Group
 When I click on "Actions dropdown"
 And I click on "Project link"
 And I set "Name Textbox (in Create Project)" value to "TestProject_{RandomValue}"
+And I wait until "Green Tick Mark for URL Textbox (in Create Project)" appears
 And I set "Description Textarea (in Create Project)" value to "TestDesc_{RandomValue}"
 And I click on "Tags Textbox (in Create Project)"
 And I type "TestTag"
@@ -46,7 +48,7 @@ And I click on "Create Project"
 Then "Test Project in Community Group for storing ALL types of content (Header)" should be displayed
 
 Scenario: Verify the project added in the group displayed in the custom stream created in step 2
-When I click on "News menu item"
+When I click on "News menu item (in Top Bar)"
 And I click on "GroupStream XXX (in Stream Page)"
 Then "You created TestProject (Notification, in Stream Page)" should be displayed
 
