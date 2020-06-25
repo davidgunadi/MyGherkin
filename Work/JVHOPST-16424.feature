@@ -8,6 +8,7 @@ Given credentials "regular_user1"
 Scenario: Login as Admin User
 Given browser "Chrome"
 When I open "{environment.Jive HOP web application.URL}"
+And I set window size to "1366x768"
 And I click on "Email Address input field"
 And I type "{credentials.regular_user1.username}"
 And I click on "Password input field"
@@ -55,4 +56,4 @@ Then "You created TestProject (Notification, in Stream Page)" should be displaye
 Scenario: Cleanup - Delete Created Stream
 When I click on "X Icon (in Stream Page)"
 And I click on "Delete Icon (in Delete This Stream confirmation popup)"
-Then "X Icon (in Stream Page)" should not be displayed
+Then "Delete Icon (in Delete This Stream confirmation popup)" should not be displayed
