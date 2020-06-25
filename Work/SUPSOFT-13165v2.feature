@@ -56,3 +56,8 @@ Scenario: Select "Unavailable" in "Status Filter" textbox and click on "Refresh"
 #And I type "unavailable"
 And I click on "Refresh Button (in Analyst Monitor)"
 Then "Analyst (Cell, in Agent Window Status Table)" should be displayed
+
+
+
+
+#Status Filter Listbox (Example2): {"type":"listbox", "open":["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='statusSearch']"],"value":"//option[text()='Unavailable']"}
