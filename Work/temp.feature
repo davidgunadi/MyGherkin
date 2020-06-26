@@ -42,13 +42,14 @@ When I click on "Add button under ContentFrame"
 Then "General Account Information dialog" should be displayed
 
 Scenario: Add Associated Accounts General Info criteria
+Given "RandomValue" default value is "{date('M/DD/YYYY')}"
 When I click on "Open Date checkbox"
 And I wait until "Open Date Inputbox" appears
-And I set "Open Date Inputbox" value to "{date('M/DD/YYYY')}"
+And I set "Open Date Inputbox" value to "{RandomValue}"
 And I click on "Add Criteria button for Account Information"
 And I wait until "Criteria for Contact List Table" appears
 Then "Criteria for Contact List header" should be displayed
-And I should see "General Info: Open Date is on [\{date('M/DD/YYYY')}]" in "Criteria for Contact List Table"
+And I should see "General Info: Open Date is on [{RandomValue}]" in "Criteria for Contact List Table"
 
 Scenario: Open Associated Opportunities dialog
 When I click on "Uplevel Icon for Associated Accounts"
@@ -64,11 +65,11 @@ Then "General Opportunity Information dialog" should be displayed
 Scenario: Add Associated Opportunities General Info criteria
 When I click on "Close Date checkbox"
 And I wait until "Close Date Inputbox" appears
-And I set "Close Date Inputbox" value to "{date('M/DD/YYYY')}"
+And I set "Close Date Inputbox" value to "{RandomValue}"
 And I click on "Add Criteria button for Account Information"
 And I wait until "Criteria for Contact List Table" appears
 Then "Criteria for Contact List header" should be displayed
-And I should see "General Info: Lost Date is on [\{date('M/DD/YYYY')}]" in "Criteria for Contact List Table"
+And I should see "General Info: Lost Date is on [{RandomValue}]" in "Criteria for Contact List Table"
 
 Scenario: Save Membership Criteria
 When I click on "Uplevel Icon for Associated Opportunities"

@@ -31,7 +31,10 @@ Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 //Date
 Given "NextMonthDateInMMDDYYYY" default value is "{date('MM/DD/YYYY','30 days')}"
 
+// Set Window Size
+And I set window size to "1280x1024"
 
+Given "RandomValue" default value is "{date('M/DD/YYYY')}"
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -125,12 +128,16 @@ OK Got It: //button[text()='OK, Got It']
 Stream name Textbox: //input[@id='New Stream-label-id']
 Search Textbox (in Stream Page): //input[@id='j-stream-edit-search-textfield']
 Add Button (for Community Group for storing ALL types of content): //li[contains(.,'Community Group for storing ALL types of content')]//button[text()='Add']
+
 In Stream Button (for Community Group for storing ALL types of content)://li[contains(.,'Community Group for storing ALL types of content')]//button[text()='In Stream']
 Done Button (in New Stream Page): //button[contains(@class,'js-done-editing-stream')]
-Community Group for storing ALL types of content (in Search Result): //a[@class='j-visor-result-link']/span[text()='Community Group for storing ALL types of content']
-
+GroupStream (in Stream Page): //span[contains(@class,'j-js-nav-stream-name')][contains(text(),'GroupStream')]
+You created TestProject (Notification, in Stream Page): //li[@class='j-act-g-item'][contains(.,'You created')][.//span[@class='j-item'][contains(text(),'TestProject')]]
+X Icon (in Stream Page): //span[contains(@class,'icon-cancel-circle2')]
+Delete Icon (in Delete This Stream confirmation popup): //input[@id='stream-delete-submit-button']
 
 Name Textbox (in Create Project): //input[@id='jive-place-name-input']
-Description Textarea (in Create Project): //textare[@name='description']
+Description Textarea (in Create Project): //textarea[@name='description']
 Tags Textbox (in Create Project): //div[@class='j-tags']
 Test Project in Community Group for storing ALL types of content (Header): //h1[@class='j-placeTitle'][.//a[contains(text(),'TestProject')]][.//a[contains(text(),'Community Group for storing ALL types of content')]]
+Green Tick Mark for URL Textbox (in Create Project): //div[@class='j-placeUrlField']//span[@class='jive-icon-glyph icon-checkmark font-color-okay']
