@@ -2,20 +2,27 @@ Feature: SNSGCID-62350
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
-Given environment ""end-to-end" or "se7"" from "https://confluence.devfactory.com/x/cUTsGg"
-Given credentials "N/A"
+Given environment "development" from "https://confluence.devfactory.com/display/SEN/Sensage+EnvDS"
+Given credentials "TEST-62350"
+
+Scenario: Populate data
+Given HTTP request
+When I execute GET request for "{environment.datasetpreload-single-node.URL}/TEST-62350"
+Then "Preload finished" should be in response body
 
 Scenario: Login
 Given browser "Chrome"
 When I open "{environment.analyzer-ui-single-node.URL}"
-And I set "Username field" to "{credentials.TEST-62350.username}" value
-And I set "Password field" to "{credentials.TEST-62350.password}" value
+And I set "{credentials.TEST-62350.username}" to "Username field" value
+And I set "{credentials.TEST-62350.password}" to "Password field" value
 And I click on "Login button"
 Then "Welcome message" should be displayed
 
 Scenario: Access Analytics Workbench
 When I click on "Data Design menu"
 And I click on "Analytics Workbench menu"
+And I wait for "1" seconds
+And I wait until "Loading Spinner" disappears
 And I click on "Analytics tab"
 Then "Analytics tab" should be displayed
 
