@@ -8,11 +8,10 @@ Given credentials "UBView-Cred-2"
 Scenario: Login
 Given browser "Chrome"
 When I open "{environment.UBView.Login URL}"
-And I wait for "10" seconds
-And I set "username" value to "{credentials.ubview-1.username}"
-And I set "password" value to "{credentials.ubview-1.password}"
+And I set "username" value to "{credentials.UBView-Cred-2.username}"
+And I set "password" value to "{credentials.UBView-Cred-2.password}"
 And I click on "login"
-Then "dashboard" page should be displayed
+Then "Dashboard" page should be displayed
 
 Scenario: Navigate to the Policy Manager subsite
 When I click "Left Navigation Configuration" 
