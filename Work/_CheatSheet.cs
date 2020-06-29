@@ -34,7 +34,11 @@ Given "NextMonthDateInMMDDYYYY" default value is "{date('MM/DD/YYYY','30 days')}
 // Set Window Size
 And I set window size to "1280x1024"
 
-Given "RandomValue" default value is "{date('M/DD/YYYY')}"
+// Remember Alert Text and Validate
+Then I remember the alert text as "AlertMessage"
+And the value of "AlertMessage" should be "Are you sure you want to backup the database?"
+
+
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -67,8 +71,6 @@ ADCM Left Menu Link
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 https://confluence.devfactory.com/display/GFIA/Yaml+Environments
-User Icon on Top Right of Page (in NewUI): //div[@class='df-user-profile__img-container']
-Archive Page (in NewUI): //div[@class='section__header px-4 py-2'][text()='Archive']
 
 
 
@@ -109,12 +111,6 @@ Supsoft LeftFrame
 Supsoft RightFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
 
-Solr Server (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Solr Server']"]
-Perform Fuzzy Searches Checkbox in Solr Server: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='prefFuzzySearchId']"]
-Disable Spell Checkbox in Solr Server: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='prefSpellCheckDisabled']"]
-Save Button in Solr Server: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='prefsubmit']"]
-Unchecked Perform Fuzzy Searches Checkbox in Solr Server:
-UnChecked Disable Spell Checkbox in Solr Server:
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -124,20 +120,38 @@ UnChecked Disable Spell Checkbox in Solr Server:
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/EN/Jive+HOP+Standard+E2E+Environment+Data
 
-OK Got It: //button[text()='OK, Got It']
-Stream name Textbox: //input[@id='New Stream-label-id']
-Search Textbox (in Stream Page): //input[@id='j-stream-edit-search-textfield']
-Add Button (for Community Group for storing ALL types of content): //li[contains(.,'Community Group for storing ALL types of content')]//button[text()='Add']
 
-In Stream Button (for Community Group for storing ALL types of content)://li[contains(.,'Community Group for storing ALL types of content')]//button[text()='In Stream']
-Done Button (in New Stream Page): //button[contains(@class,'js-done-editing-stream')]
-GroupStream (in Stream Page): //span[contains(@class,'j-js-nav-stream-name')][contains(text(),'GroupStream')]
-You created TestProject (Notification, in Stream Page): //li[@class='j-act-g-item'][contains(.,'You created')][.//span[@class='j-item'][contains(text(),'TestProject')]]
-X Icon (in Stream Page): //span[contains(@class,'icon-cancel-circle2')]
-Delete Icon (in Delete This Stream confirmation popup): //input[@id='stream-delete-submit-button']
 
-Name Textbox (in Create Project): //input[@id='jive-place-name-input']
-Description Textarea (in Create Project): //textarea[@name='description']
-Tags Textbox (in Create Project): //div[@class='j-tags']
-Test Project in Community Group for storing ALL types of content (Header): //h1[@class='j-placeTitle'][.//a[contains(text(),'TestProject')]][.//a[contains(text(),'Community Group for storing ALL types of content')]]
-Green Tick Mark for URL Textbox (in Create Project): //div[@class='j-placeUrlField']//span[@class='jive-icon-glyph icon-checkmark font-color-okay']
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              PAUB                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
+
+Configuration (in Left Menu): //ul[@id='ubd-left-navmenu']//li[text()='Configuration']
+Policy Manager (in Left Menu)://ul[@id='ubd-left-navmenu']//a[text()='Policy Manager']
+Policies (Top Menu Link, in Policy Manager Page): //div[@id='ubd-top-navmenu']/a[text()='Policies']
+Name Textbox (in Add Policy Popup): //input[@id='pname']
+Policy type Dropdown (in Add Policy Popup): //select[@id='policy_type']
+Bandwidth Limit (in Add Policy Popup): //input[@id='bandwidth_limit']
+E2ETestPolicy_SpeedLimit_1Mbps (in the last row of Policy Table)://table[@id='policies_list']/tbody/tr[last()]/td[normalize-space(text())='E2ETestPolicy_SpeedLimit_1Mbps']
+Checkbox (for E2ETestPolicy_SpeedLimit_1Mbps): //table[@id='policies_list']/tbody/tr[contains(.,"E2ETestPolicy_SpeedLimit_1Mbps")]//input[@type='checkbox']
+
+
+
+Add Button (for List): //div[@id='list_buttons']//span[@class='ui-button-text'][text()='Add']
+Delete Button (for List): //div[@id='list_buttons']//span[@class='ui-button-text'][text()='Delete']
+Add Button (in Popup): //div[@class='ui-dialog-buttonset']//span[@class='ui-button-text'][text()='Add']
+Delete Confirmation Button (in Popup): //div[@id='delete_one_confirmation']/following-sibling::div//span[@class='ui-button-text'][text()='Delete']
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              XINET                                 //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/NOR/Xinet+Environment
+["//iframe[@id='waFrame']", ""]
