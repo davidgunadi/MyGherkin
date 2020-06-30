@@ -92,7 +92,6 @@ Retriever Statistics:
 
 Loader Statistics:
 
-
 """
 
 Scenario: Disable adapter
