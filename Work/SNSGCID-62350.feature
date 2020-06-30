@@ -17,11 +17,11 @@ And I set "{credentials.TEST-62350.username}" to "Username field" value
 And I set "{credentials.TEST-62350.password}" to "Password field" value
 And I click on "Login button"
 Then "Welcome message" should be displayed
+And "Data Design menu" should be displayed
 
 Scenario: Access Analytics Workbench
 When I click on "Data Design menu"
 And I click on "Analytics Workbench menu"
-And I wait for "1" seconds
 And I wait until "Loading Spinner" disappears
 And I click on "Analytics tab"
 Then "Analytics tab" should be displayed
