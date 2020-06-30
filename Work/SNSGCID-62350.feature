@@ -46,28 +46,26 @@ When I click on "Filter list by input selector in Analytics tab"
 And I click on "Lookup option"
 And I click on "Filter list by input selector in Analytics tab"
 Then "Multi Param Input (in Search Result)" should be displayed
-
-Then I should see "Execute Report" in "First row Name column"
-And I should see "Multi Param Input" in "Second row Name column"
+And "Execute Report (in Search Result)" should be displayed
 
 Scenario: Clear filter
-When I click on "Trash button"
+When I click on "Trash button in the filter section in Analytics tab"
 Then "Filter list by input selector in Analytics tab" should not be displayed
 
 Scenario: Open filters and select by outputs filter
-When I click on "'Filtering' button"
-And I click on "'by Outputs' option"
-Then "'Filter list by: output' selector" should be displayed
+When I click on "Filtering button in Analytics tab"
+And I click on "by Outputs option in Analytics tab"
+Then "Filter list by output selector in Analytics tab" should be displayed
 
 Scenario: Select HTML type
-When I click on "'Filter list by: output' selector"
-And I click on "'HTML' option"
-And I click on "'Filter list by: output' selector"
-Then I should see "Table to HTML" in "First row Name column"
+When I click on "Filter list by output selector in Analytics tab"
+And I click on "HTML option"
+And I click on "Filter list by output selector in Analytics tab"
+Then "Table to HTML (in Search Result)" should be displayed
 
 Scenario: Add CSV type to filter
-When I click on "'Filter list by: output' selector"
-And I click on "'CSV' option"
-And I click on "'Filter list by: output' selector"
-Then I should see "Table to CSV" in "First row Name column"
-And I should see "Table to HTML" in "Second row Name column"
+When I click on "Filter list by output selector in Analytics tab"
+And I click on "CSV option"
+And I click on "Filter list by output selector in Analytics tab"
+Then "Table to HTML (in Search Result)" should be displayed
+Then "Table to CSV (in Search Result)" should be displayed
