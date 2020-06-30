@@ -41,23 +41,20 @@ And "Login Name (Table Header, in Analyst Monitor)" should be displayed
 And "Chat Window (Table Header, in Analyst Monitor)" should be displayed
 And "Status (Table Header, in Analyst Monitor)" should be displayed
 And "Refresh Button (in Analyst Monitor)" should be displayed
-#And "Analyst (Cell, in Agent Window Status Table)" should be displayed
+And "Analyst (Cell, in Agent Window Status Table)" should be displayed
 
 Scenario: Select "Available" in "Status Filter" textbox and click on "Refresh" button
-<custom> select "Available" from the listbox "Status Filter Listbox (in Analyst Monitor)"
-#When I click on "Available Option (in Status Filter Listbox)"
-#And I type "available"
+When I set "Status Filter Listbox (in Analyst Monitor)" value to "Available"
 And I click on "Refresh Button (in Analyst Monitor)"
 Then "Analyst (Cell, in Agent Window Status Table)" should not be displayed
 
 Scenario: Select "Unavailable" in "Status Filter" textbox and click on "Refresh" button
-<custom> select "Unavailable" from the listbox "Status Filter Listbox (in Analyst Monitor)"
-#When I click on "Status Filter Listbox (in Analyst Monitor)"
-#And I type "unavailable"
+When I set "Status Filter Listbox (in Analyst Monitor)" value to "Unavailable"
 And I click on "Refresh Button (in Analyst Monitor)"
 Then "Analyst (Cell, in Agent Window Status Table)" should be displayed
 
-
-
-
-#Status Filter Listbox (Example2): {"type":"listbox", "open":["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='statusSearch']"],"value":"//option[text()='Unavailable']"}
+Scenario: Cleanup
+When I switch to second window
+And I close all windows
+And I switch to main window
+And I close all windows

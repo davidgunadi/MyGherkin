@@ -27,13 +27,13 @@ And I click on "Analytics tab"
 Then "Analytics tab" should be displayed
 
 Scenario: Open filters
-When I click on "'Filtering' button"
-Then "'by Inputs' option" should be displayed
-and "'by Outputs' option" should be displayed
+When I click on "Filtering button in Analytics tab"
+Then "'by Outputs option in Analytics tab" should be displayed
+And "by Inputs option in Analytics tab" should be displayed
 
 Scenario: Select by inputs filter
-When I click on "'by Inputs' option"
-Then "'Filter list by: input' selector" should be displayed
+When I click on "by Inputs option in Analytics tab"
+Then "Filter list by input selector in Analytics tab" should be displayed
 
 Scenario: Select PNG type
 When I click on "'Filter list by: input' selector"
