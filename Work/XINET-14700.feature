@@ -27,6 +27,6 @@ Then request should complete successfully
 And response status should be "200"
 
 Scenario: Resume Refresh and Verify API Request Logs are Displayed
-When I click on "Resume Refresh"
+When I click on "Resume Refresh Button"
 Then I should see "portalDI: Request values - name | val = [ action | version ]" in "Logs (in Logging Page)"
 Then I should see "Request values - name | val = [ debug | true ]" in "Logs (in Logging Page)"
