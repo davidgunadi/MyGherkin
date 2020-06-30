@@ -28,7 +28,7 @@ Then "Analytics tab" should be displayed
 
 Scenario: Open filters
 When I click on "Filtering button in Analytics tab"
-Then "'by Outputs option in Analytics tab" should be displayed
+Then "by Outputs option in Analytics tab" should be displayed
 And "by Inputs option in Analytics tab" should be displayed
 
 Scenario: Select by inputs filter
@@ -36,21 +36,23 @@ When I click on "by Inputs option in Analytics tab"
 Then "Filter list by input selector in Analytics tab" should be displayed
 
 Scenario: Select PNG type
-When I click on "'Filter list by: input' selector"
-And I click on "'PNG' option"
-And I click on "'Filter list by: input' selector"
-Then I should see "Multi Param Input" in "First row Name column"
+When I click on "Filter list by input selector in Analytics tab"
+And I click on "PNG option"
+And I click on "Filter list by input selector in Analytics tab"
+Then "Multi Param Input (in Search Result)" should be displayed
 
 Scenario: Add Lookup type to filter
-When I click on "'Filter list by: input' selector"
-And I click on "'Lookup' option"
-And I click on "'Filter list by: input' selector"
+When I click on "Filter list by input selector in Analytics tab"
+And I click on "Lookup option"
+And I click on "Filter list by input selector in Analytics tab"
+Then "Multi Param Input (in Search Result)" should be displayed
+
 Then I should see "Execute Report" in "First row Name column"
 And I should see "Multi Param Input" in "Second row Name column"
 
 Scenario: Clear filter
 When I click on "Trash button"
-Then "'Filter list by: input' selector" should not be displayed
+Then "Filter list by input selector in Analytics tab" should not be displayed
 
 Scenario: Open filters and select by outputs filter
 When I click on "'Filtering' button"
