@@ -1,3 +1,6 @@
+// Dummy Ticket
+https://jira.devfactory.com/browse/TS-5834
+
 // Select a dropdown value - This uses the value attribute in an option
 And I set "en_CA" to "the 'User Locale' sub-section dropdown list" value
 
@@ -155,3 +158,8 @@ Delete Confirmation Button (in Popup): //div[@id='delete_one_confirmation']/foll
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/NOR/Xinet+Environment
 ["//iframe[@id='waFrame']", ""]
+["//iframe[@id='ldif']", "//pre"]
+
+Logs (in Logging Page): ["//iframe[@id='ldif']", "//pre"]
+Stop Refresh Button: //input[@value='Stop Refresh']
+Resume Refresh Button: //input[@value='Resume Refresh']
