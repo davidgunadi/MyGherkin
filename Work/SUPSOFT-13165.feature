@@ -6,7 +6,7 @@ Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/No
 Given credentials "Administrator" and "Analyst"
 
 Scenario: Navigate to "Support Center Web Portal" and Login as Analyst
-Given browser "Internet Explorer" as "Analyst Instance"
+Given browser "Internet Explorer BrowserStack" as "Analyst Instance"
 When I open "{environment.SupportSoft Support Center portal.URL}" in "Analyst Instance"
 And I set "{credentials.Analyst.username}" to "Username Textbox in SC Login Page" value in "Analyst Instance"
 And I set "{credentials.Analyst.password}" to "Password Textbox in SC Login Page" value in "Analyst Instance"
@@ -20,7 +20,7 @@ And I switch to second window in "Analyst Instance"
 Then "CSR Chat Window" page should be displayed in "Analyst Instance"
 
 Scenario: Login as Admin
-Given browser "Internet Explorer" as "Admin Instance"
+Given browser "Internet Explorer BrowserStack" as "Admin Instance"
 When I open "{environment.SupportSoft Support Center portal.URL}" in "Admin Instance"
 When I set "{credentials.Administrator.username}" to "Username Textbox in SC Login Page" value in "Admin Instance"
 And I set "{credentials.Administrator.password}" to "Password Textbox in SC Login Page" value in "Admin Instance"

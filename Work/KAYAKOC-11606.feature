@@ -68,10 +68,12 @@ Scenario: Validate some links on the left side menu
 When I click on "Apps (Link, in Left Menu)"
 Then "Apps" page should be displayed
 When I click on "Logs (Link, in Left Menu)"
+And I wait until "Error Log (Link, in Left Menu)" appears
 And I click on "Error Log (Link, in Left Menu)"
 Then "Error Log" page should be displayed
 
 Scenario: Go to Diagnostics > PHP Info
 When I click on "Diagnostics (Link, in Left Menu)"
+And I wait until "PHP Info (Link, in Left Menu)" appears
 And I click on "PHP Info (Link, in Left Menu)"
 Then "PHP Info" page should be displayed

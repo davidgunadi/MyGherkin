@@ -13,7 +13,7 @@ And I click on "Login Button"
 //isDisplayed
 Then "Username Avatar" should be displayed
 
-//Page is Displayed
+//Page is Displayed (Work for Partial Page Name)
 Then "Username Avatar" page should be displayed
 
 //multiple iFrames
@@ -84,6 +84,40 @@ https://confluence.devfactory.com/display/GFIA/Yaml+Environments
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/KM/KMECN+E2E+Environment+Data+Structure
+
+
+When I set "Channel Dropdown in Home page" value to "KMPS Trade Press Media Group"
+And I set "Customer Dropdown in Home page" value to "KMPS TradePress Subscribers ( UAD / CIRC )"
+
+When I set "Channel Dropdown in Home page" value to "Knowledge Marketing"
+And I set "Customer Dropdown in Home page" value to "Knowledge Marketing Subscribers ( PRT / UAD / CIRC )"
+
+UAD (Button in Main Page): //a[@class='btnProduct'][text()='UAD']
+Filters (Navigation Menu): //a[contains(@class,'NavigationMenu')][text()='Filters']
+Question Category (Navigation Menu): //a[contains(@class,'NavigationMenu')][text()='Question Category']
+Question Category (Page Header): //span[contains(@id,'lblMenuSelected')][text()='Question Category']
+Collapse All (in Question Category Menu): //a[text()='Collapse All']
+Expand All (in Question Category Menu): //a[text()='Expand All']
+The Line from Parent to Child (in Question Category Menu): //td[@class='rtlL rtlL3']
+
+Sales View (Navigation Menu): //a[contains(@class,'NavigationMenu')][text()='Sales View']
+Questions Category Table (in Sales View): //td[text()='Questions Category']
+First Item in Question Category Table (in Sales View): //li[@class='rtLI rtFirst']/div/span[@class='rtIn']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -187,7 +221,7 @@ Manage Tickets (Link in Top Menu): //div[@class='topnavmenuitem'][text()='Manage
 SUBJECT (Grid Title): //td[@class='gridtabletitlerow'][contains(text(),'Subject')]
 First Item Subject (in Manage Tickets Grid): //tr[contains(@id,'gridrowid_ticketmanagegrid')][1]//div[@class='subjectspancontainer']//a
 
-Settings Link (on Top Menu): //div[@class='topnavmenuitem'][text()='Settings']
+Settings Link (on Top Menu): //div[contains(@class,'topnav')][text()='Settings']
 Settings Link (on the Left Bar): //div[@class='BarItem'][@title='Settings']
 Settings Tab (in Right Hand Panel): //div[@id='View_Settingstabs']
 Date and time (in Settings List): //a[contains(@href,'Settings')][contains(.,'Date and time')]
@@ -195,7 +229,7 @@ Knowledgebase (in Settings List): //a[contains(@href,'Settings')][contains(.,'Kn
 
 
 Apps (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Apps']
-Logs (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Apps']
+Logs (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Logs']
 Diagnostics (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Diagnostics']
 Error Log (Link, in Left Menu): //div[@class='BarOptionPad'][text()='Error Log']
 PHP Info (Link, in Left Menu): //div[@class='BarOptionPad'][text()='PHP Info']
