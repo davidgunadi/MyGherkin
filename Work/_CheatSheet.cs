@@ -196,4 +196,6 @@ Knowledgebase (in Settings List): //a[contains(@href,'Settings')][contains(.,'Kn
 
 Apps (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Apps']
 Logs (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Apps']
+Diagnostics (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Diagnostics']
 Error Log (Link, in Left Menu): //div[@class='BarOptionPad'][text()='Error Log']
+PHP Info (Link, in Left Menu): //div[@class='BarOptionPad'][text()='PHP Info']

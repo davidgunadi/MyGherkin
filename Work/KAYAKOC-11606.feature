@@ -70,3 +70,8 @@ Then "Apps" page should be displayed
 When I click on "Logs (Link, in Left Menu)"
 And I click on "Error Log (Link, in Left Menu)"
 Then "Error Log" page should be displayed
+
+Scenario: Go to Diagnostics > PHP Info
+When I click on "Diagnostics (Link, in Left Menu)"
+And I click on "PHP Info (Link, in Left Menu)"
+Then "PHP Info" page should be displayed
