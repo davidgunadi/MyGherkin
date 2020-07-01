@@ -163,3 +163,18 @@ Delete Confirmation Button (in Popup): //div[@id='delete_one_confirmation']/foll
 Logs (in Logging Page): ["//iframe[@id='ldif']", "//pre"]
 Stop Refresh Button: //input[@value='Stop Refresh']
 Resume Refresh Button: //input[@value='Resume Refresh']
+
+
+
+
+{"type": "dropdown",  "open": "//select[contains(@id, 'ddlCustomerID')]", "value": "//select[contains(@id, 'ddlCustomerID')]/option[text()='{value}']"}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              KAYAKOC                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure
+Search Textbox (in Middle of Screen): //input[@name='searchquery']
+Search Result Record, containing the word Test (in Search Results): //div[@class='kbsearch']/a[contains(text(),'Test')]

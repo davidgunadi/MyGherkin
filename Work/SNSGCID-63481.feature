@@ -21,6 +21,14 @@ collectorAdmin all
 Then "hexis_hawkeye_analyzerAudit_syslogng: enabled" should be in output
 And "sap_aud_sftp: disabled" should be in output
 
+Scenario: Get enabled adapters
+When I execute script:
+"""
+collectorAdmin enabled
+"""
+Then commands should complete successfully
+And "hexis_hawkeye_analyzerAudit_syslogng: enabled" should be in output
+
 Scenario: Get disabled adapters
 When I execute script:
 """
@@ -80,6 +88,10 @@ Are you sure you want to clear collector statistics?
 
 Scenario: Confirm clear stats and verify
 When I execute command "yes y | collectorAdmin clearstats 2> /dev/null"
+And I execute script:
+"""
+collectorAdmin clearstats 2> /dev/null
+"""
 Then the output should be:
 """
 Loading config files from '/opt/sensage/etc/collector'
