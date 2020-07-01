@@ -178,3 +178,11 @@ Resume Refresh Button: //input[@value='Resume Refresh']
 //https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure
 Search Textbox (in Middle of Screen): //input[@name='searchquery']
 Search Result Record, containing the word Test (in Search Results): //div[@class='kbsearch']/a[contains(text(),'Test')]
+Knowledgebase (Link, at the top bar): //a[@class='toptoolbarlink'][text()='Knowledgebase']
+List of Item (in Knowledgebase Page): //div[@class='list-table']
+First Item under Knowledgebase Table: //div[contains(@class,'kbarticlecontainer')][1]//a
+
+Tickets (Link in Top Menu): //div[@class='menutext'][text()='Tickets']
+Manage Tickets (Link in Top Menu): //div[@class='topnavmenuitem'][text()='Manage Tickets']
+SUBJECT (Grid Title): //td[@class='gridtabletitlerow'][contains(text(),'Subject')]
+First Item Subject (in Manage Tickets Grid): //tr[contains(@id,'gridrowid_ticketmanagegrid')][1]//div[@class='subjectspancontainer']//a
