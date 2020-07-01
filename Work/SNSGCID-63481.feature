@@ -79,11 +79,7 @@ Are you sure you want to clear collector statistics?
 """
 
 Scenario: Confirm clear stats and verify
-When I execute command "y"
-And I execute script:
-"""
-collectorAdmin showstats 2> /dev/null
-"""
+When I execute command "yes y | collectorAdmin clearstats 2> /dev/null"
 Then the output should be:
 """
 Loading config files from '/opt/sensage/etc/collector'

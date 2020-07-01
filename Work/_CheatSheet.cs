@@ -26,7 +26,7 @@ Given "currentTime" value is the current datetime "+0 milliseconds"
 And I remember a value from ["title" atribute of] "selector" as "variableName"
 
 //verify a selector contains a text
-Then I should see "{text}" in "selector"
+Then I should see "text" in "selector"
 
 //Create Random Text
 Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
