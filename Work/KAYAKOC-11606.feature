@@ -45,3 +45,28 @@ And I remember a value from "First Item Subject (in Manage Tickets Grid)" as "Ti
 Scenario: Click on a ticket
 When I click on "First Item Subject (in Manage Tickets Grid)"
 Then "{TicketRecord}" page should be displayed
+
+Scenario: Go to Admin
+When I open "{environment.staging-admin.URL}"
+And I set "admin-login-user" value to "{credentials.qa-admin.username}"
+And I set "admin-login-password" value to "{credentials.qa-admin.password}"
+And I click on "admin-login-submit"
+Then "Dashboard" page should be displayed
+
+Scenario: Go to Admin > Settings
+When I click on "Settings Link (on Top Menu)"
+Then "Settings Tab (in Right Hand Panel)" should be displayed
+
+Scenario: Validate some links on the settings menu
+When I click on "Date and time (in Settings List)"
+Then "Settings > Date and time" page should be displayed
+When I click on "Settings Link (on Top Menu)"
+And I click on "Knowledgebase (in Settings List)"
+Then "Settings > Knowledgebase" page should be displayed
+
+Scenario: Validate some links on the left side menu	
+When I click on "Apps (Link, in Left Menu)"
+Then "Apps" page should be displayed
+When I click on "Logs (Link, in Left Menu)"
+And I click on "Error Log (Link, in Left Menu)"
+Then "Error Log" page should be displayed

@@ -186,3 +186,14 @@ Tickets (Link in Top Menu): //div[@class='menutext'][text()='Tickets']
 Manage Tickets (Link in Top Menu): //div[@class='topnavmenuitem'][text()='Manage Tickets']
 SUBJECT (Grid Title): //td[@class='gridtabletitlerow'][contains(text(),'Subject')]
 First Item Subject (in Manage Tickets Grid): //tr[contains(@id,'gridrowid_ticketmanagegrid')][1]//div[@class='subjectspancontainer']//a
+
+Settings Link (on Top Menu): //div[@class='topnavmenuitem'][text()='Settings']
+Settings Link (on the Left Bar): //div[@class='BarItem'][@title='Settings']
+Settings Tab (in Right Hand Panel): //div[@id='View_Settingstabs']
+Date and time (in Settings List): //a[contains(@href,'Settings')][contains(.,'Date and time')]
+Knowledgebase (in Settings List): //a[contains(@href,'Settings')][contains(.,'Knowledgebase')]
+
+
+Apps (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Apps']
+Logs (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Apps']
+Error Log (Link, in Left Menu): //div[@class='BarOptionPad'][text()='Error Log']
