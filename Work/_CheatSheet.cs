@@ -193,6 +193,8 @@ And I set "Customer Dropdown in Home page" value to "KMPS TradePress Subscribers
 
 When I set "Channel Dropdown in Home page" value to "Knowledge Marketing"
 And I set "Customer Dropdown in Home page" value to "Knowledge Marketing Subscribers ( PRT / UAD / CIRC )"
+Then I should see "Knowledge Marketing" in "Selected Channel Dropdown option in Home page"
+And I should see "Knowledge Marketing Subscribers ( PRT / UAD / CIRC )" in "Selected Customer Dropdown option in Home page"
 
 Form Designer (Button in Main Page): //a[@class='btnProduct'][text()='Form Designer']
 Group Filter Textbox (under Active Forms): //input[@id='GroupName']
