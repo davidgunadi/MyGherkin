@@ -41,7 +41,8 @@ And I set window size to "1280x1024"
 Then I remember the alert text as "AlertMessage"
 And the value of "AlertMessage" should be "Are you sure you want to backup the database?"
 
-
+// Custom Selector
+{"type": "dropdown",  "open": "//select[contains(@id, 'ddlCustomerID')]", "value": "//select[contains(@id, 'ddlCustomerID')]/option[text()='{value}']"}
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -76,21 +77,6 @@ ADCM Left Menu Link
 https://confluence.devfactory.com/display/GFIA/Yaml+Environments
 
 
-
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                             ECN                                   //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/KM/KMECN+E2E+Environment+Data+Structure
-
-
-When I set "Channel Dropdown in Home page" value to "KMPS Trade Press Media Group"
-And I set "Customer Dropdown in Home page" value to "KMPS TradePress Subscribers ( UAD / CIRC )"
-
-When I set "Channel Dropdown in Home page" value to "Knowledge Marketing"
-And I set "Customer Dropdown in Home page" value to "Knowledge Marketing Subscribers ( PRT / UAD / CIRC )"
 
 
 
@@ -180,7 +166,7 @@ Search Result Record (in Summary Page): ["//iframe[@id='waFrame']", "//a[@class=
 
 
 
-{"type": "dropdown",  "open": "//select[contains(@id, 'ddlCustomerID')]", "value": "//select[contains(@id, 'ddlCustomerID')]/option[text()='{value}']"}
+
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -189,3 +175,25 @@ Search Result Record (in Summary Page): ["//iframe[@id='waFrame']", "//a[@class=
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                             ECN                                   //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/KM/KMECN+E2E+Environment+Data+Structure
+
+
+When I set "Channel Dropdown in Home page" value to "KMPS Trade Press Media Group"
+And I set "Customer Dropdown in Home page" value to "KMPS TradePress Subscribers ( UAD / CIRC )"
+
+When I set "Channel Dropdown in Home page" value to "Knowledge Marketing"
+And I set "Customer Dropdown in Home page" value to "Knowledge Marketing Subscribers ( PRT / UAD / CIRC )"
+
+Form Designer (Button in Main Page): //a[@class='btnProduct'][text()='Form Designer']
+Group Filter Textbox (under Active Forms): //input[@id='GroupName']
+Group Filter Dropdown (under Active Forms): //div[@id='SearchPanel']//label[text()='Group:']/following-sibling::span[@aria-owns='GroupSearchCriteria_listbox']
