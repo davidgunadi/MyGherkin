@@ -2,7 +2,7 @@
 https://jira.devfactory.com/browse/TS-5834
 
 // Select a dropdown value - This uses the value attribute in an option
-And I set "en_CA" to "the 'User Locale' sub-section dropdown list" value
+And I set "value" to "selector" value
 
 //Type into textbox
 And I set "<selector>" value to "XXX"
@@ -197,3 +197,11 @@ And I set "Customer Dropdown in Home page" value to "Knowledge Marketing Subscri
 Form Designer (Button in Main Page): //a[@class='btnProduct'][text()='Form Designer']
 Group Filter Textbox (under Active Forms): //input[@id='GroupName']
 Group Filter Dropdown (under Active Forms): //div[@id='SearchPanel']//label[text()='Group:']/following-sibling::span[@aria-owns='GroupSearchCriteria_listbox']
+contains (dropdown option for Group): //div[@id='GroupSearchCriteria-list']//div[text()='contains']
+starts with (dropdown option for Group): //div[@id='GroupSearchCriteria-list']//li[text()='starts with']
+equals (dropdown option for Group): //div[@id='GroupSearchCriteria-list']//li[text()='equals']
+ends with (dropdown option for Group): //div[@id='GroupSearchCriteria-list']//li[text()='ends with']
+Search Button (under Active Forms): //input[@id='search']
+Group Cell (in First Row, under Active Forms Grid): //div[@id='ActiveForms']//tbody/tr[1]/td[3]
+
+Logout Link: //a[text()='Logout']
