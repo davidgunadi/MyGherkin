@@ -1,4 +1,4 @@
-Feature: KMECN-22084
+Feature: KMECN-19696
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
