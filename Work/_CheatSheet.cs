@@ -92,27 +92,6 @@ And I set "Customer Dropdown in Home page" value to "KMPS TradePress Subscribers
 When I set "Channel Dropdown in Home page" value to "Knowledge Marketing"
 And I set "Customer Dropdown in Home page" value to "Knowledge Marketing Subscribers ( PRT / UAD / CIRC )"
 
-UAD (Button in Main Page): //a[@class='btnProduct'][text()='UAD']
-Filters (Navigation Menu): //a[contains(@class,'NavigationMenu')][text()='Filters']
-Question Category (Navigation Menu): //a[contains(@class,'NavigationMenu')][text()='Question Category']
-Question Category (Page Header): //span[contains(@id,'lblMenuSelected')][text()='Question Category']
-Collapse All (in Question Category Menu): //a[text()='Collapse All']
-Expand All (in Question Category Menu): //a[text()='Expand All']
-The Line from Parent to Child (in Question Category Menu): //td[@class='rtlL rtlL3']
-
-Sales View (Navigation Menu): //a[contains(@class,'NavigationMenu')][text()='Sales View']
-Questions Category Table (in Sales View): //td[text()='Questions Category']
-First Item in Question Category Table (in Sales View): //li[@class='rtLI rtFirst']/div/span[@class='rtIn']
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -194,9 +173,9 @@ Delete Confirmation Button (in Popup): //div[@id='delete_one_confirmation']/foll
 ["//iframe[@id='waFrame']", ""]
 ["//iframe[@id='ldif']", "//pre"]
 
-Logs (in Logging Page): ["//iframe[@id='ldif']", "//pre"]
-Stop Refresh Button: //input[@value='Stop Refresh']
-Resume Refresh Button: //input[@value='Resume Refresh']
+Search Button (in Summary Page): ["//iframe[@id='waFrame']", "//input[@value='Search']"]
+Search Textbox (in Summary Page): ["//iframe[@id='waFrame']", "//form[@name='searchForm']//input[@type='text']"]
+Search Result Record (in Summary Page): ["//iframe[@id='waFrame']", "//a[@class='DIRLIST']"]
 
 
 
@@ -210,26 +189,3 @@ Resume Refresh Button: //input[@value='Resume Refresh']
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure
-Search Textbox (in Middle of Screen): //input[@name='searchquery']
-Search Result Record, containing the word Test (in Search Results): //div[@class='kbsearch']/a[contains(text(),'Test')]
-Knowledgebase (Link, at the top bar): //a[@class='toptoolbarlink'][text()='Knowledgebase']
-List of Item (in Knowledgebase Page): //div[@class='list-table']
-First Item under Knowledgebase Table: //div[contains(@class,'kbarticlecontainer')][1]//a
-
-Tickets (Link in Top Menu): //div[@class='menutext'][text()='Tickets']
-Manage Tickets (Link in Top Menu): //div[@class='topnavmenuitem'][text()='Manage Tickets']
-SUBJECT (Grid Title): //td[@class='gridtabletitlerow'][contains(text(),'Subject')]
-First Item Subject (in Manage Tickets Grid): //tr[contains(@id,'gridrowid_ticketmanagegrid')][1]//div[@class='subjectspancontainer']//a
-
-Settings Link (on Top Menu): //div[contains(@class,'topnav')][text()='Settings']
-Settings Link (on the Left Bar): //div[@class='BarItem'][@title='Settings']
-Settings Tab (in Right Hand Panel): //div[@id='View_Settingstabs']
-Date and time (in Settings List): //a[contains(@href,'Settings')][contains(.,'Date and time')]
-Knowledgebase (in Settings List): //a[contains(@href,'Settings')][contains(.,'Knowledgebase')]
-
-
-Apps (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Apps']
-Logs (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Logs']
-Diagnostics (Link, in Left Menu): //div[contains(@class,'BarItem')][@title='Diagnostics']
-Error Log (Link, in Left Menu): //div[@class='BarOptionPad'][text()='Error Log']
-PHP Info (Link, in Left Menu): //div[@class='BarOptionPad'][text()='PHP Info']

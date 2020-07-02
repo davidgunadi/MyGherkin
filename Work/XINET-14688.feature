@@ -27,19 +27,16 @@ When I accept the alert box
 Then "Backup in progress (message)" should be displayed
 
 Scenario: VOLUME/USERS -> System Volumes -> summary and click on root path for "WN Suite Test Files"
-When I click on "VOLUMES/USERS (Header Tab)"
+When I wait until "Backup in progress (message)" disappears
+And I click on "VOLUMES/USERS (Header Tab)"
 And I click on "System Volumes (Sub Header Tab)"
 And I click on "summary tab"
 And I click on "/xinetVols/WN Suite Test Files"
 Then I should see "WN Suite Test Files WEB" in "Folders (dropdown)"
 
-Scenario: Verify Backup is Generated Successfully, Backup folder name should be wnv_fullkbkup.<date>
+Scenario: Verify Backup is Generated Successfully, Backup file name should be "wnv_fullbkup.YYYY.MM.DD"
 Given "Today" default value is "{date('YYYY.MM.DD')}"
-When I click on "Folders (dropdown)"
-And I type "backups"
-And I press "TAB"
-Then I should see "backups" in "Folders (dropdown)"
-When I click on "Folders (dropdown)"
-And I press "END"
-And I press "TAB"
-Then I should see "wnv_quickbkup.{Today}" in "Folders (dropdown)"
+When I click on "Search Button (in Summary Page)"
+And I set "wnv_fullbkup.{Today}" to "Search Textbox (in Summary Page)" value
+And I press "ENTER"
+Then I should see "wnv_fullbkup.{Today}" in "Search Result Record (in Summary Page)"

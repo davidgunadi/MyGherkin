@@ -50,36 +50,10 @@ When I click on "First Item in Question Category Table (in Sales View)"
 Then I should see "Question Category" in "Question Category Name (in Questions Table(in Right Side))"
 
 Scenario: Search Questions
+When I set "Question Name Textbox (in Sales View)" value to "question"
+And I click on "Search Button (in Sales View)"
+Then "Question Name containing the word Question (in Questions Table(in Right Side))" should be displayed
+
 Scenario: Download Questions
-
-
-
-
-
-
-	All the child categories are folded
-Expand all categories	All the child categories are unfolded
-In the menu, go to "Sales View"	Show the Sales View listing existing question categories and categories
-Select a different Question Category	The list of Questions changes
-Search Questions by using an existing Question Name	Display the matching records
-Download Questions	A file with the correspondent questions is downloaded
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-aaaaaaaa
+When I click on "Download Questions Button (in Sales View)"
+Then the file "Questions.pdf" should be downloaded
