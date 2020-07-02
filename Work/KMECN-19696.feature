@@ -30,7 +30,7 @@ When I click on "Group Filter Dropdown (under Active Forms)"
 Then "contains (dropdown option for Group)" should be displayed
 Then "starts with (dropdown option for Group)" should be displayed
 Then "equals (dropdown option for Group)" should be displayed
-Then "ends with (dropdown option for Group)" should be displayedcontains (dropdown option for Group)
+Then "ends with (dropdown option for Group)" should be displayed
 
 Scenario: User select Search Criteria and Text, then click Search
 When I click on "contains (dropdown option for Group)"
