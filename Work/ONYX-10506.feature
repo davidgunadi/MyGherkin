@@ -17,6 +17,8 @@ And I click on "SIGN IN"
 Then "Custom action page" should be displayed
 
 Scenario: Define action to enter the system
-When I set "{credentials.OEP.type}" to "OEP User Type" value
+When I click on "OEP User Type Dropdown"
+And I click on "OEP User Type"
 And I click on "GO"
-Then "application_main page" should be displayed
+And I wait until "Application page showing all menu items" appears
+Then "Application page showing all menu items" should be displayed
