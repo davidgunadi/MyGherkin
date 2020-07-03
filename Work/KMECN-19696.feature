@@ -17,8 +17,8 @@ And I should see "{credentials.kmplatformadmin.username}" in "Current logged in 
 Scenario: User selects appropriate channel and customer
 When I set "Channel Dropdown in Home page" value to "Knowledge Marketing"
 And I set "Customer Dropdown in Home page" value to "Knowledge Marketing Subscribers ( PRT / UAD / CIRC )"
-Then I should see "KMPS Trade Press Media Group" in "Selected Channel Dropdown option in Home page"
-And I should see "MPS TradePress Subscribers ( UAD / CIRC )" in "Selected Customer Dropdown option in Home page"
+Then I should see "Knowledge Marketing" in "Selected Channel Dropdown option in Home page"
+And I should see "Knowledge Marketing Subscribers ( PRT / UAD / CIRC )" in "Selected Customer Dropdown option in Home page"
 
 Scenario: User navigates to Form Designer and Verify Group Filter Dropdown and Text
 When I click on "Form Designer (Button in Main Page)"
@@ -28,9 +28,9 @@ And "Group Filter Dropdown (under Active Forms)" should be displayed
 Scenario: User verify Group Dropdown Filter Values
 When I click on "Group Filter Dropdown (under Active Forms)"
 Then "contains (dropdown option for Group)" should be displayed
-Then "starts with (dropdown option for Group)" should be displayed
-Then "equals (dropdown option for Group)" should be displayed
-Then "ends with (dropdown option for Group)" should be displayed
+And "starts with (dropdown option for Group)" should be displayed
+And "equals (dropdown option for Group)" should be displayed
+And "ends with (dropdown option for Group)" should be displayed
 
 Scenario: User select Search Criteria and Text, then click Search
 When I click on "contains (dropdown option for Group)"
