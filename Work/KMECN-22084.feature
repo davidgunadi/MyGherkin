@@ -24,21 +24,21 @@ Scenario: Precondition: Enter UAD Application
 When I click on "UAD (Button in Main Page)"
 Then "Master Database Reports" page should be displayed
 
-Scenario: In the menu, go to "Filters", and select the option "Question Category"
-When I hover on "Filters (Navigation Menu)"
-And I click on "Question Category (Navigation Menu)"
-Then "Question Category (Page Header)" should be displayed
+# Scenario: In the menu, go to "Filters", and select the option "Question Category"
+# When I hover on "Filters (Navigation Menu)"
+# And I click on "Question Category (Navigation Menu)"
+# Then "Question Category (Page Header)" should be displayed
 
-Scenario: Collapse all categories
-When I wait for "1" seconds
-And I click on "Collapse All (in Question Category Menu)"
-And I wait until "The Line from Parent to Child (in Question Category Menu)" disappears
-Then "The Line from Parent to Child (in Question Category Menu)" should not be displayed
+# Scenario: Collapse all categories
+# When I wait for "1" seconds
+# And I click on "Collapse All (in Question Category Menu)"
+# And I wait until "The Line from Parent to Child (in Question Category Menu)" disappears
+# Then "The Line from Parent to Child (in Question Category Menu)" should not be displayed
 
-Scenario: Expand all categories
-When I click on "Expand All (in Question Category Menu)"
-And I wait until "The Line from Parent to Child (in Question Category Menu)" appears
-Then "The Line from Parent to Child (in Question Category Menu)" should be displayed
+# Scenario: Expand all categories
+# When I click on "Expand All (in Question Category Menu)"
+# And I wait until "The Line from Parent to Child (in Question Category Menu)" appears
+# Then "The Line from Parent to Child (in Question Category Menu)" should be displayed
 
 Scenario: Go to Sales View
 When I click on "Sales View (Navigation Menu)"
@@ -56,5 +56,6 @@ Then "Question Name containing the word Question (in Questions Table(in Right Si
 
 Scenario: Download Questions
 When I click on "Download Questions Button (in Sales View)"
+And I wait for "10" seconds
 Then I remember the downloaded filename as "downloadedFileName"
 And the file "{downloadedFileName}" should be downloaded
