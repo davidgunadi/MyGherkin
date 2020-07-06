@@ -229,5 +229,11 @@ Logout Link: //a[text()='Logout']
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/SEN/Sensage+EnvDS
 Search Textbox (at bottom of page, in Analytics Workbench): //input[@id='df-input-5']
-Sample Chart From Table Pie and Bar Graph (Cell): //div[@container='body'][text()=' Sample: Chart From Table: Pie and Bar Graph ']
-Sample Chart From Table Pie and Bar Graph (Cell, in Dialog): //div[@role='dialog']//span[text()='Sample: Chart From Table: Pie and Bar Graph']
+Sample Chart From Table Pie and Bar Graph (Cell): //div[@container='body'][contains(text(),'Chart From Table')][contains(text(),'Pie and Bar Graph')]
+
+
+
+
+Sample Chart From Table Pie and Bar Graph (Cell, in Analytics Model Execution Queue): //div[@role='dialog']//span[contains(text(),'Chart From Table')][contains(text(),'Pie and Bar Graph')]
+View results button (in Analytics Model Execution Queue): //span[@class='df-button__content'][contains(text(),'View results')]
+Execution results for model Sample Chart From Table Pie and Bar Graph (Dialog): //h1[contains(text(),'Execution results for model')][contains(text(),'Chart From Table')][contains(text(),'Pie and Bar Graph')]

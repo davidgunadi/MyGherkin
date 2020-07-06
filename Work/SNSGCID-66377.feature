@@ -18,20 +18,23 @@ Scenario: Access Analytics Workbench
 When I click on "Data Design menu"
 And I click on "Analytics Workbench menu"
 And I wait until "Loading Spinner" disappears
-And I click on "Analytics tab"
-Then "Analytics tab" should be displayed
+Then "Models tab" should be displayed
 
 Scenario: Open results
 When I set "Search Textbox (at bottom of page, in Analytics Workbench)" value to "Sample: Chart From Table: Pie and Bar Graph"
 And I click on "Sample Chart From Table Pie and Bar Graph (Cell)"
 And I click on "Models toolbar Play button"
-And I click on "Sample Chart From Table Pie and Bar Graph (Cell, in Dialog)"
-And I click on "Play button"
 And I wait until "Display model execution queue button with value 1" appears
 And I click on "Display model execution queue button with value 1"
-And I click on "Sample Chart From Table Pie and Bar Graph (Cell, in Dialog)"
+And I click on "Sample Chart From Table Pie and Bar Graph (Cell, in Analytics Model Execution Queue)"
 And I click on "View results button (in Analytics Model Execution Queue)"
 Then "Execution results for model Sample Chart From Table Pie and Bar Graph (Dialog)" should be displayed
+
+
+
+
+
+
 
 And "Show all preview" should be displayed
 And I should see "Output HTML (.html file)" in "First output parameter"
