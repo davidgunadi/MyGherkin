@@ -23,7 +23,7 @@ Scenario: Fill up the fields to use asset category parameter
 When I click on "Field Dropdown (in Advanced Search)"
 And I click on "Asset Category (dropdown Option)"
 And I click on "Operator Dropdown (in Advanced Search)"
-And I click on "Is (dropdown Option"
+And I click on "Is (dropdown Option)"
 And I set "Video" to "Value Textbox (in Advanced Search)" value
 And I click on "Edit Button (in Advanced Search)"
 Then "Save Current Search As Textbox (in Advanced Search)" should be displayed
