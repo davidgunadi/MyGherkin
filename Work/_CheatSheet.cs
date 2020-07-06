@@ -218,6 +218,7 @@ Logout Link: //a[text()='Logout']
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/NOR/Telescope+-+Testing+environments+-+Data+Structure+Environments
 ["//iframe[@id='fieldsearchframe']", ""]
+["//iframe[@id='contentframe']", ""]
 
 Field Dropdown (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//select[@title='Select a field to search on']"]
 Operator Dropdown (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//select[@title='Select an operator']"]
@@ -225,9 +226,12 @@ Value Dropdown (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//sel
 Edit Button (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//a[@id='EditButton']"]
 Save Current Search As Textbox (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//label[@id='savedsearch_name']"]
 Save Button (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//a[@id='savedsearch_button']"]
-Option named VarSavedSearchName (under Saved Searches Dropdown): ["//iframe[@id='fieldsearchframe']", "//select[@id='saved_searches']/option[text()=$SavedSearchName]"]
+Saved Searches Dropdown (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//select[@id='saved_searches']"]
 
 Asset Category (dropdown Option): ["//iframe[@id='fieldsearchframe']", "//li[@class='isnotselectable']//select[contains(@class,'crt_fieldlist')]/option[text()='Asset Category']"]
 Is (dropdown Option): ["//iframe[@id='fieldsearchframe']", "//li[@class='isnotselectable']//select[contains(@class,'crt_operatorlist')]/option[text()='Is']"]
 
-savedsearch_nameOperator Dropdown (in Advanced Search):
+
+
+Assets List (in Assets Page): ["//iframe[@id='contentframe']", "//div[@id='content_area']"]
+First Asset (in Assets Page): ["//iframe[@id='contentframe']", "//div[@id="content_area"]//div[@id="collections_content"]//div[@class='thumbnailView thumbcell thumbbackground item_vira'][1]"]
