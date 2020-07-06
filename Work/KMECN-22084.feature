@@ -56,4 +56,5 @@ Then "Question Name containing the word Question (in Questions Table(in Right Si
 
 Scenario: Download Questions
 When I click on "Download Questions Button (in Sales View)"
-Then the file "Questions.pdf" should be downloaded
+Then I remember the downloaded filename as "downloadedFileName"
+And the file "{downloadedFileName}" should be downloaded

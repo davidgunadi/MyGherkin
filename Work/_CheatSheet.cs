@@ -207,3 +207,27 @@ Search Button (under Active Forms): //input[@id='search']
 Group Cell (in First Row, under Active Forms Grid): //div[@id='ActiveForms']//tbody/tr[1]/td[3]
 
 Logout Link: //a[text()='Logout']
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              NORTHP                                //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/NOR/Telescope+-+Testing+environments+-+Data+Structure+Environments
+["//iframe[@id='fieldsearchframe']", ""]
+
+Field Dropdown (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//select[@title='Select a field to search on']"]
+Operator Dropdown (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//select[@title='Select an operator']"]
+Value Dropdown (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//select[@title='Select an operator']/following-sibling::input"]
+Edit Button (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//a[@id='EditButton']"]
+Save Current Search As Textbox (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//label[@id='savedsearch_name']"]
+Save Button (in Advanced Search): ["//iframe[@id='fieldsearchframe']", "//a[@id='savedsearch_button']"]
+Option named VarSavedSearchName (under Saved Searches Dropdown): ["//iframe[@id='fieldsearchframe']", "//select[@id='saved_searches']/option[text()=$SavedSearchName]"]
+
+Asset Category (dropdown Option): ["//iframe[@id='fieldsearchframe']", "//li[@class='isnotselectable']//select[contains(@class,'crt_fieldlist')]/option[text()='Asset Category']"]
+Is (dropdown Option): ["//iframe[@id='fieldsearchframe']", "//li[@class='isnotselectable']//select[contains(@class,'crt_operatorlist')]/option[text()='Is']"]
+
+savedsearch_nameOperator Dropdown (in Advanced Search):
