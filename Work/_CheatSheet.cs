@@ -85,13 +85,6 @@ https://confluence.devfactory.com/display/GFIA/Yaml+Environments
 
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                             BOINT                                  //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
-//http://spadmin:Password%231@automation1
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -269,3 +262,20 @@ Table (Cell, in Row under Create Table, under Intermediate Results): "//div[cont
 //td[text()='Output table']
 /following-sibling::td[text()='Table']
 /following-sibling::td[contains(.,'file:/opt/sensage/tomcat/temp/')]
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                             BOINT                                  //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
+//http://spadmin:Password%231@automation1
+Expand Node Icon (for IntranetNavigationFRRandomValue) : //div[@class='treenodediv'][.//span[@title=$IntranetNavigationFRRandomValue]]//img[@class='ti']
+Home (Tree Node): //span[contains(@id,'LBL')][@title='Home']
+Copy of Home (Tree Node): //span[contains(@id,'LBL')][@title='Copy of Home']
+Copy Term (Popup Menu Item): //span[@class='ms-core-menu-title'][text()='Copy Term']
+Delete Term (Popup Menu Item): //span[@class='ms-core-menu-title'][text()='Delete Term']
+Default Label Textbox (in Site Settings): //input[contains(@name,'termDefaultLabel')]

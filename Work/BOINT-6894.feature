@@ -4,7 +4,6 @@ Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "Automation Staging" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
 Given credentials "sc_admin"
-Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 
 Scenario: Log in to Bonzai as a site collection administrator
 Given browser "Chrome"
@@ -39,23 +38,16 @@ And I click on "General Tab (in Site Settings)"
 Then "Term Set Name Textbox (in Site Settings)" should be displayed
 
 Scenario: Update Term Set Name to "Intranet Navigation - FR"
-When I set "Term Set Name Textbox (in Site Settings)" value to "Intranet Navigation-FR{RandomValue}"
+Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+Given "IntranetNavigationFRRandomValue" default value is "Intranet Navigation-FR{RandomValue}"
+When I set "Term Set Name Textbox (in Site Settings)" value to "{IntranetNavigationFRRandomValue}"
 And I click on "Save Button (in Site Settings)"
-Then I should see "Intranet Navigation-FR{RandomValue}" in "Term Set Name Textbox (in Site Settings)"
-
-
-
-
-
-
-
-
+Then I should see "{IntranetNavigationFRRandomValue}" in "Term Set Name Textbox (in Site Settings)"
 
 Scenario: Expand "Intranet Navigation - FR" and right click Home Term
-When I click on "Expand Node Icon (for Intranet Navigation-FR)"
+When I click on "Expand Node Icon (for IntranetNavigationFRRandomValue)"
 And I right click on "Home (Tree Node)"
 Then "Copy Term (Popup Menu Item)" should be displayed
-
 
 Scenario: Click Copy Term
 When I click on "Copy Term (Popup Menu Item)"
@@ -68,7 +60,10 @@ And I accept the alert box
 Then "Home (Tree Node)" should not be displayed
 
 Scenario: Select the Copy and Select General Tab
-When I click on "Copy Term (Popup Menu Item)"   
+When I click on "Copy of Home (Tree Node)"
+And I click on "General Tab (in Site Settings)"
+Then "Default Label Textbox (in Site Settings)" should be displayed
+
 
 Scenario: Update the Default Label to "Home - FR"
 Scenario: Click "Intranet Navigation - FR" and select Custom Sort Tab
