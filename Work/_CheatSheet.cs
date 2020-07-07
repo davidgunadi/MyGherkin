@@ -284,4 +284,5 @@ Default Label Textbox (in Site Settings): //input[contains(@name,'termDefaultLab
 CUSTOM SORT Tab (in Site Settings): //span[@id='CustomSortTabName']
 Custom Sort Order Label (in Site Settings): //label[text()='Custom Sort Order']
 Sort Order Dropdown for Home - FR: //div[@id='SortOrderSection']//tr[contains(.,'Home - FR')]//select
+Option 1 (in Sort Order Dropdown for Home - FR): //div[@id='SortOrderSection']//tr[contains(.,'Home - FR')]//select/option[text()='1']
 Home - FR (Displayed as the first item in the Tree View Order): //div[@class='treenodediv']/following-sibling::ul/li[1][contains(.,'Home - FR')]

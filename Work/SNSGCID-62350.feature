@@ -5,7 +5,7 @@ Given quality bar version "20200115.1"
 Given environment "development" from "https://confluence.devfactory.com/display/SEN/Sensage+EnvDS"
 Given credentials "TEST-62350"
 
-Scenario: Populate data
+Scenario: Precondition - Populate data
 Given HTTP request
 When I execute GET request for "{environment.datasetpreload-single-node.URL}/TEST-62350"
 Then "Preload finished" should be in response body

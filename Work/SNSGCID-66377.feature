@@ -5,6 +5,11 @@ Given quality bar version "20200115.1"
 Given environment "development" from "https://confluence.devfactory.com/display/SEN/Sensage+EnvDS"
 Given credentials "TEST-66377"
 
+Scenario: Precondition - Populate data
+Given HTTP request
+When I execute GET request for "{environment.datasetpreload-single-node.URL}/TEST-66377"
+Then "Preload finished" should be in response body
+
 Scenario: Login
 Given browser "Chrome"
 When I open "{environment.analyzer-ui-single-node.URL}"
@@ -17,7 +22,6 @@ And "Data Design menu" should be displayed
 Scenario: Access Analytics Workbench
 When I click on "Data Design menu"
 And I click on "Analytics Workbench menu"
-And I wait for "3" seconds
 And I wait until "Loading Spinner" disappears
 Then "Models tab" should be displayed
 
