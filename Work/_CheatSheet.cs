@@ -253,9 +253,14 @@ First Output - Print Icon: //div[1]/app-output-preview//df-icon[contains(@class,
 First Output - Arrow to the Right (Click to view or download the output file) Icon: //div[1]/app-output-preview//df-icon[contains(@class,'fa-share')]
 HTML Table (in Second Window): //table
 
-Output Table (Cell, in Row under Create Table, under Intermediate Results): "//div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]//td[text()='Output table']/following-sibling::td[text()='Table']"
+Output Table (Cell, in Row under Create Table, under Intermediate Results): "//div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]//td[text()='Output table']/following-sibling::td[text()='Output table']"
 Table (Cell, in Row under Create Table, under Intermediate Results): "//div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]td[text()='Table']"
 "file/opt/sensage/tomcat/temp (Cell, in Row under Create Table, under Intermediate Results)": "//div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]//td[contains(.,'file:/opt/sensage/tomcat/temp/')]"
+
+
+Name Column (under Outputs for model Create Table, under Intermediate results): "//div[contains(@class,'execution-result')][./div/div/div/h1[contains(text(),'Model name: Create Table')]]//div[contains(@class,'output-container')]//tbody/tr[1]/td[1]"
+Type Column (under Outputs for model Create Table, under Intermediate results): "//div[contains(@class,'execution-result')][./div/div/div/h1[contains(text(),'Model name: Create Table')]]//div[contains(@class,'output-container')]//tbody/tr[1]/td[2]"
+Value Column (under Outputs for model Create Table, under Intermediate results): "//div[contains(@class,'execution-result')][./div/div/div/h1[contains(text(),'Model name: Create Table')]]//div[contains(@class,'output-container')]//tbody/tr[1]/td[3]/div/div"
 
 
 //div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]

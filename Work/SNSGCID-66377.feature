@@ -80,6 +80,6 @@ Then "HTML Table (in Second Window)" should be displayed
 Scenario: Intermediate results
 When I switch to main window and close others
 And I click on "Show intermediate results"
-Then "Output Table (Cell, in Row under Create Table, under Intermediate Results)" should be displayed
-Then "Table (Cell, in Row under Create Table, under Intermediate Results)" should be displayed
-Then "file/opt/sensage/tomcat/temp (Cell, in Row under Create Table, under Intermediate Results)" should be displayed
+Then I should see "Output Table" in "Name Column (under Outputs for model Create Table, under Intermediate results)"
+And I should see "Table" in "Type Column (under Outputs for model Create Table, under Intermediate results)"
+And I should see "file:/opt/sensage/tomcat/temp/" in "Value Column (under Outputs for model Create Table, under Intermediate results)"

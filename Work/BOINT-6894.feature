@@ -70,6 +70,7 @@ When I click on "Default Label Textbox (in Site Settings)"
 And I set "Default Label Textbox (in Site Settings)" value to ""
 And I set "Default Label Textbox (in Site Settings)" value to "Home - FR"
 And I click on "Save Button (in Site Settings)"
+And I wait until "Home - FR (Tree Node)" disappears
 Then I should see "Home - FR" in "Default Label Textbox (in Site Settings)"
 And "Home - FR (Tree Node)" should be displayed
 
@@ -82,5 +83,6 @@ Scenario: Select "Use custom sort order" and set "Home FR" to 1 and Save
 When I click on "Sort Order Dropdown for Home - FR"
 And I click on "Option 1 (in Sort Order Dropdown for Home - FR)"
 And I click on "Save Button (in Site Settings)"
-Then I should see "1" in "Sort Order Dropdown for Home - FR"
-And "Home - FR (Displayed as the first item in the Tree View Order)" should be displayed
+And I wait until "Home - FR (Displayed as the first item in the Tree View Order)" appears
+Then "Home - FR (Displayed as the first item in the Tree View Order)" should be displayed
+And I should see "1" in "Sort Order Dropdown for Home - FR"
