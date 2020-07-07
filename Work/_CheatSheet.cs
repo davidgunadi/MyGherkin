@@ -274,8 +274,14 @@ Table (Cell, in Row under Create Table, under Intermediate Results): "//div[cont
 //https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
 //http://spadmin:Password%231@automation1
 Expand Node Icon (for IntranetNavigationFRRandomValue) : //div[@class='treenodediv'][.//span[@title=$IntranetNavigationFRRandomValue]]//img[@class='ti']
+IntranetNavigationFRRandomValue (Tree Node): //span[contains(@id,'LBL')][@title=$IntranetNavigationFRRandomValue]
 Home (Tree Node): //span[contains(@id,'LBL')][@title='Home']
 Copy of Home (Tree Node): //span[contains(@id,'LBL')][@title='Copy of Home']
+Home - FR (Tree Node): //span[contains(@id,'LBL')][@title='Home - FR']
 Copy Term (Popup Menu Item): //span[@class='ms-core-menu-title'][text()='Copy Term']
 Delete Term (Popup Menu Item): //span[@class='ms-core-menu-title'][text()='Delete Term']
 Default Label Textbox (in Site Settings): //input[contains(@name,'termDefaultLabel')]
+CUSTOM SORT Tab (in Site Settings): //span[@id='CustomSortTabName']
+Custom Sort Order Label (in Site Settings): //label[text()='Custom Sort Order']
+Sort Order Dropdown for Home - FR: //div[@id='SortOrderSection']//tr[contains(.,'Home - FR')]//select
+Home - FR (Displayed as the first item in the Tree View Order): //div[@class='treenodediv']/following-sibling::ul/li[1][contains(.,'Home - FR')]

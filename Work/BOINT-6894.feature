@@ -38,8 +38,7 @@ And I click on "General Tab (in Site Settings)"
 Then "Term Set Name Textbox (in Site Settings)" should be displayed
 
 Scenario: Update Term Set Name to "Intranet Navigation - FR"
-Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
-Given "IntranetNavigationFRRandomValue" default value is "Intranet Navigation-FR{RandomValue}"
+Given "IntranetNavigationFRRandomValue" default value is "Intranet Navigation-FR-{date('YYYYMMDDmmss')}"
 When I set "Term Set Name Textbox (in Site Settings)" value to "{IntranetNavigationFRRandomValue}"
 And I click on "Save Button (in Site Settings)"
 Then I should see "{IntranetNavigationFRRandomValue}" in "Term Set Name Textbox (in Site Settings)"
@@ -54,7 +53,7 @@ When I click on "Copy Term (Popup Menu Item)"
 Then "Copy of Home (Tree Node)" should be displayed
 
 Scenario: Right Click Original Term and click Delete, and Accept Confirmation
-when I right click on "Home (Tree Node)"
+When I right click on "Home (Tree Node)"
 And I click on "Delete Term (Popup Menu Item)"
 And I accept the alert box
 Then "Home (Tree Node)" should not be displayed
@@ -64,9 +63,19 @@ When I click on "Copy of Home (Tree Node)"
 And I click on "General Tab (in Site Settings)"
 Then "Default Label Textbox (in Site Settings)" should be displayed
 
-
 Scenario: Update the Default Label to "Home - FR"
+When I set "Default Label Textbox (in Site Settings)" value to "Home - FR"
+And I click on "Save Button (in Site Settings)"
+Then I should see "Home - FR" in "Default Label Textbox (in Site Settings)"
+And "Home - FR (Tree Node)" should be displayed
+
 Scenario: Click "Intranet Navigation - FR" and select Custom Sort Tab
-Scenario: Select "Use custom sort order" and set "Home FR" to 1
-Scenario: Click on Save
-Scenario: Save the "Navigation Term Set Guid" into a Variable
+When I click on "IntranetNavigationFRRandomValue (Tree Node)"
+And I click on "CUSTOM SORT Tab (in Site Settings)"
+Then "Custom Sort Order Label (in Site Settings)" should be displayed
+
+Scenario: Select "Use custom sort order" and set "Home FR" to 1 and Save
+When I set "1" to "Sort Order Dropdown for Home - FR" value
+And I click on "Save Button (in Site Settings)"
+Then I should see "1" in "Sort Order Dropdown for Home - FR"
+Then "Home - FR (Displayed as the first item in the Tree View Order)" should be displayed
