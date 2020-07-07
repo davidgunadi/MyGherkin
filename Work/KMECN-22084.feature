@@ -24,21 +24,21 @@ Scenario: Precondition: Enter UAD Application
 When I click on "UAD (Button in Main Page)"
 Then "Master Database Reports" page should be displayed
 
-# Scenario: In the menu, go to "Filters", and select the option "Question Category"
-# When I hover on "Filters (Navigation Menu)"
-# And I click on "Question Category (Navigation Menu)"
-# Then "Question Category (Page Header)" should be displayed
+Scenario: In the menu, go to "Filters", and select the option "Question Category"
+When I hover on "Filters (Navigation Menu)"
+And I click on "Question Category (Navigation Menu)"
+Then "Question Category (Page Header)" should be displayed
 
-# Scenario: Collapse all categories
-# When I wait for "1" seconds
-# And I click on "Collapse All (in Question Category Menu)"
-# And I wait until "The Line from Parent to Child (in Question Category Menu)" disappears
-# Then "The Line from Parent to Child (in Question Category Menu)" should not be displayed
+Scenario: Collapse all categories
+When I wait for "1" seconds
+And I click on "Collapse All (in Question Category Menu)"
+And I wait until "The Line from Parent to Child (in Question Category Menu)" disappears
+Then "The Line from Parent to Child (in Question Category Menu)" should not be displayed
 
-# Scenario: Expand all categories
-# When I click on "Expand All (in Question Category Menu)"
-# And I wait until "The Line from Parent to Child (in Question Category Menu)" appears
-# Then "The Line from Parent to Child (in Question Category Menu)" should be displayed
+Scenario: Expand all categories
+When I click on "Expand All (in Question Category Menu)"
+And I wait until "The Line from Parent to Child (in Question Category Menu)" appears
+Then "The Line from Parent to Child (in Question Category Menu)" should be displayed
 
 Scenario: Go to Sales View
 When I click on "Sales View (Navigation Menu)"
@@ -47,6 +47,7 @@ And I remember a value from "First Item in Question Category Table (in Sales Vie
 
 Scenario: Select a Different Question Category
 When I click on "First Item in Question Category Table (in Sales View)"
+When I wait for "3" seconds
 Then I should see "Question Category" in "Question Category Name (in Questions Table(in Right Side))"
 
 Scenario: Search Questions

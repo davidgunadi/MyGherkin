@@ -262,7 +262,7 @@ HTML Table (in Second Window): //table
 
 Output Table (Cell, in Row under Create Table, under Intermediate Results): "//div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]//td[text()='Output table']/following-sibling::td[text()='Table']"
 Table (Cell, in Row under Create Table, under Intermediate Results): "//div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]td[text()='Table']"
-"file:/opt/sensage/tomcat/temp (Cell, in Row under Create Table, under Intermediate Results)": "//div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]//td[contains(.,'file:/opt/sensage/tomcat/temp/')]"
+"file/opt/sensage/tomcat/temp (Cell, in Row under Create Table, under Intermediate Results)": "//div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]//td[contains(.,'file:/opt/sensage/tomcat/temp/')]"
 
 
 //div[contains(@class,'execution-result')][.//h1[contains(text(),'Model name: Create Table')]]

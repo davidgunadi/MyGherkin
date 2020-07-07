@@ -56,14 +56,6 @@ Then "First Output - HTML Table Preview" should be displayed
 And "Second Output - Image Preview" should not be displayed
 And "Third Output - Image Preview" should not be displayed
 
-Scenario: Single preview in fullscreen
-When I click on "First Output - Expand (Fullscreen) Icon"
-Then "First Output - In Fullscreen Mode" should be displayed
-
-Scenario: Exit single preview in fullscreen
-When I click on "First Output - Expand (Fullscreen) Icon"
-Then "First Output - In Fullscreen Mode" should not be displayed
-
 Scenario: Print single preview
 When I click on "First Output - Print Icon"
 And I switch to second window
@@ -86,4 +78,4 @@ When I switch to main window and close others
 And I click on "Show intermediate results"
 Then "Output Table (Cell, in Row under Create Table, under Intermediate Results)" should be displayed
 Then "Table (Cell, in Row under Create Table, under Intermediate Results)" should be displayed
-Then "file:/opt/sensage/tomcat/temp (Cell, in Row under Create Table, under Intermediate Results)" should be displayed
+Then "file/opt/sensage/tomcat/temp (Cell, in Row under Create Table, under Intermediate Results)" should be displayed

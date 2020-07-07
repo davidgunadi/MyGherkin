@@ -4,7 +4,7 @@ Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "Automation Staging" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
 Given credentials "sc_admin"
-Given "RandomValue" value is the current datetime "+0 milliseconds"
+Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 
 Scenario: Log in to Bonzai as a site collection administrator
 Given browser "Chrome"
@@ -42,6 +42,14 @@ Scenario: Update Term Set Name to "Intranet Navigation - FR"
 When I set "Term Set Name Textbox (in Site Settings)" value to "Intranet Navigation-FR{RandomValue}"
 And I click on "Save Button (in Site Settings)"
 Then I should see "Intranet Navigation-FR{RandomValue}" in "Term Set Name Textbox (in Site Settings)"
+
+
+
+
+
+
+
+
 
 Scenario: Expand "Intranet Navigation - FR" and right click Home Term
 When I click on "Expand Node Icon (for Intranet Navigation-FR)"
