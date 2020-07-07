@@ -17,6 +17,7 @@ And "Data Design menu" should be displayed
 Scenario: Access Analytics Workbench
 When I click on "Data Design menu"
 And I click on "Analytics Workbench menu"
+And I wait for "3" seconds
 And I wait until "Loading Spinner" disappears
 Then "Models tab" should be displayed
 
@@ -29,68 +30,63 @@ And I click on "Display model execution queue button with value 1"
 And I click on "Sample Chart From Table Pie and Bar Graph (Cell, in Analytics Model Execution Queue)"
 And I click on "View results button (in Analytics Model Execution Queue)"
 Then "Execution results for model Sample Chart From Table Pie and Bar Graph (Dialog)" should be displayed
-
-
-
-
-
-
-
-And "Show all preview" should be displayed
-And I should see "Output HTML (.html file)" in "First output parameter"
-And "First output parameter link address" should be displayed
-And I should see "Bar Chart (.png file)" in "Second output parameter"
-And "Second output parameter link address" should be displayed
-And I should see "Pie Chart (.png file)" in "Third output parameter"
-And "Third output parameter link address" should be displayed
+And "Show all preview Checkbox (in Execution Results Dialog)" should be displayed
+And "Output HTML (html file)" should be displayed
+And "First Output - Https Link" should be displayed
+And "Bar Chart (png file)" should be displayed
+And "Second Output - Https Link" should be displayed
+And "Pie Chart (png file)" should be displayed
+And "Third Output - Https Link" should be displayed
 
 Scenario: Open preview
-When I "check" "Show all preview" checkbox
-Then "First parameter HTML table preview" should be displayed
-And "Second parameter image preview" should be displayed
-And "Third parameter image preview " should be displayed
+When I click on "Show all preview Checkbox (in Execution Results Dialog)"
+Then "First Output - HTML Table Preview" should be displayed
+And "Second Output - Image Preview" should be displayed
+And "Third Output - Image Preview" should be displayed
 
 Scenario: Close preview
-When I "uncheck" "Show all preview" checkbox
-Then "First parameter HTML table preview" should not be displayed
-And "Second parameter image preview" should not be displayed
-And "Third parameter image preview " should not be displayed
+When I click on "Show all preview Checkbox (in Execution Results Dialog)"
+Then "First Output - HTML Table Preview" should not be displayed
+And "Second Output - Image Preview" should not be displayed
+And "Third Output - Image Preview" should not be displayed
 
 Scenario: Single preview
-When I click on "First output parameter magnifier icon"
-Then "First parameter HTML table preview" should be displayed
-And "Second parameter image preview" should not be displayed
-And "Third parameter image preview " should not be displayed
+When I click on "First Output - Magnifier (Preview) Icon"
+Then "First Output - HTML Table Preview" should be displayed
+And "Second Output - Image Preview" should not be displayed
+And "Third Output - Image Preview" should not be displayed
 
 Scenario: Single preview in fullscreen
-When I click on "First output parameter 'Fullscreen' button"
-Then "First parameter HTML table preview in fullscreen mode" should be displayed
+When I click on "First Output - Expand (Fullscreen) Icon"
+Then "First Output - In Fullscreen Mode" should be displayed
 
 Scenario: Exit single preview in fullscreen
-When I click on "First output parameter 'Fullscreen' button"
-Then "First parameter HTML table preview in fullscreen mode" should not be displayed
+When I click on "First Output - Expand (Fullscreen) Icon"
+Then "First Output - In Fullscreen Mode" should not be displayed
 
 Scenario: Print single preview
-When I click on "First output parameter 'Print' button"
-And I switch to window "Print Window"
-Then "HTML table print content" should be displayed
+When I click on "First Output - Print Icon"
+And I switch to second window
+Then "First Output - HTML Table Preview" should be displayed
 
 Scenario: Download single preview
-When I switch to main window
-And I click on "First output parameter 'Click to view or download the output file' button"
-And I switch to window "Download Window"
-Then "HTML table" should be displayed
+When I switch to main window and close others
+And I click on "First Output - Arrow to the Right (Click to view or download the output file) Icon"
+And I switch to second window
+Then "HTML Table (in Second Window)" should be displayed
 
 Scenario: Download link single preview
-When I switch to main window
-And I click on "First output parameter link address"
-And I switch to window "Download Window"
-Then "HTML table" should be displayed
+When I switch to main window and close others
+And I click on "First Output - Https Link"
+And I switch to second window
+Then "HTML Table (in Second Window)" should be displayed
 
 Scenario: Intermediate results
-When I switch to main window
+When I switch to main window and close others
 And I "check" "Show intermediate results" checkbox
 And I scroll to the element "Intermediate results"
 Then I should see "Output table" in "Outputs for model: Create Table intermediate result, Name column"
 And I should see "Table" in "Outputs for model: Create Table intermediate result, Type column"
 And "Outputs for model: Create Table intermediate result, Value column with a value starting with file:///opt/sensage/tomcat/temp" should be displayed
+
+

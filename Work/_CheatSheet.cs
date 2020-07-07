@@ -237,3 +237,25 @@ Sample Chart From Table Pie and Bar Graph (Cell): //div[@container='body'][conta
 Sample Chart From Table Pie and Bar Graph (Cell, in Analytics Model Execution Queue): //div[@role='dialog']//span[contains(text(),'Chart From Table')][contains(text(),'Pie and Bar Graph')]
 View results button (in Analytics Model Execution Queue): //span[@class='df-button__content'][contains(text(),'View results')]
 Execution results for model Sample Chart From Table Pie and Bar Graph (Dialog): //h1[contains(text(),'Execution results for model')][contains(text(),'Chart From Table')][contains(text(),'Pie and Bar Graph')]
+
+Show all preview Checkbox (in Execution Results Dialog): //button[contains(.,'Show all preview')]
+Output HTML (.html file): //div[@class='row'][contains(.,'Output HTML')][contains(.,'(.html file)')]
+Bar Chart (.png file): //div[@class='row'][contains(.,'Bar Chart')][contains(.,'(.png file)')]
+Pie Chart (.png file): //div[@class='row'][contains(.,'Pie Chart')][contains(.,'(.png file)')]
+First Output - Https Link: //div[contains(@class,'output-container')]/div[1]//a[@class='p-3'][contains(@href,'https://dev-single.sensage.aureacentral.com:28093/api/files/')]
+Second Output - Https Link: //div[contains(@class,'output-container')]/div[2]//a[@class='p-3'][contains(@href,'https://dev-single.sensage.aureacentral.com:28093/api/files/')]
+Third Output - Https Link: //div[contains(@class,'output-container')]/div[3]//a[@class='p-3'][contains(@href,'https://dev-single.sensage.aureacentral.com:28093/api/files/')]
+First Output - HTML Table Preview: ["//iframe[@class='w-100 ng-star-inserted']", "//table"]
+Second Output - Image Preview: //div[2]/app-output-preview/div[contains(@class,'output-preview')]//img[@class='mw-100 ng-star-inserted']
+Third Output - Image Preview: //div[3]/app-output-preview/div[contains(@class,'output-preview')]//img[@class='mw-100 ng-star-inserted']
+
+First Output - Magnifier Icon: //div[1]/app-output-preview//df-icon[contains(@class,'fa-search')]
+First Output - Expand (Fullscreen) Icon: //div[1]/app-output-preview//df-icon[contains(@class,'fa-expand')]
+First Output - In Fullscreen Mode: //div[1]/app-output-preview/div[contains(@class,'df-fullscreen--expanded')]
+
+
+First Output - Print Icon: //div[1]/app-output-preview//df-icon[contains(@class,'fa-print')]
+
+
+First Output - Arrow to the Right (Click to view or download the output file) Icon: //div[1]/app-output-preview//df-icon[contains(@class,'fa-share')]
+HTML Table (in Second Window): //table

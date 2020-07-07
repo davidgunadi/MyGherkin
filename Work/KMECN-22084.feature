@@ -56,6 +56,6 @@ Then "Question Name containing the word Question (in Questions Table(in Right Si
 
 Scenario: Download Questions
 When I click on "Download Questions Button (in Sales View)"
-And I wait for "10" seconds
+And I wait until the file downloaded
 Then I remember the downloaded filename as "downloadedFileName"
 And the file "{downloadedFileName}" should be downloaded
