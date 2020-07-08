@@ -15,7 +15,7 @@ When I click on "Directories - Services (in Footer)"
 Then "Services" page should be displayed
 
 Scenario: User creates a test page by clicking on Add a Page in the admin menu
-When I click on "Admin Menu Icon"
+When I click on "Gear Icon (on top right of the page)"
 And I click on "Add a page"
 Then "Page Name Textbox" should be displayed
 
@@ -76,10 +76,28 @@ And I click on "Continue Button (in Publish Dialog)"
 Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
 And "Please select a Roll Up Image (under Show Roll Up Image on Page)" should be displayed
 
-Scenario: Assign a rollup image using Bonzai Page Layout Rollup Image rendition by clicking on Insert and Image from Sharepoint and assigning an image from the Sharepoint library. The Image Rendition is selected in the dropdown below the Selected image field of the popup
+Scenario: Assign a rollup image using Bonzai Page Layout Rollup Image rendition by clicking on Insert and Image from Sharepoint and assigning an image from the Sharepoint library.
+When I click on "Click here to insert a picture from SharePoint"
+And I click on "Browse (for Selected Image)"
+And I double click on "FAQ Image"
+And I click on "OK Button (in Edit Image Properties Dialog)"
+Then "FAQ Image Preview (in Roll Up Image)" should be displayed
 
 Scenario: Publish the page by clicking on the Publish button and continuing on the confirmation popup
+When I click on "Publish Tab (in Sharepoint Ribbon)"
+And I click on "Publish (in Sharepoint Ribbon)"
+And I click on "Continue Button (in Publish Dialog)"
+Then "Publish Tab (in Sharepoint Ribbon)" should not be displayed
 
 Scenario: User deletes the test page using the Delete Page button on the Page tab of the Sharepoint ribbon (If the ribbon is not visible, click on the Show Ribbon item in the Admin menu), and accepting the confirmation.
+When I click on "Gear Icon (on top right of the page)"
+And I click on "Edit page"
+And I click on "Page Tab (in Sharepoint Ribbon)"
+And I click on "Delete Page"
+And I accept the alert box
+Then "Services" page should be displayed
 
 Scenario: User logs out of Bonzai using the Sign Out option of the user menu
+When I click on "Username (on top right of the page)"
+And I click on "Sign Out"
+Then "Please close the browser to complete sign out" should be displayed

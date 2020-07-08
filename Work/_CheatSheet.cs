@@ -279,8 +279,7 @@ Value Column (under Outputs for model Create Table, under Intermediate results):
 //https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
 //http://spadmin:Password%231@automation1
 Directories - Services (in Footer): //div[contains(@class,'bz-footer-container')]//li/a[text()='Services']
-["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_PlaceHolderMain_nameInput']"]
-["//iframe[@class='ms-dlgFrame']", "//input[@id='//input[@id='ctl00_PlaceHolderMain_createButton']']"]
+["//iframe[@class='ms-dlgFrame']", ""]
 
 
 
@@ -304,3 +303,14 @@ Find it at, containing VarRandomPage: ["//iframe[@class='ms-dlgFrame']", "//inpu
 
 BONZAI\Administrator (in Posted By Textbox): //span[@id='content'][contains(text(),'administrator')]
 Please select a Roll Up Image (under Show Roll Up Image on Page): //span[@role='alert'][text()='Please select a Roll Up Image']
+
+
+Click here to insert a picture from SharePoint: //a[contains(@id,'AddAssetPromptLink')]
+Browse (for Selected Image): ["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_PlaceHolderDialogBodySection_PlaceHolderDialogBodyMainSection_ctl01_assetSelectedImage_PickerLaunchButton']"]
+FAQ Image: ["//iframe[@class='ms-dlgFrame']", "//div[text()='FAQ']"]
+OK Button (in Edit Image Properties Dialog): ["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_OkButton']"]
+
+FAQ Image Preview (in Roll Up Image): //img[contains(@src,'FAQ')]
+
+
+Username (on top right of the page): //span[contains(@class,'username')]
