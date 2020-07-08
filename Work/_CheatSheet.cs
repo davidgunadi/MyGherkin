@@ -279,3 +279,24 @@ Value Column (under Outputs for model Create Table, under Intermediate results):
 //https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
 //http://spadmin:Password%231@automation1
 Directories - Services (in Footer): //div[contains(@class,'bz-footer-container')]//li/a[text()='Services']
+["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_PlaceHolderMain_nameInput']"]
+["//iframe[@class='ms-dlgFrame']", "//input[@id='//input[@id='ctl00_PlaceHolderMain_createButton']']"]
+
+
+
+Location Title Textbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_TextField1_ctl00_TextField']
+Service Title Textbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_ctl01_ctl00_TextField']
+Posted By Textbox: //div[@id='ctl00_PlaceHolderMain_EditModePanel_ctl02_ctl00_UserField_upLevelDiv']
+Person Icon (for Posted By): //tr[contains(.,'Posted By')]//img[@alt='Check Names']
+
+Page Tab (in Sharepoint Ribbon): //span[@class='ms-cui-tt-span'][text()='Page']
+Publish Tab (in Sharepoint Ribbon): //span[@class='ms-cui-tt-span'][text()='Publish']
+
+Page Layout (in Sharepoint Ribbon): //a[contains(@id,'ChangePageLayout')]
+Publish (in Sharepoint Ribbon): //a[contains(@id,'Publish-SelectedItem')]   
+Service Page (under Page Layout Popup): //div[@title='Service Page']
+
+Continue Button (in Publish Dialog): //input[@id='statechangedialog_okbutton']
+
+Error - This page contains content or formatting that is not valid. You can find more information in the affected sections: //span[@class='ms-status-status'][contains(.,'Error')][contains(.,'This page contains content or formatting that is not valid. You can find more information in the affected sections')]
+You must specify a value for this required field (under Posted By): //tr[contains(.,'Posted By')]//span[text()='You must specify a value for this required field.']

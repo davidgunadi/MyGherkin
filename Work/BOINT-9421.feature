@@ -15,14 +15,36 @@ When I click on "Directories - Services (in Footer)"
 Then "Services" page should be displayed
 
 Scenario: User creates a test page by clicking on Add a Page in the admin menu
+When I click on "Admin Menu Icon"
+And I click on "Add a page"
+Then "Page Name Textbox" should be displayed
 
 Scenario: User provides a valid title and clicks on Create
+Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+When I set "Page Name Textbox" value to "Page_{RandomValue}"
+And I click on "Create"
+Then "Page_{RandomValue}" page should be displayed
 
 Scenario: User assigns a Service Page layout to the page by clicking on the Page tab of the Sharepoint Ribbon and selecting the layout from the Page Layouts menu
+When I click on "Page Tab (in Sharepoint Ribbon)"
+And I click on "Page Layout (in Sharepoint Ribbon)"
+And I click on "Service Page (under Page Layout Popup)"
+Then "Service Title Textbox" should be displayed
 
-Scenario: User leaves the default values and tries to publish the page by clicking on the Publish button on the Sharepoint Ribbon, and clicking Continue on the comment modal that appears.
+Scenario: User leaves the default values and tries to publish the page
+When I click on "Publish Tab (in Sharepoint Ribbon)"
+And I click on "Publish (in Sharepoint Ribbon)"
+And I click on "Continue Button (in Publish Dialog)"
+Then "Error - This page contains content or formatting that is not valid. You can find more information in the affected sections" should be displayed
+And "You must specify a value for this required field (under Posted By)" should be displayed
 
-Scenario: User performs the following for the required fields in the Metadata tab and tries to publish by clicking the Publish button and continuing on the comment popup: Clear the contents of Service Title, Enter a valid user in Posted By (enter a username and click on the person icon to validate. Your own username may be used.), Uncheck Show Rollup Image
+Scenario: User Clear the contents of Service Title, Enter a valid user in Posted By, Uncheck Show Rollup Image, and Publish the page
+When I set "Service Title Textbox" value to ""
+And I click on "Posted By Textbox"
+And I type "administrator"
+And I click on "Person Icon (for Posted By)"
+
+
 
 Scenario: User performs the following for the required fields in the Metadata tab and tries to publish by clicking the Publish button and continuing on the comment popup:
 Provide a valid title for Service Title
