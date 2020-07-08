@@ -1,4 +1,4 @@
-Feature: BOINT-6894
+Feature: BOINT-9421
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
@@ -23,18 +23,21 @@ Scenario: User provides a valid title and clicks on Create
 Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 When I set "Page Name Textbox" value to "Page_{RandomValue}"
 And I click on "Create"
+And I wait until "Checked out to you" appears
 Then "Page_{RandomValue}" page should be displayed
 
 Scenario: User assigns a Service Page layout to the page by clicking on the Page tab of the Sharepoint Ribbon and selecting the layout from the Page Layouts menu
 When I click on "Page Tab (in Sharepoint Ribbon)"
 And I click on "Page Layout (in Sharepoint Ribbon)"
 And I click on "Service Page (under Page Layout Popup)"
+And I wait until "Checked out to you" appears
 Then "Service Title Textbox" should be displayed
 
 Scenario: User leaves the default values and tries to publish the page
 When I click on "Publish Tab (in Sharepoint Ribbon)"
 And I click on "Publish (in Sharepoint Ribbon)"
 And I click on "Continue Button (in Publish Dialog)"
+And I wait until "Checked out to you" appears
 Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
 And "You must specify a value for this required field (under Posted By)" should be displayed
 
@@ -48,6 +51,7 @@ And I "uncheck" "Show Roll Up Image on Page Checkbox" checkbox
 And I click on "Publish Tab (in Sharepoint Ribbon)"
 And I click on "Publish (in Sharepoint Ribbon)"
 And I click on "Continue Button (in Publish Dialog)"
+And I wait until "Checked out to you" appears
 Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
 And "You must specify a value for this required field (under Service Title)" should be displayed
 
@@ -59,6 +63,7 @@ And I press "BACK_SPACE"
 And I click on "Publish Tab (in Sharepoint Ribbon)"
 And I click on "Publish (in Sharepoint Ribbon)"
 And I click on "Continue Button (in Publish Dialog)"
+And I wait until "Checked out to you" appears
 Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
 And "You must specify a value for this required field (under Posted By)" should be displayed
 
@@ -73,6 +78,7 @@ When I "check" "Show Roll Up Image on Page Checkbox" checkbox
 And I click on "Publish Tab (in Sharepoint Ribbon)"
 And I click on "Publish (in Sharepoint Ribbon)"
 And I click on "Continue Button (in Publish Dialog)"
+And I wait until "Checked out to you" appears
 Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
 And "Please select a Roll Up Image (under Show Roll Up Image on Page)" should be displayed
 
@@ -87,11 +93,13 @@ Scenario: Publish the page by clicking on the Publish button and continuing on t
 When I click on "Publish Tab (in Sharepoint Ribbon)"
 And I click on "Publish (in Sharepoint Ribbon)"
 And I click on "Continue Button (in Publish Dialog)"
+And I wait until "Publish Tab (in Sharepoint Ribbon)" disappears
 Then "Publish Tab (in Sharepoint Ribbon)" should not be displayed
 
 Scenario: User deletes the test page using the Delete Page button on the Page tab of the Sharepoint ribbon (If the ribbon is not visible, click on the Show Ribbon item in the Admin menu), and accepting the confirmation.
 When I click on "Gear Icon (on top right of the page)"
 And I click on "Edit page"
+And I wait until "Checked out to you" appears
 And I click on "Page Tab (in Sharepoint Ribbon)"
 And I click on "Delete Page"
 And I accept the alert box
