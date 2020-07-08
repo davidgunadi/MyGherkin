@@ -35,7 +35,7 @@ Scenario: User leaves the default values and tries to publish the page
 When I click on "Publish Tab (in Sharepoint Ribbon)"
 And I click on "Publish (in Sharepoint Ribbon)"
 And I click on "Continue Button (in Publish Dialog)"
-Then "Error - This page contains content or formatting that is not valid. You can find more information in the affected sections" should be displayed
+Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
 And "You must specify a value for this required field (under Posted By)" should be displayed
 
 Scenario: User Clear the contents of Service Title, Enter a valid user in Posted By, Uncheck Show Rollup Image, and Publish the page
@@ -43,17 +43,38 @@ When I set "Service Title Textbox" value to ""
 And I click on "Posted By Textbox"
 And I type "administrator"
 And I click on "Person Icon (for Posted By)"
+And I wait until "BONZAI\Administrator (in Posted By Textbox)" appears
+And I "uncheck" "Show Roll Up Image on Page Checkbox" checkbox
+And I click on "Publish Tab (in Sharepoint Ribbon)"
+And I click on "Publish (in Sharepoint Ribbon)"
+And I click on "Continue Button (in Publish Dialog)"
+Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
+And "You must specify a value for this required field (under Service Title)" should be displayed
 
-
-
-Scenario: User performs the following for the required fields in the Metadata tab and tries to publish by clicking the Publish button and continuing on the comment popup:
-Provide a valid title for Service Title
-Clear the value of Posted By
-Keep Show Rollup Image unchecked
+Scenario: User Provide a valid title for Service Title, Clear the value of Posted By, Keep Show Rollup Image unchecked, and Publish the page
+When I set "Service Title Textbox" value to "Page_{RandomValue}"
+And I click on "Posted By Textbox"
+And I press "BACK_SPACE"
+And I press "BACK_SPACE"
+And I click on "Publish Tab (in Sharepoint Ribbon)"
+And I click on "Publish (in Sharepoint Ribbon)"
+And I click on "Continue Button (in Publish Dialog)"
+Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
+And "You must specify a value for this required field (under Posted By)" should be displayed
 
 Scenario: Provide a value for the Posted By property by entering a username and clicking on the person icon
+When I click on "Posted By Textbox"
+And I type "administrator"
+And I click on "Person Icon (for Posted By)"
+Then "BONZAI\Administrator (in Posted By Textbox)" should be displayed
 
 Scenario: Toggle the Show Rollup Image on Page to checked/enabled but leave the Rollup Image empty, and try to publish the page
+When I "check" "Show Roll Up Image on Page Checkbox" checkbox
+And I click on "Publish Tab (in Sharepoint Ribbon)"
+And I click on "Publish (in Sharepoint Ribbon)"
+And I click on "Continue Button (in Publish Dialog)"
+Then "Error - This page contains content or formatting that is not valid You can find more information in the affected sections" should be displayed
+And "Please select a Roll Up Image (under Show Roll Up Image on Page)" should be displayed
 
 Scenario: Assign a rollup image using Bonzai Page Layout Rollup Image rendition by clicking on Insert and Image from Sharepoint and assigning an image from the Sharepoint library. The Image Rendition is selected in the dropdown below the Selected image field of the popup
 

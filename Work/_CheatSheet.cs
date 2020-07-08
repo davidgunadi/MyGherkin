@@ -288,15 +288,19 @@ Location Title Textbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_TextFie
 Service Title Textbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_ctl01_ctl00_TextField']
 Posted By Textbox: //div[@id='ctl00_PlaceHolderMain_EditModePanel_ctl02_ctl00_UserField_upLevelDiv']
 Person Icon (for Posted By): //tr[contains(.,'Posted By')]//img[@alt='Check Names']
-
+Show Roll Up Image on Page Checkbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_BooleanField2_ctl00_BooleanField']
 Page Tab (in Sharepoint Ribbon): //span[@class='ms-cui-tt-span'][text()='Page']
 Publish Tab (in Sharepoint Ribbon): //span[@class='ms-cui-tt-span'][text()='Publish']
-
 Page Layout (in Sharepoint Ribbon): //a[contains(@id,'ChangePageLayout')]
 Publish (in Sharepoint Ribbon): //a[contains(@id,'Publish-SelectedItem')]   
 Service Page (under Page Layout Popup): //div[@title='Service Page']
-
 Continue Button (in Publish Dialog): //input[@id='statechangedialog_okbutton']
-
 Error - This page contains content or formatting that is not valid. You can find more information in the affected sections: //span[@class='ms-status-status'][contains(.,'Error')][contains(.,'This page contains content or formatting that is not valid. You can find more information in the affected sections')]
 You must specify a value for this required field (under Posted By): //tr[contains(.,'Posted By')]//span[text()='You must specify a value for this required field.']
+You must specify a value for this required field (under Service Title): //tr[contains(.,'Service Title')]//span[text()='You must specify a value for this required field.']
+
+
+Find it at, containing VarRandomPage: ["//iframe[@class='ms-dlgFrame']", "//input[@id='//input[@id='ctl00_PlaceHolderMain_createButton']']"]
+
+BONZAI\Administrator (in Posted By Textbox): //span[@id='content'][contains(text(),'administrator')]
+Please select a Roll Up Image (under Show Roll Up Image on Page): //span[@role='alert'][text()='Please select a Roll Up Image']
