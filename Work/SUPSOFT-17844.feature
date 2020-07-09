@@ -18,4 +18,9 @@ When I click on "Application Management in SA Menu"
 And I click on "RequestAssist in SA Menu"
 And I click on "Severity Levels in SA Menu"
 Then "New Button (in Severity Levels)" should be displayed
-Then "Cancel Button (in Severity Levels)" should be displayed
+And "Cancel Button (in Severity Levels)" should be displayed
+And "Edit Button (for First Record) (in Severity Levels)" should be displayed
+And "Delete Button (for First Record) (in Severity Levels)" should be displayed
+And I remember a value from "Value Cell (for First Record) (in Severity Levels)" as "ValueRowOne"
+And I remember a value from "Value Cell (for Second Record) (in Severity Levels)" as "ValueRowTwo"
+And the value of "ValueRowOne" should be greater than "{ValueRowTwo}"
