@@ -21,13 +21,13 @@ Then "Resume Refresh Button" should be displayed
 
 Scenario: Send API Request to GET Xinet Version
 Given HTTP request
-Given "TimeStamp" default value is "{date('D HH:mm'),+1 hours}"
+Given "TimeStamp" default value is "{date('D HH:mm')}"
 When I set header "Authorization" to "Basic bmF0aXZlYWRtaW46bmF0aXZlYWRtaW4="
 When I set header "User-Agent" to "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 XWNP / 18.0"
 When I set header "Accept" to "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3"
 When I set header "Accept-Language" to "en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7"
 When I set header "Accept-Encoding" to "gzip, deflate"
-When I execute GET request for "http://10.187.192.15//webnative/portalDI?action=version&debug=true"
+When I execute GET request for "{environment.SERVER.URL}/webnative/portalDI?action=version&debug=true"
 Then request should complete successfully
 And response status should be "200"
 

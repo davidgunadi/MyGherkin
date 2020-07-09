@@ -9,8 +9,7 @@ Scenario: Create an advanced search
 Given browser "Chrome"
 Given "VarSavedSearchName" default value is "{date('YYYYMMDDmmss')}"
 When I execute scenario "NORTHP-16902" with inputs "VarSavedSearchName" as "{VarSavedSearchName}"
-Then "Save Current Search As Textbox (in Advanced Search)" should not be displayed
-And "Option named VarSavedSearchName (under Saved Searches Dropdown)" should be displayed
+Then scenario steps should complete successfully
 
 Scenario: Login to the TSWeb
 Given browser "Chrome"

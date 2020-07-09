@@ -1,3 +1,9 @@
+//Examples Table
+KAYAKOC-18044
+
+//Upload
+CRM-71603
+
 // Dummy Ticket
 https://jira.devfactory.com/browse/TS-5834
 
@@ -96,15 +102,7 @@ DNN Persona Bar Frame
 ["//iframe[@id='personaBar-iframe']", ""]
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                              SUPSOFT                               //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-Supsoft LeftFrame
-["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
-Supsoft RightFrame
-["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
+
 
 
 
@@ -309,8 +307,32 @@ Click here to insert a picture from SharePoint: //a[contains(@id,'AddAssetPrompt
 Browse (for Selected Image): ["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_PlaceHolderDialogBodySection_PlaceHolderDialogBodyMainSection_ctl01_assetSelectedImage_PickerLaunchButton']"]
 FAQ Image: ["//iframe[@class='ms-dlgFrame']", "//div[text()='FAQ']"]
 OK Button (in Edit Image Properties Dialog): ["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_OkButton']"]
-
 FAQ Image Preview (in Roll Up Image): //img[contains(@src,'FAQ')]
-
-
 Username (on top right of the page): //span[contains(@class,'username')]
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              SUPSOFT                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+Supsoft LeftFrame
+["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
+Supsoft RightFrame
+["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
+
+
+Severity Levels in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[contains(@href,'rrn_severity')]"]
+
+New Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='New']"]
+Cancel Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='Cancel']"]
+Edit Button (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//a[contains(@href,'edit')]"]
+Edit Button (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//a[contains(@href,'delete')]"]
