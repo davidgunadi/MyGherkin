@@ -334,6 +334,7 @@ Supsoft RightFrame
 
 
 Severity Levels in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[contains(@href,'rrn_severity')]"]
+Service Level Agreements in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[contains(@href,'slalevels')]"]
 
 New Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='New']"]
 Cancel Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='Cancel']"]
@@ -341,3 +342,17 @@ Edit Button (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin'
 Delete Button (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//a[contains(@href,'delete')]"]
 Value Cell (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//td[4]"]
 Value Cell (for Second Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[4]//td[4]"]
+
+Save Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Save']"]
+Severity Textbox (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='keyname']"]
+Value Textbox (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='keyvalue']"]
+Emergency (in Severity Column): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[text()='Emergency']"]
+
+
+
+Average Time to First Response(Minutes) Table: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableHeader'][contains(.,'Average Time to First Response(Minutes)')]"]
+Average Time to Close(Minutes) Table: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableHeader'][contains(.,'Average Time to Close(Minutes)')]"]
+Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,'Average Time to First Response(Minutes)')]//td[normalize-space(text())='Emergency']"]
+Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,'Average Time to Close(Minutes)')]//td[normalize-space(text())='Emergency']"]
+Edit Icon for Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "(//tbody[contains(.,"Average Time to First Response(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
+Edit Icon for Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,"Average Time to Close(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
