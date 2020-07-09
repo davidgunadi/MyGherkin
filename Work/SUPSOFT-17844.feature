@@ -49,18 +49,33 @@ Then "Average Time to First Response(Minutes) Table" should be displayed
 And "Average Time to Close(Minutes) Table" should be displayed
 And "Emergency (in Average Time to First Response Table)" should be displayed
 And "Emergency (in Average Time to Close Table)" should be displayed
-And "Edit Icon for Emergency (in Average Time to First Response Table)" should be displayed
-And "Edit Icon for Emergency (in Average Time to Close Table)" should be displayed
+And "Pencil Icon for Emergency (in Average Time to First Response Table)" should be displayed
+And "Pencil Icon for Emergency (in Average Time to Close Table)" should be displayed
 
 Scenario: Edit "Emergency" entry in 'Average Time to Close(Minutes)' table
-When I click on "Edit Icon for Emergency (in Average Time to First Response Table)"
-
+When I click on "Pencil Icon for Emergency (in Average Time to Close Table)"
+Then "Save Button (in Service Level Agreements)" should be displayed
+And "SLA Value Textbox (in Service Level Agreements)" should be displayed
 
 Scenario: Enter 35 and Save
+When I set "35" to "SLA Value Textbox (in Service Level Agreements)" value
+And I click on "Save Button (in Service Level Agreements)"
+Then "Pencil Icon for Emergency (in Average Time to Close Table)" should be displayed
+And "SLA Value Textbox (in Service Level Agreements)" should not be displayed
 
 Scenario: Edit "Emergency" entry in 'Average Time to Response(Minutes)' table
-When I click on "Edit Icon for Emergency (in Average Time to Close Table)"
+When I click on "Pencil Icon for Emergency (in Average Time to First Response Table)"
+Then "Save Button (in Service Level Agreements)" should be displayed
+And "SLA Value Textbox (in Service Level Agreements)" should be displayed
 
 Scenario: Enter 35 and Save
+When I set "35" to "SLA Value Textbox (in Service Level Agreements)" value
+And I click on "Save Button (in Service Level Agreements)"
+Then "Pencil Icon for Emergency (in Average Time to First Response Table)" should be displayed
+And "SLA Value Textbox (in Service Level Agreements)" should not be displayed
 
 Scenario: Cleanup (Required)
+When I click on "Severity Levels in SA Menu"
+And I click on "Delete Button for Emergency (in Severity Levels)"
+And I accept the alert box
+Then "Emergency (in Severity Column)" should not be displayed

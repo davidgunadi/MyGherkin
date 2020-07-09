@@ -354,5 +354,10 @@ Average Time to First Response(Minutes) Table: ["//frame[@name='mainAdmin']", "/
 Average Time to Close(Minutes) Table: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableHeader'][contains(.,'Average Time to Close(Minutes)')]"]
 Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,'Average Time to First Response(Minutes)')]//td[normalize-space(text())='Emergency']"]
 Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,'Average Time to Close(Minutes)')]//td[normalize-space(text())='Emergency']"]
-Edit Icon for Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "(//tbody[contains(.,"Average Time to First Response(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
-Edit Icon for Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,"Average Time to Close(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
+Pencil Icon for Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "(//tbody[contains(.,"Average Time to First Response(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
+Pencil Icon for Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,"Average Time to Close(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
+Save Button (in Service Level Agreements): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Save']"]
+SLA Value Textbox (in Service Level Agreements): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='Emergency_response_time']"]
+
+
+
