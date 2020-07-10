@@ -2,12 +2,12 @@ Feature: BOINT-6894
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
-Given environment "Automation Staging" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
+Given environment "Quality" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
 Given credentials "sc_admin"
 
 Scenario: Log in to Bonzai as a site collection administrator
 Given browser "Chrome"
-When I open "{environment.bonzai_home.Login URL}"
+When I open "{environment.bonzai_home.CredURL}"
 Then "Admin Menu Icon" should be displayed
 
 Scenario: Navigate to Site Settings
@@ -20,7 +20,7 @@ When I click on "Term store management link (in Site Settings)"
 Then "Term Store Management Tool (Header)" should be displayed
 
 Scenario: Expand "Bonzai Automation Environment"
-When I click on "Expand Node Icon (for Bonzai Automation Environment Terms)"
+When I click on "Expand Node Icon (for Bonzai xxx Environment Terms)"
 Then "Intranet Navigation (Tree Node)" should be displayed
 
 Scenario: Right Click on "Intranet Navigation"
