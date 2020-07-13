@@ -279,3 +279,111 @@ INFO:E2EContext:Executing step When I click on "Diagnostics (Link, in Left Menu)
 INFO:E2EContext:Executing step And I wait until "PHP Info (Link, in Left Menu)" appears
 INFO:E2EContext:Executing step And I click on "PHP Info (Link, in Left Menu)"
 INFO:E2EContext:Executing step Then "PHP Info" page should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "qa-admin" and "qa-staff"
+INFO:E2EContext:Executing scenario Go to Support Center
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.qa-visitor.URL}"
+INFO:E2EContext:Executing step Then "Kayako" page should be displayed
+INFO:E2EContext:Executing scenario Test the search widget
+INFO:E2EContext:Executing step When I set "Search Textbox (in Middle of Screen)" value to "test"
+INFO:E2EContext:Executing step And I press "ENTER"
+INFO:E2EContext:Executing step Then "First Search Result Record (in Search Results)" should be displayed
+INFO:E2EContext:Executing step And I remember a value from "First Search Result Record (in Search Results)" as "SearchResultRecord"
+INFO:E2EContext:Executing scenario Click on a news article
+INFO:E2EContext:Executing step When I click on "First Search Result Record (in Search Results)"
+INFO:E2EContext:Executing step Then "{SearchResultRecord}" page should be displayed
+INFO:E2EContext:Executing scenario Go to Support Center > Knowledge Base
+INFO:E2EContext:Executing step When I click on "Knowledgebase (Link, at the top bar)"
+INFO:E2EContext:Executing step Then "List of Item (in Knowledgebase Page)" should be displayed
+INFO:E2EContext:Executing step And I remember a value from "First Item under Knowledgebase Table" as "KBRecord"
+INFO:E2EContext:Executing scenario Click on an article
+INFO:E2EContext:Executing step When I click on "First Item under Knowledgebase Table"
+INFO:E2EContext:Executing step Then "{KBRecord}" page should be displayed
+INFO:E2EContext:Executing scenario Go to Staff
+INFO:E2EContext:Executing step When I open "{environment.qa-staff.URL}"
+INFO:E2EContext:Executing step And I set "staff-login-user" value to "{credentials.qa-staff.username}"
+INFO:E2EContext:Executing step And I set "staff-login-password" value to "{credentials.qa-staff.password}"
+INFO:E2EContext:Executing step And I click on "staff-login-submit"
+INFO:E2EContext:Executing step Then "Dashboard" page should be displayed
+INFO:E2EContext:Executing scenario Go to Staff > Tickets > Manage Tickets
+INFO:E2EContext:Executing step When I click on "Tickets (Link in Top Menu)"
+INFO:E2EContext:Executing step And I click on "Manage Tickets (Link in Top Menu)"
+INFO:E2EContext:Executing step Then "First Item Subject (in Manage Tickets Grid)" should be displayed
+INFO:E2EContext:Executing step And I remember a value from "First Item Subject (in Manage Tickets Grid)" as "TicketRecord"
+INFO:E2EContext:Executing scenario Click on a ticket
+INFO:E2EContext:Executing step When I click on "First Item Subject (in Manage Tickets Grid)"
+INFO:E2EContext:Executing step Then "{TicketRecord}" page should be displayed
+INFO:E2EContext:Executing scenario Go to Admin
+INFO:E2EContext:Executing step When I open "{environment.qa-admin.URL}"
+INFO:E2EContext:Executing step And I set "admin-login-user" value to "{credentials.qa-admin.username}"
+INFO:E2EContext:Executing step And I set "admin-login-password" value to "{credentials.qa-admin.password}"
+INFO:E2EContext:Executing step And I click on "admin-login-submit"
+INFO:E2EContext:Executing step Then "Dashboard" page should be displayed
+INFO:E2EContext:Executing scenario Go to Admin > Settings
+INFO:E2EContext:Executing step When I click on "Settings Link (on Top Menu)"
+INFO:E2EContext:Executing step Then "Settings Tab (in Right Hand Panel)" should be displayed
+INFO:E2EContext:Executing scenario Validate some links on the settings menu
+INFO:E2EContext:Executing step When I click on "Date and time (in Settings List)"
+INFO:E2EContext:Executing step Then "Settings > Date and time" page should be displayed
+INFO:E2EContext:Executing scenario Validate some links on the settings menu
+INFO:E2EContext:Executing step When I click on "Settings Link (on Top Menu)"
+INFO:E2EContext:Executing step And I click on "Knowledgebase (in Settings List)"
+INFO:E2EContext:Executing step Then "Settings > Knowledgebase" page should be displayed
+INFO:E2EContext:Executing scenario Validate some links on the left side menu
+INFO:E2EContext:Executing step When I click on "Apps (Link, in Left Menu)"
+INFO:E2EContext:Executing step Then "Apps" page should be displayed
+INFO:E2EContext:Executing scenario Validate some links on the left side menu
+INFO:E2EContext:Executing step When I click on "Logs (Link, in Left Menu)"
+INFO:E2EContext:Executing step And I wait until "Error Log (Link, in Left Menu)" appears
+INFO:E2EContext:Executing step And I click on "Error Log (Link, in Left Menu)"
+INFO:E2EContext:Executing step Then "Error Log" page should be displayed
+INFO:E2EContext:Executing scenario Go to Diagnostics > PHP Info
+INFO:E2EContext:Executing step When I click on "Diagnostics (Link, in Left Menu)"
+INFO:E2EContext:Executing step And I wait until "PHP Info (Link, in Left Menu)" appears
+INFO:E2EContext:Executing step And I click on "PHP Info (Link, in Left Menu)"
+INFO:E2EContext:Executing step Then "PHP Info" page should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "qa-admin" and "qa-staff"
+INFO:E2EContext:Executing scenario Go to Support Center
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.qa-visitor.URL}"
+INFO:E2EContext:Executing step Then "Kayako" page should be displayed
+INFO:E2EContext:Executing scenario Test the search widget
+INFO:E2EContext:Executing step When I set "Search Textbox (in Middle of Screen)" value to "test"
+INFO:E2EContext:Executing step And I press "ENTER"
+INFO:E2EContext:Executing step Then "First Search Result Record (in Search Results)" should be displayed
+INFO:E2EContext:Executing step And I remember a value from "First Search Result Record (in Search Results)" as "SearchResultRecord"
+INFO:E2EContext:Executing scenario Click on a news article
+INFO:E2EContext:Executing step When I click on "First Search Result Record (in Search Results)"
+INFO:E2EContext:Executing step Then "{SearchResultRecord}" page should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "qa-admin" and "qa-staff"
+INFO:E2EContext:Executing scenario Go to Support Center
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.qa-visitor.URL}"
+INFO:E2EContext:Executing step And I set window size to "1920x1080"
+INFO:E2EContext:Executing step Then "Kayako" page should be displayed
+INFO:E2EContext:Executing scenario Test the search widget
+INFO:E2EContext:Executing step When I set "Search Textbox (in Middle of Screen)" value to "test"
+INFO:E2EContext:Executing step And I press "ENTER"
+INFO:E2EContext:Executing step Then "First Search Result Record (in Search Results)" should be displayed
+INFO:E2EContext:Executing step And I remember a value from "First Search Result Record (in Search Results)" as "SearchResultRecord"
+INFO:E2EContext:Executing scenario Click on a news article
+INFO:E2EContext:Executing step When I click on "First Search Result Record (in Search Results)"
+INFO:E2EContext:Executing step Then "{SearchResultRecord}" page should be displayed
