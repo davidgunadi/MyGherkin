@@ -121,28 +121,7 @@ DNN Persona Bar Frame
 
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                              PAUB                               //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
 
-Configuration (in Left Menu): //ul[@id='ubd-left-navmenu']//li[text()='Configuration']
-Policy Manager (in Left Menu)://ul[@id='ubd-left-navmenu']//a[text()='Policy Manager']
-Policies (Top Menu Link, in Policy Manager Page): //div[@id='ubd-top-navmenu']/a[text()='Policies']
-Name Textbox (in Add Policy Popup): //input[@id='pname']
-Policy type Dropdown (in Add Policy Popup): //select[@id='policy_type']
-Bandwidth Limit (in Add Policy Popup): //input[@id='bandwidth_limit']
-E2ETestPolicy_SpeedLimit_1Mbps (in the last row of Policy Table)://table[@id='policies_list']/tbody/tr[last()]/td[normalize-space(text())='E2ETestPolicy_SpeedLimit_1Mbps']
-Checkbox (for E2ETestPolicy_SpeedLimit_1Mbps): //table[@id='policies_list']/tbody/tr[contains(.,"E2ETestPolicy_SpeedLimit_1Mbps")]//input[@type='checkbox']
-
-
-
-Add Button (for List): //div[@id='list_buttons']//span[@class='ui-button-text'][text()='Add']
-Delete Button (for List): //div[@id='list_buttons']//span[@class='ui-button-text'][text()='Delete']
-Add Button (in Popup): //div[@class='ui-dialog-buttonset']//span[@class='ui-button-text'][text()='Add']
-Delete Confirmation Button (in Popup): //div[@id='delete_one_confirmation']/following-sibling::div//span[@class='ui-button-text'][text()='Delete']
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -357,4 +336,13 @@ SLA Value Textbox (in Service Level Agreements): ["//frame[@name='mainAdmin']", 
 Emergency_resolution_time
 
 
-
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              PAUB                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
+Hardware View (under Status): //li/a[text()='Hardware View']
+Support Tag ID (in Hardware View): //td[text()='Support Tag ID:']
+Cache Engine Table (in Hardware View): //h2[text()='Cache Engine']/following-sibling::table[1]
+System Info Table (in Hardware View): //h2[text()='System Info']/following-sibling::table[1]
