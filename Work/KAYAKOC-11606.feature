@@ -39,7 +39,7 @@ Then "Dashboard" page should be displayed
 Scenario: Go to Staff > Tickets > Manage Tickets
 When I click on "Tickets (Link in Top Menu)"
 And I click on "Manage Tickets (Link in Top Menu)"
-Then "SUBJECT (Grid Title)" should be displayed
+Then "First Item Subject (in Manage Tickets Grid)" should be displayed
 And I remember a value from "First Item Subject (in Manage Tickets Grid)" as "TicketRecord"
 
 Scenario: Click on a ticket
@@ -47,7 +47,7 @@ When I click on "First Item Subject (in Manage Tickets Grid)"
 Then "{TicketRecord}" page should be displayed
 
 Scenario: Go to Admin
-When I open "{environment.qa-staff.URL}"
+When I open "{environment.qa-admin.URL}"
 And I set "admin-login-user" value to "{credentials.qa-admin.username}"
 And I set "admin-login-password" value to "{credentials.qa-admin.password}"
 And I click on "admin-login-submit"
@@ -81,4 +81,3 @@ When I click on "Diagnostics (Link, in Left Menu)"
 And I wait until "PHP Info (Link, in Left Menu)" appears
 And I click on "PHP Info (Link, in Left Menu)"
 Then "PHP Info" page should be displayed
-a
