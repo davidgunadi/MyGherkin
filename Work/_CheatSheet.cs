@@ -342,9 +342,8 @@ Emergency_resolution_time
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
-Hardware View (under Status): //li/a[text()='Hardware View']
-Support Tag ID (in Hardware View): //td[text()='Support Tag ID:']
-Cache Engine Table (in Hardware View): //h2[text()='Cache Engine']/following-sibling::table[1]
-System Info Table (in Hardware View): //h2[text()='System Info']/following-sibling::table[1]
-Cache Lists (under Maintenance): //li/a[text()='Cache Lists']
-Export Cache List Button (in Cache Lists): //span[@class='ui-button-text'][text()='Export Cache List']
+Logical View (under Status): //li/a[text()='Logical View']
+Avg CPU Link (in Logical View): //a[@href='/ui/status/cpu/raw/all']
+Memory Link (in Logical View): //a[@href='/ui/status/memory/raw/all']
+In Traffic Link (in Logical View): //a[@href='/ui/statistics/bandwidth/in_downstream/all']
+Cache Out Link (in Logical View): //a[@href='/ui/statistics/bandwidth/cout_downstream/all']
