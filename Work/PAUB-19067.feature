@@ -1,4 +1,4 @@
-Feature: PAUB-19064
+Feature: PAUB-19067
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
@@ -15,7 +15,5 @@ Then "Home Link" should be displayed
 
 Scenario: Navigate to Dashboard
 When I click on "Status Link"
-And I click on "Hardware View (under Status)"
-Then "Support Tag ID (in Hardware View)" should be displayed
-And "Cache Engine Table (in Hardware View)" should be displayed
-And "System Info Table (in Hardware View)" should be displayed
+And I click on "Memory Utilization (under Status)"
+Then "Graph (in Memory Utilization, in Raw Tab)" should be displayed

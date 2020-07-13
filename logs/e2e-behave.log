@@ -387,3 +387,143 @@ INFO:E2EContext:Executing step And I remember a value from "First Search Result 
 INFO:E2EContext:Executing scenario Click on a news article
 INFO:E2EContext:Executing step When I click on "First Search Result Record (in Search Results)"
 INFO:E2EContext:Executing step Then "{SearchResultRecord}" page should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UB-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Trying to download new driver from http://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.zip
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UB-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Dashboard
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Hardware View (under Status)"
+INFO:E2EContext:Executing step Then "Support Tag ID (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "Cache Engine Table (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "System Info Table (in Hardware View)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Dashboard
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Hardware View (under Status)"
+INFO:E2EContext:Executing step Then "Support Tag ID (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "Cache Engine Table (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "System Info Table (in Hardware View)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Dashboard
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Hardware View (under Status)"
+INFO:E2EContext:Executing step Then "Support Tag ID (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "Cache Engine Table (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "System Info Table (in Hardware View)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Dashboard
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Hardware View (under Status)"
+INFO:E2EContext:Executing step Then "Support Tag ID (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "Cache Engine Table (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "System Info Table (in Hardware View)" should be displayed
