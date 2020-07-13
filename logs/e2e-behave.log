@@ -1,0 +1,62 @@
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "qa-admin" and "qa-staff"
+INFO:E2EContext:Executing scenario Go to Support Center
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Trying to download new driver from http://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.zip
+INFO:E2EContext:Executing step When I open "{environment.staging-visitor.URL}"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "qa-admin" and "qa-staff"
+INFO:E2EContext:Executing scenario Go to Support Center
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.qa-visitor.URL}"
+INFO:E2EContext:Executing step Then "Kayako" page should be displayed
+INFO:E2EContext:Executing scenario Test the search widget
+INFO:E2EContext:Executing step When I set "Search Textbox (in Middle of Screen)" value to "test"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "qa-admin" and "qa-staff"
+INFO:E2EContext:Executing scenario Go to Support Center
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.qa-visitor.URL}"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "qa-admin" and "qa-staff"
+INFO:E2EContext:Executing scenario Go to Support Center
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.qa-visitor.URL}"
+INFO:E2EContext:Executing step Then "Kayako" page should be displayed
+INFO:E2EContext:Executing scenario Test the search widget
+INFO:E2EContext:Executing step When I set "Search Textbox (in Middle of Screen)" value to "test"
+INFO:E2EContext:Executing step And I press "ENTER"
+INFO:E2EContext:Executing step Then "Search Result Record, containing the word Test (in Search Results)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "qa-admin" and "qa-staff"
+INFO:E2EContext:Executing scenario Go to Support Center
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.qa-visitor.URL}"
