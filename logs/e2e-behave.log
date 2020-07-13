@@ -713,3 +713,46 @@ INFO:E2EContext:Executing step Then "Home Link" should be displayed
 INFO:E2EContext:Executing scenario Navigate to Logical Status
 INFO:E2EContext:Executing step When I click on "Status Link"
 INFO:E2EContext:Executing step And I click on "Logical View (under Status)"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Firefox"
+INFO:WDM:Getting latest mozilla release info for v0.26.0
+INFO:WDM:Trying to download new driver from https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-win64.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\geckodriver\v0.26.0\win64\geckodriver-v0.26.0-win64.zip
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Logical Status
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Logical View (under Status)"
+INFO:E2EContext:Executing step Then "Avg CPU Link (in Logical View)" should be displayed
+INFO:E2EContext:Executing step And "Memory Link (in Logical View)" should be displayed
+INFO:E2EContext:Executing step And "In Traffic Link (in Logical View)" should be displayed
+INFO:E2EContext:Executing step And "Cache Out Link (in Logical View)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB6-2" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Firefox"
+INFO:WDM:Looking for [geckodriver v0.26.0 win64] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\geckodriver\v0.26.0\win64\geckodriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Logical Status
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Logical View (under Status)"
+INFO:E2EContext:Executing step Then "Avg CPU Link (in Logical View)" should be displayed
+INFO:E2EContext:Executing step And "Memory Link (in Logical View)" should be displayed
+INFO:E2EContext:Executing step And "In Traffic Link (in Logical View)" should be displayed
+INFO:E2EContext:Executing step And "Cache Out Link (in Logical View)" should be displayed
