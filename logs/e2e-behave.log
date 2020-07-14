@@ -815,3 +815,209 @@ INFO:E2EContext:Executing step And I start the stopwatch "Save Timer"
 INFO:E2EContext:Executing step And I wait until "Firefox Controls Package successfully selected Message" appears
 INFO:E2EContext:Executing step And I stop the stopwatch "Save Timer"
 INFO:E2EContext:Executing step Then the stopwatch "Save Timer" value should be "10" sec or less
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Dynamic Content Preview Install Page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "Content in SA Menu"
+INFO:E2EContext:Executing step And I click on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step Then "Configure Dynamic Content Preview Install (Header)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Dynamic Content Preview Install Page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "Content in SA Menu"
+INFO:E2EContext:Executing step And I click on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step Then "Configure Dynamic Content Preview Install (Header)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Dynamic Content Preview Install Page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "Content in SA Menu"
+INFO:E2EContext:Executing step And I click on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step Then "Configure Dynamic Content Preview Install (Header)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Dynamic Content Preview Install Page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "Content in SA Menu"
+INFO:E2EContext:Executing step And I click on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step Then "Configure Dynamic Content Preview Install (Header)" should be displayed
+INFO:E2EContext:Executing step And "MSI Package Dropdownlist in Configure Dynamic Content Preview Install" should be displayed
+INFO:E2EContext:Executing step And "Save Button in Configure Dynamic Content Preview Install" should be displayed
+INFO:E2EContext:Executing scenario Browser: Select Dynamic Content Preview Install Package
+INFO:E2EContext:Executing step Given a stopwatch "Save Timer"
+INFO:E2EContext:Executing step When I click on "MSI Package Dropdownlist in Configure Dynamic Content Preview Install"
+INFO:E2EContext:Executing step And I click on "First Item of MSI Package Dropdownlist in Configure Dynamic Content Preview Install"
+INFO:E2EContext:Executing step And I click on "Save Button in Configure Firefox Controls"
+INFO:E2EContext:Executing step And I start the stopwatch "Save Timer"
+INFO:E2EContext:Executing step And I wait until "Dynamic Content Preview Install successfully selected Message" appears
+INFO:E2EContext:Executing step And I stop the stopwatch "Save Timer"
+INFO:E2EContext:Executing step Then the stopwatch "Save Timer" value should be "10" sec or less
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Dynamic Content Preview Install Page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "Content in SA Menu"
+INFO:E2EContext:Executing step And I hover on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step And I click on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step Then "Configure Dynamic Content Preview Install (Header)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Dynamic Content Preview Install Page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "Content in SA Menu"
+INFO:E2EContext:Executing step And I hover on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step And I click on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step Then "Configure Dynamic Content Preview Install (Header)" should be displayed
+INFO:E2EContext:Executing step And "MSI Package Dropdownlist in Configure Dynamic Content Preview Install" should be displayed
+INFO:E2EContext:Executing step And "Save Button in Configure Dynamic Content Preview Install" should be displayed
+INFO:E2EContext:Executing scenario Browser: Select Dynamic Content Preview Install Package
+INFO:E2EContext:Executing step Given a stopwatch "Save Timer"
+INFO:E2EContext:Executing step When I click on "MSI Package Dropdownlist in Configure Dynamic Content Preview Install"
+INFO:E2EContext:Executing step And I click on "First Item of MSI Package Dropdownlist in Configure Dynamic Content Preview Install"
+INFO:E2EContext:Executing step And I click on "Save Button in Configure Firefox Controls"
+INFO:E2EContext:Executing step And I start the stopwatch "Save Timer"
+INFO:E2EContext:Executing step And I wait until "Dynamic Content Preview Install successfully selected Message" appears
+INFO:E2EContext:Executing step And I stop the stopwatch "Save Timer"
+INFO:E2EContext:Executing step Then the stopwatch "Save Timer" value should be "10" sec or less
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Trying to download new driver from http://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Dynamic Content Preview Install Page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "Content in SA Menu"
+INFO:E2EContext:Executing step And I hover on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step And I click on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step Then "Configure Dynamic Content Preview Install (Header)" should be displayed
+INFO:E2EContext:Executing step And "MSI Package Dropdownlist in Configure Dynamic Content Preview Install" should be displayed
+INFO:E2EContext:Executing step And "Save Button in Configure Dynamic Content Preview Install" should be displayed
+INFO:E2EContext:Executing scenario Browser: Select Dynamic Content Preview Install Package
+INFO:E2EContext:Executing step Given a stopwatch "Save Timer"
+INFO:E2EContext:Executing step When I click on "MSI Package Dropdownlist in Configure Dynamic Content Preview Install"
+INFO:E2EContext:Executing step And I click on "First Item of MSI Package Dropdownlist in Configure Dynamic Content Preview Install"
+INFO:E2EContext:Executing step And I click on "Save Button in Configure Firefox Controls"
+INFO:E2EContext:Executing step And I start the stopwatch "Save Timer"
+INFO:E2EContext:Executing step And I wait until "Dynamic Content Preview Install successfully selected Message" appears
+INFO:E2EContext:Executing step And I stop the stopwatch "Save Timer"
+INFO:E2EContext:Executing step Then the stopwatch "Save Timer" value should be "10" sec or less
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Dynamic Content Preview Install Page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "Content in SA Menu"
+INFO:E2EContext:Executing step And I hover on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step And I click on "Configure Dynamic Content Preview Install in SA Menu"
+INFO:E2EContext:Executing step Then "Configure Dynamic Content Preview Install (Header)" should be displayed
+INFO:E2EContext:Executing step And "MSI Package Dropdownlist in Configure Dynamic Content Preview Install" should be displayed
+INFO:E2EContext:Executing step And "Save Button in Configure Dynamic Content Preview Install" should be displayed
+INFO:E2EContext:Executing scenario Browser: Select Dynamic Content Preview Install Package
+INFO:E2EContext:Executing step Given a stopwatch "Save Timer"
+INFO:E2EContext:Executing step When I click on "MSI Package Dropdownlist in Configure Dynamic Content Preview Install"
+INFO:E2EContext:Executing step And I click on "First Item of MSI Package Dropdownlist in Configure Dynamic Content Preview Install"
+INFO:E2EContext:Executing step And I click on "Save Button in Configure Firefox Controls"
+INFO:E2EContext:Executing step And I start the stopwatch "Save Timer"
+INFO:E2EContext:Executing step And I wait until "Dynamic Content Preview Install successfully selected Message" appears
+INFO:E2EContext:Executing step And I stop the stopwatch "Save Timer"
+INFO:E2EContext:Executing step Then the stopwatch "Save Timer" value should be "5" sec or less

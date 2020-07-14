@@ -307,33 +307,11 @@ Supsoft LeftFrame
 Supsoft RightFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
 
-
-Severity Levels in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[contains(@href,'rrn_severity')]"]
-Service Level Agreements in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[contains(@href,'slalevels')]"]
-
-New Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='New']"]
-Cancel Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='Cancel']"]
-Edit Button (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//a[contains(@href,'edit')]"]
-Delete Button (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//a[contains(@href,'delete')]"]
-Value Cell (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//td[4]"]
-Value Cell (for Second Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[4]//td[4]"]
-
-Save Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Save']"]
-Severity Textbox (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='keyname']"]
-Value Textbox (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='keyvalue']"]
-Emergency (in Severity Column): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[text()='Emergency']"]
-
-
-
-Average Time to First Response(Minutes) Table: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableHeader'][contains(.,'Average Time to First Response(Minutes)')]"]
-Average Time to Close(Minutes) Table: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableHeader'][contains(.,'Average Time to Close(Minutes)')]"]
-Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,'Average Time to First Response(Minutes)')]//td[normalize-space(text())='Emergency']"]
-Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,'Average Time to Close(Minutes)')]//td[normalize-space(text())='Emergency']"]
-Pencil Icon for Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "(//tbody[contains(.,"Average Time to First Response(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
-Pencil Icon for Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,"Average Time to Close(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
-Save Button (in Service Level Agreements): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Save']"]
-SLA Value Textbox (in Service Level Agreements): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='Emergency_response_time']"]
-Emergency_resolution_time
+Configure Dynamic Content Preview Install (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Configure Dynamic Content Preview Install']"]
+MSI Package Dropdownlist in Configure Dynamic Content Preview Install: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@name='SCMsiPackageList']"]
+First Item of MSI Package Dropdownlist in Configure Dynamic Content Preview Install: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@name='SCMsiPackageList']/option[2]"]
+Save Button in Configure Dynamic Content Preview Install: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[@name='btnSubmit']"]
+Dynamic Content Preview Install successfully selected Message: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[text()='Dynamic Content Preview Install successfully selected.']"]
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -347,3 +325,7 @@ Avg CPU Link (in Logical View): //a[@href='/ui/status/cpu/raw/all']
 Memory Link (in Logical View): //a[@href='/ui/status/memory/raw/all']
 In Traffic Link (in Logical View): //a[@href='/ui/statistics/bandwidth/in_downstream/all']
 Cache Out Link (in Logical View): //a[@href='/ui/statistics/bandwidth/cout_downstream/all']
+
+
+//font[text()='Firefox Controls Package successfully selected.']
+//font[text()='Firefox Controls Package successfully selected.']

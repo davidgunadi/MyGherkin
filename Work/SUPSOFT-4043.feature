@@ -17,7 +17,7 @@ Scenario: Browser: Navigate to Dynamic Content Preview Install Page
 When I click on "Application Management in SA Menu"
 And I click on "Content in SA Menu"
 And I click on "Configure Dynamic Content Preview Install in SA Menu"
-Then "Configure Dynamic Content Preview Install" page should be displayed
+Then "Configure Dynamic Content Preview Install (Header)" should be displayed
 And "MSI Package Dropdownlist in Configure Dynamic Content Preview Install" should be displayed
 And "Save Button in Configure Dynamic Content Preview Install" should be displayed
 
