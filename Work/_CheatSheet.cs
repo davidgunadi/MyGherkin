@@ -53,6 +53,9 @@ And the value of "AlertMessage" should be "Are you sure you want to backup the d
 // Remember Variable Value
 I remember a value from ["<attribute>" attribute of] "<selector>" [in "<ui driver instance id>"] as "<variable>"
 
+// Execute Scenario
+When I execute scenario "NORTHP-16902" with inputs "urlsearch" as "TSWeb - Advanced Search - Save search name input"
+
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //                             CRM                                    //
