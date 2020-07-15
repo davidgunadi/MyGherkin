@@ -7,6 +7,10 @@ CRM-71603
 // Dummy Ticket
 https://jira.devfactory.com/browse/TS-5834
 
+//Check checkbox
+When I "check" "<selector>" checkbox
+When I "uncheck" "<selector>" checkbox
+
 // Select a dropdown value - This uses the value attribute in an option
 And I set "value" to "selector" value
 
@@ -254,46 +258,7 @@ Value Column (under Outputs for model Create Table, under Intermediate results):
 
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                             BOINT                                  //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
-//http://spadmin:Password%231@automation1
-Directories - Services (in Footer): //div[contains(@class,'bz-footer-container')]//li/a[text()='Services']
-["//iframe[@class='ms-dlgFrame']", ""]
 
-
-
-Location Title Textbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_TextField1_ctl00_TextField']
-Service Title Textbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_ctl01_ctl00_TextField']
-Posted By Textbox: //div[@id='ctl00_PlaceHolderMain_EditModePanel_ctl02_ctl00_UserField_upLevelDiv']
-Person Icon (for Posted By): //tr[contains(.,'Posted By')]//img[@alt='Check Names']
-Show Roll Up Image on Page Checkbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_BooleanField2_ctl00_BooleanField']
-Page Tab (in Sharepoint Ribbon): //span[@class='ms-cui-tt-span'][text()='Page']
-Publish Tab (in Sharepoint Ribbon): //span[@class='ms-cui-tt-span'][text()='Publish']
-Page Layout (in Sharepoint Ribbon): //a[contains(@id,'ChangePageLayout')]
-Publish (in Sharepoint Ribbon): //a[contains(@id,'Publish-SelectedItem')]   
-Service Page (under Page Layout Popup): //div[@title='Service Page']
-Continue Button (in Publish Dialog): //input[@id='statechangedialog_okbutton']
-Error - This page contains content or formatting that is not valid. You can find more information in the affected sections: //span[@class='ms-status-status'][contains(.,'Error')][contains(.,'This page contains content or formatting that is not valid. You can find more information in the affected sections')]
-You must specify a value for this required field (under Posted By): //tr[contains(.,'Posted By')]//span[text()='You must specify a value for this required field.']
-You must specify a value for this required field (under Service Title): //tr[contains(.,'Service Title')]//span[text()='You must specify a value for this required field.']
-
-
-Find it at, containing VarRandomPage: ["//iframe[@class='ms-dlgFrame']", "//input[@id='//input[@id='ctl00_PlaceHolderMain_createButton']']"]
-
-BONZAI\Administrator (in Posted By Textbox): //span[@id='content'][contains(text(),'administrator')]
-Please select a Roll Up Image (under Show Roll Up Image on Page): //span[@role='alert'][text()='Please select a Roll Up Image']
-
-
-Click here to insert a picture from SharePoint: //a[contains(@id,'AddAssetPromptLink')]
-Browse (for Selected Image): ["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_PlaceHolderDialogBodySection_PlaceHolderDialogBodyMainSection_ctl01_assetSelectedImage_PickerLaunchButton']"]
-FAQ Image: ["//iframe[@class='ms-dlgFrame']", "//div[text()='FAQ']"]
-OK Button (in Edit Image Properties Dialog): ["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_OkButton']"]
-FAQ Image Preview (in Roll Up Image): //img[contains(@src,'FAQ')]
-Username (on top right of the page): //span[contains(@class,'username')]
 
 
 
@@ -332,3 +297,50 @@ Cache Out Link (in Logical View): //a[@href='/ui/statistics/bandwidth/cout_downs
 
 //font[text()='Firefox Controls Package successfully selected.']
 //font[text()='Firefox Controls Package successfully selected.']
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                             BOINT                                  //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
+//http://spadmin:Password%231@automation1
+["//iframe[@class='ms-dlgFrame']", ""]
+
+Home Page 1 (4 Column) - under Page Layout Popup: //div[@title='Home Page 1 (4 Column)']
+Header Zone: //span[text()='Header Zone']
+
+Add a Web Part (under Header Zone): //div[@class='bz-row'][.//span[text()='Header Zone']]//span[text()='Add a Web Part']
+Web Part Adder (on top of the page): //div[@id='WebPartAdderUpdatePanelContainer']
+People Listing Web Part: //div[@title='People Listing Web Part']
+People Listing Web Part (under Header Zone): //div[@class='bz-row'][.//span[text()='Header Zone']]//span[text()='People Listing Web Part']
+
+Down Arrow next to People Listing Web Part: //a[@id='WebPartWPQ1_MenuLink']
+Edit Web Part (dropdown option): //div[@id='MSOMenu_Edit']
+
+Site URL Textbox (in People Listing Web Part): //input[@id='bz-webpart-property-siteUrl']
+List Dropdown(in People Listing Web Part): //select[@id='bz-webpart-property-listName']
+View Dropdown (in People Listing Web Part): //select[@id='bz-webpart-property-viewName']
+Person Column Dropdown (in People Listing Web Part): //select[@id='bz-webpart-property-personColumn']
+
+Show Profile Picture Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showProfilePicture']
+Show Email Address Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showEmailAddress']
+Show Location Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showLocation']
+Show Job Title Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showJobTitle']
+Show Phone Number Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showPhoneNumber']
+Show Promoted Items Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showPromotedItems']
+
+Display Users As Dropdown (in People Listing Web Part): //select[@id='bz-webpart-property-displayType']
+
+Show Table Headers Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showTableHeaders']
+Use Paging Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showPaging']
+Items per Page Textbox (in People Listing Web Part): //input[@id='bz-webpart-property-itemsPerPage']
+OK Button (in People Listing Web Part): //input[@id='ctl00_MSOTlPn_EditorZone_MSOTlPn_OKBtn']
+
+Profile Image (in People Listing Web Part Table): //span[@class='bz-profile-image']
+Contact (Grid Header in People Listing Web Part Table): //th[text()='Contact']
+Job Title (Grid Header in People Listing Web Part Table): //th[text()='Job Title']
+Email (Grid Header in People Listing Web Part Table): //th[text()='Email']
+Location (Grid Header in People Listing Web Part Table): //th[text()='Location']
+Phone Number (Grid Header in People Listing Web Part Table): //th[text()='Phone Number']

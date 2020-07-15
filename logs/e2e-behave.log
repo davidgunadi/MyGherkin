@@ -1832,3 +1832,216 @@ INFO:E2EContext:Executing step When I click on "Service Level Agreements in SA M
 INFO:E2EContext:Executing step Then "EmergencyWithFourDigitNumber (in Average Time to First Response Table)" should not be displayed
 INFO:E2EContext:Executing step And "EmergencyWithFourDigitNumber (in Average Time to Close Table)" should not be displayed
 INFO:E2EContext:Disposing the subscription.
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Quality" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "sc_admin"
+INFO:E2EContext:Executing scenario Log in to Bonzai as a administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Trying to download new driver from http://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.zip
+INFO:E2EContext:Executing step When I open "{environment.bonzai_home.CredURL}"
+INFO:E2EContext:Executing step Then "Admin Menu Icon" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Add a Page
+INFO:E2EContext:Executing step When I click on "Gear Icon (on top right of the page)"
+INFO:E2EContext:Executing step And I click on "Add a page"
+INFO:E2EContext:Executing step Then "Page Name Textbox" should be displayed
+INFO:E2EContext:Executing scenario Enter New Page Details and Create
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step When I set "Page Name Textbox" value to "Page_{RandomValue}"
+INFO:E2EContext:Executing step And I click on "Create"
+INFO:E2EContext:Executing step And I wait until "Checked out to you" appears
+INFO:E2EContext:Executing step Then "Page_{RandomValue}" page should be displayed
+INFO:E2EContext:Executing scenario Open Page Layout
+INFO:E2EContext:Executing step When I click on "Page Tab (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step And I click on "Page Layout (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step Then "Home Page 1 (4 Column) - under Page Layout Popup" should be displayed
+INFO:E2EContext:Executing scenario Change Page Layout to "Landing Page 1 (4 column w/ header)"
+INFO:E2EContext:Executing step When I click on "Home Page 1 (4 Column) - under Page Layout Popup"
+INFO:E2EContext:Executing step Then "Header Zone" should be displayed
+INFO:E2EContext:Executing scenario Add Web Part in the "Header Zone"
+INFO:E2EContext:Executing step When I click on "Add a Web Part (under Header Zone)"
+INFO:E2EContext:Executing step Then "Web Part Adder (on top of the page)" should be displayed
+INFO:E2EContext:Executing scenario Select Bonzai Web Parts
+INFO:E2EContext:Executing step When I click on "Bonzai Web Parts folder"
+INFO:E2EContext:Executing step Then "People Listing Web Part" should be displayed
+INFO:E2EContext:Executing scenario Add People Listing Web Part
+INFO:E2EContext:Executing step When I click on "People Listing Web Part"
+INFO:E2EContext:Executing step And I click on "Add button"
+INFO:E2EContext:Executing step Then "People Listing Web Part (under Header Zone)" should be displayed
+INFO:E2EContext:Executing scenario Edit People Listing Web Part
+INFO:E2EContext:Executing step When I hover on "People Listing Web Part (under Header Zone)"
+INFO:E2EContext:Executing step And I click on "Down Arrow next to People Listing Web Part"
+INFO:E2EContext:Executing step And I click on "Edit Web Part (dropdown option)"
+INFO:E2EContext:Executing step And I set "Site URL Textbox (in People Listing Web Part)" value to "/"
+INFO:E2EContext:Executing step And I set "List Dropdown(in People Listing Web Part)" value to "People Listing"
+INFO:E2EContext:Executing step And I wait for "1" minutes
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Quality" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "sc_admin"
+INFO:E2EContext:Executing scenario Log in to Bonzai as a administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.bonzai_home.CredURL}"
+INFO:E2EContext:Executing step Then "Admin Menu Icon" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Add a Page
+INFO:E2EContext:Executing step When I click on "Gear Icon (on top right of the page)"
+INFO:E2EContext:Executing step And I click on "Add a page"
+INFO:E2EContext:Executing step Then "Page Name Textbox" should be displayed
+INFO:E2EContext:Executing scenario Enter New Page Details and Create
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step When I set "Page Name Textbox" value to "Page_{RandomValue}"
+INFO:E2EContext:Executing step And I click on "Create"
+INFO:E2EContext:Executing step And I wait until "Checked out to you" appears
+INFO:E2EContext:Executing step Then "Page_{RandomValue}" page should be displayed
+INFO:E2EContext:Executing scenario Open Page Layout
+INFO:E2EContext:Executing step When I click on "Page Tab (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step And I click on "Page Layout (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step Then "Home Page 1 (4 Column) - under Page Layout Popup" should be displayed
+INFO:E2EContext:Executing scenario Change Page Layout to "Landing Page 1 (4 column w/ header)"
+INFO:E2EContext:Executing step When I click on "Home Page 1 (4 Column) - under Page Layout Popup"
+INFO:E2EContext:Executing step Then "Header Zone" should be displayed
+INFO:E2EContext:Executing scenario Add Web Part in the "Header Zone"
+INFO:E2EContext:Executing step When I click on "Add a Web Part (under Header Zone)"
+INFO:E2EContext:Executing step Then "Web Part Adder (on top of the page)" should be displayed
+INFO:E2EContext:Executing scenario Select Bonzai Web Parts
+INFO:E2EContext:Executing step When I click on "Bonzai Web Parts folder"
+INFO:E2EContext:Executing step Then "People Listing Web Part" should be displayed
+INFO:E2EContext:Executing scenario Add People Listing Web Part
+INFO:E2EContext:Executing step When I click on "People Listing Web Part"
+INFO:E2EContext:Executing step And I click on "Add button"
+INFO:E2EContext:Executing step Then "People Listing Web Part (under Header Zone)" should be displayed
+INFO:E2EContext:Executing scenario Edit People Listing Web Part
+INFO:E2EContext:Executing step When I hover on "People Listing Web Part (under Header Zone)"
+INFO:E2EContext:Executing step And I click on "Down Arrow next to People Listing Web Part"
+INFO:E2EContext:Executing step And I click on "Edit Web Part (dropdown option)"
+INFO:E2EContext:Executing step And I set "Site URL Textbox (in People Listing Web Part)" value to "/"
+INFO:E2EContext:Executing step And I set "List Dropdown(in People Listing Web Part)" value to "People Listing"
+INFO:E2EContext:Executing step And I set "View Dropdown (in People Listing Web Part)" value to "All Items"
+INFO:E2EContext:Executing step And I set "Person Column Dropdown (in People Listing Web Part)" value to "Person to List"
+INFO:E2EContext:Executing step And I wait for "1" minutes
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Quality" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "sc_admin"
+INFO:E2EContext:Executing scenario Log in to Bonzai as a administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.bonzai_home.CredURL}"
+INFO:E2EContext:Executing step Then "Admin Menu Icon" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Add a Page
+INFO:E2EContext:Executing step When I click on "Gear Icon (on top right of the page)"
+INFO:E2EContext:Executing step And I click on "Add a page"
+INFO:E2EContext:Executing step Then "Page Name Textbox" should be displayed
+INFO:E2EContext:Executing scenario Enter New Page Details and Create
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step When I set "Page Name Textbox" value to "Page_{RandomValue}"
+INFO:E2EContext:Executing step And I click on "Create"
+INFO:E2EContext:Executing step And I wait until "Checked out to you" appears
+INFO:E2EContext:Executing step Then "Page_{RandomValue}" page should be displayed
+INFO:E2EContext:Executing scenario Open Page Layout
+INFO:E2EContext:Executing step When I click on "Page Tab (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step And I click on "Page Layout (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step Then "Home Page 1 (4 Column) - under Page Layout Popup" should be displayed
+INFO:E2EContext:Executing scenario Change Page Layout to "Landing Page 1 (4 column w/ header)"
+INFO:E2EContext:Executing step When I click on "Home Page 1 (4 Column) - under Page Layout Popup"
+INFO:E2EContext:Executing step Then "Header Zone" should be displayed
+INFO:E2EContext:Executing scenario Add Web Part in the "Header Zone"
+INFO:E2EContext:Executing step When I click on "Add a Web Part (under Header Zone)"
+INFO:E2EContext:Executing step Then "Web Part Adder (on top of the page)" should be displayed
+INFO:E2EContext:Executing scenario Select Bonzai Web Parts
+INFO:E2EContext:Executing step When I click on "Bonzai Web Parts folder"
+INFO:E2EContext:Executing step Then "People Listing Web Part" should be displayed
+INFO:E2EContext:Executing scenario Add People Listing Web Part
+INFO:E2EContext:Executing step When I click on "People Listing Web Part"
+INFO:E2EContext:Executing step And I click on "Add button"
+INFO:E2EContext:Executing step Then "People Listing Web Part (under Header Zone)" should be displayed
+INFO:E2EContext:Executing scenario Edit People Listing Web Part
+INFO:E2EContext:Executing step When I hover on "People Listing Web Part (under Header Zone)"
+INFO:E2EContext:Executing step And I click on "Down Arrow next to People Listing Web Part"
+INFO:E2EContext:Executing step And I click on "Edit Web Part (dropdown option)"
+INFO:E2EContext:Executing step And I set "Site URL Textbox (in People Listing Web Part)" value to "/"
+INFO:E2EContext:Executing step And I set "List Dropdown(in People Listing Web Part)" value to "People Listing"
+INFO:E2EContext:Executing step And I set "View Dropdown (in People Listing Web Part)" value to "All Items"
+INFO:E2EContext:Executing step And I set "Person Column Dropdown (in People Listing Web Part)" value to "Person to List"
+INFO:E2EContext:Executing step And I "check" "Show Profile Picture Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Email Address Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Location Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Job Title Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Phone Number Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Promoted Items Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I set "Display Users As Dropdown (in People Listing Web Part)" value to "Table"
+INFO:E2EContext:Executing step And I "check" "Show Table Headers Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Use Paging Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I set "Items per Page Textbox (in People Listing Web Part)" value to "10"
+INFO:E2EContext:Executing step And I click on "OK Button (in People Listing Web Part)"
+INFO:E2EContext:Executing step Then "Contact (Grid Header)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "Quality" from "https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "sc_admin"
+INFO:E2EContext:Executing scenario Log in to Bonzai as a administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.bonzai_home.CredURL}"
+INFO:E2EContext:Executing step Then "Admin Menu Icon" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Add a Page
+INFO:E2EContext:Executing step When I click on "Gear Icon (on top right of the page)"
+INFO:E2EContext:Executing step And I click on "Add a page"
+INFO:E2EContext:Executing step Then "Page Name Textbox" should be displayed
+INFO:E2EContext:Executing scenario Enter New Page Details and Create
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step When I set "Page Name Textbox" value to "Page_{RandomValue}"
+INFO:E2EContext:Executing step And I click on "Create"
+INFO:E2EContext:Executing step And I wait until "Checked out to you" appears
+INFO:E2EContext:Executing step Then "Page_{RandomValue}" page should be displayed
+INFO:E2EContext:Executing scenario Open Page Layout
+INFO:E2EContext:Executing step When I click on "Page Tab (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step And I click on "Page Layout (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step Then "Home Page 1 (4 Column) - under Page Layout Popup" should be displayed
+INFO:E2EContext:Executing scenario Change Page Layout to "Landing Page 1 (4 column w/ header)"
+INFO:E2EContext:Executing step When I click on "Home Page 1 (4 Column) - under Page Layout Popup"
+INFO:E2EContext:Executing step Then "Header Zone" should be displayed
+INFO:E2EContext:Executing scenario Add Web Part in the "Header Zone"
+INFO:E2EContext:Executing step When I click on "Add a Web Part (under Header Zone)"
+INFO:E2EContext:Executing step Then "Web Part Adder (on top of the page)" should be displayed
+INFO:E2EContext:Executing scenario Select Bonzai Web Parts
+INFO:E2EContext:Executing step When I click on "Bonzai Web Parts folder"
+INFO:E2EContext:Executing step Then "People Listing Web Part" should be displayed
+INFO:E2EContext:Executing scenario Add People Listing Web Part
+INFO:E2EContext:Executing step When I click on "People Listing Web Part"
+INFO:E2EContext:Executing step And I click on "Add button"
+INFO:E2EContext:Executing step Then "People Listing Web Part (under Header Zone)" should be displayed
+INFO:E2EContext:Executing scenario Edit People Listing Web Part
+INFO:E2EContext:Executing step When I hover on "People Listing Web Part (under Header Zone)"
+INFO:E2EContext:Executing step And I click on "Down Arrow next to People Listing Web Part"
+INFO:E2EContext:Executing step And I click on "Edit Web Part (dropdown option)"
+INFO:E2EContext:Executing step And I set "Site URL Textbox (in People Listing Web Part)" value to "/"
+INFO:E2EContext:Executing step And I set "List Dropdown(in People Listing Web Part)" value to "People Listing"
+INFO:E2EContext:Executing step And I set "View Dropdown (in People Listing Web Part)" value to "All Items"
+INFO:E2EContext:Executing step And I set "Person Column Dropdown (in People Listing Web Part)" value to "Person to List"
+INFO:E2EContext:Executing step And I "check" "Show Profile Picture Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Email Address Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Location Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Job Title Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Phone Number Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Show Promoted Items Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I set "Display Users As Dropdown (in People Listing Web Part)" value to "Table"
+INFO:E2EContext:Executing step And I "check" "Show Table Headers Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I "check" "Use Paging Checkbox (in People Listing Web Part)" checkbox
+INFO:E2EContext:Executing step And I set "Items per Page Textbox (in People Listing Web Part)" value to "10"
+INFO:E2EContext:Executing step And I click on "OK Button (in People Listing Web Part)"
+INFO:E2EContext:Executing step Then "Contact (Grid Header in People Listing Web Part Table)" should be displayed
+INFO:E2EContext:Executing scenario Publish the Page and Verify People Listing Web Part Components after Publishing
+INFO:E2EContext:Executing step When I click on "Publish Tab (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step And I click on "Publish (in Sharepoint Ribbon)"
+INFO:E2EContext:Executing step And I click on "Continue Button (in Publish Dialog)"
+INFO:E2EContext:Executing step And I wait until "Publish Tab (in Sharepoint Ribbon)" disappears

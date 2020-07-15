@@ -45,10 +45,39 @@ And I click on "Add button"
 Then "People Listing Web Part (under Header Zone)" should be displayed
 
 Scenario: Edit People Listing Web Part
+When I hover on "People Listing Web Part (under Header Zone)"
+And I click on "Down Arrow next to People Listing Web Part"
+And I click on "Edit Web Part (dropdown option)"
+And I set "Site URL Textbox (in People Listing Web Part)" value to "/"
+And I set "List Dropdown(in People Listing Web Part)" value to "People Listing"
+And I set "View Dropdown (in People Listing Web Part)" value to "All Items"
+And I set "Person Column Dropdown (in People Listing Web Part)" value to "Person to List"
+And I "check" "Show Profile Picture Checkbox (in People Listing Web Part)" checkbox
+And I "check" "Show Email Address Checkbox (in People Listing Web Part)" checkbox
+And I "check" "Show Location Checkbox (in People Listing Web Part)" checkbox
+And I "check" "Show Job Title Checkbox (in People Listing Web Part)" checkbox
+And I "check" "Show Phone Number Checkbox (in People Listing Web Part)" checkbox
+And I "check" "Show Promoted Items Checkbox (in People Listing Web Part)" checkbox
+And I set "Display Users As Dropdown (in People Listing Web Part)" value to "Table"
+And I "check" "Show Table Headers Checkbox (in People Listing Web Part)" checkbox
+And I "check" "Use Paging Checkbox (in People Listing Web Part)" checkbox
+And I set "Items per Page Textbox (in People Listing Web Part)" value to "10"
+And I click on "OK Button (in People Listing Web Part)"
+Then "Contact (Grid Header)" should be displayed
 
-Scenario: Publish the Page
+Scenario: Publish the Page and Verify People Listing Web Part Components after Publishing
+When I click on "Publish Tab (in Sharepoint Ribbon)"
+And I click on "Publish (in Sharepoint Ribbon)"
+And I click on "Continue Button (in Publish Dialog)"
+And I wait until "Publish Tab (in Sharepoint Ribbon)" disappears
+Then "Profile Image (in People Listing Web Part Table)" should be displayed
+Then "Contact (Grid Header in People Listing Web Part Table)" should be displayed
+Then "Job Title (Grid Header in People Listing Web Part Table)" should be displayed
+Then "Email (Grid Header in People Listing Web Part Table)" should be displayed
+Then "Location (Grid Header in People Listing Web Part Table)" should be displayed
+Then "Phone Number (Grid Header in People Listing Web Part Table)" should be displayed
 
-Scenario: Verify People Listing Web Part Components after Publishing
+Scenario: 
 
 Scenario: Enable Responsive Mode in Developer Tools
 
