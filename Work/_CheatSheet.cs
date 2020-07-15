@@ -344,3 +344,9 @@ Job Title (Grid Header in People Listing Web Part Table): //th[text()='Job Title
 Email (Grid Header in People Listing Web Part Table): //th[text()='Email']
 Location (Grid Header in People Listing Web Part Table): //th[text()='Location']
 Phone Number (Grid Header in People Listing Web Part Table): //th[text()='Phone Number']
+
+
+Add a Web Part (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='Row 1 Left Zone']]//span[text()='Add a Web Part']
+People Listing Web Part (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='Row 1 Left Zone']]//span[text()='People Listing Web Part']
+Profile Image (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='Row 1 Left Zone']]//span[@class='bz-profile-image']
+//div[@class='bz-peoplelisting-grid']
