@@ -25,11 +25,11 @@ Then "Page_{RandomValue}" page should be displayed
 Scenario: Open Page Layout
 When I click on "Page Tab (in Sharepoint Ribbon)"
 And I click on "Page Layout (in Sharepoint Ribbon)"
-Then "Home Page 1 (4 Column) - under Page Layout Popup" should be displayed
+Then "Landing Page 1 (4 Column w/ Header)" should be displayed
 
 Scenario: Change Page Layout to "Landing Page 1 (4 column w/ header)"
-When I click on "Home Page 1 (4 Column) - under Page Layout Popup"
-Then "Header Zone" should be displayed
+When I click on "Landing Page 1 (4 Column w/ Header)"
+Then "Full Zone Header" should be displayed
 
 Scenario: Add Web Part in the "Row 1 Left Zone"
 When I click on "Add a Web Part (under Row 1 Left Zone)"
