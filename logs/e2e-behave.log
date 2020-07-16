@@ -3131,3 +3131,775 @@ INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache
 INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
 INFO:E2EContext:Executing step When I open "{environment.UBView.SQL Hack URL-7}" in "browser"
 INFO:E2EContext:Executing step Then "Error Text" should not be displayed in "browser"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Men"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I wait for "10" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I wait for "10" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "Read-only" to "Request Details Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "Read-only" to "Request Details Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I wait for "11" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "Read-only" to "Request Details Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I wait for "11" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "Read-only" to "Request Details Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I wait for "11" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "Read-only" to "Request Details Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I wait for "11" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "Read-only" to "Request Details Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I wait for "11" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "Read-only" to "Request Details Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I wait for "11" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I wait for "11" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step Then "Request Class has been saved" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Define Class)"
+INFO:E2EContext:Executing step Then "Request Class has been saved" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Types page
+INFO:E2EContext:Executing step When I click on "Types in SA Menu"
+INFO:E2EContext:Executing step Then "Types (Header)" page should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Define Class)"
+INFO:E2EContext:Executing step Then "Request Class has been saved" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Types page
+INFO:E2EContext:Executing step When I click on "Types in SA Menu"
+INFO:E2EContext:Executing step Then "Types (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Edit Request Type page
+INFO:E2EContext:Executing step When I click on "New Button in Types"
+INFO:E2EContext:Executing step Then "Edit Request Type (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Create and configure a new Request Type
+INFO:E2EContext:Executing step Given "TestTypeRandomValue" default value is "TestType_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Type (Textbox, in Edit Request Type Form)" value to "{TestTypeRandomValue}"
+INFO:E2EContext:Executing step And I click on "Selected Classes (Listbox, in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I type "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I click on "Right Arrow Button (to move item from Available Class to Selected Class)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Edit Request Type Form)"
+INFO:E2EContext:Executing step Then "Request type has been saved" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Define Class)"
+INFO:E2EContext:Executing step Then "Request Class has been saved" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Types page
+INFO:E2EContext:Executing step When I click on "Types in SA Menu"
+INFO:E2EContext:Executing step Then "Types (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Edit Request Type page
+INFO:E2EContext:Executing step When I click on "New Button in Types"
+INFO:E2EContext:Executing step Then "Edit Request Type (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Create and configure a new Request Type
+INFO:E2EContext:Executing step Given "TestTypeRandomValue" default value is "TestType_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Type (Textbox, in Edit Request Type Form)" value to "{TestTypeRandomValue}"
+INFO:E2EContext:Executing step And I click on "Selected Classes (Listbox, in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I type "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I click on "Right Arrow Button (to move item from Available Class to Selected Class)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I wait for "2" minutes
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "testclass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Define Class)"
+INFO:E2EContext:Executing step Then "Request Class has been saved" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Types page
+INFO:E2EContext:Executing step When I click on "Types in SA Menu"
+INFO:E2EContext:Executing step Then "Types (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Edit Request Type page
+INFO:E2EContext:Executing step When I click on "New Button in Types"
+INFO:E2EContext:Executing step Then "Edit Request Type (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Create and configure a new Request Type
+INFO:E2EContext:Executing step Given "TestTypeRandomValue" default value is "testtype_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Type (Textbox, in Edit Request Type Form)" value to "{TestTypeRandomValue}"
+INFO:E2EContext:Executing step And I click on "Selected Classes (Listbox, in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I type "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I click on "Right Arrow Button (to move item from Available Class to Selected Class)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I wait for "2" minutes
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "testclass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Define Class)"
+INFO:E2EContext:Executing step Then "Request Class has been saved" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Types page
+INFO:E2EContext:Executing step When I click on "Types in SA Menu"
+INFO:E2EContext:Executing step Then "Types (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Edit Request Type page
+INFO:E2EContext:Executing step When I click on "New Button in Types"
+INFO:E2EContext:Executing step Then "Edit Request Type (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Create and configure a new Request Type
+INFO:E2EContext:Executing step Given "TestTypeRandomValue" default value is "testtype_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Type (Textbox, in Edit Request Type Form)" value to "{TestTypeRandomValue}"
+INFO:E2EContext:Executing step And I click on "Selected Classes (Listbox, in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I type "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I wait for "1" minutes
+INFO:E2EContext:Executing step And I click on "Right Arrow Button (to move item from Available Class to Selected Class)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I wait for "2" minutes
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Define Class)"
+INFO:E2EContext:Executing step Then "Request Class has been saved" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Types page
+INFO:E2EContext:Executing step When I click on "Types in SA Menu"
+INFO:E2EContext:Executing step Then "Types (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Edit Request Type page
+INFO:E2EContext:Executing step When I click on "New Button in Types"
+INFO:E2EContext:Executing step Then "Edit Request Type (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Create and configure a new Request Type
+INFO:E2EContext:Executing step Given "TestTypeRandomValue" default value is "TestType_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Type (Textbox, in Edit Request Type Form)" value to "{TestTypeRandomValue}"
+INFO:E2EContext:Executing step And I click on "Available Classes (Listbox, in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I type "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I click on "Right Arrow Button (to move item from Available Class to Selected Class)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I wait for "2" minutes
+INFO:E2EContext:Executing step Then "Request type has been saved" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:Executing step Then "SupportSoft - Support Administrator" page should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Define Class page
+INFO:E2EContext:Executing step When I click on "Application Management in SA Menu"
+INFO:E2EContext:Executing step And I click on "RequestAssist in SA Menu"
+INFO:E2EContext:Executing step And I click on "Classes in SA Menu"
+INFO:E2EContext:Executing step And I click on "Define Class in SA Menu"
+INFO:E2EContext:Executing step Then "Define Class (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Define new Request Class
+INFO:E2EContext:Executing step Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+INFO:E2EContext:Executing step Given "TestClassRandomValue" default value is "TestClass_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Class Textbox (in Define Class)" value to "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I set "Description Textbox (in Request Class Properties Table)" value to "Password"
+INFO:E2EContext:Executing step And I set "Read-only" to "New Request Attributes Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I set "password" to "Input Type Dropdown (in Request Class Properties Table)" value
+INFO:E2EContext:Executing step And I click on "Request Details Attributes Dropdown (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I type "Read-only"
+INFO:E2EContext:Executing step And I press "TAB"
+INFO:E2EContext:Executing step And I click on "Update Button (in Request Class Properties Table)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Define Class)"
+INFO:E2EContext:Executing step Then "Request Class has been saved" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Types page
+INFO:E2EContext:Executing step When I click on "Types in SA Menu"
+INFO:E2EContext:Executing step Then "Types (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Navigate to Edit Request Type page
+INFO:E2EContext:Executing step When I click on "New Button in Types"
+INFO:E2EContext:Executing step Then "Edit Request Type (Header)" should be displayed
+INFO:E2EContext:Executing scenario Browser: Create and configure a new Request Type
+INFO:E2EContext:Executing step Given "TestTypeRandomValue" default value is "TestType_{RandomValue}"
+INFO:E2EContext:Executing step When I set "Request Type (Textbox, in Edit Request Type Form)" value to "{TestTypeRandomValue}"
+INFO:E2EContext:Executing step And I click on "Available Classes (Listbox, in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I type "{TestClassRandomValue}"
+INFO:E2EContext:Executing step And I click on "Right Arrow Button (to move item from Available Class to Selected Class)"
+INFO:E2EContext:Executing step And I click on "Save Button (in Edit Request Type Form)"
+INFO:E2EContext:Executing step Then "Request type has been saved" should be displayed
+INFO:E2EContext:Executing scenario Browser: Set Request Type permissions
+INFO:E2EContext:Executing step When I click on "Set Permissions Button (in Edit Request Type Form)"
+INFO:E2EContext:Executing step And I switch to second window
+INFO:E2EContext:Executing step And I click on "Force Unlock"
+INFO:E2EContext:Executing step And I wait for "30" seconds
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
+INFO:E2EContext:Executing step Given credentials "Administrator"
+INFO:E2EContext:Executing scenario Browser: Login to Support Administrator
+INFO:E2EContext:Executing step Given browser "Internet Explorer"
+INFO:WDM:Looking for [IEDriverServer 3.150.1 Win32] driver in cache 
+INFO:WDM:Trying to download new driver from http://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\IEDriverServer\3.150.1\Win32\IEDriverServer.zip
+INFO:E2EContext:Executing step When I open "{environment.SupportSoft Administrator portal.URL}"
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
+INFO:E2EContext:Executing step And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
+INFO:E2EContext:Executing step And I click on "Login Button In SA Login Page"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Dashboard" page should be displayed
+INFO:E2EContext:Executing scenario Navigate To Upload Files
+INFO:E2EContext:Executing step When I click on "Maintenance Link"
+INFO:E2EContext:Executing step And I click on "Upload Files (under Maintenance)"
+INFO:E2EContext:Executing step Then "Choose File (in Upload Files)" should be displayed
+INFO:E2EContext:Executing scenario Upload File
+INFO:E2EContext:Executing step When I upload a file "https://e2efiles.s3.amazonaws.com/htlgaij.txt" to "Choose File (in Upload Files)"
+INFO:E2EContext:Executing step And I click on "Upload (in Upload Files)"
+INFO:E2EContext:Executing step Then "File uploaded successfully message" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Dashboard" page should be displayed
+INFO:E2EContext:Executing scenario Navigate To Upload Files
+INFO:E2EContext:Executing step When I click on "Maintenance Link"
+INFO:E2EContext:Executing step And I click on "Upload Files (under Maintenance)"
+INFO:E2EContext:Executing step Then "Choose File (in Upload Files)" should be displayed
+INFO:E2EContext:Executing scenario Upload File
+INFO:E2EContext:Executing step When I upload a file "https://e2efiles.s3.amazonaws.com/htlgaij.txt" to "Choose File (in Upload Files)"
+INFO:E2EContext:Executing step And I click on "Upload (in Upload Files)"
+INFO:E2EContext:Executing step Then "File uploaded successfully message" should be displayed
