@@ -17,4 +17,3 @@ Scenario: Navigate to Memory Utilization
 When I click on "Status Link"
 And I click on "Memory Utilization (under Status)"
 Then "Graph (in Memory Utilization, in Raw Tab)" should be displayed
-

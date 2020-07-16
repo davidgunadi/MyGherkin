@@ -3021,3 +3021,113 @@ INFO:E2EContext:Executing step And I click on "Page Layout (in Sharepoint Ribbon
 INFO:E2EContext:Executing step Then "Landing Page 1 (4 Column w/ Header)" should be displayed
 INFO:E2EContext:Executing scenario Change Page Layout to "Landing Page 1 (4 column w/ header)"
 INFO:E2EContext:Executing step When I click on "Landing Page 1 (4 Column w/ Header)"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Trying to download new driver from http://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip
+INFO:WDM:Unpack archive C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.zip
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Dashboard
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Hardware View (under Status)"
+INFO:E2EContext:Executing step Then "Support Tag ID (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "Cache Engine Table (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "System Info Table (in Hardware View)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Dashboard
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Hardware View (under Status)"
+INFO:E2EContext:Executing step Then "Support Tag ID (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "Cache Engine Table (in Hardware View)" should be displayed
+INFO:E2EContext:Executing step And "System Info Table (in Hardware View)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Login
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.Login URL}"
+INFO:E2EContext:Executing step And I set "username" value to "{credentials.UBView-Cred.username}"
+INFO:E2EContext:Executing step And I set "password" value to "{credentials.UBView-Cred.password}"
+INFO:E2EContext:Executing step And I click on "login"
+INFO:E2EContext:Executing step Then "Home Link" should be displayed
+INFO:E2EContext:Executing scenario Navigate to Memory Utilization
+INFO:E2EContext:Executing step When I click on "Status Link"
+INFO:E2EContext:Executing step And I click on "Memory Utilization (under Status)"
+INFO:E2EContext:Executing step Then "Graph (in Memory Utilization, in Raw Tab)" should be displayed
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Check Vulnerability
+INFO:E2EContext:Executing step Given browser "Chrome" as "browser"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "SQL Hack URL-7" in "browser"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Check Vulnerability
+INFO:E2EContext:Executing step Given browser "Chrome"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "SQL Hack URL-7"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Check Vulnerability
+INFO:E2EContext:Executing step Given browser "Chrome" as "browser"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "SQL Hack URL-7" in "browser"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Check Vulnerability
+INFO:E2EContext:Executing step Given browser "Chrome" as "browser"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.SQL Hack URL-7}" in "browser"
+INFO:E2EContext:Executing step Then "Error Text" should not be displayed in "browser"
+INFO:E2EContext:E2E validation has skipped
+INFO:E2EContext:Executing scenario Preconditions
+INFO:E2EContext:Executing step Given quality bar version "20200115.1"
+INFO:E2EContext:Executing step Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
+INFO:E2EContext:Executing step Given credentials "UBView-Cred"
+INFO:E2EContext:Executing scenario Check Vulnerability
+INFO:E2EContext:Executing step Given browser "Chrome" as "browser"
+INFO:WDM:Looking for [chromedriver 83.0.4103.39 win32] driver in cache 
+INFO:WDM:File found in cache by path [C:\Users\david\.wdm\drivers\chromedriver\83.0.4103.39\win32\chromedriver.exe]
+INFO:E2EContext:Executing step When I open "{environment.UBView.SQL Hack URL-7}" in "browser"
+INFO:E2EContext:Executing step Then "Error Text" should not be displayed in "browser"

@@ -258,30 +258,6 @@ Value Column (under Outputs for model Create Table, under Intermediate results):
 
 
 
-
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                              SUPSOFT                               //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-Supsoft LeftFrame
-["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
-Supsoft RightFrame
-["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
-
-Configure Dynamic Content Preview Install (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Configure Dynamic Content Preview Install']"]
-MSI Package Dropdownlist in Configure Dynamic Content Preview Install: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@name='SCMsiPackageList']"]
-First Item of MSI Package Dropdownlist in Configure Dynamic Content Preview Install: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@name='SCMsiPackageList']/option[2]"]
-Save Button in Configure Dynamic Content Preview Install: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[@name='btnSubmit']"]
-Dynamic Content Preview Install successfully selected Message: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[text()='Dynamic Content Preview Install successfully selected.']"]
-
-
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 //                                  PAUB                              //
@@ -350,3 +326,24 @@ Add a Web Part (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='R
 People Listing Web Part (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='Row 1 Left Zone']]//span[text()='People Listing Web Part']
 Profile Image (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='Row 1 Left Zone']]//span[@class='bz-profile-image']
 //div[@class='bz-peoplelisting-grid']
+
+Landing Page 1 (4 Column w/ Header): //div[@title='Landing Page 1 (4 Column w/ Header)']
+Full Zone Header: //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]
+People Listing Web Part (under Full Zone Header): //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]//span[text()='People Listing Web Part']
+Add a Web Part (under Full Zone Header): //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]//span[text()='Add a Web Part']
+People Listing Web Part (under Full Zone Header): //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]//span[text()='People Listing Web Part']
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              SUPSOFT                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+Supsoft LeftFrame
+["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
+Supsoft RightFrame
+["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
+
+Classes in SA Menu:  ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@fullpath='Application Management/RequestAssist/Classes']"]
+Define Class in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[text()=" Define Class"][@class="clsTreeLeaf"]"]
+Define Class (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Define Class']"]
