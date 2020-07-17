@@ -343,28 +343,21 @@ Supsoft LeftFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
 Supsoft RightFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
+NavFrame
+["//frame[@name='navFrame']", ""]
+sdcxuser_main Frame
+["//frame[@name='sdcxuser_main']", ""]
 
-Classes in SA Menu:  ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@fullpath='Application Management/RequestAssist/Classes']"]
-Define Class in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[text()=' Define Class'][@class='clsTreeLeaf']"]
-Define Class (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Define Class']"]
 
-Request Class Textbox (in Define Class): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='classDescription']"]
-Description Textbox (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='propDescription1']"]
-New Request Attributes Dropdown (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@name='propAttribute1']"]
-Request Details Attributes Dropdown (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@name='ReqDetpropAttribute1']"]
-Input Type Dropdown (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@name='propInputType1']"]
-Update Button (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Update']"]
-
-Save Button (in Define Class): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='Save']"]
-Request Class has been saved: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[text()='Request Class has been saved.']"]
-
-Right Arrow Button (to move item from Available Class to Selected Class): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//img[@alt='Add']"]
-
-Force Unlock: //a[text()='Force Unlock']
-Request Type close (in Component Listbox): //select[@id='sel_left']/option[contains(text(),'close')]
-Request Type create (in Component Listbox): //select[@id='sel_left']/option[contains(text(),'create')]
-Request Type edit (in Component Listbox): //select[@id='sel_left']/option[contains(text(),'edit')]
-Request Type route (in Component Listbox): //select[@id='sel_left']/option[contains(text(),'route')]
-Request Type view (in Component Listbox): //select[@id='sel_left']/option[contains(text(),'view')]
-Tier 1 Analysts (in Group Listbox): //select[@id='sel_right']/option[text()='Tier 1 Analysts']
-Users (in Group Listbox): //select[@id='sel_right']/option[text()='Users']
+My Requests: ["//frame[@name='navFrame']", "//a/b[text()='My Requests']"]
+New Request (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@value='New Request']"]
+Submit a New Request Header (in Request Page): ["//frame[@name='sdcxuser_main']", "//div[@id='ph'][text()='Submit a New Request']"]
+Short Description Textbox (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@id='Kernel::Kernel::sik_short_desc']"]
+Long Description Textbox (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@id='Kernel::Kernel::sik_long_desc']"]
+Severity Dropdown (in Request Page): ["//frame[@name='sdcxuser_main']", "//select[@id='Kernel::Kernel::sik_severity']"]
+Registered Email Address Textbox (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@id='reg_email_addr']"]
+Other Email Address Textbox (in Request Page)Registered Email Address Textbox (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@id='other_email_addr']"]
+Top Link (in Request Page): ["//frame[@name='sdcxuser_main']", "//a[@id='_Top_']"]
+Search for Solutions Button (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@value='Search for Solutions']"]
+Submit Request Button (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@value='Submit Request']"]
+Request Type Dropdown (in Request Page): ["//frame[@name='sdcxuser_main']", "//select[@id='Kernel::Kernel::sik_iss_type']"]

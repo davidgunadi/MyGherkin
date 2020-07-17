@@ -3,7 +3,7 @@ Feature: SUPSOFT-16820
 Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
-Given credentials "Administrator"
+Given credentials "Administrator" and "UserPortalAdministrator"
 
 Scenario: Browser: Login to Support Administrator
 Given browser "Internet Explorer"
@@ -79,34 +79,36 @@ And I switch to main window and close others
 Then "Edit Request Type (Header)" should be displayed
 
 Scenario: Browser: Login to User Center
-When I open "{environment.SupportSoft User Center portal.URL}"
-And I set "Username" value to "Administrator.Username"
-And I set "Password" value to "Administrator.Password"
-And I click on "Login"
-Then "Welcome to the Proactive Assist User Center " page should be displayed
+When I open "{environment.SupportSoft User Center portal.URLLogin}"
+And I set "Username in UC Login Page" value to "{credentials.Administrator.username}"
+And I set "Password in UC Login Page" value to "{credentials.Administrator.password}"
+And I click on "Login Button in UC Login Page"
+Then "Proactive Assist User Center" page should be displayed
+
+
+
 
 Scenario: Browser: Navigate to Submit New Request page
 When I click on "My Requests"
-And I click on "New Request"
-Then "Submit a New Request" page should be displayed
-And I should see "" in "Short Description Textbox"
-And I should see "" in "Long Description Textbox"
-And I should see "Low" in "Severity Dropdown"
-And I should see "" in "Registered Email Address Textbox"
-And I get a value from "Registered Email Address Textbox" attribute "readonly" into "Registered Email Address Textbox Readonly"
-And I should see "" in "Registered Email Address Textbox Readonly"
-And I should see "" in "Other Email Address Textbox"
-And I should see "Top" in "Request Type Top"
-And I should see "Default" in "Request Type Dropdown"
-And I should see "Search for Solutions" in "Search For Solutions Button"
-And I should see "Submit Request" in "Submit Request Button"
+And I click on "New Request (in Request Page)"
+Then "Submit a New Request Header (in Request Page)" should be displayed
+And I should see "" in "Short Description Textbox (in Request Page)"
+And I should see "" in "Long Description Textbox (in Request Page)"
+And I should see "Low" in "Severity Dropdown (in Request Page)"
+And I should see "admin" in "Registered Email Address Textbox (in Request Page)"
+And I should see "" in "Other Email Address Textbox (in Request Page)"
+And "Top Link (in Request Page)" should be displayed
+And I should see "Default" in "Request Type Dropdown (in Request Page)"
+And "Search for Solutions Button (in Request Page)" should be displayed
+And "Submit Request Button (in Request Page)" should be displayed
 
 Scenario: Browser: Select Request Type
-When I set "Short Description Textbox" value to "short description"
-And I set "Long Description Textbox" value to "long description"
-And I click on "Request Type Top"
-And I click on "Request Type Dropdown"
-And I click on "Request Type Dropdown Test Type Item"
+Given "ShortDescRandomValue" default value is "ShortDesc_{RandomValue}"
+Given "LongDescRandomValue" default value is "LongDesc_{RandomValue}"
+When I set "Short Description Textbox (in Request Page)" value to "{ShortDescRandomValue}"
+And I set "Long Description Textbox (in Request Page)" value to "{LongDescRandomValue}"
+And I click on "Top Link (in Request Page)"
+And I set "{TestClassRandomValue}" to "Request Type Dropdown (in Request Page)" value
 Then I get a value from "Password Property Textbox" attribute "readonly" into "Password Property Textbox Readonly"
 And I should see "" in "Password Property Textbox Readonly"
 
