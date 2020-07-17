@@ -348,23 +348,15 @@ NavFrame
 sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
 
-
-Live Assist (under Reporting): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@fullpath='Reporting/LiveAssist ']"]
-Archived Reports (under Live Assist): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@fullpath='Reporting/LiveAssist / Archived Reports']']"]
-Chat Transcript (under Archived Reports): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[text()=' Chat Transcript']"]
-
-
-Chat Transcript (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Chat Transcript']"]
-
-Run Report Now (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='Run Report Now']"]
-Report Filter Form (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//form[@name='repfrm']"]
-Calendar Icon for Report Start Date (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//img[@class='clsCalendarButton'][contains(@onclick,'StartDate')]"]
-Calendar Icon for Report End Date (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//img[@class='clsCalendarButton'][contains(@onclick,'EndDate')]"]
-<m (in Calendar Picker): //a[text()='<m']
-1 (in Calendar Picker): //a[text()='1']
-TomorrowDate (in Calendar Picker): //a[text()=$TomorrowDate]
+Show Report Properties (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[text()='Show Report Properties']"]
+Hide Report Properties (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[text()='Hide Report Properties']"]
+Report run date (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='Report run date:']"]
+Rows Returned (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='Rows Returned:']"]
+Total Rows (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='Total Rows:']"]
+Report Variables (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='Report Variables:']"]
+SQL Query (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='SQL Query:']"]
 
 
-Room Textbox (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='V_Room']"]
-Run Button (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Run']"]
-Results Table (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table[.//td[contains(text(),'Results')]]"]
+
+
+

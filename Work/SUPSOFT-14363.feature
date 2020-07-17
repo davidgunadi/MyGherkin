@@ -25,7 +25,7 @@ When I click on "Run Report Now (in Chat Transcript)"
 Then "Report Filter Form (in Chat Transcript)" should be displayed
 
 Scenario: Enter Report Inputs and Click Run
-Given "TomorrowDate" default value is "{date('D','1 days')}"
+#Given "TomorrowDate" default value is "{date('D','1 days')}"
 When I click on "Calendar Icon for Report Start Date (in Chat Transcript)"
 And I switch to second window
 And I click on "<m (in Calendar Picker)"
@@ -33,12 +33,25 @@ And I click on "1 (in Calendar Picker)"
 And I switch to main window
 And I click on "Calendar Icon for Report End Date (in Chat Transcript)"
 And I switch to second window
-And I click on "TomorrowDate (in Calendar Picker)"
+And I click on "m> (in Calendar Picker)"
+And I click on "1 (in Calendar Picker)"
 And I switch to main window
 And I set "Room Textbox (in Chat Transcript)" value to "%"
 And I click on "Run Button (in Chat Transcript)"
 Then "Results Table (in Chat Transcript)" should be displayed
 
 Scenario: Show Report Properties
+When I click on "Show Report Properties (in Chat Transcript)"
+Then "Report run date (in Chat Transcript)" should be displayed
+And "Rows Returned (in Chat Transcript)" should be displayed
+And "Total Rows (in Chat Transcript)" should be displayed
+And "Report Variables (in Chat Transcript)" should be displayed
+And "SQL Query (in Chat Transcript)" should be displayed
 
 Scenario: Hide Report Properties
+When I click on "Hide Report Properties (in Chat Transcript)"
+Then "Report run date (in Chat Transcript)" should not be displayed
+And "Rows Returned (in Chat Transcript)" should not be displayed
+And "Total Rows (in Chat Transcript)" should not be displayed
+And "Report Variables (in Chat Transcript)" should not be displayed
+And "SQL Query (in Chat Transcript)" should not be displayed
