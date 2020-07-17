@@ -85,9 +85,6 @@ And I set "Password in UC Login Page" value to "{credentials.Administrator.passw
 And I click on "Login Button in UC Login Page"
 Then "Proactive Assist User Center" page should be displayed
 
-
-
-
 Scenario: Browser: Navigate to Submit New Request page
 When I click on "My Requests"
 And I click on "New Request (in Request Page)"
@@ -109,10 +106,9 @@ When I set "Short Description Textbox (in Request Page)" value to "{ShortDescRan
 And I set "Long Description Textbox (in Request Page)" value to "{LongDescRandomValue}"
 And I click on "Top Link (in Request Page)"
 And I set "{TestClassRandomValue}" to "Request Type Dropdown (in Request Page)" value
-Then I get a value from "Password Property Textbox" attribute "readonly" into "Password Property Textbox Readonly"
-And I should see "" in "Password Property Textbox Readonly"
+Then I should see "" in "Password Textbox (in Request Page)"
 
 Scenario: Browser: Submit Request
-When I click on "Submit Request Button"
+When I click on "Submit Request Button (in Request Page)"
 Then "My Requests" page should be displayed
-And I should see "short description" in "My Requests Table Test Item Description"
+And I should see "{ShortDescRandomValue}" in "ShortDescRandomValue (under Description Column in Requests Table)"

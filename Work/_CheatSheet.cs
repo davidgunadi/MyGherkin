@@ -349,15 +349,22 @@ sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
 
 
-My Requests: ["//frame[@name='navFrame']", "//a/b[text()='My Requests']"]
-New Request (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@value='New Request']"]
-Submit a New Request Header (in Request Page): ["//frame[@name='sdcxuser_main']", "//div[@id='ph'][text()='Submit a New Request']"]
-Short Description Textbox (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@id='Kernel::Kernel::sik_short_desc']"]
-Long Description Textbox (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@id='Kernel::Kernel::sik_long_desc']"]
-Severity Dropdown (in Request Page): ["//frame[@name='sdcxuser_main']", "//select[@id='Kernel::Kernel::sik_severity']"]
-Registered Email Address Textbox (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@id='reg_email_addr']"]
-Other Email Address Textbox (in Request Page)Registered Email Address Textbox (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@id='other_email_addr']"]
-Top Link (in Request Page): ["//frame[@name='sdcxuser_main']", "//a[@id='_Top_']"]
-Search for Solutions Button (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@value='Search for Solutions']"]
-Submit Request Button (in Request Page): ["//frame[@name='sdcxuser_main']", "//input[@value='Submit Request']"]
-Request Type Dropdown (in Request Page): ["//frame[@name='sdcxuser_main']", "//select[@id='Kernel::Kernel::sik_iss_type']"]
+Live Assist (under Reporting): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@fullpath='Reporting/LiveAssist ']"]
+Archived Reports (under Live Assist): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@fullpath='Reporting/LiveAssist / Archived Reports']']"]
+Chat Transcript (under Archived Reports): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[text()=' Chat Transcript']"]
+
+
+Chat Transcript (Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='Chat Transcript']"]
+
+Run Report Now (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='Run Report Now']"]
+Report Filter Form (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//form[@name='repfrm']"]
+Calendar Icon for Report Start Date (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//img[@class='clsCalendarButton'][contains(@onclick,'StartDate')]"]
+Calendar Icon for Report End Date (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//img[@class='clsCalendarButton'][contains(@onclick,'EndDate')]"]
+<m (in Calendar Picker): //a[text()='<m']
+1 (in Calendar Picker): //a[text()='1']
+TomorrowDate (in Calendar Picker): //a[text()=$TomorrowDate]
+
+
+Room Textbox (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='V_Room']"]
+Run Button (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Run']"]
+Results Table (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table[.//td[contains(text(),'Results')]]"]
