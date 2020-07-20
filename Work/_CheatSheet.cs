@@ -364,3 +364,6 @@ UI Log (under Maintenance): //a[@id='ubview_log_url']
 
 Export Logs (in Logs Page): //span[text()='Export Logs']
 operation executed: //pre[contains(text(),'operation executed')]
+
+Downstream Bandwidth (under Statistics): //a[@id='bandwidth_left_menu']
+Cache Productivity (Navigation Tab): //a[contains(@href,'cache_prod')]
