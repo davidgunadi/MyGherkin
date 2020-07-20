@@ -25,7 +25,6 @@ When I click on "Run Report Now (in Chat Transcript)"
 Then "Report Filter Form (in Chat Transcript)" should be displayed
 
 Scenario: Enter Report Inputs and Click Run
-#Given "TomorrowDate" default value is "{date('D','1 days')}"
 When I click on "Calendar Icon for Report Start Date (in Chat Transcript)"
 And I switch to second window
 And I click on "<m (in Calendar Picker)"

@@ -258,21 +258,7 @@ Value Column (under Outputs for model Create Table, under Intermediate results):
 
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                                  PAUB                              //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
-Logical View (under Status): //li/a[text()='Logical View']
-Avg CPU Link (in Logical View): //a[@href='/ui/status/cpu/raw/all']
-Memory Link (in Logical View): //a[@href='/ui/status/memory/raw/all']
-In Traffic Link (in Logical View): //a[@href='/ui/statistics/bandwidth/in_downstream/all']
-Cache Out Link (in Logical View): //a[@href='/ui/statistics/bandwidth/cout_downstream/all']
 
-
-//font[text()='Firefox Controls Package successfully selected.']
-//font[text()='Firefox Controls Package successfully selected.']
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -360,3 +346,21 @@ SQL Query (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='s
 
 
 
+
+
+Upload Files (under Maintenance): //a[@id='upload_left_menu']
+Logs (under Maintenance): //a[@id='logs_url']
+Graphs (under Maintenance): //a[@id='graphs_url']
+Cache Lists (under Maintenance): //a[@id='cache_list_url']
+UI Log (under Maintenance): //a[@id='ubview_log_url']
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                                  PAUB                              //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
+
+Export Logs (in Logs Page): //span[text()='Export Logs']
+operation executed: //pre[contains(text(),'operation executed')]
