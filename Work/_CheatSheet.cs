@@ -320,39 +320,7 @@ Add a Web Part (under Full Zone Header): //div[contains(@class,'bz-container')][
 People Listing Web Part (under Full Zone Header): //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]//span[text()='People Listing Web Part']
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                              SUPSOFT                               //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-Supsoft LeftFrame
-["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
-Supsoft RightFrame
-["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
-NavFrame
-["//frame[@name='navFrame']", ""]
-sdcxuser_main Frame
-["//frame[@name='sdcxuser_main']", ""]
 
-Show Report Properties (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[text()='Show Report Properties']"]
-Hide Report Properties (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[text()='Hide Report Properties']"]
-Report run date (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='Report run date:']"]
-Rows Returned (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='Rows Returned:']"]
-Total Rows (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='Total Rows:']"]
-Report Variables (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='Report Variables:']"]
-SQL Query (in Chat Transcript): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//b[text()='SQL Query:']"]
-
-
-
-
-
-
-
-Upload Files (under Maintenance): //a[@id='upload_left_menu']
-Logs (under Maintenance): //a[@id='logs_url']
-Graphs (under Maintenance): //a[@id='graphs_url']
-Cache Lists (under Maintenance): //a[@id='cache_list_url']
-UI Log (under Maintenance): //a[@id='ubview_log_url']
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -367,3 +335,27 @@ operation executed: //pre[contains(text(),'operation executed')]
 
 Downstream Bandwidth (under Statistics): //a[@id='bandwidth_left_menu']
 Cache Productivity (Navigation Tab): //a[contains(@href,'cache_prod')]
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              SUPSOFT                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+Supsoft LeftFrame
+["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
+Supsoft RightFrame
+["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
+NavFrame
+["//frame[@name='navFrame']", ""]
+sdcxuser_main Frame
+["//frame[@name='sdcxuser_main']", ""]
+
+
+
+Terms Radio Button (in Advanced Search): ["//frame[@name='sdcxuser_main']", "//label[contains(.,'Terms')]//input[@type='radio'][@id='advsrch_category']"]
+Folder Name Radio Button (in Advanced Search): ["//frame[@name='sdcxuser_main']", "//label[contains(.,'Folder Name')]//input[@type='radio'][@id='advsrch_category']"]
+Search Type Dropdown: ["//frame[@name='sdcxuser_main']", "//select[@id='search_type']"]
+Occurrence Dropdown: ["//frame[@name='sdcxuser_main']", "//select[@id='search_area']"]
+Modified Dropdown: ["//frame[@name='sdcxuser_main']", "//select[@id='search_lm_dt']"]
+Content Type Dropdown: ["//frame[@name='sdcxuser_main']", "//select[@id='search_ct']"]
