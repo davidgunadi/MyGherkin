@@ -353,9 +353,5 @@ sdcxuser_main Frame
 
 
 
-Terms Radio Button (in Advanced Search): ["//frame[@name='sdcxuser_main']", "//label[contains(.,'Terms')]//input[@type='radio'][@id='advsrch_category']"]
-Folder Name Radio Button (in Advanced Search): ["//frame[@name='sdcxuser_main']", "//label[contains(.,'Folder Name')]//input[@type='radio'][@id='advsrch_category']"]
-Search Type Dropdown: ["//frame[@name='sdcxuser_main']", "//select[@id='search_type']"]
-Occurrence Dropdown: ["//frame[@name='sdcxuser_main']", "//select[@id='search_area']"]
-Modified Dropdown: ["//frame[@name='sdcxuser_main']", "//select[@id='search_lm_dt']"]
-Content Type Dropdown: ["//frame[@name='sdcxuser_main']", "//select[@id='search_ct']"]
+RequestTypeName (in Types Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[text()=$RequestTypeName]"]
+Delete Icon for RequestTypeName (in Types Table): //tr[contains(.,$RequestTypeName)]//img[@alt='Delete']
