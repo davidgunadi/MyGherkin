@@ -7,6 +7,10 @@ CRM-71603
 // Dummy Ticket
 https://jira.devfactory.com/browse/TS-5834
 
+//Check checkbox
+When I "check" "<selector>" checkbox
+When I "uncheck" "<selector>" checkbox
+
 // Select a dropdown value - This uses the value attribute in an option
 And I set "value" to "selector" value
 
@@ -52,6 +56,9 @@ And the value of "AlertMessage" should be "Are you sure you want to backup the d
 
 // Remember Variable Value
 I remember a value from ["<attribute>" attribute of] "<selector>" [in "<ui driver instance id>"] as "<variable>"
+
+// Execute Scenario
+When I execute scenario "NORTHP-16902" with inputs "urlsearch" as "TSWeb - Advanced Search - Save search name input"
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -251,50 +258,28 @@ Value Column (under Outputs for model Create Table, under Intermediate results):
 
 
 
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-//                             BOINT                                  //
+//                                  PAUB                              //
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
-//http://spadmin:Password%231@automation1
-Directories - Services (in Footer): //div[contains(@class,'bz-footer-container')]//li/a[text()='Services']
-["//iframe[@class='ms-dlgFrame']", ""]
+//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
 
+Export Logs (in Logs Page): //span[text()='Export Logs']
+operation executed: //pre[contains(text(),'operation executed')]
 
-
-Location Title Textbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_TextField1_ctl00_TextField']
-Service Title Textbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_ctl01_ctl00_TextField']
-Posted By Textbox: //div[@id='ctl00_PlaceHolderMain_EditModePanel_ctl02_ctl00_UserField_upLevelDiv']
-Person Icon (for Posted By): //tr[contains(.,'Posted By')]//img[@alt='Check Names']
-Show Roll Up Image on Page Checkbox: //input[@id='ctl00_PlaceHolderMain_EditModePanel_BooleanField2_ctl00_BooleanField']
-Page Tab (in Sharepoint Ribbon): //span[@class='ms-cui-tt-span'][text()='Page']
-Publish Tab (in Sharepoint Ribbon): //span[@class='ms-cui-tt-span'][text()='Publish']
-Page Layout (in Sharepoint Ribbon): //a[contains(@id,'ChangePageLayout')]
-Publish (in Sharepoint Ribbon): //a[contains(@id,'Publish-SelectedItem')]   
-Service Page (under Page Layout Popup): //div[@title='Service Page']
-Continue Button (in Publish Dialog): //input[@id='statechangedialog_okbutton']
-Error - This page contains content or formatting that is not valid. You can find more information in the affected sections: //span[@class='ms-status-status'][contains(.,'Error')][contains(.,'This page contains content or formatting that is not valid. You can find more information in the affected sections')]
-You must specify a value for this required field (under Posted By): //tr[contains(.,'Posted By')]//span[text()='You must specify a value for this required field.']
-You must specify a value for this required field (under Service Title): //tr[contains(.,'Service Title')]//span[text()='You must specify a value for this required field.']
-
-
-Find it at, containing VarRandomPage: ["//iframe[@class='ms-dlgFrame']", "//input[@id='//input[@id='ctl00_PlaceHolderMain_createButton']']"]
-
-BONZAI\Administrator (in Posted By Textbox): //span[@id='content'][contains(text(),'administrator')]
-Please select a Roll Up Image (under Show Roll Up Image on Page): //span[@role='alert'][text()='Please select a Roll Up Image']
-
-
-Click here to insert a picture from SharePoint: //a[contains(@id,'AddAssetPromptLink')]
-Browse (for Selected Image): ["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_PlaceHolderDialogBodySection_PlaceHolderDialogBodyMainSection_ctl01_assetSelectedImage_PickerLaunchButton']"]
-FAQ Image: ["//iframe[@class='ms-dlgFrame']", "//div[text()='FAQ']"]
-OK Button (in Edit Image Properties Dialog): ["//iframe[@class='ms-dlgFrame']", "//input[@id='ctl00_OkButton']"]
-FAQ Image Preview (in Roll Up Image): //img[contains(@src,'FAQ')]
-Username (on top right of the page): //span[contains(@class,'username')]
-
-
-
-
+Downstream Bandwidth (under Statistics): //a[@id='bandwidth_left_menu']
+Cache Productivity (Navigation Tab): //a[contains(@href,'cache_prod')]
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -306,44 +291,26 @@ Supsoft LeftFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
 Supsoft RightFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
-
-
-Severity Levels in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[contains(@href,'rrn_severity')]"]
-Service Level Agreements in SA Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[contains(@href,'slalevels')]"]
-
-New Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='New']"]
-Cancel Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[text()='Cancel']"]
-Edit Button (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//a[contains(@href,'edit')]"]
-Delete Button (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//a[contains(@href,'delete')]"]
-Value Cell (for First Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[3]//td[4]"]
-Value Cell (for Second Record) (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//table//tr[4]//td[4]"]
-
-Save Button (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Save']"]
-Severity Textbox (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='keyname']"]
-Value Textbox (in Severity Levels): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='keyvalue']"]
-Emergency (in Severity Column): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[text()='Emergency']"]
+NavFrame
+["//frame[@name='navFrame']", ""]
+sdcxuser_main Frame
+["//frame[@name='sdcxuser_main']", ""]
 
 
 
-Average Time to First Response(Minutes) Table: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableHeader'][contains(.,'Average Time to First Response(Minutes)')]"]
-Average Time to Close(Minutes) Table: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[@class='clsTableHeader'][contains(.,'Average Time to Close(Minutes)')]"]
-Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,'Average Time to First Response(Minutes)')]//td[normalize-space(text())='Emergency']"]
-Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,'Average Time to Close(Minutes)')]//td[normalize-space(text())='Emergency']"]
-Pencil Icon for Emergency (in Average Time to First Response Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "(//tbody[contains(.,"Average Time to First Response(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
-Pencil Icon for Emergency (in Average Time to Close Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//tbody[contains(.,"Average Time to Close(Minutes)")]//tr[./td[normalize-space(text())='Emergency']]//a[contains(@href,'edit')]"]
-Save Button (in Service Level Agreements): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Save']"]
-SLA Value Textbox (in Service Level Agreements): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@name='Emergency_response_time']"]
-Emergency_resolution_time
+RequestTypeName (in Types Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[text()=$RequestTypeName]"]
+Delete Icon for RequestTypeName (in Types Table): //tr[contains(.,$RequestTypeName)]//img[@alt='Delete']
+
+
 
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-//                                  PAUB                              //
+//                             BOINT                                  //
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
-Logical View (under Status): //li/a[text()='Logical View']
-Avg CPU Link (in Logical View): //a[@href='/ui/status/cpu/raw/all']
-Memory Link (in Logical View): //a[@href='/ui/status/memory/raw/all']
-In Traffic Link (in Logical View): //a[@href='/ui/statistics/bandwidth/in_downstream/all']
-Cache Out Link (in Logical View): //a[@href='/ui/statistics/bandwidth/cout_downstream/all']
+//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
+//http://spadmin:Password%231@automation1
+["//iframe[@class='ms-dlgFrame']", ""]
+
+Unique Identifier Value: //div[@id='ItemId']
