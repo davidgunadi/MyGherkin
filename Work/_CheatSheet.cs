@@ -261,63 +261,8 @@ Value Column (under Outputs for model Create Table, under Intermediate results):
 
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//                             BOINT                                  //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
-//http://spadmin:Password%231@automation1
-["//iframe[@class='ms-dlgFrame']", ""]
-
-Home Page 1 (4 Column) - under Page Layout Popup: //div[@title='Home Page 1 (4 Column)']
-Header Zone: //span[text()='Header Zone']
-
-Add a Web Part (under Header Zone): //div[@class='bz-row'][.//span[text()='Header Zone']]//span[text()='Add a Web Part']
-Web Part Adder (on top of the page): //div[@id='WebPartAdderUpdatePanelContainer']
-People Listing Web Part: //div[@title='People Listing Web Part']
-People Listing Web Part (under Header Zone): //div[@class='bz-row'][.//span[text()='Header Zone']]//span[text()='People Listing Web Part']
-
-Down Arrow next to People Listing Web Part: //a[@id='WebPartWPQ1_MenuLink']
-Edit Web Part (dropdown option): //div[@id='MSOMenu_Edit']
-
-Site URL Textbox (in People Listing Web Part): //input[@id='bz-webpart-property-siteUrl']
-List Dropdown(in People Listing Web Part): //select[@id='bz-webpart-property-listName']
-View Dropdown (in People Listing Web Part): //select[@id='bz-webpart-property-viewName']
-Person Column Dropdown (in People Listing Web Part): //select[@id='bz-webpart-property-personColumn']
-
-Show Profile Picture Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showProfilePicture']
-Show Email Address Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showEmailAddress']
-Show Location Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showLocation']
-Show Job Title Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showJobTitle']
-Show Phone Number Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showPhoneNumber']
-Show Promoted Items Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showPromotedItems']
-
-Display Users As Dropdown (in People Listing Web Part): //select[@id='bz-webpart-property-displayType']
-
-Show Table Headers Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showTableHeaders']
-Use Paging Checkbox (in People Listing Web Part): //input[@id='bz-webpart-property-showPaging']
-Items per Page Textbox (in People Listing Web Part): //input[@id='bz-webpart-property-itemsPerPage']
-OK Button (in People Listing Web Part): //input[@id='ctl00_MSOTlPn_EditorZone_MSOTlPn_OKBtn']
-
-Profile Image (in People Listing Web Part Table): //span[@class='bz-profile-image']
-Contact (Grid Header in People Listing Web Part Table): //th[text()='Contact']
-Job Title (Grid Header in People Listing Web Part Table): //th[text()='Job Title']
-Email (Grid Header in People Listing Web Part Table): //th[text()='Email']
-Location (Grid Header in People Listing Web Part Table): //th[text()='Location']
-Phone Number (Grid Header in People Listing Web Part Table): //th[text()='Phone Number']
 
 
-Add a Web Part (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='Row 1 Left Zone']]//span[text()='Add a Web Part']
-People Listing Web Part (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='Row 1 Left Zone']]//span[text()='People Listing Web Part']
-Profile Image (under Row 1 Left Zone): //div[@class='flex-2'][.//span[text()='Row 1 Left Zone']]//span[@class='bz-profile-image']
-//div[@class='bz-peoplelisting-grid']
-
-Landing Page 1 (4 Column w/ Header): //div[@title='Landing Page 1 (4 Column w/ Header)']
-Full Zone Header: //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]
-People Listing Web Part (under Full Zone Header): //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]//span[text()='People Listing Web Part']
-Add a Web Part (under Full Zone Header): //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]//span[text()='Add a Web Part']
-People Listing Web Part (under Full Zone Header): //div[contains(@class,'bz-container')][1]//div[@class='bz-row'][.//span[text()='Full Zone']]//span[text()='People Listing Web Part']
 
 
 
@@ -355,3 +300,17 @@ sdcxuser_main Frame
 
 RequestTypeName (in Types Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[text()=$RequestTypeName]"]
 Delete Icon for RequestTypeName (in Types Table): //tr[contains(.,$RequestTypeName)]//img[@alt='Delete']
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                             BOINT                                  //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/BI/00+-+E2E+Environment+Data+Structure
+//http://spadmin:Password%231@automation1
+["//iframe[@class='ms-dlgFrame']", ""]
+
+Unique Identifier Value: //div[@id='ItemId']

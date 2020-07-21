@@ -43,6 +43,10 @@ When I set "Term Set Name Textbox (in Site Settings)" value to "{IntranetNavigat
 And I click on "Save Button (in Site Settings)"
 Then I should see "{IntranetNavigationFRRandomValue}" in "Term Set Name Textbox (in Site Settings)"
 
+Scenario: Save the Unique Identifier for the newly created "Intranet Navigation - FR"
+When I scroll to the element "Unique Identifier Value"
+Then I remember a value from "Unique Identifier Value" as "IntranetNavigationFRUniqueIdentifier"
+
 Scenario: Expand "Intranet Navigation - FR" and right click Home Term
 When I click on "Expand Node Icon (for IntranetNavigationFRRandomValue)"
 And I click on "Home (Tree Node)"
