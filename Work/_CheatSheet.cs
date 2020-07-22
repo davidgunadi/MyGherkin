@@ -342,3 +342,11 @@ Videos Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./
 Polls Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Polls']]/td[@class='recharts-tooltip-cell-value']
 Events Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Events']]/td[@class='recharts-tooltip-cell-value']
 Blog Posts Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Blog Posts']]/td[@class='recharts-tooltip-cell-value']
+
+
+Video Textbox (in Video Page): //input[@id='embedFormControl']
+Import Video Button (in Video Page): //span[text()='Import Video']
+Video Title (in Video Page): //input[@name='subject']
+Video Body (in HTML Formatting): //label[@class='j-rte-label']
+Youtube Video Preview: ["//iframe[@class='embedly-embed']", "//div[@class='iframe youtube']"]
+

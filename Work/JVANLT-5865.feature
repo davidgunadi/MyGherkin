@@ -30,10 +30,10 @@ Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 When I click on "Pencil icon"
 And I click on "Video link"
 And I wait until "Cancel Button (Enabled)" appears
-And I click on "The community Community Radio Button"
 And I click on "Video Textbox (in Video Page)"
 And I type slowly "https://www.youtube.com/watch?v=EngW7tLk6R8"
 And I click on "Import Video Button (in Video Page) (In Enabled State)"
+And I click on "The community Community Radio Button"
 And I wait until "Youtube Video Preview" appears
 And I click on "Video Title (in Video Page)"
 And I type "Video_{RandomValue}"
