@@ -36,8 +36,7 @@ And I click on "Idea Body (in HTML Formatting)"
 And I type "Sample Idea Body"
 And I click on "The community Community Radio Button"
 And I wait until "In a Place Textbox" disappears
-And I click on "Publish button"
-And I wait until "Global Reach" appears
+And I click on "Create Idea button"
 Then "Idea_{RandomValue}" page should be displayed
 
 Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
@@ -51,4 +50,4 @@ Then "Content Creation Graph" should be displayed
 Scenario: Check the current number of content created (type="Ideas") in the current month is increased by 1
 Given "OriginalIdeasCountPlusOne" default value is "{to_int(OriginalIdeasCount)+1}"
 When I hover on "Bar Chart for Current Month (for Content Creation)"
-Then I should see "{OriginalIdeasCountPlusOne}" in "Document Value (in Graph Tooltip)"
+Then I should see "{OriginalIdeasCountPlusOne}" in "Ideas Value (in Graph Tooltip)"
