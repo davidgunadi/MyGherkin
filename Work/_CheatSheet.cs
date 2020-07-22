@@ -349,4 +349,3 @@ Import Video Button (in Video Page): //span[text()='Import Video']
 Video Title (in Video Page): //input[@name='subject']
 Video Body (in HTML Formatting): //label[@class='j-rte-label']
 Youtube Video Preview: ["//iframe[@class='embedly-embed']", "//div[@class='iframe youtube']"]
-
