@@ -1,7 +1,26 @@
 Feature: JVANLT-5857
 
-Access instance and login with CA user
-CA user is logged in and Welcome to Jive page is displayed
+Scenario: Preconditions
+Given quality bar version "20200115.1"
+Given environment "Jive Analytics E2E" from "https://confluence.devfactory.com/display/EN/Jive+Analytics+-+E2E+Environment+Data"
+Given credentials "ca user"
+
+Scenario: Login as User
+Given browser "Chrome"
+When I open "{environment.Jive Cloud.URL}"
+And I set "Email Address input field" value to "{credentials.ca user.username}"
+And I set "Password input field" value to "{credentials.ca user.password}"
+And I click on "Sign in button"
+Then "Welcome" page should be displayed
+
+Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
+When I click on "Avatar icon"
+And I click on "Community Analytics menu item"
+And I click on "Engagement Dashboard drop-down"
+And I click on "Community Usage Dashboard option"
+And I wait until "Content Creation Graph" appears
+Then "Content Creation Graph" should be displayed
+
 
 User clicks on Avatar -> Community Analytics -> clicks on Engagement Dashboard dropdown and selects Community Usage Dashboard
 Community Usage Dashboard is displayed and all reports are loaded
