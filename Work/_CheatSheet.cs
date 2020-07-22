@@ -7,6 +7,11 @@ CRM-71603
 // Dummy Ticket
 https://jira.devfactory.com/browse/TS-5834
 
+//Add value
+And I remember a value from "value" attribute of "Cache Key Textbox" as "CacheKeyOriginalValue"
+Given "CacheKeyIncrementedValue" default value is "{to_int(CacheKeyOriginalValue)+1}"
+When I set "Cache Key Textbox" value to "{CacheKeyIncrementedValue}"
+
 //Check checkbox
 When I "check" "<selector>" checkbox
 When I "uncheck" "<selector>" checkbox
@@ -313,4 +318,7 @@ Delete Icon for RequestTypeName (in Types Table): //tr[contains(.,$RequestTypeNa
 //http://spadmin:Password%231@automation1
 ["//iframe[@class='ms-dlgFrame']", ""]
 
-Unique Identifier Value: //div[@id='ItemId']
+Language Dropdown (in Edit Bonzai Configuration): //div[@class='dropdown'][.//option[text()='English']]
+FR Icon (next to the textboxes): //span[@class='localized'][text()='FR']
+Navigation Term Set Guid Textbox: //input[@name='_owlNavTermSetGuid']
+Cache Key Textbox: //input[@name='_owlCacheKey']
