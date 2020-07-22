@@ -1,4 +1,4 @@
-Feature: JVANLT-5857
+Feature: JVANLT-5866
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
@@ -21,24 +21,24 @@ And I click on "Community Usage Dashboard option"
 And I wait until "Content Creation Graph" appears
 Then "Content Creation Graph" should be displayed
 
-Scenario: User observes and writes down current number of content created (type="Documents") in the current month
+Scenario: User observes and writes down current number of content created (type="Ideas") in the current month
 When I hover on "Bar Chart for Current Month (for Content Creation)"
-Then I remember a value from "Document Value (in Graph Tooltip)" as "OriginalDocumentCount"
+Then I remember a value from "Ideas Value (in Graph Tooltip)" as "OriginalIdeasCount"
 
-Scenario: Create a new Document and publish it in "The community Community"
+Scenario: Create a new Idea and publish it in "The community Community"
 Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
 When I click on "Pencil icon"
-And I click on "Document link"
+And I click on "Idea link"
 And I wait until "Cancel Button (Enabled)" appears
-And I click on "Document Title (in Document Page)"
-And I type "Doc_{RandomValue}"
-And I click on "Document Body (in HTML Formatting)"
-And I type "Sample Document Body"
+And I click on "Idea Title (in Idea Page)"
+And I type "Idea_{RandomValue}"
+And I click on "Idea Body (in HTML Formatting)"
+And I type "Sample Idea Body"
 And I click on "The community Community Radio Button"
 And I wait until "In a Place Textbox" disappears
 And I click on "Publish button"
 And I wait until "Global Reach" appears
-Then "Doc_{RandomValue}" page should be displayed
+Then "Idea_{RandomValue}" page should be displayed
 
 Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
 When I click on "Avatar icon"
@@ -48,7 +48,7 @@ And I click on "Community Usage Dashboard option"
 And I wait until "Content Creation Graph" appears
 Then "Content Creation Graph" should be displayed
 
-Scenario: Check the current number of content created (type="Documents") in the current month is increased by 1
-Given "OriginalDocumentCountPlusOne" default value is "{to_int(OriginalDocumentCount)+1}"
+Scenario: Check the current number of content created (type="Ideas") in the current month is increased by 1
+Given "OriginalIdeasCountPlusOne" default value is "{to_int(OriginalIdeasCount)+1}"
 When I hover on "Bar Chart for Current Month (for Content Creation)"
-Then I should see "{OriginalDocumentCountPlusOne}" in "Document Value (in Graph Tooltip)"
+Then I should see "{OriginalIdeasCountPlusOne}" in "Document Value (in Graph Tooltip)"
