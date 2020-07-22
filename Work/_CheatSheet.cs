@@ -335,7 +335,7 @@ Your configuration has been saved: ://p[text()='Your configuration has been save
 ////////////////////////////////////////////////////////////////////////
 https://confluence.devfactory.com/display/EN/Jive+Analytics+-+E2E+Environment+Data
 
-Bar Chart for Current Month for Content Creation: //div[@id='j-content-creation-chart']/div/div/*[local-name()='svg']//*[local-name()='g'][@class='recharts-layer recharts-bar'][.//*[local-name()='path'][contains(@id,'bar-content-blog-posts-created-rect')]]/*[local-name()='g']/*[local-name()='g'][last()]
+Bar Chart for Current Month (for Content Creation): //div[@id='j-content-creation-chart']/div/div/*[local-name()='svg']//*[local-name()='g'][@class='recharts-layer recharts-bar'][.//*[local-name()='path'][contains(@id,'bar-content-blog-posts-created-rect')]]/*[local-name()='g']/*[local-name()='g'][last()]
 Document Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Documents']]/td[@class='recharts-tooltip-cell-value']
 Ideas Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Ideas']]/td[@class='recharts-tooltip-cell-value']
 Videos Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Videos']]/td[@class='recharts-tooltip-cell-value']
