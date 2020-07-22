@@ -8,4 +8,4 @@ Given credentials "UBView-Cred"
 Scenario: Check Vulnerability
 Given browser "Internet Explorer" as "browser"
 When I open "{environment.UBView.Hack URL}" in "browser"
-Then alert should not be displayed
+Then alert should not be displayed in "browser"
