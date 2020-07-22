@@ -322,3 +322,6 @@ Language Dropdown (in Edit Bonzai Configuration): //div[@class='dropdown'][.//op
 FR Icon (next to the textboxes): //span[@class='localized'][text()='FR']
 Navigation Term Set Guid Textbox: //input[@name='_owlNavTermSetGuid']
 Cache Key Textbox: //input[@name='_owlCacheKey']
+
+Save Button (in Edit Bonzai Configuration): //button[text()='Save']
+Your configuration has been saved: ://p[text()='Your configuration has been saved']
