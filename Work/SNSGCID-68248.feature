@@ -10,7 +10,7 @@ Given HTTP request
 When I execute GET request for "{environment.datasetpreload-single-node.URL}/TEST-68248"
 Then "Preload finished" should be in response body
 
-Scenario: Login
+Scenario: Login and Access "Data Design -> Reports" menu
 Given browser "Chrome"
 When I open "{environment.analyzer-ui-single-node.URL}"
 And I set "{credentials.TEST-68248.username}" to "Username field" value
@@ -18,8 +18,6 @@ And I set "{credentials.TEST-68248.password}" to "Password field" value
 And I click on "Login button"
 Then "Welcome message" should be displayed
 And "Data Design menu" should be displayed
-
-Scenario: Access "Data Design -> Reports" menu
 When I click on "Data Design menu"
 And I click on "Reports menu"
 Then "Manage reports page title" should be displayed
