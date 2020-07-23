@@ -33,7 +33,7 @@ And I click on "Blog Post link"
 And I wait until "Cancel Button (Enabled)" appears
 And I click on "Blog title"
 And I type "Blog_{RandomValue}"
-And I click on "Blog Post Body"
+And I click on "Blog Post Body (in HTML Formatting)"
 And I type "Sample Blog Body"
 And I click on "Your personal blog"
 And I click on "Publish button"

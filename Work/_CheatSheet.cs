@@ -181,17 +181,6 @@ DNN Persona Bar Frame
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-//                              SENSAGE                               //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/SEN/Sensage+EnvDS
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
 //                                  PAUB                              //
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -253,3 +242,21 @@ Import Video Button (in Video Page): //span[text()='Import Video']
 Video Title (in Video Page): //input[@name='subject']
 Video Body (in HTML Formatting): //label[@class='j-rte-label']
 Youtube Video Preview: ["//iframe[@class='embedly-embed']", "//div[@class='iframe youtube']"]
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              SENSAGE                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/SEN/Sensage+EnvDS
+
+TEST-68248-REPORT (in Reports Table): //td[contains(@class,'grid-table-body__cell')][contains(.,'TEST-68248-REPORT')]
+History Count Value for TEST-68248-REPORT: //td[contains(@class,'grid-table-body__cell')][contains(.,'TEST-68248-REPORT')]/following-sibling::td[9]/span
+Space (MB) Value for TEST-68248-REPORT: //td[contains(@class,'grid-table-body__cell')][contains(.,'TEST-68248-REPORT')]/following-sibling::td[10]/span
+
+Report Queue (Header): //h1[text()='Report Queue']
+TEST-68248-REPORT (in Reports Queue Table): //td[contains(@class,'grid-table-body__cell')][contains(.,'TEST-68248-REPORT')]
+DONE (Status for TEST-68248-REPORT): //td[contains(@class,'grid-table-body__cell')][contains(.,'TEST-68248-REPORT')]//following-sibling::td[contains(.,'DONE')]
+Manage Reports Button (in Report Queue Page): //span[@class='df-button__content'][normalize-space(text())='Manage Reports']
