@@ -260,3 +260,17 @@ Report Queue (Header): //h1[text()='Report Queue']
 TEST-68248-REPORT (in Reports Queue Table): //td[contains(@class,'grid-table-body__cell')][contains(.,'TEST-68248-REPORT')]
 DONE (Status for TEST-68248-REPORT): //td[contains(@class,'grid-table-body__cell')][contains(.,'TEST-68248-REPORT')]//following-sibling::td[contains(.,'DONE')]
 Manage Reports Button (in Report Queue Page): //span[@class='df-button__content'][normalize-space(text())='Manage Reports']
+
+
+
+Analytics Workbench (Header): //h1[text()='Analytics Workbench']
+Pencil Icon (Create an analytic request) (in Analytics Workbench Page): //df-icon[@name='pencil']
+Analytic Request Dialog: //div[@class='container-fluid'][.//h1[text()='Analytic Request']]
+Please describe the desired analytic function below Textarea (in Analytic Request Dialog): //df-input-container[.//label[text()=' Please describe the desired analytic function below ']]//textarea
+Choose file Button (in Analytic Request Dialog): //button[contains(.,'Choose file')]
+Warning message (in Analytic Request Dialog): //span[@class='bg-warning p-1']
+Submit Button (Disabled) (in Analytic Request Dialog): //button[contains(.,'Submit')][@disabled]
+Submit Button (Enabled) (in Analytic Request Dialog): //button[contains(.,'Submit')][not(@disabled)]
+Reset Button (Enabled) (in Analytic Request Dialog): //button[contains(.,'Reset')][not(@disabled)]
+Cancel Button (Enabled) (in Analytic Request Dialog): //button[contains(.,'Cancel')][not(@disabled)]
+
