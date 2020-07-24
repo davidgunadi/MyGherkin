@@ -52,17 +52,17 @@ And I click on "Select an Analytics model to schedule dropdown bar"
 Then "option 'TEST-66266-MODEL' in models dropdown" should not be displayed
 
 Scenario: Update "TEST-66266-MODEL" status to Active
-When I click on "Select an Analytics model to schedule dropdown bar"
+When I press 'ESCAPE'
 And I click on "Analytics Workbench menu"
 And I click on "Page search text inputbox in 'Models' tab of 'Analytics Workbench' page"
 And I type "TEST-66266-MODEL"
+And I click on "TEST-66266-MODEL model row"
 And I click on "enabled 'Status' button"
 And I click on "option 'Active' in Status button dropdown"
 Then I should see "ACTIVE" in "Status column of 'TEST-66266-MODEL' model row"
 
 Scenario: Verify "TEST-66266-MODEL" is displayed in "Select an Analytics model to schedule" dropdown in Schedule Page
-When I click on "Scheduler menu"
-And I click on "Schedules menu"
+When I click on "Schedules menu"
 And I click on "Analytics Schedules Tab"
 And I click on "Add a schedule button in 'Scheduler' page"
 And I click on "Select an Analytics model to schedule dropdown bar"
