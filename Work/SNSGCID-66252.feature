@@ -22,7 +22,7 @@ When I open "{environment.analyzer-ui-single-node.URL}" in "Analyzer Site"
 And I set "{credentials.TEST-66252.username}" to "Username field" value in "Analyzer Site"
 And I set "{credentials.TEST-66252.password}" to "Password field" value in "Analyzer Site"
 And I click on "Login button" in "Analyzer Site"
-When I click on "Data Design menu" in "Analyzer Site"
+And I click on "Data Design menu" in "Analyzer Site"
 And I click on "Analytics Workbench menu" in "Analyzer Site"
 Then "Analytics Workbench (Header)" should be displayed in "Analyzer Site"
 
@@ -46,13 +46,27 @@ Scenario: Add File
 When I upload a file "https://e2efiles.s3.amazonaws.com/htlgaij.txt" to "Choose file (Uploader)" in "Analyzer Site"
 Then I should see "htlgaij.txt" in "Uploaded File Name Label (in Analytic Request Dialog)" in "Analyzer Site"
 
-
 Scenario: Reset Form
 When I click on "Reset Button (Enabled) (in Analytic Request Dialog)" in "Analyzer Site"
 Then I should see "" in "Please describe the desired analytic function below Textarea (in Analytic Request Dialog)" in "Analyzer Site"
 And I should see "No file chosen" in "Uploaded File Name Label (in Analytic Request Dialog)" in "Analyzer Site"
 
-Scenario: Write a message and click Submit
+Scenario: Write a message, upload a file, and click Submit
+When I click on "Please describe the desired analytic function below Textarea (in Analytic Request Dialog)" in "Analyzer Site"
+And I type "Message_{RandomValue}" in "Analyzer Site"
+And I upload a file "https://e2efiles.s3.amazonaws.com/htlgaij.txt" to "Choose file (Uploader)" in "Analyzer Site"
+Then I should see "htlgaij.txt" in "Uploaded File Name Label (in Analytic Request Dialog)" in "Analyzer Site"
+When I click on "Submit Button (Enabled) (in Analytic Request Dialog)" in "Analyzer Site"
+Then "Analytic Request Dialog" should not be displayed in "Analyzer Site"
+
 Scenario: Check Email Received
+When I wait until "Email with Subject as Analytic Request - TEST-66252 (in MailDev)" appears in "Mailbox Site"
+Then "Email with Subject as Analytic Request - TEST-66252 (in MailDev)" should be displayed in "Mailbox Site"
+
 Scenario: Check Email Message
+When I click on "Email with Subject as Analytic Request - TEST-66252 (in MailDev)" in "Mailbox Site"
+Then I should see "Message_{RandomValue}" in "Email Content (in MailDev)" in "Mailbox Site"
+
 Scenario: Check Email Attachment
+When I click on "Attachment Link (in MailDev)" in "Mailbox Site"
+Then I should see "htlgaij.txt" in "Attachment Name (in MailDev)" in "Mailbox Site"
