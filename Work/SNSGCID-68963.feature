@@ -36,7 +36,7 @@ And "unchecked 'Edit' checkbox in the 'TEST-68963-GROUP' row" should be displaye
 And "unchecked 'Delete' checkbox in the 'TEST-68963-GROUP' row" should be displayed
 
 Scenario: Check View permission and Save
-When I click on "View Checkbox for TEST-68963-GROUP"
+When I "check" "View Checkbox for TEST-68963-GROUP" checkbox
 And I click on "Save button in Edit Access Permissions dialog"
 And I wait until "Edit Access Permissions dialog" disappears
 Then "Edit Access Permissions dialog" should not be displayed

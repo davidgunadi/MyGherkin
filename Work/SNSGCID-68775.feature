@@ -25,7 +25,7 @@ And "TEST-68775-SCHEDULE schedule row" should be displayed
 And "disabled 'Delete schedule(s)' button in Scheduler page" should be displayed
 
 Scenario: Select all reports schedules in the report list and verify Delete button is enabled
-When I click on "Grid Header's(checkbox to select all the schedules)"
+When I "check" "Grid Header's(checkbox to select all the schedules)" checkbox
 Then "enabled 'Delete schedule(s)' button in Scheduler page" should be displayed
 
 Scenario: Delete Schedule and Verify Message
