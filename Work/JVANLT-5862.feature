@@ -22,7 +22,8 @@ And I wait until "Content Creation Graph" appears
 Then "Content Creation Graph" should be displayed
 
 Scenario: User observes and writes down current number of content created (type="Events") in the current month
-When I hover on "Bar Chart for Current Month (for Content Creation)"
+When I wait for "2" seconds
+And I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I remember a value from "Events Value (in Graph Tooltip)" as "OriginalEventCount"
 
 Scenario: Create a new Event and Publish it in Community
@@ -38,6 +39,7 @@ And I set "Demo" to "Event Type Dropdown" value
 And I click on "The community Community Radio Button"
 And I wait until "In a Place Textbox" disappears
 And I click on "Create Event Button"
+And I wait until "Add a comment Button (Enabled)" appears
 Then "Event_{RandomValue}" page should be displayed
 
 Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
@@ -50,5 +52,6 @@ Then "Content Creation Graph" should be displayed
 
 Scenario: Check the current number of content created (type="Events") in the current month is increased by 1
 Given "OriginalEventCountPlusOne" default value is "{to_int(OriginalEventCount)+1}"
-When I hover on "Bar Chart for Current Month (for Content Creation)"
+When I wait for "2" seconds
+And I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I should see "{OriginalEventCountPlusOne}" in "Events Value (in Graph Tooltip)"

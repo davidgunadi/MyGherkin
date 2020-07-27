@@ -22,13 +22,25 @@ And I wait until "Content Creation Graph" appears
 Then "Content Creation Graph" should be displayed
 
 Scenario: User observes and writes down current number of content created (type="Polls") in the current month
-When I hover on "Bar Chart for Current Month (for Content Creation)"
+When I wait for "2" seconds
+And I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I remember a value from "Polls Value (in Graph Tooltip)" as "OriginalPollsCount"
 
 Scenario: Create a new Poll and publish it in Community
-#User clicks on Pencil -> Poll -> enters some title, enters description for Choice 1 and Choice 2, enters some body, selects Community as publish location -> Create Poll
-
-
+Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+When I click on "Pencil icon"
+And I click on "Poll link"
+And I wait until "Cancel Button (Enabled)" appears
+And I set "Event Page title" value to "Polls_{RandomValue}"
+And I set "Choice1_{RandomValue}" value to "Choice 1 Textbox"
+And I set "Choice2_{RandomValue}" value to "Choice 2 Textbox"
+And I click on "Event Body (in HTML Formatting)"
+And I type "Sample Polls Body"
+And I click on "The community Community Radio Button"
+And I wait until "In a Place Textbox" disappears
+And I click on "Create Poll Button"
+And I wait until "Add a comment Button (Enabled)" appears
+Then "Polls_{RandomValue}" page should be displayed
 
 Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
 When I click on "Avatar icon"
@@ -40,5 +52,6 @@ Then "Content Creation Graph" should be displayed
 
 Scenario: Check the current number of content created (type="Polls") in the current month is increased by 1
 Given "OriginalPollsCountPlusOne" default value is "{to_int(OriginalPollsCount)+1}"
-When I hover on "Bar Chart for Current Month (for Content Creation)"
+When I wait for "2" seconds
+And I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I should see "{OriginalPollsCountPlusOne}" in "Events Value (in Graph Tooltip)"

@@ -243,6 +243,18 @@ Video Title (in Video Page): //input[@name='subject']
 Video Body (in HTML Formatting): //label[@class='j-rte-label']
 Youtube Video Preview: ["//iframe[@class='embedly-embed']", "//div[@class='iframe youtube']"]
 
+Event Page title: //*[@id='subject']
+Event Body (in HTML Formatting): //label[@class='j-rte-label']
+Event Location Textbox: //input[@id='event-location']
+Event Type Dropdown: //select[@id='event-type']
+Create Event Button: //button[@id='submitButton']
+Add a comment Button (Enabled): //a[@class='noprint js-add-comment j-btn-global j-btn-callout']/strong[text()='Add a comment']
+
+Polls title: //*[@id='subject']
+Polls Body (in HTML Formatting): //label[@class='j-rte-label']
+Choice 1 Textbox: //input[@name='options[0].index']
+Choice 2 Textbox: //input[@name='options[1].text']
+Create Poll Button: //button[@id='submitButton']
 
 
 ////////////////////////////////////////////////////////////////////////

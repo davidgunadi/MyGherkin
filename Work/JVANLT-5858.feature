@@ -22,7 +22,8 @@ And I wait until "Content Creation Graph" appears
 Then "Content Creation Graph" should be displayed
 
 Scenario: User observes and writes down current number of content created (type="Blog Posts") in the current month
-When I hover on "Bar Chart for Current Month (for Content Creation)"
+When I wait for "2" seconds
+And I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I remember a value from "Blog Posts Value (in Graph Tooltip)" as "OriginalBlogPostsCount"
 
 Scenario: Create a new Blog Post and publish it in Your Personal Blog
@@ -49,5 +50,6 @@ Then "Content Creation Graph" should be displayed
 
 Scenario: Check the current number of content created (type="Blog Posts") in the current month is increased by 1
 Given "OriginalBlogPostsCountPlusOne" default value is "{to_int(OriginalBlogPostsCount)+1}"
-When I hover on "Bar Chart for Current Month (for Content Creation)"
+When I wait for "2" seconds
+And I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I should see "{OriginalBlogPostsCountPlusOne}" in "Blog Posts Value (in Graph Tooltip)"
