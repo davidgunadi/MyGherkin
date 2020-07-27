@@ -12,6 +12,7 @@ And I set "Email Address input field" value to "{credentials.ca user.username}"
 And I set "Password input field" value to "{credentials.ca user.password}"
 And I click on "Sign in button"
 And I wait until "Application landing page" appears
+And I wait for "3" seconds
 Then "Welcome" page should be displayed
 
 Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
@@ -33,8 +34,8 @@ When I click on "Pencil icon"
 And I click on "Poll link"
 And I wait until "Cancel Button (Enabled)" appears
 And I set "Event Page title" value to "Polls_{RandomValue}"
-And I set "Choice1_{RandomValue}" value to "Choice 1 Textbox"
-And I set "Choice2_{RandomValue}" value to "Choice 2 Textbox"
+And I set "Choice 1 Textbox" value to "Choice1_{RandomValue}"
+And I set "Choice 2 Textbox" value to "Choice2_{RandomValue}"
 And I click on "Event Body (in HTML Formatting)"
 And I type "Sample Polls Body"
 And I click on "The community Community Radio Button"

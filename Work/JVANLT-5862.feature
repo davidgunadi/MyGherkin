@@ -12,6 +12,7 @@ And I set "Email Address input field" value to "{credentials.ca user.username}"
 And I set "Password input field" value to "{credentials.ca user.password}"
 And I click on "Sign in button"
 And I wait until "Application landing page" appears
+And I wait for "3" seconds
 Then "Welcome" page should be displayed
 
 Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
