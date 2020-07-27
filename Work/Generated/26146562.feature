@@ -38,7 +38,7 @@ Given selectors
  When I click on 'x5'
  When I click on 'x6'
  Then 'x7' should be displayed
-# Step:- 'Click Create an analytic request button'
+#2 Step:- 'Click Create an analytic request button'
  When I click on 'x8'
 # Verification:- "Analytic Request modal window will open, displaying: \
 #		    \"Please describe the desired analytic function below\" text area (required) \
@@ -49,27 +49,27 @@ Given selectors
 #		    Cancel button (enabled)"
  Then 'x9' should be displayed
  Then 'x10' should be displayed
-# Step:- 'Write any message in the text area'
+#3 Step:- 'Write any message in the text area'
  When I press 'LCTRL+a'
  When I set 'x10' value to " "
  When I set 'x10' value to 'test_message_jDFbzi54Th'
 # Verification:- 'Submit button will be enabled'
  Then 'x11' should be displayed
-# Step:- 'Click Choose file button'
+#4 Step:- 'Click Choose file button'
  When I set 'x12' value to '/Users/priyansusingh/codenation-projects/ignite-sensage-automation-ui/resources/reportAutoExport.xml'
 # Verification:- '"Choose file" button'
  Then 'x13' should be displayed
-# Step:- 'Click Reset button'
+#5 Step:- 'Click Reset button'
  When I click on 'x14'
 # Verification:- 'Text area and file will be cleaned'
  Then 'x10' should be displayed
-# Step:- "Write Message to administrator in the text area and choose a file with a few bytes length \
+#6 Step:- "Write Message to administrator in the text area and choose a file with a few bytes length \
 #				 Click Submit button"
  When I press 'LCTRL+a'
  When I set 'x10' value to " "
  When I set 'x10' value to 'test_message_jDFbzi54Th'
  Then 'x12' should be displayed
-# Verification:- 'Modal window will close'
+#7 Verification:- 'Modal window will close'
  Then 'x13' should be displayed
 # Step:- "Open Mailbox URL in an incognito browser window. \
 #				 Wait up to 1 minute until the email is displayed in the inbox"
@@ -77,10 +77,10 @@ Given selectors
 #				 The email subject will be \"Analytic Request - TEST-66252 sensage@server.domain\""
  Then 'x11' should be displayed
  Then 'x11' should be displayed
-# Step:- 'Click in the email'
+#8 Step:- 'Click in the email'
  When I click on 'x11'
 # Verification:- 'Email content will be "Message to administrator"'
  Then 'x7' should be displayed
-# Step:- 'Click in Attachments menu'
+#9 Step:- 'Click in Attachments menu'
 # Verification:- 'A zip file will be displayed'
  Then 'x9' should be displayed
