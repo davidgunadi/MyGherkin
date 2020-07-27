@@ -252,4 +252,15 @@ Youtube Video Preview: ["//iframe[@class='embedly-embed']", "//div[@class='ifram
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/SEN/Sensage+EnvDS
 
-TEST-66266-MODEL (in Select an Analytics model to schedule Dropdown): //div[contains(@class,'df-select__options-list')]//span[@class='ml-2 ellipsis'][text()='TEST-66266-MODEL']
+DONE status for TEST-69343-REPORT: //tr[contains(.,'TEST-69343-REPORT')]//df-label[text()='DONE']
+ts Cell in First Row of Report Execution Result Table: //tr[contains(@class,'df-grid__row--data')][1]/td[2]
+TEST-69343-REPORT (Page Header): //h1[contains(.,'TEST-69343-REPORT')]
+Filter Icon (in ts Cell, in First Row of Report Execution Result Table): //tr[contains(@class,'df-grid__row--data')][1]/td[2]//df-icon[@name='filter']
+Minute Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='Minute']
+Hour Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='Hour']
+Day Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='Day']
+week Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='week']
+month Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='month']
+
+ts textbox (in Execution Results Table): //tr[contains(@class,'df-grid__row--header id3')]/th[2]//input
+X button inside ts textbox (in Execution Results Table): //tr[contains(@class,'df-grid__row--header id3')]/th[2]//i[contains(@class,'close-icon')]
