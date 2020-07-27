@@ -26,8 +26,19 @@ When I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I remember a value from "Events Value (in Graph Tooltip)" as "OriginalEventCount"
 
 Scenario: Create a new Event and Publish it in Community
-#User clicks on Pencil -> Event -> enters some title, enters some location and some body, selects any Event Type, selects Community as publish location -> Create Event
-
+Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+When I click on "Pencil icon"
+And I click on "Event link"
+And I wait until "Cancel Button (Enabled)" appears
+And I set "Event Page title" value to "Event_{RandomValue}"
+And I set "Event Location Textbox" value to "Test Location"
+And I click on "Event Body (in HTML Formatting)"
+And I type "Sample Event Body"
+And I set "Demo" to "Event Type Dropdown" value
+And I click on "The community Community Radio Button"
+And I wait until "In a Place Textbox" disappears
+And I click on "Create Event Button"
+Then "Event_{RandomValue}" page should be displayed
 
 Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
 When I click on "Avatar icon"
