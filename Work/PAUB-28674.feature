@@ -14,7 +14,7 @@ And I click on "login"
 Then "Dashboard" page should be displayed
 
 Scenario: Click on Configuration, on the left-side menu
-When I click on "Configuration (in Left Menu):"
+When I click on "Configuration (in Left Menu)"
 Then "Left Navigation Configuration - Cluster Configuration" should be displayed
 And "Left Navigation Configuration - Policy Manager" should be displayed
 And "Left Navigation Configuration - License Manager" should be displayed
