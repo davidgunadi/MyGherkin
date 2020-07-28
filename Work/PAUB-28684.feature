@@ -31,16 +31,16 @@ Scenario: Click on Add button
 When I click on "Add Button (in Categories Page)"
 Then "Add Category Form" should be displayed
 
-Scenario: Enter New Policy Manager Details for "E2ETest_Category_DeviceMatchUserAgents_Microsoft"
+Scenario: Enter New Policy Manager Details for "E2ETest_Category_DeviceExcludeUserAgents_Mozilla"
 Given "RandomNumber" default value is "{date('YYYYMMDDmmss')}"
-Given "CategoryName" default value is "E2ETest_Category_DeviceMatchUserAgents_Microsoft_{RandomNumber}"
+Given "CategoryName" default value is "E2ETest_Category_DeviceExcludeUserAgents_Mozilla_{RandomNumber}"
 When I set "Add Category Form Name" value to "{CategoryName}"
-And I set "Add Category Form Type" value to "Device: Match user agents"
+And I set "Add Category Form Type" value to "Device: Exclude user agents"
 Then I should see "{CategoryName}" in "Add Category Form Name"
-And I should see "Device: Match user agents" in "Add Category Form Type"
+And I should see "Device: Exclude user agents" in "Add Category Form Type"
 
 Scenario: Type or select Microsoft on the box
-Given "UserAgentName" default value is "Microsoft"
+Given "UserAgentName" default value is "Mozilla"
 When I set "User agent Textbox" value to "{UserAgentName}"
 And I press "ENTER"
 Then I should see "{UserAgentName}" in "First Item above user Agent Textbox"
