@@ -1,4 +1,4 @@
-Feature: PAUB-28678
+Feature: PAUB-28679
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
@@ -31,16 +31,16 @@ Scenario: Click on Add button
 When I click on "Add Button (in Categories Page)"
 Then "Add Category Form" should be displayed
 
-Scenario: Enter New Policy Manager Details for "E2ETest_Category_ServiceExcludeProtocols_Bittorrent"
+Scenario: Enter New Policy Manager Details for "E2ETest_Category_ServiceExcludeProtocols_HTTP"
 Given "RandomNumber" default value is "{date('YYYYMMDDmmss')}"
-Given "CategoryName" default value is "E2ETest_Category_ServiceExcludeProtocols_Bittorrent_{RandomNumber}"
+Given "CategoryName" default value is "E2ETest_Category_ServiceExcludeProtocols_HTTP_{RandomNumber}"
 When I set "Add Category Form Name" value to "{CategoryName}"
 And I set "Add Category Form Type" value to "Service: Exclude protocols"
 Then I should see "{CategoryName}" in "Add Category Form Name"
 And I should see "Service: Exclude protocols" in "Add Category Form Type"
 
-Scenario: Type or select Bittorrent on the box
-Given "VarProtocolName" default value is "Bittorrent"
+Scenario: Type or select HTTP on the box
+Given "VarProtocolName" default value is "HTTP"
 When I click on "Add Category Protocol Input"
 And I click on "VarProtocolName (option under Protocol Input)"
 Then I should see "{VarProtocolName}" in "First Item (in Protocol Input)"
