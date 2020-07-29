@@ -6,6 +6,7 @@ EXOS-13753
 
 //Examples Table
 KAYAKOC-18044
+https://jira.devfactory.com/browse/QAP-11509
 
 //Upload
 CRM-71603
