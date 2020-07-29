@@ -9,6 +9,7 @@ Scenario: Login to the TSWeb
 Given browser "Chrome"
 When I open "{environment.endpoints.TSWeb application.URL}"
 And I click on "Close (in Cookies Bar)"
+And I set "{environment.endpoints.TSWeb application.connectTo}" to "Connect To" value
 And I set "{credentials.telescopetswebqa.username}" to "Username" value
 And I set "{credentials.telescopetswebqa.password}" to "Password" value
 And I click on "Login"
