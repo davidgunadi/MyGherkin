@@ -28,9 +28,26 @@ When I click on "Policy Manager - Policies Tab"
 Then "Policies List table" should be displayed
 
 Scenario: Click on Add button
+When I click on "Add Button (for List)"
+Then "Add Policy Form" should be displayed
 
 Scenario: Create "E2ETest_Policy_BandwidthLimit_1Mbps"
+Given "RandomNumber" default value is "{date('YYYYMMDDmmss')}"
+Given "PolicyName" default value is "E2ETest_Policy_BandwidthLimit_1Mbps_{RandomNumber}"
+Given "BandwidthLimitValue" default value is "1"
+When I set "Name Textbox (in Add Policy Popup)" value to "{PolicyName}"
+And I set "Policy type Dropdown (in Add Policy Popup)" value to "Bandwidth limit"
+And I set "Bandwidth Limit (in Add Policy Popup)" value to "{BandwidthLimitValue}"
+Then I should see "{PolicyName}" in "Name Textbox (in Add Policy Popup)"
+And I should see "Bandwidth limit" in "Policy type Dropdown (in Add Policy Popup)"
+And I should see "{BandwidthLimitValue}" in "Bandwidth Limit (in Add Policy Popup)"
 
 Scenario: Click on Add
+When I click on "Add Button (in Popup)"
+Then "Policy with name=PolicyName in the Policies list" should be displayed
 
 Scenario: Cleanup (This is to keep the list tidy, and should be fine since this E2E is not a precondition to any other E2E)
+When I click on "Checkbox (for Policy with name = PolicyName)"
+And I click on "Delete Button (for List)"
+And I click on "Delete Confirmation Button (in Popup)"
+Then "Policy with name=PolicyName in the Policies list" should not be displayed
