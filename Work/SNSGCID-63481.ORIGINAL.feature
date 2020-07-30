@@ -76,7 +76,7 @@ Retriever r_microsoft_windows_securityEvent_sensageRetriever: enabled
 
 /opt/sensage/etc/collector/adapters/microsoft_windows_securityEvent_sensageRetriever/config.xml
 
-"""
+
 
 Scenario: Get adapters details
 When I execute script:
@@ -120,19 +120,19 @@ Warning all accumulated statistics data will be removed.
 
 Are you sure you want to clear collector statistics?
 
-"""
+
 
 Scenario: Confirm clear stats and verify
 When I execute command "y"
 And I execute script:
-"""
+
 
 collectorAdmin showstats 2> /dev/null
 
-"""
+
 Then commands should complete successfully
 And the output should be:
-"""
+
 
 Loading config files from '/opt/sensage/etc/collector'
 
