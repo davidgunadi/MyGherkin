@@ -6,7 +6,7 @@ Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/No
 Given credentials "Administrator"
 
 Scenario: Navigate to "Support Administrator Portal" and Login as Admin
-Given browser "Chrome"
+Given browser "Internet Explorer"
 When I open "{environment.SupportSoft Administrator portal.URL}"
 And I set "{credentials.Administrator.username}" to "Username In SA Login Page" value
 And I set "{credentials.Administrator.password}" to "Password In SA Login Page" value
