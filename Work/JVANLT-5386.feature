@@ -20,9 +20,16 @@ And I click on "Community Analytics menu item"
 #id=j-user-interaction-chart
 
 Scenario: Admin user navigates to Avatar icon -> Analytics Export
-
+#Page is loaded properly
 
 Scenario: Admin user navigates BACK (browser button) then clicks on Avatar icon -> View Profile -> Insights
+#Page is loaded properly and displays some data
+
 Scenario: Admin user navigates to any Avatar icon -> Your Places -> Any Place -> Analytics
+#	Place Analytics page is loaded and displays some data
+
 Scenario: Admin clicks on Avatar icon -> Your content -> opens any document in jive
+#Document is opened
+
 Scenario: Admin user navigates to Impact metrics
+#Impact metrics popup dialog is opened and it displays some data
