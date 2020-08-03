@@ -188,17 +188,6 @@ DNN Persona Bar Frame
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-//                                  PAUB                              //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
 //                              SUPSOFT                               //
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -235,33 +224,6 @@ sdcxuser_main Frame
 ////////////////////////////////////////////////////////////////////////
 https://confluence.devfactory.com/display/EN/Jive+Analytics+-+E2E+Environment+Data
 
-Bar Chart for Current Month (for Content Creation): //div[@id='j-content-creation-chart']/div/div/*[local-name()='svg']//*[local-name()='g'][@class='recharts-layer recharts-bar'][.//*[local-name()='path'][contains(@id,'bar-content-blog-posts-created-rect')]]/*[local-name()='g']/*[local-name()='g'][last()]
-Document Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Documents']]/td[@class='recharts-tooltip-cell-value']
-Ideas Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Ideas']]/td[@class='recharts-tooltip-cell-value']
-Videos Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Videos']]/td[@class='recharts-tooltip-cell-value']
-Polls Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Polls']]/td[@class='recharts-tooltip-cell-value']
-Events Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Events']]/td[@class='recharts-tooltip-cell-value']
-Blog Posts Value (in Graph Tooltip): //div[@class='recharts-default-tooltip']//tr[./td[text()='Blog Posts']]/td[@class='recharts-tooltip-cell-value']
-
-
-Video Textbox (in Video Page): //input[@id='embedFormControl']
-Import Video Button (in Video Page): //span[text()='Import Video']
-Video Title (in Video Page): //input[@name='subject']
-Video Body (in HTML Formatting): //label[@class='j-rte-label']
-Youtube Video Preview: ["//iframe[@class='embedly-embed']", "//div[@class='iframe youtube']"]
-
-Event Page title: //*[@id='subject']
-Event Body (in HTML Formatting): //label[@class='j-rte-label']
-Event Location Textbox: //input[@id='event-location']
-Event Type Dropdown: //select[@id='event-type']
-Create Event Button: //button[@id='submitButton']
-Add a comment Button (Enabled): //a[@class='noprint js-add-comment j-btn-global j-btn-callout']/strong[text()='Add a comment']
-
-Polls title: //*[@id='subject']
-Polls Body (in HTML Formatting): //label[@class='j-rte-label']
-Choice 1 Textbox: //input[@name='options[0].index']
-Choice 2 Textbox: //input[@name='options[1].text']
-Create Poll Button: //button[@id='submitButton']
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -271,15 +233,26 @@ Create Poll Button: //button[@id='submitButton']
 ////////////////////////////////////////////////////////////////////////
 //https://confluence.devfactory.com/display/SEN/Sensage+EnvDS
 
-DONE status for TEST-69343-REPORT: //tr[contains(.,'TEST-69343-REPORT')]//df-label[text()='DONE']
-ts Cell in First Row of Report Execution Result Table: //tr[contains(@class,'df-grid__row--data')][1]/td[2]
-TEST-69343-REPORT (Page Header): //h1[contains(.,'TEST-69343-REPORT')]
-Filter Icon (in ts Cell, in First Row of Report Execution Result Table): //tr[contains(@class,'df-grid__row--data')][1]/td[2]//df-icon[@name='filter']
-Minute Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='Minute']
-Hour Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='Hour']
-Day Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='Day']
-week Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='week']
-month Item (in Filter Dropdown): //span[contains(@class,'quick-filters__item')][normalize-space(text())='month']
 
-ts textbox (in Execution Results Table): //tr[contains(@class,'df-grid__row--header id3')]/th[2]//input
-X button inside ts textbox (in Execution Results Table): //tr[contains(@class,'df-grid__row--header id3')]/th[2]//i[contains(@class,'close-icon')]
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                                  PAUB                              //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
+
+
+Protocol filter threshold value: //span[@name='filter_protocol_percent']
+HTTP Service filter threshold value: //span[@name='filter_service_percent']
+Percentile limit value: //span[@name='percentile']
+Interactive graphs (Enabled Option): //label[@for='interactive_graph_enabled']
+Interactive graphs (Disabled Option): //label[@for='interactive_graph_disabled']
+Graph height (Floating Option): //label[@for='igraph_height_behavior_floating']
+Graph height (Fixed Option)://label[@for='igraph_height_behavior_fixed']
+Enable Password field: //span[@id='enable_password']
