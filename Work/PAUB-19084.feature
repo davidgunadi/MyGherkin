@@ -31,5 +31,5 @@ And "Graph height (Floating Option)" should be displayed
 And "Graph height (Fixed Option)" should be displayed
 
 Scenario: Go into Security Tab
-# 10	Click on the 'Security' tab at the top.	A new page should load with other settings.
-# 11	Verify that the "Enable password" setting is present.	The element should be visible, and a text box should be by its right side.
+When I click on "Security Tab (in Settings)"
+Then "Enable Password field" should be displayed
