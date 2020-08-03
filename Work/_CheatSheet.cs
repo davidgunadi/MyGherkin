@@ -188,24 +188,6 @@ DNN Persona Bar Frame
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
-//                              SUPSOFT                               //
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-Supsoft LeftFrame
-["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
-Supsoft RightFrame
-["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
-NavFrame
-["//frame[@name='navFrame']", ""]
-sdcxuser_main Frame
-["//frame[@name='sdcxuser_main']", ""]
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
 //                             BOINT                                  //
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -248,11 +230,29 @@ https://confluence.devfactory.com/display/EN/Jive+Analytics+-+E2E+Environment+Da
 //https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure
 
 
-Protocol filter threshold value: //span[@name='filter_protocol_percent']
-HTTP Service filter threshold value: //span[@name='filter_service_percent']
-Percentile limit value: //span[@name='percentile']
-Interactive graphs (Enabled Option): //label[@for='interactive_graph_enabled']
-Interactive graphs (Disabled Option): //label[@for='interactive_graph_disabled']
-Graph height (Floating Option): //label[@for='igraph_height_behavior_floating']
-Graph height (Fixed Option)://label[@for='igraph_height_behavior_fixed']
-Enable Password field: //span[@id='enable_password']
+
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+//                              SUPSOFT                               //
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+Supsoft LeftFrame
+["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", ""]
+Supsoft RightFrame
+["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
+NavFrame
+["//frame[@name='navFrame']", ""]
+sdcxuser_main Frame
+["//frame[@name='sdcxuser_main']", ""]
+
+Reset Password Checkbox (in PolicyConfiguration): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='ResetPassword']"]
+Unlock Account Checkbox (in PolicyConfiguration): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='UnlockAccount']"]
+Save Button (in Configure Business Unit Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Save']"]
+Cancel Button (in Configure Business Unit Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[@name='Cancel']"]
+Number of Policy Questions Textbox: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='AdminQuestionCount']"]
+Number of User-defined Questions Textbox: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='UserQuestionCount']"]
+Minimum Number of Answers to Validate (User flow) Textbox: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='UserValidationCount']"]
+Minimum Number of Answers to Validate (Analyst flow) Textbox: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='AnalystValidateQuestionCount']"]
+Successfully Updated Message (in Configure Business Unit Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[text()='Successfully Updated']"]
