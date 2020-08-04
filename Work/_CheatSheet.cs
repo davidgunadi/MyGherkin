@@ -247,12 +247,7 @@ NavFrame
 sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
 
-Reset Password Checkbox (in PolicyConfiguration): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='ResetPassword']"]
-Unlock Account Checkbox (in PolicyConfiguration): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='UnlockAccount']"]
-Save Button (in Configure Business Unit Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@value='Save']"]
-Cancel Button (in Configure Business Unit Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//button[@name='Cancel']"]
-Number of Policy Questions Textbox: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='AdminQuestionCount']"]
-Number of User-defined Questions Textbox: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='UserQuestionCount']"]
-Minimum Number of Answers to Validate (User flow) Textbox: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='UserValidationCount']"]
-Minimum Number of Answers to Validate (Analyst flow) Textbox: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//input[@id='AnalystValidateQuestionCount']"]
-Successfully Updated Message (in Configure Business Unit Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[text()='Successfully Updated']"]
+Analyst Request Queue in SC Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[@href='/sdchealtop/rrn/issue_q.asp']"]
+
+
+Browse Button (in Attachments Popup): //input[@id='file1']
