@@ -18,5 +18,6 @@ Then "Home Link" should be displayed
 
 Scenario: Navigate to Dashboard
 When I click on "Statistics Link"
-And I click on "Statistics HTTP Services Link"
+And I click on "HTTP Services (under Statistics)"
+And I click on "Show (any number) filtered (in Legend)"
 Then I should see "Outgoing Video" in "Statistics HTTP Services Traffic Types Legend Table"

@@ -46,7 +46,7 @@ Then "Username Avatar" page should be displayed
 "Any row item": ["//iframe[@id='fr1']", "//iframe[@id='fr2']", "//iframe[@id='fr3']", "//tr[contains(@class, 'GridRow_Aptean')]"],
 
 //set Date Time to variable
-Given "currentTime" value is the current datetime "+0 milliseconds"
+Given "currentTime" default value is the current datetime "+0 milliseconds"
 
 //save a value to variable
 Then I remember a value from ["title" atribute of] "selector" as "variableName"
@@ -277,3 +277,7 @@ Key Value Textbox for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@nam
 Key Value Cell for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//div[@id='div_val_txt_101']"]
 
 
+
+
+Select Category Textbox under Service: //div[./label[@for='SERVICE']]//input[@value='Select category…']
+Category Name Displayed Inside the Textbox under Service: //div[@id='SERVICE_chosen']//li/span[text()=$CategoryName]

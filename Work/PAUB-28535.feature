@@ -1,5 +1,8 @@
 Feature: PAUB-28535
 
+As an administrator, I should be able to block a domain in Policy Manager when I create a new rule.
+This is accessible because This E2E is related to configuration of the project
+
 Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "UB7-1" from "https://confluence.devfactory.com/display/PEERAPP/Environment+Data+Structure"
@@ -49,7 +52,7 @@ Scenario: Click on the option labeled "Service"
 When I click on "Service (Option in Add Category Dropdown)"
 Then "Select Category Textbox under Service" should be displayed
 
-Scenario: In the textbox under Service, add the Category that was created in prcondition PAUB-28484
+Scenario: In the textbox under Service, add the Category that was created in precondition PAUB-28484
 When I click on "Select Category Textbox under Service"
 And I type "{CategoryName}"
 And I press "ENTER"
@@ -60,7 +63,7 @@ Given "PolicyNameCreatedInPAUB28486" default value is "E2ETest_Policy_AdmissionB
 When I click on "Add policy Dropdown (in Add Rule Dialog)"
 Then "PolicyNameCreatedInPAUB28486 (in Add Policy Dropdown)" should be displayed
 
-Scenario: In the dropdown under Admission Section, click on the Policy that was created in prcondition PAUB-28486
+Scenario: In the dropdown under Admission Section, click on the Policy that was created in precondition PAUB-28486
 When I click on "PolicyNameCreatedInPAUB28486 (in Add Policy Dropdown)"
 Then "PolicyNameCreatedInPAUB28486 (shown in a box under Add Policy Dropdown)" should be displayed
 
