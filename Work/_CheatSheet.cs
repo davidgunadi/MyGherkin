@@ -1,3 +1,7 @@
+// Get link from email
+https://jira.devfactory.com/browse/KAYAKO-6920
+RegexToGetActivationLink: '[\s\S][(https:.)][\s\S]][\s\S]'
+
 //JSON Path
 AGSC-96
 
@@ -71,6 +75,9 @@ I remember a value from ["<attribute>" attribute of] "<selector>" [in "<ui drive
 
 // Execute Scenario
 When I execute scenario "NORTHP-16902" with inputs "urlsearch" as "TSWeb - Advanced Search - Save search name input"
+
+// Upload File
+When I upload a file "https://e2efiles.s3.amazonaws.com/htlgaij.txt" to "Browse Button (in Attachments Popup)"
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -247,7 +254,18 @@ NavFrame
 sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
 
-Analyst Request Queue in SC Menu: ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[@href='/sdchealtop/rrn/issue_q.asp']"]
 
 
-Browse Button (in Attachments Popup): //input[@id='file1']
+
+Chart (in Engagement Dashboard Page): //div[@id='j-engagement-page']//div[contains(@class,'j-dash-chart-wrapper')]
+
+DES Explorer (Header): //div[@class='page-header']//h1[contains(text(),'DES Explorer')]
+
+All Link (in Places Page): //a[@href='/places?filterID=all']
+First Place in the List: //li[contains(@class,'js-browse-thumbnail')][1]//a[contains(@class,'j-place-name')]
+
+All Link (in Content Page): //a[@href='/content?filterID=all']
+Documents Link (at the top bar in Content Page): //a[@data-filter-id='all~objecttype~objecttype[document]']
+First Document in the List: //li[contains(@class,'js-browse-thumbnail')][1]//a[contains(@class,'j-single-line')]
+Document Detail Header: //div[@aria-labelledby='main-doc-header']
+
