@@ -71,10 +71,12 @@ And the value of "AlertMessage" should be "Are you sure you want to backup the d
 {"type": "dropdown",  "open": "//select[contains(@id, 'ddlCustomerID')]", "value": "//select[contains(@id, 'ddlCustomerID')]/option[text()='{value}']"}
 
 // Remember Variable Value
-I remember a value from ["<attribute>" attribute of] "<selector>" [in "<ui driver instance id>"] as "<variable>"
+Then I remember a value from ["<attribute>" attribute of] "<selector>" [in "<ui driver instance id>"] as "<variable>"
 
 // Execute Scenario
 When I execute scenario "NORTHP-16902" with inputs "urlsearch" as "TSWeb - Advanced Search - Save search name input"
+When I execute scenario "SUPSOFT-3940" to capture outputs "BusinessUnitRandomValue"
+Then scenario steps should complete successfully
 
 // Upload File
 When I upload a file "https://e2efiles.s3.amazonaws.com/htlgaij.txt" to "Browse Button (in Attachments Popup)"
