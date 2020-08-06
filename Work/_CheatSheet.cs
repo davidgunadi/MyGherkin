@@ -49,7 +49,7 @@ Then "Username Avatar" page should be displayed
 Given "currentTime" value is the current datetime "+0 milliseconds"
 
 //save a value to variable
-And I remember a value from ["title" atribute of] "selector" as "variableName"
+Then I remember a value from ["title" atribute of] "selector" as "variableName"
 
 //verify a selector contains a text
 Then I should see "text" in "selector"
@@ -257,15 +257,21 @@ sdcxuser_main Frame
 
 
 
-Chart (in Engagement Dashboard Page): //div[@id='j-engagement-page']//div[contains(@class,'j-dash-chart-wrapper')]
+Remote Assist in SA Menu (under Application Management): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@fullpath='Application Management/RemoteAssist']"]
+Preferences in SA Menu (under Remote Assist): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[@href='/sdcadmin/rassist/ra_preference.asp']"]
+RemoteAssist Preferences (Page Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='RemoteAssist Preferences']"]
 
-DES Explorer (Header): //div[@class='page-header']//h1[contains(text(),'DES Explorer')]
 
-All Link (in Places Page): //a[@href='/places?filterID=all']
-First Place in the List: //li[contains(@class,'js-browse-thumbnail')][1]//a[contains(@class,'j-place-name')]
+User Tab (in RemoteAssist Preferences Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'tabStrip')][./a[text()='User']]"]
+Analyst Tab (in RemoteAssist Preferences Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'tabStrip')][./a[text()='Analyst']]"]
+Key Name Table Header (in User - Preferences List): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[contains(.,'User - Preferences List')]//td[contains(@class,'clsTableSubHeader')][text()='Key Name']"]
+Key Type Table Header (in User - Preferences List): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[contains(.,'User - Preferences List')]//td[contains(@class,'clsTableSubHeader')][text()='Key Type']"]
+Key Value Table Header (in User - Preferences List): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[contains(.,'User - Preferences List')]//td[contains(@class,'clsTableSubHeader')][text()='Key Value']"]
 
-All Link (in Content Page): //a[@href='/content?filterID=all']
-Documents Link (at the top bar in Content Page): //a[@data-filter-id='all~objecttype~objecttype[document]']
-First Document in the List: //li[contains(@class,'js-browse-thumbnail')][1]//a[contains(@class,'j-single-line')]
-Document Detail Header: //div[@aria-labelledby='main-doc-header']
+Key Name in First Row (in User - Preferences List): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[contains(.,'User - Preferences List')]//table[@id='tblMain_1']//tr[2]//div[@id='div_name_txt_101']/following-sibling::input"]
+Edit Button for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//img[@alt='Edit']"]
+Save Button for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//img[@alt='Save']"]
+Key Value Textbox for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//input[@id='newKeyValue101']"]
+Key Value Cell for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//div[@id='div_val_txt_101']"]
+
 
