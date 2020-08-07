@@ -1,7 +1,6 @@
-Feature: SCLOOPW-11267
+Feature: SCLOOPW-11269
 
-As an admin, I do able to access group so that I can see the information of the group loads fast
-This is fast because User can access groups page in a timely manner
+As an admin, I can access to groups only after login so that no other can access groups without valid credentials
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
@@ -27,12 +26,16 @@ Then "Groups" page should be displayed
 And "First Group in Group Table (in Groups Page)" should be displayed
 And I remember a value from "First Group in Group Table (in Groups Page)" as "GroupName"
 
-Scenario: Click on the first group and verify page is opened in timely manner
-Given a stopwatch "Timer"
-When I start the stopwatch "Timer"
-And I click on "First Group in Group Table (in Groups Page)"
+Scenario: Click on the first group and copy the Page URL
+When I click on "First Group in Group Table (in Groups Page)"
 Then "{GroupName}" page should be displayed
+And I remember current url as "GroupPageDirectUrl"
 
-Scenario: Click on the first group and verify page is opened in timely manner
-When I stop the stopwatch "Timer"
-Then the stopwatch "Timer" value should be "5" sec or less
+Scenario: Logout
+When I click on "Logout"
+Then "Gradebook School" page should be displayed
+And "Login at the bottom of the screen" should be displayed
+
+Scenario: Go to Copied URL
+When I open "{GroupPageDirectUrl}"
+Then "Login Required message" should be displayed
