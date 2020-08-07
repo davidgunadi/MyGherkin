@@ -28,10 +28,10 @@ When I "check" "<selector>" checkbox
 When I "uncheck" "<selector>" checkbox
 
 // Select a dropdown value - This uses the value attribute in an option
-And I set "value" to "selector" value
+When I set "value" to "selector" value
 
 //Type into textbox
-And I set "<selector>" value to "XXX"
+When I set "<selector>" value to "XXX"
 
 //Click
 And I click on "Login Button"
@@ -258,26 +258,8 @@ sdcxuser_main Frame
 
 
 
+About Groups: //a[text()='About Groups']
+First Group Name under Groups Dropdown: //a[@data-track-link='Groups Drop Menu'][1]
+First Group in Group Table (in Groups Page): //div[@id='replace_content_groups']//tbody/tr[1]//a[contains(@href,'group_id')]
 
-Remote Assist in SA Menu (under Application Management): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//div[@fullpath='Application Management/RemoteAssist']"]
-Preferences in SA Menu (under Remote Assist): ["//frame[@name='mainAdmin']", "//frame[@name='sadLeftFrame']", "//a[@href='/sdcadmin/rassist/ra_preference.asp']"]
-RemoteAssist Preferences (Page Header): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//font[@class='pageheader'][text()='RemoteAssist Preferences']"]
-
-
-User Tab (in RemoteAssist Preferences Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'tabStrip')][./a[text()='User']]"]
-Analyst Tab (in RemoteAssist Preferences Page): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'tabStrip')][./a[text()='Analyst']]"]
-Key Name Table Header (in User - Preferences List): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[contains(.,'User - Preferences List')]//td[contains(@class,'clsTableSubHeader')][text()='Key Name']"]
-Key Type Table Header (in User - Preferences List): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[contains(.,'User - Preferences List')]//td[contains(@class,'clsTableSubHeader')][text()='Key Type']"]
-Key Value Table Header (in User - Preferences List): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[contains(.,'User - Preferences List')]//td[contains(@class,'clsTableSubHeader')][text()='Key Value']"]
-
-Key Name in First Row (in User - Preferences List): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[contains(.,'User - Preferences List')]//table[@id='tblMain_1']//tr[2]//div[@id='div_name_txt_101']/following-sibling::input"]
-Edit Button for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//img[@alt='Edit']"]
-Save Button for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//img[@alt='Save']"]
-Key Value Textbox for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//input[@id='newKeyValue101']"]
-Key Value Cell for FirstKeyName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//div[@id='tblMainDiv']//tr[contains(.,$FirstKeyName)]//div[@id='div_val_txt_101']"]
-
-
-
-
-Select Category Textbox under Service: //div[./label[@for='SERVICE']]//input[@value='Select category…']
-Category Name Displayed Inside the Textbox under Service: //div[@id='SERVICE_chosen']//li/span[text()=$CategoryName]
+Join/Create Groups: //a[text()='Join/Create Groups']
