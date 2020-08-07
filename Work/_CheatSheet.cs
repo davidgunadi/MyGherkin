@@ -257,9 +257,5 @@ sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
 
 
-
-About Groups: //a[text()='About Groups']
-First Group Name under Groups Dropdown: //a[@data-track-link='Groups Drop Menu'][1]
-First Group in Group Table (in Groups Page): //div[@id='replace_content_groups']//tbody/tr[1]//a[contains(@href,'group_id')]
-
-Join/Create Groups: //a[text()='Join/Create Groups']
+View Month Icon (the third icon in Calendar section, on the top right hand side): //div[contains(@class,'cal_content_holder')]//a[@title='Click to view the month']
+Month Calendar View (in Calendar Page): //div[contains(@class,'cal_content_holder')][@data-track-container='Calendar']
