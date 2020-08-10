@@ -257,8 +257,7 @@ sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
 
 
-View Month Icon (the third icon in Calendar section, on the top right hand side): //div[contains(@class,'cal_content_holder')]//a[@title='Click to view the month']
-Month Calendar View (in Calendar Page): //div[contains(@class,'cal_content_holder')][@data-track-container='Calendar']
-
-Standard Group Radio Button: //input[@name='group_type']/following-sibling::b[text()='Standard Group']
-Curriculum Group Radio Button: //input[@name='group_type']/following-sibling::b[text()='Curriculum Group']
+Progress Report for ENG 3 SPR P: //tr[./td[contains(@class,'course')]][contains(.,'ENG 3 SPR P')]//a[text()='Progress Report']
+Option 'FALL - 12/31/18' under All Progress Reports Dropdown: //select[@name='choose']/option[text()='FALL - 12/31/18']
+Assessment Table (in Progress Report Page): //table[contains(@class,'hub_general')]
+Cell containing the date '7/12/18': //td[contains(text(),'7/12/18')]
