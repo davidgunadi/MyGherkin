@@ -1,6 +1,6 @@
 Feature: SCLOOPW-7857
 
-Parent should be able to can see progress report when using the website
+As a Parent I should be able to see progress report when using the website
 This is accessible because Parent should be able to access progress report
 
 Scenario: Preconditions
@@ -21,7 +21,7 @@ When I click on "Progress Report for ENG 3 SPR P"
 Then "Progress Report" page should be displayed
 
 Scenario: Click All Progress Report dropdown
-When I click on "All Progress Reports Dropdown"
+When I click on "All Progress Report Dropdown"
 Then "Option 'FALL - 12/31/18' under All Progress Reports Dropdown" should be displayed
 
 Scenario: Click FALL - 12/31/18, Click go
