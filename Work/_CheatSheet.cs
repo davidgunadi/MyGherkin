@@ -259,3 +259,6 @@ sdcxuser_main Frame
 
 View Month Icon (the third icon in Calendar section, on the top right hand side): //div[contains(@class,'cal_content_holder')]//a[@title='Click to view the month']
 Month Calendar View (in Calendar Page): //div[contains(@class,'cal_content_holder')][@data-track-container='Calendar']
+
+Standard Group Radio Button: //input[@name='group_type']/following-sibling::b[text()='Standard Group']
+Curriculum Group Radio Button: //input[@name='group_type']/following-sibling::b[text()='Curriculum Group']

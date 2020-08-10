@@ -17,8 +17,27 @@ And I click on "Login"
 Then "Logout" should be displayed
 
 Scenario: Click "Settings" in top right corner
+When I click on "Settings Icon on Top Right Side of the Main Page"
+Then "Settings" page should be displayed
 
 Scenario: Click "Go" button under "Account Management"	
+When I click on "Go button for Account Management"
+Then "Edit Your Account" page should be displayed
 
 Scenario: Change "Receive Daily Emails" to No
+Given a stopwatch "Timer"
+When I click on "Change Button (for Receive Daily Emails)"
+And I start the stopwatch "Timer"
+And I wait until "No (status for Receive Daily Emails)"
+And I stop the stopwatch "Timer"
+Then "No (status for Receive Daily Emails)" should be displayed
+And the stopwatch "Timer" value should be "4" sec or less
+
 Scenario: Change "Receive Daily Emails" to Yes
+When I reset the stopwatch "Timer"
+And I click on "Change Button (for Receive Daily Emails)"
+And I start the stopwatch "Timer"
+And I wait until "Yes (status for Receive Daily Emails)"
+And I stop the stopwatch "Timer"
+Then "Yes (status for Receive Daily Emails)" should be displayed
+And the stopwatch "Timer" value should be "4" sec or less
