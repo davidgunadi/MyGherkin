@@ -17,7 +17,7 @@ And I click on "Login"
 Then "N. Gregory Portal" page should be displayed
 And "Logout" should be displayed
 
-Scenario: Click "My Website"
+Scenario: Go to "My Website"
 When I click on "My Website"
 Then "N. Gregory" page should be displayed
 
@@ -68,11 +68,9 @@ And I click on "More Tools"
 Then "History (option under More Tools)" should be displayed
 
 Scenario: Click "History" and verify only 2 changes are displayed
-Given "RowNumber" default value is "2"
 When I click on "History (option under More Tools)"
-Then "Row 'RowNumber' in Page History Table" should be displayed
-Given "RowNumber" value is "3"
-Then "Row 'RowNumber' in Page History Table" should not be displayed
+Then "Row '2' in Page History Table" should be displayed
+Then "Row '3' in Page History Table" should not be displayed
 
 Scenario: Click "Back to Site Center"
 When I click on "Back to Site Center"
@@ -80,3 +78,5 @@ Then "User Site Center" page should be displayed
 
 Scenario: Click "SCLOOPW-11158" then click "Archive" button	
 When I click on "Cell with the value GeneratedTitleName"
+And I click on "Archive Link"
+Then "Cell with the value GeneratedTitleName" should not be displayed
