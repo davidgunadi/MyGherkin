@@ -257,7 +257,10 @@ sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
 
 
-Progress Report for ENG 3 SPR P: //tr[./td[contains(@class,'course')]][contains(.,'ENG 3 SPR P')]//a[text()='Progress Report']
-Option 'FALL - 12/31/18' under All Progress Reports Dropdown: //select[@name='choose']/option[text()='FALL - 12/31/18']
-Assessment Table (in Progress Report Page): //table[contains(@class,'hub_general')]
-Cell containing the date '7/12/18': //td[contains(text(),'7/12/18')]
+Cell with the value GeneratedTitleName: //div[contains(@class,'sitemap__cell')][contains(text(),$GeneratedTitleName)]
+Area under the Title to Add Widget: //div[@id='block_col1']//div[@data-can-add='true'][contains(@class,'jsLayoutModule')]
+Plus Sign inside Area under the Title to Add Widget: //div[@id='block_col1']//div[@data-can-add='true'][contains(@class,'jsLayoutModule')]//div[contains(@class,'column_space__add')]
+Title Icon in Insert Module Dialog: //div[@data-block-type='title_cms2_block']
+More Tools: //div[text()='More Tools']
+History (option under More Tools): //a[contains(@class,'jsViewHistoryMenuItem')]
+Row 'RowNumber' in Page History Table: //table[contains(@class,'sl-table__table')]/tbody/tr[contains(@class,'data-id')][$RowNumber]
