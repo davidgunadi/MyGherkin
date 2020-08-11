@@ -34,21 +34,49 @@ When I click on "Page"
 Then "Create Page" should be displayed
 
 Scenario: Fill title as "SCLOOPW-11158", check the first layout option, click submit
+Given "GeneratedTitleName" default value is "SCLOOPW-11158-{date('YYYYMMDDmmss')}"
+When I set "Title" value to "{GeneratedTitleName}"
+And I click on "First Layout radio button"
+And I click on "Submit Button"
+Then "{GeneratedTitleName}" page should be displayed
 
 Scenario: Click "Publish" button
+When I click on "Header Publish Button"
+Then "User Site Center" page should be displayed
 
 Scenario: Click "SCLOOPW-11158" then click "Edit"
+When I click on "Cell with the value GeneratedTitleName"
+And I click on "Edit at Site Center"
+Then "{GeneratedTitleName}" page should be displayed
 
 Scenario: Hover under "SCLOOPW-11158" then click plus sign
+When I hover on "Area under the Title to Add Widget"
+And I click on "Plus Sign inside Area under the Title to Add Widget"
+Then "Insert Module" should be displayed
 
 Scenario: Click "Title" icon
+When I click on "Title Icon in Insert Module Dialog"
+Then "Module title" should be displayed
 
 Scenario: Click "Publish Changes" button
+When I click on "Publish Changes"
+Then "User Site Center" page should be displayed
 
 Scenario: Click "SCLOOPW-11158" then click More Tools
+When I click on "Cell with the value GeneratedTitleName"
+And I click on "More Tools"
+Then "History (option under More Tools)" should be displayed
 
-Scenario: Click "History"
+Scenario: Click "History" and verify only 2 changes are displayed
+Given "RowNumber" default value is "2"
+When I click on "History (option under More Tools)"
+Then "Row 'RowNumber' in Page History Table" should be displayed
+Given "RowNumber" value is "3"
+Then "Row 'RowNumber' in Page History Table" should not be displayed
 
 Scenario: Click "Back to Site Center"
+When I click on "Back to Site Center"
+Then "User Site Center" page should be displayed
 
 Scenario: Click "SCLOOPW-11158" then click "Archive" button	
+When I click on "Cell with the value GeneratedTitleName"
