@@ -263,4 +263,5 @@ Plus Sign inside Area under the Title to Add Widget: //div[@id='block_col1']//di
 Title Icon in Insert Module Dialog: //div[@data-block-type='title_cms2_block']
 More Tools: //div[text()='More Tools']
 History (option under More Tools): //a[contains(@class,'jsViewHistoryMenuItem')]
-Row 'RowNumber' in Page History Table: //table[contains(@class,'sl-table__table')]/tbody/tr[contains(@class,'data-id')][$RowNumber]
+Row '2' in Page History Table: //table[contains(@class,'sl-table__table')]/tbody/tr[contains(@class,'data-id')][2]
+Row '3' in Page History Table: //table[contains(@class,'sl-table__table')]/tbody/tr[contains(@class,'data-id')][3]
