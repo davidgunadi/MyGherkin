@@ -1,12 +1,20 @@
 Feature: SUPSOFT-16820
 
-As an administrator, I should be able to define CLass properties of input type 'Passsword' for Request Classes when I am extending the forms to create new Requests in the application User Center
+As an administrator, I should be able to define Class properties of input type 'Passsword' for Request Classes when I am extending the forms to create new Requests in the application User Center
 This is correct because User can define Class Properties of input type 'Password' for Request Classes
 
 Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments+-+Supportsoft"
 Given credentials "db_user" and "Administrator"
+
+Scenario: Precondition - Unlock the DB instead of using "Force Unlock" in scenario "Browser: Set Request Type permissions"
+Given DB "SQL Server" connection to "SupportSoft Database"
+When I execute multiline query:
+"""
+update sprt_registry set keyvalue = N'' where keypath = N'Software\SupportSoft\Permissions' and keyname = N'PermLockData';
+"""
+Then queries should complete successfully
 
 Scenario: Browser: Login to Support Administrator
 Given browser "Chrome"
@@ -54,18 +62,9 @@ And I click on "Right Arrow Button (to move item from Available Class to Selecte
 And I click on "Save Button (in Edit Request Type Form)"
 Then "Request type has been saved" should be displayed
 
-Scenario: Precondition - Unlock the DB instead of using "Force Unlock" in scenario "Browser: Set Request Type permissions"
-Given DB "SQL Server" connection to "SupportSoft Database"
-When I execute multiline query:
-"""
-update sprt_registry set keyvalue = N'' where keypath = N'Software\SupportSoft\Permissions' and keyname = N'PermLockData';
-"""
-#Then queries should complete successfully
-
 Scenario: Browser: Set Request Type permissions
 When I click on "Set Permissions Button (in Edit Request Type Form)"
 And I switch to second window
-And I click on "Force Unlock"
 And I click on "Request Type close (in Component Listbox)"
 And I click on "Tier 1 Analysts (in Group Listbox)"
 And I hold "CTRL" and click on "Users (in Group Listbox)"
@@ -120,5 +119,4 @@ Then I should see "" in "Password Textbox (in Request Page)"
 
 Scenario: Browser: Submit Request
 When I click on "Submit Request Button (in Request Page)"
-Then "My Requests" page should be displayed
-And I should see "{ShortDescRandomValue}" in "ShortDescRandomValue (under Description Column in Requests Table)"
+Then I should see "{ShortDescRandomValue}" in "ShortDescRandomValue (under Description Column in Requests Table)"

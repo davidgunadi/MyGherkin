@@ -56,6 +56,7 @@ Then I should see "text" in "selector"
 
 //Create Random Text
 Given "RandomValue" default value is "{date('YYYYMMDDmmss')}"
+Given "GeneratedUsername" default value is "User_{random_string(6)}"
 
 //Date
 Given "NextMonthDateInMMDDYYYY" default value is "{date('MM/DD/YYYY','30 days')}"
@@ -257,11 +258,18 @@ sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
 
 
-Cell with the value GeneratedTitleName: //div[contains(@class,'sitemap__cell')][contains(text(),$GeneratedTitleName)]
-Area under the Title to Add Widget: //div[@id='block_col1']//div[@data-can-add='true'][contains(@class,'jsLayoutModule')]
-Plus Sign inside Area under the Title to Add Widget: //div[@id='block_col1']//div[@data-can-add='true'][contains(@class,'jsLayoutModule')]//div[contains(@class,'column_space__add')]
-Title Icon in Insert Module Dialog: //div[@data-block-type='title_cms2_block']
-More Tools: //div[text()='More Tools']
-History (option under More Tools): //a[contains(@class,'jsViewHistoryMenuItem')]
-Row '2' in Page History Table: //table[contains(@class,'sl-table__table')]/tbody/tr[contains(@class,'data-id')][2]
-Row '3' in Page History Table: //table[contains(@class,'sl-table__table')]/tbody/tr[contains(@class,'data-id')][3]
+["//iframe[@id='catalogframe']", ""]
+["//iframe[@id='appdialogframe']", ""]
+
+My Collection Dropdown Panel: ["//frame[@id='catalogframe']", "//div[@id='collections_content']"]
+["//frame[@id='catalogframe']", "//img[@id='NewCatalogButton']"]
+Top Level Option (in Save In Listbox): ["//frame[@id='appdialogframe']", "//option[text()='[Top Level]']"]
+Info Button for 'VarCollectionName': ["//iframe[@id='catalogframe']", "//li[contains(.,$VarCollectionName)]//img[contains(@class,'alterCatalog')]"]
+- Icon (Delete Collection Button): ["//iframe[@id='catalogframe']", "//img[@alt='Delete Selected']"]
+Delete Collection Confirmation Message: //div[contains(@class,'message')][contains(text(),'delete the selected collection')]
+
+
+
+Selection Icon for Member of: //tr[@id='memberOfRow']//img[contains(@src,'list.gif')]
+Default Option (in Member Of Listbox): ["//tr[@id='memberOfRow']//iframe", "//option[text()='Default']"]
+User with the name GeneratedUserName in the User Table: //table[@id='adminuserTable']//td/a[text()=$GeneratedUserName]
