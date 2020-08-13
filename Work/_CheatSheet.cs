@@ -273,3 +273,34 @@ Delete Collection Confirmation Message: //div[contains(@class,'message')][contai
 Selection Icon for Member of: //tr[@id='memberOfRow']//img[contains(@src,'list.gif')]
 Default Option (in Member Of Listbox): ["//tr[@id='memberOfRow']//iframe", "//option[text()='Default']"]
 User with the name GeneratedUserName in the User Table: //table[@id='adminuserTable']//td/a[text()=$GeneratedUserName]
+
+
+["//iframe[@id='refineSearchFrame']",""]
+Show More (under Asset Category): ["//iframe[@id='refineSearchFrame']","//li[@tsfld='editorial.asset_category']//a[@class='a-show-more']"]
+Image checkbox (under Asset Category): ["//iframe[@id='refineSearchFrame']","//input[@type='checkbox'][contains(@id,'Image-Asset+Category')]"]
+Audio checkbox (under Asset Category): ["//iframe[@id='refineSearchFrame']","//input[@type='checkbox'][contains(@id,'Audio-Asset+Category')]"]
+Document checkbox (under Asset Category): ["//iframe[@id='refineSearchFrame']","//input[@type='checkbox'][contains(@id,'Document-Asset+Category')]"]
+Playlist checkbox (under Asset Category): ["//iframe[@id='refineSearchFrame']","//input[@type='checkbox'][contains(@id,'Playlist-Asset+Category')]"]
+Video checkbox (under Asset Category): ["//iframe[@id='refineSearchFrame']","//input[@type='checkbox'][contains(@id,'Video-Asset+Category')]"]
+
+
+["//iframe[@id='contentframe']",""]
+"Asset Category: Image": ["//iframe[@id='contentframe']","(//span[text()='Asset Category : Image'])"]
+"Asset Category: Audio": ["//iframe[@id='contentframe']","(//span[text()='Asset Category : Audio'])"]
+"Asset Category: Document": ["//iframe[@id='contentframe']","(//span[text()='Asset Category : Document'])"]
+"Asset Category: Playlist": ["//iframe[@id='contentframe']","(//span[text()='Asset Category : Playlist'])"]
+"Asset Category: Video": ["//iframe[@id='contentframe']","(//span[text()='Asset Category : Video'])"]
+
+
+
+"Pin Icon for Asset Category: Image": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumb'][contains(.,'Image')]/span[@class='makeStickyBreadcrumbBtn']"]
+"Pin Icon for Asset Category: Audio": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumb'][contains(.,'Audio')]/span[@class='makeStickyBreadcrumbBtn']"]
+"Pin Icon for Asset Category: Document": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumb'][contains(.,'Document')]/span[@class='makeStickyBreadcrumbBtn']"]
+"Pin Icon for Asset Category: Playlist": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumb'][contains(.,'Playlist')]/span[@class='makeStickyBreadcrumbBtn']"]
+"Pin Icon for Asset Category: Video": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumb'][contains(.,'Video')]/span[@class='makeStickyBreadcrumbBtn']"]
+
+"Asset Category: Image (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Image')]"]
+"Asset Category: Audio (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Audio')]"]
+"Asset Category: Document (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Document')]"]
+"Asset Category: Playlist (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Playlist')]"]
+"Asset Category: Video (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Video')]"]
