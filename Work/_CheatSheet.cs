@@ -298,9 +298,20 @@ Video checkbox (under Asset Category): ["//iframe[@id='refineSearchFrame']","//i
 "Pin Icon for Asset Category: Document": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumb'][contains(.,'Document')]/span[@class='makeStickyBreadcrumbBtn']"]
 "Pin Icon for Asset Category: Playlist": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumb'][contains(.,'Playlist')]/span[@class='makeStickyBreadcrumbBtn']"]
 "Pin Icon for Asset Category: Video": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumb'][contains(.,'Video')]/span[@class='makeStickyBreadcrumbBtn']"]
-
 "Asset Category: Image (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Image')]"]
 "Asset Category: Audio (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Audio')]"]
 "Asset Category: Document (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Document')]"]
 "Asset Category: Playlist (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Playlist')]"]
 "Asset Category: Video (as Sticky Filter)": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Video')]"]
+
+"X button for Asset Category: Image": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Image')]/span[@class='removeBreadcrumbBtn']"]
+"X button for Asset Category: Audio": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Audio')]/span[@class='removeBreadcrumbBtn']"]
+"X button for Asset Category: Document": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Document')]/span[@class='removeBreadcrumbBtn']"]
+"X button for Asset Category: Playlist": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Playlist')]/span[@class='removeBreadcrumbBtn']"]
+"X button for Asset Category: Video": ["//iframe[@id='contentframe']","//span[@class='removeBreadcrumbSticky'][contains(.,'Video')]/span[@class='removeBreadcrumbBtn']"]
+"X button outside the remove sticky filter (to clear all sticky filter)": ["//iframe[@id='contentframe']","//span[@class='clearFiltersContainer']"]
+
+
+
+Edit Header and Footer: //a[text()='Edit Header and Footer']
+2018 WEUSD: //div[contains(@id,'jsFullModule')][contains(.,'2018 WEUSD')]
