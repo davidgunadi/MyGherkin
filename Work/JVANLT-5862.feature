@@ -1,5 +1,8 @@
 Feature: JVANLT-5862
 
+As a User with Manage Community permissions,  I should be able to verify that newly created content (type=Events) affects Analytics reports, when I access Community Analytics / Content Creation Report.
+This is consistent because This E2E verifies the user ability to create a content of type Event in a consistent way
+
 Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "Jive Analytics E2E" from "https://confluence.devfactory.com/display/EN/Jive+Analytics+-+E2E+Environment+Data"
@@ -11,12 +14,10 @@ When I open "{environment.Jive Cloud.URL}"
 And I set "Email Address input field" value to "{credentials.ca user.username}"
 And I set "Password input field" value to "{credentials.ca user.password}"
 And I click on "Sign in button"
-And I wait until "Application landing page" appears
-And I wait for "3" seconds
 Then "Welcome" page should be displayed
 
 Scenario: Navigate to Avatar - Community Analytics - Community Usage Dashboard
-When I click on "Avatar icon"
+When I click on "Avatar icon" and retry until "Community Analytics menu item" appears
 And I click on "Community Analytics menu item"
 And I click on "Engagement Dashboard drop-down"
 And I click on "Community Usage Dashboard option"
@@ -24,8 +25,7 @@ And I wait until "Content Creation Graph" appears
 Then "Content Creation Graph" should be displayed
 
 Scenario: User observes and writes down current number of content created (type="Events") in the current month
-When I wait for "2" seconds
-And I hover on "Bar Chart for Current Month (for Content Creation)"
+When I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I remember a value from "Events Value (in Graph Tooltip)" as "OriginalEventCount"
 
 Scenario: Create a new Event and Publish it in Community
@@ -39,7 +39,7 @@ And I click on "Event Body (in HTML Formatting)"
 And I type "Sample Event Body"
 And I set "Demo" to "Event Type Dropdown" value
 And I click on "The community Community Radio Button"
-And I wait until "In a Place Textbox" disappears
+And I wait until "Loading Icon under Publish Location Section" disappears
 And I click on "Create Event Button"
 And I wait until "Add a comment Button (Enabled)" appears
 Then "Event_{RandomValue}" page should be displayed
@@ -54,6 +54,5 @@ Then "Content Creation Graph" should be displayed
 
 Scenario: Check the current number of content created (type="Events") in the current month is increased by 1
 Given "OriginalEventCountPlusOne" default value is "{to_int(OriginalEventCount)+1}"
-When I wait for "2" seconds
-And I hover on "Bar Chart for Current Month (for Content Creation)"
+When I hover on "Bar Chart for Current Month (for Content Creation)"
 Then I should see "{OriginalEventCountPlusOne}" in "Events Value (in Graph Tooltip)"
