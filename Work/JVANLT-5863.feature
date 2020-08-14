@@ -55,4 +55,4 @@ Then "Content Creation Graph" should be displayed
 Scenario: Check the current number of content created (type="Polls") in the current month is increased by 1
 Given "OriginalPollsCountPlusOne" default value is "{to_int(OriginalPollsCount)+1}"
 When I hover on "Bar Chart for Current Month (for Content Creation)"
-Then I should see "{OriginalPollsCountPlusOne}" in "Events Value (in Graph Tooltip)"
+Then I should see "{OriginalPollsCountPlusOne}" in "Polls Value (in Graph Tooltip)"
