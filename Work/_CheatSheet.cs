@@ -268,3 +268,8 @@ Undelete Button: //a[text()='Undelete']
 Select Destination Dialog: //div[contains(@class,'sl-column-container')][contains(.,'Select Destination')]
 Pages Tab: //a[text()='Pages']
 Accessibility Issues - Links (in Site Center Page): //div[contains(@id,'site_map_item')]//div[contains(text(),'Accessibility Issues - Links')]
+
+Cell with the value GeneratedConversionName in the Conversions Table: //table[@id='nmconv-tbl']//a[text()=$GeneratedConversionName]
+
+
+Loading Icon under Publish Location Section: //div[contains(@class,'j-running-loader')]
