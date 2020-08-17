@@ -44,7 +44,6 @@ When I set "100" to "TSAdmin - Named Conversions - Converted size input" value
 And I set "{GeneratedConversionName}" to "TSAdmin - Named Conversions - Conversion name input" value
 And I "check" "TSAdmin - Named Conversions - Visibility select all checkbox" checkbox
 And I click on "TSAdmin - Named Conversions - Save button"
-And I accept the alert box if displayed
 Then "TeleScope Administrator - Named Conversions" page should be displayed
 And "Cell with the value GeneratedConversionName in the Conversions Table" should be displayed
 

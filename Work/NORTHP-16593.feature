@@ -37,10 +37,10 @@ And "Save Button (in Rule Definition Page)" should be displayed
 Scenario: Enter New Rule Details and Save
 Given "NewRule" default value is "XMP_CONVERSION_TEST_{date('YYYYMMDDmmss')}"
 When I set "Rule Name Textbox" value to "{NewRule}"
-And I set "select count(*) from doc_renditions" to "Test Function Textarea" value
-And I set "Hello mr <!user_name!> from <!user_group!>! XMP Error Message!" to "Default Error Message Textarea" value
-Then I should see "select count(*) from doc_renditions" in "Test Function Textarea"
-Then I should see "Hello mr <!user_name!> from <!user_group!>! XMP Error Message!" in "Default Error Message Textarea"
+And I set "{SelectCountFromDocRenditionsSQLStatement}" to "Test Function Textarea" value
+And I set "{HelloMrUserNameFromUserGroupErrorMessage}" to "Default Error Message Textarea" value
+Then I should see "{SelectCountFromDocRenditionsSQLStatement}" in "Test Function Textarea"
+And I should see "{HelloMrUserNameFromUserGroupErrorMessage}" in "Default Error Message Textarea"
 
 Scenario: Save Rule
 When I click on "Save Button (in Rule Definition Page)"
