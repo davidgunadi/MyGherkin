@@ -85,7 +85,7 @@ And I click on "Save Button (in Define Class)"
 And I wait until "Request Class has been saved" appears
 And I stop the stopwatch "Timer"
 Then "Request Class has been saved" should be displayed
-And the stopwatch "Timer" value should be "4" sec or less
+And the stopwatch "Timer" value should be "5" sec or less
 
 Scenario: Navigate to Types page
 When I click on "Types in SA Menu"
@@ -167,7 +167,7 @@ And "Checkbox Yes (in Request Page)" should be displayed
 And I remember a value from "checked" attribute of "Checkbox Yes (in Request Page)" as "CheckboxyesStatus"
 And the value of "CheckboxYesStatus" should be empty
 And "Checkbox Required with a Star Sign next to it (in Request Page)" should be displayed
-And "Checkbox ReadOnly in readonly mode (in Request Page)" should be displayed
+And "Checkbox ReadOnly in readonly mode (in Request Page)" should not be displayed
 
 Scenario: Submit Request
 When I click on "Submit Request Button (in Request Page)"
