@@ -1,3 +1,6 @@
+// No error in browser logs
+https://jira.devfactory.com/browse/AGSC-771
+
 // Get link from email
 https://jira.devfactory.com/browse/KAYAKO-6920
 RegexToGetActivationLink: '[\s\S][(https:.)][\s\S]][\s\S]'
@@ -254,8 +257,12 @@ Supsoft RightFrame
 ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
 NavFrame
 ["//frame[@name='navFrame']", ""]
+BannerFrame
+["//frame[@name='banner']", ""]
 sdcxuser_main Frame
 ["//frame[@name='sdcxuser_main']", ""]
+ulFrame
+["//frame[@name='ul']", ""]
 
 
 ["//iframe[@id='catalogframe']", ""]
@@ -273,3 +280,82 @@ Cell with the value GeneratedConversionName in the Conversions Table: //table[@i
 
 
 Loading Icon under Publish Location Section: //div[contains(@class,'j-running-loader')]
+
+
+
+
+["//frame[@name='navFrame']", "//a[@id='xla_LiveAssist']"]
+
+["//frame[@name='sdcxuser_main']", "//td[./div/label[text()='Chat Name']]/..//input"]
+["//frame[@name='sdcxuser_main']", "//td[./div/label[text()='Email']]/..//input"]
+["//frame[@name='sdcxuser_main']", "//td[./div/label[text()='Problem Type']]/..//select"]
+["//frame[@name='sdcxuser_main']", "//td[./div/label[text()='Problem Description']]/..//input"]
+["//frame[@name='sdcxuser_main']", "//input[@name='lachat']"]
+
+["//frame[@name='sdcxuser_main']", "//textarea[@id='message']"]
+["//frame[@name='sdcxuser_main']", "//button[@id='SendMessage']"]
+["//frame[@name='sdcxuser_main']", "//button[@id='bttn2']"]
+["//frame[@name='sdcxuser_main']", "//span[contains(text(),'You are waiting for an analyst to assist you')]"]
+["//frame[@name='sdcxuser_main']", "//div[text()='You have joined the room']"]
+
+
+User Waiting (in CSR Chat Window): ["//frame[@name='banner']", "//b[text()='User Waiting=']"]
+Preferred User Waiting (in CSR Chat Window): ["//frame[@name='banner']", "//b[text()='Preferred User Waiting=']"]
+AHT (in CSR Chat Window): ["//frame[@name='banner']", "//b[text()='AHT=']"]
+Closed (in CSR Chat Window): ["//frame[@name='banner']", "//b[text()='Closed=']"]
+Escalated (in CSR Chat Window): ["//frame[@name='banner']", "//b[text()='Escalated=']"]
+Bounced (in CSR Chat Window): ["//frame[@name='banner']", "//b[text()='Bounced=']"]
+Available Icon (in First Chat Window, in CSR Chat Window): ["//frame[@name='ul']", "//img[@title='Available']"]
+
+
+
+
+
+Queue Status Change Available (Message in CSR Chat Window): ["//frame[@name='ul']", "(//div[text()='Queue status change: available'])"]
+Queue poll started (Message in CSR Chat Window): ["//frame[@name='ul']", "//div[contains(text(),'Queue poll started')]"]
+Hello Test Chat, Thank you for contacting LiveAssist Support, My name is analyst, How may I help you (Message in CSR Chat Window): ["//frame[@name='ul']", "//div[contains(text(),'Hello Test Chat, Thank you for contacting LiveAssist Support. My name is analyst. How may I help you?')]"]
+Analyst in Chat Room Box: ["//frame[@name='ul']", "//select[@name='userList']/option[text()='analyst']"]
+This Issue will be escalated after 40 seconds (Message in CSR Chat Window): ["//frame[@name='ul']", "//div[text()='This issue will be escalated after 40 seconds.']"]
+This Issue will be escalated after 30 seconds (Message in CSR Chat Window): ["//frame[@name='ul']", "//div[text()='This issue will be escalated after 30 seconds.']"]
+Message Textbox (in CSR Chat Window): ["//frame[@name='ul']", "//iframe[@id='ifMsg']", "//body[@id='body']"]
+
+
+
+
+analyst is assisting you on this issue (Message in LiveAssist Chat): ["//frame[@name='sdcxuser_main']", "//span[@id='statMsg'][contains(.,'analyst')][contains(.,'is assisting you on this issue')]"]
+analyst has joined the room (Message in LiveAssist Chat): ["//frame[@name='sdcxuser_main']", "//div[./b[text()='analyst']][contains(.,'has joined the room')]"]
+Chat One From Analyst to User (Message in LiveAssist Chat): ["//frame[@name='sdcxuser_main']", "//div[text()='Chat One - From Analyst to User']"]
+Chat Two From User to Analyst (Message in CSR Chat Window): ["//frame[@name='ul']", "//div[contains(text(),'Chat Two - From User to Analyst')]"]
+
+
+Chat History Above The Message Textbox (in CSR Chat Window): ["//frame[@name='ul']", "//div[@id='ChatDisplay']"]
+
+
+
+Script Textarea (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//textarea[@name='propScript1']"]
+
+
+Checkbox yes Cell in Description Column (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'clsTableRow1')][contains(.,'Checkbox yes')]"]
+Checkbox Yes Cell in Description Column (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'clsTableRow1')][contains(.,'Checkbox yes')]"]
+Checkbox YES Cell in Description Column (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'clsTableRow1')][contains(.,'Checkbox yes')]"]
+
+Checkbox Required Cell in Description Column (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'clsTableRow1')][contains(.,'Checkbox Required')]"]
+Checkbox ReadOnly Cell in Description Column (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'clsTableRow1')][contains(.,'Checkbox ReadOnly')]"]
+Checkbox Hidden Cell in Description Column (in Request Class Properties Table): ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'clsTableRow1')][contains(.,'Checkbox Hidden')]"]
+
+
+["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", ""]
+
+
+
+
+
+
+
+
+
+Checkbox yes (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')]//tr[contains(.,'Checkbox yes')]//input[@type='checkbox'])"]
+Checkbox YES (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')]//tr[contains(.,'Checkbox YES')]//input[@type='checkbox'])"]
+Checkbox Yes (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')]//tr[contains(.,'Checkbox Yes')]//input[@type='checkbox'])"]
+Checkbox Required with a Star Sign next to it (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')][.//font[@class='required']]//tr[contains(.,'Checkbox Required')]//input[@type='checkbox'])"]
+Checkbox ReadOnly in readonly mode (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')]//tr[contains(.,'Checkbox ReadOnly')]//input[@type='checkbox'][@onclick='return false;'])"]
