@@ -44,8 +44,9 @@ When I wait for "10" seconds
 Then "This Issue will be escalated after 30 seconds (Message in CSR Chat Window)" should be displayed in "Analyst Instance"
 
 Scenario: Analyst Send Message to User
-When I click on "This Issue will be escalated after 30 seconds (Message in CSR Chat Window)" in "Analyst Instance"
-And I press "TAB" in "Analyst Instance"
+#When I click on "This Issue will be escalated after 30 seconds (Message in CSR Chat Window)" in "Analyst Instance"
+When I click on "Analyst in Chat Room Box" in "Analyst Instance"
+And I press "SHIFT+TAB" in "Analyst Instance"
 And I type "Chat One - From Analyst to User" in "Analyst Instance"
 And I press "ENTER" in "Analyst Instance"
 Then "analyst is assisting you on this issue (Message in LiveAssist Chat)" should be displayed in "User Instance"

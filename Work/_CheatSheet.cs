@@ -359,3 +359,20 @@ Checkbox YES (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[conta
 Checkbox Yes (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')]//tr[contains(.,'Checkbox Yes')]//input[@type='checkbox'])"]
 Checkbox Required with a Star Sign next to it (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')][.//font[@class='required']]//tr[contains(.,'Checkbox Required')]//input[@type='checkbox'])"]
 Checkbox ReadOnly in readonly mode (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')]//tr[contains(.,'Checkbox ReadOnly')]//input[@type='checkbox'][@onclick='return false;'])"]
+Checkbox Hidden (in Request Page): ["//frame[@name='sdcxuser_main']", "(//div[contains(@class,'classLabel')]/following-sibling::div[contains(@class,'classContent')]//tr[contains(.,'Checkbox Hidden')]//input[@type='checkbox'])"]
+
+To Textbox (in New Loopmail - Mobile): "//android.view.View[@text='To']/following-sibling::android.view.View[1]//android.widget.EditText"
+CC Textbox (in New Loopmail - Mobile): "//android.view.View[@text='CC']/following-sibling::android.view.View[1]//android.widget.EditText"
+Subject Textbox (in New Loopmail - Mobile): //android.widget.TextView[@text='Subject']
+Message Textbox (in New Loopmail - Mobile): "/descendant::android.widget.EditText[last()]"
+VANESSA Alonzo (in Dropdown List): //android.view.View[@text='VANESSA Alonzo']
+principal principal (in Dropdown List): //android.view.View[@text='principal principal']
+Send Button (in New Loopmail - Mobile): //android.view.View[@text='New Loopmail']/following-sibling::android.view.View[1]/android.view.View[1]
+Inbox Dropdown (in Loopmail - Mobile): //android.widget.TextView[@text='Inbox']
+Sent Option in Dropdown (in Loopmail - Mobile): //android.view.View[@text='Sent']
+Email with the subject as VarEmailSubject (in Loopmail - Mobile): //android.view.View[@text=$VarEmailSubject]
+
+principal principal as Recipient Name (in New Loopmail - Mobile): //android.widget.TextView[@text='principal principal']
+
+
+//android.widget.Button[@text='Loopmail']

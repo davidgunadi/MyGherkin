@@ -148,8 +148,8 @@ And "Search for Solutions Button (in Request Page)" should be displayed
 And "Submit Request Button (in Request Page)" should be displayed
 
 Scenario: Select Request Type
-Given "ShortDescRandomValue" default value is "ShortDesc_{RandomValue}"
-Given "LongDescRandomValue" default value is "LongDesc_{RandomValue}"
+Given "ShortDescRandomValue" default value is "ShortDesc_{random_string(6)}"
+Given "LongDescRandomValue" default value is "LongDesc_{random_string(6)}"
 When I set "Short Description Textbox (in Request Page)" value to "{ShortDescRandomValue}"
 And I click on "Long Description Textbox (in Request Page)"
 And I type "{LongDescRandomValue}"
@@ -167,7 +167,7 @@ And "Checkbox Yes (in Request Page)" should be displayed
 And I remember a value from "checked" attribute of "Checkbox Yes (in Request Page)" as "CheckboxyesStatus"
 And the value of "CheckboxYesStatus" should be empty
 And "Checkbox Required with a Star Sign next to it (in Request Page)" should be displayed
-And "Checkbox ReadOnly in readonly mode (in Request Page)" should not be displayed
+And "Checkbox Hidden (in Request Page)" should not be displayed
 
 Scenario: Submit Request
 When I click on "Submit Request Button (in Request Page)"
