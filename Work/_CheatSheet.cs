@@ -1,3 +1,6 @@
+// Prevent markup
+AGSC-722
+
 // No error in browser logs
 https://jira.devfactory.com/browse/AGSC-771
 
@@ -373,6 +376,9 @@ Sent Option in Dropdown (in Loopmail - Mobile): //android.view.View[@text='Sent'
 Email with the subject as VarEmailSubject (in Loopmail - Mobile): //android.view.View[@text=$VarEmailSubject]
 
 principal principal as Recipient Name (in New Loopmail - Mobile): //android.widget.TextView[@text='principal principal']
+Staff Staff as Recipient Name (in New Loopmail - Mobile): //android.widget.TextView[@text='Staff Staff']
 
 
 //android.widget.Button[@text='Loopmail']
+
+Assignment Page Title (Mobile): //*[@resource-id='tab-title'][@text='Assignments']
