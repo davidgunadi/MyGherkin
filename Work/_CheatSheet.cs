@@ -382,3 +382,17 @@ Staff Staff as Recipient Name (in New Loopmail - Mobile): //android.widget.TextV
 //android.widget.Button[@text='Loopmail']
 
 Assignment Page Title (Mobile): //*[@resource-id='tab-title'][@text='Assignments']
+
+
+
+More Link (for ALGEBRA 1B SPR): //tr[.//a[contains(text(),'ALGEBRA 1B SPR')]]//span[contains(@id,'moreLinkButton')]
+Roster Tool Link (for ALGEBRA 1B SPR): "//tr[.//a[contains(text(),'ALGEBRA 1B SPR')]]/following-sibling::tr[1]//a[text()='Roster Tools']"
+Roster Printout: //a[text()='Roster Printout']
+
+
+
+Search Textbox (in User Profiles Page): //input[@id='query']
+
+
+Username with the value EmailVariable: //a[contains(text(),$EmailVariable)]
+The value for Activated Row: //tr[contains(@class,'hide-from-new')][contains(.,'Activated')]/td/span
