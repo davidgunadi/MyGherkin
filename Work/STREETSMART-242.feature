@@ -30,7 +30,7 @@ When I click on "Create Button (in Companies Page)"
 Then "Create new Company Dialog" should be displayed
 
 Scenario: Fill in new company details then Save & Close
-Given "GeneratedCompanyName" default value is "Cpmpany{random_string(6)}"
+Given "GeneratedCompanyName" default value is "TestCompany_{random_string(6)}"
 When I set "Company Name Textbox (in Create new Company)" value to "{GeneratedCompanyName}"
 And I set "Company Type Dropdown (in Create new Company)" value to "Test"
 And I set "Package Dropdown (in Create new Company)" value to "StreetSmart Workforce Premier"
