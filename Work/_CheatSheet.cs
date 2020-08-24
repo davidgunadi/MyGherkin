@@ -401,3 +401,17 @@ The value for Activated Row: //tr[contains(@class,'hide-from-new')][contains(.,'
 DispositionName Option under Disposition Dropdown: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='Select1']/option[text()=$DispositionName]"]
 
 Disposition with the name DispositionName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'clsTableRow')][text()=$DispositionName]"]
+
+
+
+
+["//iframe[@id='xrCommonDialogIFrame']",""]
+Create new Company Dialog: ["//iframe[@id='xrCommonDialogIFrame']","//div[@id='popupTitle'][contains(.,'Create new Company')]"]
+
+
+Company Name Textbox (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//input[@id='companyData.name']"]
+Company Type Dropdown (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//select[@id='companyData.companyTypeId']"]
+Package Dropdown (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//select[@id='companyData.packageId']"]
+Add-On Packages Checkbox (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//input[@name='selectedAddonPackage']"]
+Save & Close Button (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//span[text()='Save & Close']"]
+GeneratedCompanyName Record in Company Table: //table[@id='Company']//td[text()=$GeneratedCompanyName]
