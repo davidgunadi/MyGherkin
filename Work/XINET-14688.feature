@@ -1,5 +1,8 @@
 Feature: XINET-14688
 
+As an admin, I should be able to create Backup to the desired location when I run full backup.
+This is secure because Securely create a backup as admin
+
 Scenario: Preconditions
 Given quality bar version "20200115.1"
 Given environment "stage" from "https://confluence.devfactory.com/display/NOR/Xinet+Environment"
@@ -32,11 +35,10 @@ And I click on "VOLUMES/USERS (Header Tab)"
 And I click on "System Volumes (Sub Header Tab)"
 And I click on "summary tab"
 And I click on "/xinetVols/WN Suite Test Files"
-Then I should see "WN Suite Test Files WEB" in "Folders (dropdown)"
+Then "backups folder" should be displayed
 
 Scenario: Verify Backup is Generated Successfully, Backup file name should be "wnv_fullbkup.YYYY.MM.DD"
-Given "Today" default value is "{date('YYYY.MM.DD')}"
-When I click on "Search Button (in Summary Page)"
-And I set "wnv_fullbkup.{Today}" to "Search Textbox (in Summary Page)" value
-And I press "ENTER"
-Then I should see "wnv_fullbkup.{Today}" in "Search Result Record (in Summary Page)"
+Given "TodayInYYYYMMDD" default value is "{date('YYYY.MM.DD')}"
+When I wait for "10" minutes
+And I click on "backups folder"
+Then "Full Backup with Today Date in YYYYMMDD" should be displayed

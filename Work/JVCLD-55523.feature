@@ -47,9 +47,7 @@ And I should see "Any errors will be reported" in "Confirmation Message"
 Scenario: Open Bash Terminal and Check User is Deleted
 Given "OutputShowingNoResult" value is:
 """
-"itemsPerPage" : 25,
 "list" : [ ],
-"startIndex" : 0
 """
 Given shell session
 When I execute script:

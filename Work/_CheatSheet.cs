@@ -396,3 +396,8 @@ Search Textbox (in User Profiles Page): //input[@id='query']
 
 Username with the value EmailVariable: //a[contains(text(),$EmailVariable)]
 The value for Activated Row: //tr[contains(@class,'hide-from-new')][contains(.,'Activated')]/td/span
+
+
+DispositionName Option under Disposition Dropdown: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//select[@id='Select1']/option[text()=$DispositionName]"]
+
+Disposition with the name DispositionName: ["//frame[@name='mainAdmin']", "//frame[@name='sadRightFrame']", "//td[contains(@class,'clsTableRow')][text()=$DispositionName]"]
