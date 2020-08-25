@@ -35,9 +35,9 @@ Then "Browse - Places" page should be displayed
 
 Scenario: Select Project Filter and Select the Project created in Precondition "JVSRCH-10519"
 When I click on "Your Places - Projects link"
-And I set "Search Textbox (in Projects Filter)" value to "{ProjectName}"
+And I set "Search Textbox (in Projects Filter)" value to "{projectName}"
 And I click on "Project with the name projectName (in Projects Filter)"
-Then "{ProjectName}" page should be displayed
+Then "{projectName}" page should be displayed
 
 Scenario: Click Actions, then Video
 When I click on "Actions dropdown"
@@ -64,4 +64,4 @@ Then "Created Video Page with Title" should be displayed
 
 Scenario: Validate Video is Listed in the Project
 When I click on "projectName Link in Top Left Breadcrumbs"
-Then "Created Video Title In Your Content Page" should be displayed
+Then "Video with the title VideoTitle (in Recent Activity Page)" should be displayed

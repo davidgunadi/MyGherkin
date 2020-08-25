@@ -1,5 +1,4 @@
 features/
 get-pip.py
 logs/e2e-behave.log
-logs/e2e-behave.log
 *.log

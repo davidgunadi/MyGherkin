@@ -1,3 +1,7 @@
+//Remember Current URL
+Then I remember current url as "DirectURL"
+When I open "{DirectURL}"
+
 // Prevent markup
 AGSC-722
 
