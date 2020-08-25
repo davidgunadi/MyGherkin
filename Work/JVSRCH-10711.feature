@@ -14,19 +14,20 @@ Given browser "Chrome"
 When I execute scenario "JVSRCH-10519" with inputs "SiteURL" as "{SiteURL}" to capture outputs "projectName"
 Then scenario steps should complete successfully
 
-Scenario: Precondition to create user
+Scenario: Precondition to create user then wait to ensure user is active
 Given browser "Chrome"
 When I execute scenario "JVSRCH-10427" to capture outputs "Email", "Password"
-Then "Login Button" should be displayed
+Then scenario steps should complete successfully
 
 Scenario: Login as the Created User
 Given browser "Chrome"
 When I open "{environment.MSI.Login URL}"
 And I click on "UserName Textbox"
-And I type slowly "{email}"
+And I type slowly "{Email}"
 And I click on "Password Textbox"
 And I type slowly "{Password}"
 And I click on "Login Button"
+Then "Home Page - User Menu Icon" should be displayed
 
 Scenario: Go to Groups Page
 When I open "{environment.MSI.URL}groups"

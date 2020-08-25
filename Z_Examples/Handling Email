@@ -1,0 +1,60 @@
+Feature: KAYAKO-6920
+
+As a customer I should be able to recover my password when I lose it
+This is consistent because User should be able to see data in place
+
+Scenario: Preconditions
+Given quality bar version "20200115.1"
+Given environment "Manual QA" from "https://confluence.devfactory.com/display/KAYAK/TNK+Environment+Data+Structure"
+
+Scenario: Execute KAYAKO-6926 as precondition
+Given "Username" default value is "{random_string(5)}"
+Given "my email id" default value is "general.automation+{Username}@aurea.com"
+When I execute scenario "KAYAKO-6926" with inputs "Username" as "{Username}", "my email id" as "{my email id}"
+Then scenario steps should complete successfully
+
+Scenario: As an anonymous user go to the help center
+Given browser "Chrome"
+When I open "{environment.helpdesk.URL}"
+Then "How can we help you heading" should be displayed
+
+Scenario: Click on Sign In
+When I click on "Sign in link in the Helpcenter navigation header"
+Then "Sign in" page should be displayed
+
+Scenario: Click Forgot password
+When I click on "Forgot password"
+Then "Forgot password" page should be displayed
+
+Scenario: Add known user address
+When I set "Your email address" value to "{my email id}"
+And I click on "Recover Password"
+Then "Email sent confirmation" should be displayed
+
+Scenario: On the confirmation email click on the confirmation link
+When I set my email address as "{my email id}"
+And I open "first" email from "support@qa2.kayakostage.net" with subject "Reset password for qa2" of mimetype "text/plain"
+Then I put the email into "message"
+
+Scenario: The dialog to set the password will show
+Given "confirmationlink" default value is "{regex_replace(message,RegexToGetActivationLink,'$1')}"
+When I open "{confirmationlink}"
+And I click on "language selector in page header"
+And I click on 'language option "English (United States)"'
+Then "Create a password title" should be displayed
+
+Scenario: Fill the data and click Set Password
+When I set "New password" value to "{password}new"
+And I click on "Set password button"
+Then "Password created successfully" should be displayed
+
+Scenario: Click on Sign In
+When I click on "Sign in link in the Helpcenter navigation header"
+Then "Sign in" page should be displayed
+
+Scenario: Log in with created user
+When I set "Your email address field" value to "{my email id}"
+And I set "Your password field" value to "{password}new"
+And I click on "Sign in button"
+Then "How can we help you heading" should be displayed
+And "Logged user" should be displayed

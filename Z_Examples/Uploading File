@@ -1,0 +1,5 @@
+//File Upload
+And I upload a file "{Document1}" to "Select Files"
+And I wait until "Uploaded File Name" appears
+Then I remember a value from "Uploaded File Name" as "UploadedFile"
+When I click on "Save Uploaded File Button"

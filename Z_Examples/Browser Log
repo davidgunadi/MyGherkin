@@ -1,0 +1,5 @@
+Then I should see "Feature Story" in "Issue Type in Bar tooltip in 'Orphan Issues' section"
+And I should see "57" in "Issue Count in Bar tooltip in 'Orphan Issues' section"
+And I remember the browser log as "browser log"
+And the value of "browser log" should not contain '"level": "SEVERE"'
+#The Last 2 statements are equivalent to checking that 'There are no error messages in Browser Console in Developer Tools'

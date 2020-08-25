@@ -1,0 +1,20 @@
+Scenario: Go to Monitor -> Real Time
+When I click on "Monitor"
+And I click on "Monitor Realtime"
+And I click on "Hosts/Users tab"
+And I "check" "Show Users checkbox" checkbox
+And I wait until "Inbound Hosts/Users rows containing name" appears
+Then I put total count of "Inbound Hosts/Users rows containing name" into "RowCount"
+And the value of "RowCount" should be greater than 0
+
+Scenario: Save a random Host/User row
+Given "RandomPosition" default value is "{random_number(1,RowCount)}"
+Given "HostUserFormat" default value is "(\d+\.\d+\.\d+\.\d+)\s\((.+)\)"
+When I hover on "Inbound Hosts/Users rows containing name"
+Then I put a value from "Inbound Hosts/Users row according to <RandomPosition>" into "HostUser"
+And the value of "HostUser" should not be empty
+
+Scenario: Verify if the random Host/User exists in the Exinda Users file
+Given "Name address Host" default value is "{regex_replace(HostUser,HostUserFormat,'$2 address $1')}"
+When I hover on "Inbound Hosts/Users rows containing name"
+Then the value of "File Content" should contain "{Name address Host}"

@@ -1,0 +1,36 @@
+Feature: VERD-3743
+
+As an administrator, I should see the creation and deletion times of a policy when I query the Surveyor database.
+This is traceable because Administrators should be able to trace policy timestamps.
+
+Scenario: Preconditions
+Given quality bar version "20200115.1"
+Given environment "QA" from "https://confluence.devfactory.com/display/AVOLIN/Non-prod+Environments"
+Given credentials "DB user"
+
+Scenario: Get Policy create time
+Given DB connection to "Surveyor Database"
+When I execute query "SELECT CONVERT(VARCHAR(19),GETDATE(),121) AS DATETIME"
+Then queries should complete successfully
+And I remember the result set as "RESULT"
+And "SERVERDATE_ROW" is a jsonpath selected value "$[0]" from "RESULT"
+
+Scenario: Create and delete a policy
+When I execute scenario "VERD-3739" to capture outputs "POLICY_NAME"
+Then scenario steps should complete successfully
+
+Scenario: Get Policy create time
+Given "SERVER_DATETIME" value is "{SERVERDATE_ROW.DATETIME}"
+Given DB connection to "Surveyor Database"
+When I execute query "SELECT CONVERT(VARCHAR(19),StartDateTimeUtc,121) AS START_DATETIME FROM [dbo].[PolicyHistory] WHERE PolicyPath LIKE '%{POLICY_NAME}%'"
+Then queries should complete successfully
+And I put the result set into "RESULT"
+And "START_ROW" is a jsonpath selected value "$[0]" from "RESULT"
+And the value of "START_ROW.START_DATETIME" should be greater than or equal to "{SERVER_DATETIME}"
+
+Scenario: Get Policy delete time
+When I execute query "SELECT CONVERT(VARCHAR(19),EndDateTimeUtc,121) AS END_DATETIME FROM [dbo].[PolicyHistory] WHERE PolicyPath LIKE '%{POLICY_NAME}%'"
+Then queries should complete successfully
+And I put the result set into "RESULT"
+And "END_ROW" is a jsonpath selected value "$[0]" from "RESULT"
+And the value of "END_ROW.END_DATETIME" should be greater than or equal to "{START_ROW.START_DATETIME}"

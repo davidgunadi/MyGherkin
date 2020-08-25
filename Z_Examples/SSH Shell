@@ -1,0 +1,27 @@
+Feature: EXOS-17280
+
+Scenario: Preconditions
+Given quality bar version "20200115.1"
+Given environment "End-to-End scenarios test-bed 2" from "https://confluence.devfactory.com/display/ExOS/End-to-End+scenarios+test+bed"
+Given credentials "admin-exinda"
+
+Scenario: Using Putty client, open an SSH connection to Nomadix SSH
+Given shell session to "Exinda VM SSH" as "SSHTerminal1"
+When I wait for "1" minutes
+
+EXOS
+
+Scenario: Open application
+Given shell session to "Exinda VM SSH" with prompt "[\w\-]+ >"
+When I execute interactive command "help"
+Then "Try the following to get started:" should be in output
+When I execute interactive command "show"
+Then `Type "show ?" for help` should be in output
+
+When I execute interactive command "en" with prompt "#"
+And I execute interactive command "config t" with prompt "#"
+Then "(config) #" should be in output
+
+When I execute interactive command "show monitor setup{'\n\n\n\n\n\n\n\n'}" with prompt "\n[\s\w\-\(\)]+#"
+
+Then 'Bit-torrent Sensitivity' should be in output

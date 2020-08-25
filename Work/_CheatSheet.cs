@@ -405,13 +405,16 @@ Disposition with the name DispositionName: ["//frame[@name='mainAdmin']", "//fra
 
 
 
-["//iframe[@id='xrCommonDialogIFrame']",""]
-Create new Company Dialog: ["//iframe[@id='xrCommonDialogIFrame']","//div[@id='popupTitle'][contains(.,'Create new Company')]"]
+["//iframe[@id='xrCommonDialogIFrame']","(//tr[@id='smartPkgsContainer']//input[@name='selectedSmartSocCodes'])[1]"]
+
+Create User (In Popup Menu): (//li[@id='listElement_action.create.user']
+User Details Section: ["//iframe[@id='xrCommonDialogIFrame']","//th[contains(text(),'User Details')]"]
+Contact Information Section: ["//iframe[@id='xrCommonDialogIFrame']","//th[contains(text(),'Contact Information')]"]
+Notification Information Section: ["//iframe[@id='xrCommonDialogIFrame']","//th[contains(text(),'Notification Information')]"]
 
 
-Company Name Textbox (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//input[@id='companyData.name']"]
-Company Type Dropdown (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//select[@id='companyData.companyTypeId']"]
-Package Dropdown (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//select[@id='companyData.packageId']"]
-Add-On Packages Checkbox (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//input[@name='selectedAddonPackage']"]
-Save & Close Button (in Create new Company): ["//iframe[@id='xrCommonDialogIFrame']","//span[text()='Save & Close']"]
-GeneratedCompanyName Record in Company Table: //table[@id='Company']//td[text()=$GeneratedCompanyName]
+First Checkbox in SOC Code (in Create User Dialog): ["//iframe[@id='xrCommonDialogIFrame']","(//tr[@id='smartPkgsContainer']//input[@name='selectedSmartSocCodes'])[1]"]
+First Checkbox in SOC Code (in Create User Dialog): ["//iframe[@id='xrCommonDialogIFrame']","(//tr[@id='smartPkgsContainer']//input[@name='selectedSmartSocCodes'])[1]"]
+Device type Dropdown (in Create User Dialog): ["//iframe[@id='xrCommonDialogIFrame']","//select[@id='device.type.id']"]
+Description Textbox (in Create User Dialog): ["//iframe[@id='xrCommonDialogIFrame']","//input[@id='device.description']"]
+Phone Number Textbox (in Create User Dialog): ["//iframe[@id='xrCommonDialogIFrame']","//input[@id='device.phoneNumber']"]

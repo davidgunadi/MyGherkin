@@ -11,7 +11,7 @@ Given credentials "admin"
 Scenario: Precondition to create user
 Given browser "Chrome"
 When I execute scenario "JVSRCH-10427" to capture outputs "Email", "Password"
-Then "Login Button" should be displayed
+Then scenario steps should complete successfully
 
 Scenario: Login as Jive user created in precondition
 When I open "{environment.MSI.Login URL}"

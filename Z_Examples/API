@@ -1,0 +1,66 @@
+Feature: SCLOOPW-11218
+
+As a student, I can send request to API so that I can login securely
+This is secure because A student can send request to API to login securely
+
+Scenario: Preconditions
+Given quality bar version "20200115.1"
+Given environment "QA" from "https://confluence.devfactory.com/display/SCHOOL/Environments"
+Given credentials "stu65" and "stu65_wpd"
+
+Scenario: Login via API with valid user and password
+Given HTTP request
+Given "Url" value is "{environment.Gradebook.URL}mapi/login?version=1.3.2"
+When I set basic authentication as "stu65"
+And I execute GET request for "{Url}"
+Then request should complete successfully
+And response status should be "200"
+And I put the response into "response" as json
+And "saved_isParent" is a jsonpath selected value "isParent" from "response"
+And the value of "saved_isParent" should not be empty
+And "saved_isUnverifiedParent" is a jsonpath selected value "isUnverifiedParent" from "response"
+And the value of "saved_isUnverifiedParent" should not be empty
+And "saved_email" is a jsonpath selected value "email" from "response"
+And the value of "saved_email" should not be empty
+And "saved_userName" is a jsonpath selected value "userName" from "response"
+And the value of "saved_userName" should not be empty
+And "saved_acceptedAgreement" is a jsonpath selected value "acceptedAgreement" from "response"
+And the value of "saved_acceptedAgreement" should not be empty
+And "saved_hashedPassword" is a jsonpath selected value "hashedPassword" from "response"
+And the value of "saved_hashedPassword" should not be empty
+And "saved_userID" is a jsonpath selected value "userID" from "response"
+And the value of "saved_userID" should not be empty
+And "saved_fullName" is a jsonpath selected value "fullName" from "response"
+And the value of "saved_fullName" should not be empty
+And "saved_students" is a jsonpath selected value "students" from "response"
+And the value of "saved_students" should not be empty
+And "saved_students_studentID" is a jsonpath selected value "students[0].studentID" from "response"
+And the value of "saved_students_studentID" should not be empty
+And "saved_students_name" is a jsonpath selected value "students[0].name" from "response"
+And the value of "saved_students_name" should not be empty
+And "saved_students_school_paid" is a jsonpath selected value "students[0].school.paid" from "response"
+And the value of "saved_students_school_paid" should not be empty
+And "saved_students_school_domainName" is a jsonpath selected value "students[0].school.domainName" from "response"
+And the value of "saved_students_school_domainName" should not be empty
+And "saved_students_school_grades" is a jsonpath selected value "students[0].school.grades" from "response"
+And the value of "saved_students_school_grades" should not be empty
+And "saved_students_school_districtName" is a jsonpath selected value "students[0].school.districtName" from "response"
+And the value of "saved_students_school_districtName" should not be empty
+And "saved_students_school_name" is a jsonpath selected value "students[0].school.name" from "response"
+And the value of "saved_students_school_name" should not be empty
+
+Scenario: Logout via API
+Given HTTP request
+Given "Url" value is "{environment.Gradebook.URL}mapi/logout?version=1.3.2"
+When I set basic authentication as "stu65"
+And I execute GET request for "{Url}"
+Then request should complete successfully
+And "SUCCESS" should be in response body
+
+Scenario: Login via API with a wrong password
+Given HTTP request
+Given "Url" value is "{environment.Gradebook.URL}mapi/login?version=1.3.2"
+When I set basic authentication as "stu65_wpd"
+And I execute GET request for "{Url}"
+Then request should complete successfully
+And "ERROR 2: password incorrect" should be in response body

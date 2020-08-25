@@ -1,0 +1,7 @@
+
+RGBFormat: rgba\((\d+), (\d+), (\d+), \d+\)
+Scenario: Verify the Command execution result's color
+Given "GreenBackgroundColor" default value is "rgb(110, 180, 48)"
+Given "BackgroundColor" default value is "{regex_replace(CSSBackgroundColor,RGBFormat,'rgb($1, $2, $3)')}"
+When I hover on "Command execution results"
+Then the value of "BackgroundColor" should be equal to "{GreenBackgroundColor}"

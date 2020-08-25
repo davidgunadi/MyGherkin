@@ -46,19 +46,19 @@ Then "Preferences page header" should be displayed
 
 Scenario: Navigate to "Analyst Request Queue" - "All - Open Tab"
 When I click on "Manage Requests link in SC Menu"
-And I click on "Manage Requests link in SC Menu"
+And I click on "Analyst Request Queue in SC Menu"
 And I click on "All - Open tab"
 Then "the update link for the newly created request" should be displayed
 
 Scenario: Click "Update" for the request created in Precondition "SUPSOFT-17847"
 When I click on "the update link for the newly created request"
 And I switch to second window
-Then "Resolve Notify tab" should be displayed
+Then "Resolve Notify tab (in New Window)" should be displayed
 
 Scenario: Select the 'Resolve/Notify' tab
-When I click on "Resolve Notify tab"
-Then "Disposition dropdown" should be displayed
+When I click on "Resolve Notify tab (in New Window)"
+Then "Disposition dropdown (in New Window)" should be displayed
 
 Scenario: Verify Created Disposition is available under Disposition Dropdown 
-When I click on "Disposition dropdown"
-Then "DispositionName Option under Disposition Dropdown" should be displayed
+When I click on "Disposition dropdown (in New Window)"
+Then "DispositionName Option under Disposition Dropdown (in New Window)" should be displayed

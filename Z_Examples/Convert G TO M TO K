@@ -1,0 +1,33 @@
+
+Scenario: convert kilo byte
+Given "data" value is "15564.8K"
+Given "data_number" value is "{regex_extract_first(data, '[\d\.]+')}"
+Given "giga_mega_byte" value is "{regex_replace(data, '.*(G|M|K|k)', '$1')}"
+Given "exponent_number" value is "{regex_replace(regex_replace(regex_replace(giga_mega_byte, '(G)', '1024'), '(M)', '1'), '(K|k)', '0.0009765625')}"
+Given "expected_value" value is "{to_float(data_number)*to_float(exponent_number)}M"
+Then the value of "data_number" should be equal to "15564.8"
+Then the value of "giga_mega_byte" should be equal to "K"
+Then the value of "exponent_number" should be equal to "0.0009765625"
+Then the value of "expected_value" should be equal to "15.2M"
+
+Scenario: convert gigabyte
+Given "data" value is "20.59G"
+Given "data_number" value is "{regex_extract_first(data, '[\d\.]+')}"
+Given "giga_mega_byte" value is "{regex_replace(data, '.*(G|M|K)', '$1')}"
+Given "exponent_number" value is "{regex_replace(regex_replace(regex_replace(giga_mega_byte, '(G)', '1024'), '(M)', '1'), '(K)', '0.0009765625')}"
+Given "expected_value" value is "{to_float(data_number)*to_float(exponent_number)}M"
+Then the value of "data_number" should be equal to "20.59"
+Then the value of "giga_mega_byte" should be equal to "G"
+Then the value of "exponent_number" should be equal to "1024"
+Then the value of "expected_value" should be equal to "21084.16M"
+
+Scenario: convert mega byte
+Given "data" value is "1022.00M"
+Given "data_number" value is "{regex_extract_first(data, '[\d\.]+')}"
+Given "giga_mega_byte" value is "{regex_replace(data, '.*(G|M|K)', '$1')}"
+Given "exponent_number" value is "{regex_replace(regex_replace(regex_replace(giga_mega_byte, '(G)', '1024'), '(M)', '1'), '(K)', '0.0009765625')}"
+Given "expected_value" value is "{to_float(data_number)*to_float(exponent_number)}M"
+Then the value of "data_number" should be equal to "1022.00"
+Then the value of "giga_mega_byte" should be equal to "M"
+Then the value of "exponent_number" should be equal to "1"
+Then the value of "expected_value" should be equal to "1022M"

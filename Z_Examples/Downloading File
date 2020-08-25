@@ -1,0 +1,6 @@
+Scenario: Download the import config file and save to a variable
+Given "Exinda Users File" default value is "https://e2efiles.s3.amazonaws.com/nyugewk.txt"
+When I download a file "{Exinda Users File}"
+And I wait until the file downloaded with a timeout of "2" minutes
+Then I put the content of file into "File Content"
+And the value of "File Content" should not be empty

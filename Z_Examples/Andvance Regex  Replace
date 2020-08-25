@@ -1,0 +1,11 @@
+Scenario: Execute command: `show ssh server host-keys`
+When I execute interactive command "show ssh server host-keys" with prompt "#"
+Then commands should complete successfully
+And I put the output into "OUTPUT"
+
+Scenario: Validate the `SSH server configuration` and `Host Key Finger Prints and Key Lengths` sections
+Given "REGEX" value is "[.\s\S]*(Host Key Finger Prints and Key Lengths:)(((\s+[A-Z]+ v.+ host key:\s+\(key missing or invalid\))|(\s+[A-Z]+ v.+ host key:\s+SHA.+))+)(\s+exinda.*)[.\s\S]*"
+Given "HOST_KEYS_SECTION" value is "{regex_replace(OUTPUT,REGEX,'MATCH_FOUND')}"
+Then the value of "OUTPUT" should contain "SSH server configuration:"
+And the value of "OUTPUT" should contain "Host Key Finger Prints and Key Lengths:"
+And the value of "HOST_KEYS_SECTION" should be equal to "MATCH_FOUND"

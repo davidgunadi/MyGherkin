@@ -1,0 +1,17 @@
+Scenario: Precodition: Delete all SLA's
+Given shell session
+Given "SH To Delete SLAs" default value is:
+"""
+#!/bin/bash
+slas=$(curl --location --request GET 'https://qa2.kayakostage.net/api/v1/slas?limit=10000&include=*' --header 'Authorization: Basic cWEyQGtheWFrb2Rldi5uZXQ6UEBzc3cwcmQkJCQk' | jq --raw-output '[.data[] | {id}]')
+for row in $(echo "${slas}" | jq -r '.[] | @base64'); do
+    _jq() {
+     echo ${row} | base64 --decode | jq -r ${1}
+    }
+
+   sla_id=$(_jq '.id')
+   curl --location --request DELETE "https://qa2.kayakostage.net/api/v1/slas/$sla_id?include=*" --header 'Authorization: Basic cWEyQGtheWFrb2Rldi5uZXQ6UEBzc3cwcmQkJCQk'
+done
+"""
+When I execute command "{SH To Delete SLAs}"
+Then commands should complete successfully
